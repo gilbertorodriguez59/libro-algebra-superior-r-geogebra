@@ -1,0 +1,89 @@
+name: Publicar edición estable completa
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/publicar-edicion-estable.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio estable
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Obtener edición verificada
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch main https://github.com/gilbertorodriguez59/libro-algebra-superior-r-geogebra-dev.git "$RUNNER_TEMP/edicion"
+          test "$(git -C "$RUNNER_TEMP/edicion" rev-parse HEAD)" = "6f344f61919b60c21744f12d796728816a515f0f"
+
+      - name: Preparar edición estable
+        shell: bash
+        env:
+          OLD_TOKEN: libro-algebra-superior-r-geogebra-dev
+          NEW_TOKEN: libro-algebra-superior-r-geogebra
+        run: |
+          set -euo pipefail
+          rsync -a --delete --exclude='.git/' "$RUNNER_TEMP/edicion/" ./
+          grep -RIlZ --exclude-dir=.git -- "$OLD_TOKEN" . | xargs -0 -r sed -i "s/$OLD_TOKEN/$NEW_TOKEN/g"
+          if test -f generar-y-publicar-desarrollo.bat
+          then
+            mv generar-y-publicar-desarrollo.bat generar-y-publicar-estable.bat
+          fi
+          sed -i 's/Versión de desarrollo del libro/Edición estable del libro/' README.md
+          sed -i 's/Sitio de desarrollo:/Sitio estable:/' README.md
+          sed -i 's/ - desarrollo/ - estable/g' generar-y-publicar-estable.bat
+          sed -i 's/repositorio de desarrollo/repositorio estable/g' generar-y-publicar-estable.bat
+          cat >> .gitignore <<'EOF'
+
+          # Material de evaluación excluido permanentemente
+          **/Examen Parcial 1 Algebra Superior (13-09-2017).pdf
+          **/Tarea 1.pdf
+          **/Preimer Examen Algebra Superior (05-09-2024).pdf
+          EOF
+
+      - name: Validar contenido
+        shell: bash
+        env:
+          OLD_TOKEN: libro-algebra-superior-r-geogebra-dev
+          PDF_PATH: docs/Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf
+        run: |
+          set -euo pipefail
+          test "$(find . -maxdepth 1 -type f -name '0[1-5]-*.qmd' | wc -l)" -eq 5
+          test "$(find docs -maxdepth 1 -type f -name '0[1-5]-*.html' | wc -l)" -eq 5
+          test -s "$PDF_PATH"
+          test "$(head -c 4 "$PDF_PATH")" = '%PDF'
+          if grep -RIl --exclude-dir=.git -- "$OLD_TOKEN" . | grep -q .
+          then
+            exit 42
+          fi
+          while IFS= read -r -d '' file_path
+          do
+            case "$(basename "$file_path")" in
+              'Examen Parcial 1 Algebra Superior (13-09-2017).pdf'|'Tarea 1.pdf'|'Preimer Examen Algebra Superior (05-09-2024).pdf')
+                exit 43
+                ;;
+            esac
+          done < <(find . -path './.git' -prune -o -type f -print0)
+          git check-ignore -q --no-index 'Examen Parcial 1 Algebra Superior (13-09-2017).pdf'
+          git check-ignore -q --no-index 'Tarea 1.pdf'
+          git check-ignore -q --no-index 'Preimer Examen Algebra Superior (05-09-2024).pdf'
+
+      - name: Publicar en main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publica edición estable completa de cinco capítulos'
+          git push origin HEAD:main
