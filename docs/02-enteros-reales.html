@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2&nbsp; Números enteros y reales – Álgebra Superior con aplicaciones en R y GeoGebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./03-numeros-complejos.html" rel="next">
+<link href="./01-logica-conjuntos.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-enteros-reales.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Contenido del libro</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/gilbertorodriguez59/libro-algebra-superior-r-geogebra" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Portada</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bienvenida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenida</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./creditos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Créditos editoriales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./licencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Licencia y uso académico</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prefacio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./agradecimientos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Agradecimientos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduccion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notación general</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-logica-conjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-enteros-reales.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-numeros-complejos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-polinomios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-metodos-raices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glosario</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de consulta</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias generales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./autor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acerca del autor</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este capítulo</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-propiedades-enteros" id="toc-sec-propiedades-enteros" class="nav-link active" data-scroll-target="#sec-propiedades-enteros"><span class="header-section-number">2.1</span> Propiedades de los números enteros</a></li>
+  <li><a href="#sec-induccion" id="toc-sec-induccion" class="nav-link" data-scroll-target="#sec-induccion"><span class="header-section-number">2.2</span> Inducción matemática</a></li>
+  <li><a href="#sec-divisibilidad" id="toc-sec-divisibilidad" class="nav-link" data-scroll-target="#sec-divisibilidad"><span class="header-section-number">2.3</span> Divisibilidad</a></li>
+  <li><a href="#sec-primos-factorizacion" id="toc-sec-primos-factorizacion" class="nav-link" data-scroll-target="#sec-primos-factorizacion"><span class="header-section-number">2.4</span> Números primos y factorización</a></li>
+  <li><a href="#sec-racionales-reales" id="toc-sec-racionales-reales" class="nav-link" data-scroll-target="#sec-racionales-reales"><span class="header-section-number">2.5</span> Números racionales y números reales</a></li>
+  <li><a href="#sec-propiedades-reales" id="toc-sec-propiedades-reales" class="nav-link" data-scroll-target="#sec-propiedades-reales"><span class="header-section-number">2.6</span> Propiedades de los números reales</a></li>
+  <li><a href="#sec-exponentes" id="toc-sec-exponentes" class="nav-link" data-scroll-target="#sec-exponentes"><span class="header-section-number">2.7</span> Exponentes racionales y negativos</a></li>
+  <li><a href="#sec-valor-absoluto" id="toc-sec-valor-absoluto" class="nav-link" data-scroll-target="#sec-valor-absoluto"><span class="header-section-number">2.8</span> Valor absoluto</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><em>Experimentación con R, algoritmos y recta numérica</em></p>
+<section id="introducción" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="introducción">Introducción</h2>
+<p>Este capítulo convierte propiedades de los enteros y los reales en experimentos reproducibles. R permitirá generar ejemplos, ejecutar algoritmos, detectar patrones y visualizar distancias. La comprobación computacional será una herramienta para formular y revisar conjeturas; las afirmaciones para infinitos números continuarán requiriendo demostración.</p>
+<p>Todo el código principal usa R base <span class="citation" data-cites="rCore2026">(<a href="references.html#ref-rCore2026" role="doc-biblioref">R Core Team 2026</a>)</span>. Puede ejecutarse en RStudio o en Google Colab sin instalar paquetes.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Cuaderno completo y ejecutable">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Cuaderno completo y ejecutable
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El cuaderno sigue las secciones 2.1-2.8, incluye algoritmos de divisibilidad y primos, experimentos sobre precisión numérica y gráficas de exponentes y valor absoluto.</p>
+<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-02-enteros-reales-R.ipynb" class="btn btn-primary" target="_blank">Abrir en Google Colab</a> <a href="notebooks/capitulo-02-enteros-reales-R.ipynb" class="btn" target="_blank">Descargar el cuaderno</a></p>
+</div>
+</div>
+<section id="objetivos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="objetivos">Objetivos</h3>
+<p>Al finalizar, el lector podrá:</p>
+<ul>
+<li>representar enteros y operar con cociente y residuo en R;</li>
+<li>experimentar con sucesiones que se demuestran por inducción;</li>
+<li>programar los algoritmos de Euclides y Euclides extendido;</li>
+<li>detectar primos y obtener factorizaciones;</li>
+<li>distinguir cálculo exacto simbólico de aproximación numérica;</li>
+<li>explorar propiedades de orden y densidad en la recta real;</li>
+<li>evaluar potencias con exponentes enteros y racionales atendiendo a su dominio;</li>
+<li>resolver e interpretar inecuaciones con valor absoluto.</li>
+</ul>
+</section>
+</section>
+<section id="sec-propiedades-enteros" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="sec-propiedades-enteros"><span class="header-section-number">2.1</span> Propiedades de los números enteros</h2>
+<section id="enteros-y-almacenamiento-en-r" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="enteros-y-almacenamiento-en-r">Enteros y almacenamiento en R</h3>
+<p>R distingue valores enteros escritos con el sufijo <code>L</code> y valores numéricos almacenados, normalmente, en doble precisión.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>L, <span class="sc">-</span><span class="dv">2</span>L, <span class="sc">-</span><span class="dv">1</span>L, <span class="dv">0</span>L, <span class="dv">1</span>L, <span class="dv">2</span>L, <span class="dv">3</span>L)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(z)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">3</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(<span class="dv">3</span>L)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Para los ejemplos habituales ambos tipos producen las mismas operaciones. Sin embargo, una computadora representa un conjunto <strong>finito</strong> de valores; no contiene literalmente todos los elementos de <span class="math inline">\(\mathbb Z\)</span> ni de <span class="math inline">\(\mathbb R\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>.Machine<span class="sc">$</span>integer.max</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>.Machine<span class="sc">$</span>double.xmax</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Modelo matemático y representación computacional">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Modelo matemático y representación computacional
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Los enteros matemáticos no tienen cota superior. Los enteros almacenados en un tipo de computadora sí la tienen. Cuando un cálculo excede el rango o la precisión disponible, el resultado puede desbordarse o redondearse.</p>
+</div>
+</div>
+</section>
+<section id="comprobación-de-propiedades" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="comprobación-de-propiedades">Comprobación de propiedades</h3>
+<p>Elegimos tres enteros y comparamos ambos lados de las propiedades asociativa y distributiva.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">7</span>L</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">5</span>L</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">3</span>L</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">propiedad =</span> <span class="fu">c</span>(<span class="st">"asociativa de la suma"</span>, <span class="st">"distributiva"</span>),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">izquierda =</span> <span class="fu">c</span>((a <span class="sc">+</span> b) <span class="sc">+</span> c, a <span class="sc">*</span> (b <span class="sc">+</span> c)),</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">derecha =</span> <span class="fu">c</span>(a <span class="sc">+</span> (b <span class="sc">+</span> c), a <span class="sc">*</span> b <span class="sc">+</span> a <span class="sc">*</span> c)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La igualdad para estos valores es una <strong>verificación</strong>, no una demostración para todos los enteros.</p>
+</section>
+<section id="orden-en-la-recta-numérica" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="orden-en-la-recta-numérica">Orden en la recta numérica</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">6</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(x)), <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"entero"</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">yaxt =</span> <span class="st">"n"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Enteros en la recta numérica"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray50"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(x, <span class="fu">rep</span>(<span class="fl">0.08</span>, <span class="fu">length</span>(x)), <span class="at">labels =</span> x, <span class="at">cex =</span> <span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>En la recta, <span class="math inline">\(a&lt;b\)</span> significa que <span class="math inline">\(a\)</span> aparece a la izquierda de <span class="math inline">\(b\)</span>. Sumar el mismo número traslada ambos puntos sin cambiar su orden.</p>
+</section>
+</section>
+<section id="sec-induccion" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-induccion"><span class="header-section-number">2.2</span> Inducción matemática</h2>
+<section id="explorar-antes-de-demostrar" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="explorar-antes-de-demostrar">Explorar antes de demostrar</h3>
+<p>Consideremos la conjetura</p>
+<p><span class="math display">\[
+1+3+\cdots +(2n-1)=n^2.
+\]</span></p>
+<p>R permite comparar ambos lados para los primeros valores.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>lado_izquierdo <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(<span class="dv">2</span> <span class="sc">*</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>lado_derecho <span class="ot">&lt;-</span> n<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">n =</span> n,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">suma_impares =</span> lado_izquierdo,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">cuadrado =</span> lado_derecho,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">diferencia =</span> lado_izquierdo <span class="sc">-</span> lado_derecho</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Que la columna <code>diferencia</code> sea cero sugiere la identidad, pero la demostración inductiva explica por qué se conserva al pasar de <span class="math inline">\(n\)</span> a <span class="math inline">\(n+1\)</span>.</p>
+<div id="fig-induccion-impares" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-induccion-impares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/induccion-impares.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-induccion-impares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.1: La suma acumulada de impares coincide con los cuadrados perfectos.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="función-para-revisar-una-identidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="función-para-revisar-una-identidad">Función para revisar una identidad</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>revisar_identidad <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">n_max =</span> <span class="dv">50</span>L) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(n_max)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  izquierda <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(<span class="dv">2</span> <span class="sc">*</span> n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> n,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">izquierda =</span> izquierda,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">derecha =</span> n<span class="sc">^</span><span class="dv">2</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">coincide =</span> izquierda <span class="sc">==</span> n<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">revisar_identidad</span>(<span class="dv">20</span>L)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(resultado<span class="sc">$</span>coincide)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="interactivo-construir-el-siguiente-cuadrado" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-construir-el-siguiente-cuadrado">Interactivo: construir el siguiente cuadrado</h3>
+<p>Seleccione <span class="math inline">\(n\)</span> y observe cómo <span class="math inline">\(n^2\)</span> puntos, más una franja de <span class="math inline">\(2n+1\)</span> puntos, forman <span class="math inline">\((n+1)^2\)</span>.</p>
+<p><a href="interactivos/induccion-impares.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de inducción</a></p>
+<iframe class="interactive-frame induction" src="interactivos/induccion-impares.html" title="Construcción interactiva de la suma de números impares" loading="lazy">
+</iframe>
+</section>
+<section id="lo-que-r-no-demuestra" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="lo-que-r-no-demuestra">Lo que R no demuestra</h3>
+<p>No existe una instrucción que enumere todos los naturales y termine. La prueba formal requiere:</p>
+<ol type="1">
+<li>comprobar el caso base;</li>
+<li>suponer la fórmula para un entero arbitrario <span class="math inline">\(k\)</span>;</li>
+<li>deducir la fórmula para <span class="math inline">\(k+1\)</span>.</li>
+</ol>
+<p>R ayuda a encontrar errores y contraejemplos. Si una afirmación falla para algún valor ensayado, queda refutada; si no falla, todavía necesita demostración.</p>
+</section>
+</section>
+<section id="sec-divisibilidad" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-divisibilidad"><span class="header-section-number">2.3</span> Divisibilidad</h2>
+<section id="cociente-y-residuo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="cociente-y-residuo">Cociente y residuo</h3>
+<p>En R, <code>%/%</code> calcula el cociente entero y <code>%%</code> el residuo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">47</span>L, <span class="sc">-</span><span class="dv">47</span>L)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="dv">6</span>L</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>q <span class="ot">&lt;-</span> a <span class="sc">%/%</span> d</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> a <span class="sc">%%</span> d</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">a =</span> a,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">d =</span> d,</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">q =</span> q,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">r =</span> r,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">reconstruccion =</span> d <span class="sc">*</span> q <span class="sc">+</span> r</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Observe que R elige el residuo de modo que <span class="math inline">\(0\le r&lt;d\)</span> cuando <span class="math inline">\(d&gt;0\)</span>.</p>
+<p>Una función de divisibilidad puede escribirse así:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>divide <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (a <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"El divisor no puede ser cero"</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  b <span class="sc">%%</span> a <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">`</span><span class="at">7 divide 42</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">divide</span>(<span class="dv">7</span>L, <span class="dv">42</span>L),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">`</span><span class="at">7 divide 40</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">divide</span>(<span class="dv">7</span>L, <span class="dv">40</span>L))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="algoritmo-de-euclides" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="algoritmo-de-euclides">Algoritmo de Euclides</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>euclides <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  a <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">as.integer</span>(a))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  b <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">as.integer</span>(b))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  pasos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">dividendo =</span> <span class="fu">integer</span>(), <span class="at">divisor =</span> <span class="fu">integer</span>(),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">cociente =</span> <span class="fu">integer</span>(), <span class="at">residuo =</span> <span class="fu">integer</span>()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (b <span class="sc">!=</span> <span class="dv">0</span>L) {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    q <span class="ot">&lt;-</span> a <span class="sc">%/%</span> b</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span> a <span class="sc">%%</span> b</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    pasos <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>      pasos,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">data.frame</span>(<span class="at">dividendo =</span> a, <span class="at">divisor =</span> b,</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>                 <span class="at">cociente =</span> q, <span class="at">residuo =</span> r)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    a <span class="ot">&lt;-</span> b</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    b <span class="ot">&lt;-</span> r</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">mcd =</span> a, <span class="at">pasos =</span> pasos)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">euclides</span>(<span class="dv">252</span>L, <span class="dv">198</span>L)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>resultado<span class="sc">$</span>pasos</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>resultado<span class="sc">$</span>mcd</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-algoritmo-euclides" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-algoritmo-euclides-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/algoritmo-euclides.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-algoritmo-euclides-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.2: Los pares sucesivos del algoritmo de Euclides terminan en el máximo común divisor.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="euclides-extendido-y-coeficientes-de-bézout" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="euclides-extendido-y-coeficientes-de-bézout">Euclides extendido y coeficientes de Bézout</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>euclides_extendido <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  viejo_r <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(a); r <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(b)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  viejo_s <span class="ot">&lt;-</span> <span class="dv">1</span>L; s <span class="ot">&lt;-</span> <span class="dv">0</span>L</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  viejo_t <span class="ot">&lt;-</span> <span class="dv">0</span>L; t <span class="ot">&lt;-</span> <span class="dv">1</span>L</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (r <span class="sc">!=</span> <span class="dv">0</span>L) {</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    q <span class="ot">&lt;-</span> viejo_r <span class="sc">%/%</span> r</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    aux <span class="ot">&lt;-</span> viejo_r <span class="sc">-</span> q <span class="sc">*</span> r; viejo_r <span class="ot">&lt;-</span> r; r <span class="ot">&lt;-</span> aux</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    aux <span class="ot">&lt;-</span> viejo_s <span class="sc">-</span> q <span class="sc">*</span> s; viejo_s <span class="ot">&lt;-</span> s; s <span class="ot">&lt;-</span> aux</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    aux <span class="ot">&lt;-</span> viejo_t <span class="sc">-</span> q <span class="sc">*</span> t; viejo_t <span class="ot">&lt;-</span> t; t <span class="ot">&lt;-</span> aux</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (viejo_r <span class="sc">&lt;</span> <span class="dv">0</span>L) {</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    viejo_r <span class="ot">&lt;-</span> <span class="sc">-</span>viejo_r</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    viejo_s <span class="ot">&lt;-</span> <span class="sc">-</span>viejo_s</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    viejo_t <span class="ot">&lt;-</span> <span class="sc">-</span>viejo_t</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">mcd =</span> viejo_r, <span class="at">x =</span> viejo_s, <span class="at">y =</span> viejo_t)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>bezout <span class="ot">&lt;-</span> <span class="fu">euclides_extendido</span>(<span class="dv">252</span>L, <span class="dv">198</span>L)</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>bezout</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="dv">252</span>L <span class="sc">*</span> bezout[<span class="st">"x"</span>] <span class="sc">+</span> <span class="dv">198</span>L <span class="sc">*</span> bezout[<span class="st">"y"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="interactivo-residuos-sucesivos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-residuos-sucesivos">Interactivo: residuos sucesivos</h3>
+<p>Introduzca dos enteros positivos. El laboratorio muestra cada división y señala el último residuo no nulo.</p>
+<p><a href="interactivos/algoritmo-euclides.html" class="btn btn-primary" target="_blank">Abrir el algoritmo de Euclides</a></p>
+<iframe class="interactive-frame euclid" src="interactivos/algoritmo-euclides.html" title="Algoritmo de Euclides interactivo" loading="lazy">
+</iframe>
+</section>
+</section>
+<section id="sec-primos-factorizacion" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="sec-primos-factorizacion"><span class="header-section-number">2.4</span> Números primos y factorización</h2>
+<section id="prueba-de-primalidad-por-división" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="prueba-de-primalidad-por-división">Prueba de primalidad por división</h3>
+<p>Para decidir si <span class="math inline">\(n\)</span> es primo basta probar divisores hasta <span class="math inline">\(\sqrt n\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>es_primo <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(n)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;</span> <span class="dv">2</span>L) <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">==</span> <span class="dv">2</span>L) <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">%%</span> <span class="dv">2</span>L <span class="sc">==</span> <span class="dv">0</span>L) <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  limite <span class="ot">&lt;-</span> <span class="fu">floor</span>(<span class="fu">sqrt</span>(n))</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (limite <span class="sc">&lt;</span> <span class="dv">3</span>L) <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  candidatos <span class="ot">&lt;-</span> <span class="fu">seq.int</span>(<span class="dv">3</span>L, limite, <span class="at">by =</span> <span class="dv">2</span>L)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="sc">!</span><span class="fu">any</span>(n <span class="sc">%%</span> candidatos <span class="sc">==</span> <span class="dv">0</span>L)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">30</span>, es_primo)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)[<span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, es_primo)]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="criba-de-eratóstenes" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="criba-de-eratóstenes">Criba de Eratóstenes</h3>
+<p>La criba elimina múltiplos y conserva los primos no mayores que un límite.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>criba <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(n)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;</span> <span class="dv">2</span>L) <span class="fu">return</span>(<span class="fu">integer</span>())</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  primo <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="cn">TRUE</span>, n)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  primo[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  limite <span class="ot">&lt;-</span> <span class="fu">floor</span>(<span class="fu">sqrt</span>(n))</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (limite <span class="sc">&gt;=</span> <span class="dv">2</span>L) {</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (p <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>limite) {</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (primo[p]) primo[<span class="fu">seq.int</span>(p <span class="sc">*</span> p, n, <span class="at">by =</span> p)] <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">which</span>(primo)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="fu">criba</span>(<span class="dv">100</span>L)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="factorización-por-divisiones-sucesivas" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="factorización-por-divisiones-sucesivas">Factorización por divisiones sucesivas</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>factorizar <span class="ot">&lt;-</span> <span class="cf">function</span>(n) {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">abs</span>(<span class="fu">as.integer</span>(n))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;</span> <span class="dv">2</span>L) <span class="fu">return</span>(<span class="fu">integer</span>())</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  factores <span class="ot">&lt;-</span> <span class="fu">integer</span>()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  d <span class="ot">&lt;-</span> <span class="dv">2</span>L</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (d <span class="sc">*</span> d <span class="sc">&lt;=</span> n) {</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (n <span class="sc">%%</span> d <span class="sc">==</span> <span class="dv">0</span>L) {</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>      factores <span class="ot">&lt;-</span> <span class="fu">c</span>(factores, d)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>      n <span class="ot">&lt;-</span> n <span class="sc">%/%</span> d</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    d <span class="ot">&lt;-</span> <span class="cf">if</span> (d <span class="sc">==</span> <span class="dv">2</span>L) <span class="dv">3</span>L <span class="cf">else</span> d <span class="sc">+</span> <span class="dv">2</span>L</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&gt;</span> <span class="dv">1</span>L) factores <span class="ot">&lt;-</span> <span class="fu">c</span>(factores, n)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  factores</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">factorizar</span>(<span class="dv">756</span>L)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">factorizar</span>(<span class="dv">756</span>L))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-arbol-factorizacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-arbol-factorizacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/arbol-factorizacion.png" class="img-fluid figure-img" style="width:82.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-arbol-factorizacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.3: Cadena de factorización y descomposición prima de <span class="math inline">\(756\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="mcd-y-mcm" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="mcd-y-mcm">MCD y MCM</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>mcd <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) <span class="fu">euclides</span>(a, b)<span class="sc">$</span>mcd</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>mcm <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (a <span class="sc">==</span> <span class="dv">0</span>L <span class="sc">||</span> b <span class="sc">==</span> <span class="dv">0</span>L) <span class="fu">return</span>(<span class="dv">0</span>L)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abs</span>(a <span class="sc">%/%</span> <span class="fu">mcd</span>(a, b) <span class="sc">*</span> b)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">840</span>L</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">378</span>L</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">mcd =</span> <span class="fu">mcd</span>(a, b), <span class="at">mcm =</span> <span class="fu">mcm</span>(a, b), <span class="at">producto =</span> a <span class="sc">*</span> b)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mcd</span>(a, b) <span class="sc">*</span> <span class="fu">mcm</span>(a, b) <span class="sc">==</span> a <span class="sc">*</span> b</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="sec-racionales-reales" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-racionales-reales"><span class="header-section-number">2.5</span> Números racionales y números reales</h2>
+<section id="representar-una-fracción-exactamente" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="representar-una-fracción-exactamente">Representar una fracción exactamente</h3>
+<p>R base representa <code>1/3</code> mediante una aproximación de punto flotante. Para conservar una fracción exacta podemos guardar numerador y denominador reducidos.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fraccion <span class="ot">&lt;-</span> <span class="cf">function</span>(num, <span class="at">den =</span> <span class="dv">1</span>L) {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (den <span class="sc">==</span> <span class="dv">0</span>L) <span class="fu">stop</span>(<span class="st">"El denominador no puede ser cero"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  num <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(num)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  den <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(den)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (den <span class="sc">&lt;</span> <span class="dv">0</span>L) { num <span class="ot">&lt;-</span> <span class="sc">-</span>num; den <span class="ot">&lt;-</span> <span class="sc">-</span>den }</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="fu">mcd</span>(<span class="fu">abs</span>(num), den)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">num =</span> num <span class="sc">%/%</span> g, <span class="at">den =</span> den <span class="sc">%/%</span> g)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">fraccion</span>(<span class="dv">18</span>L, <span class="dv">24</span>L)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="fu">fraccion</span>(<span class="sc">-</span><span class="dv">15</span>L, <span class="sc">-</span><span class="dv">35</span>L)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="aproximación-y-precisión" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="aproximación-y-precisión">Aproximación y precisión</h3>
+<p>El conocido ejemplo siguiente muestra que una igualdad matemáticamente correcta puede no ser exacta en aritmética binaria de punto flotante.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fl">0.1</span> <span class="sc">+</span> <span class="fl">0.2</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>(<span class="fl">0.1</span> <span class="sc">+</span> <span class="fl">0.2</span>) <span class="sc">==</span> <span class="fl">0.3</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(<span class="fl">0.1</span> <span class="sc">+</span> <span class="fl">0.2</span>, <span class="fl">0.3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Para comparar resultados numéricos se utiliza una tolerancia:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>iguales_aprox <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y, <span class="at">tolerancia =</span> <span class="fl">1e-12</span>) {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abs</span>(x <span class="sc">-</span> y) <span class="sc">&lt;=</span> tolerancia</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">iguales_aprox</span>(<span class="fl">0.1</span> <span class="sc">+</span> <span class="fl">0.2</span>, <span class="fl">0.3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="racionales-e-irracionales-en-la-recta" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="racionales-e-irracionales-en-la-recta">Racionales e irracionales en la recta</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>valores <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>, <span class="fu">sqrt</span>(<span class="dv">2</span>), <span class="dv">3</span><span class="sc">/</span><span class="dv">2</span>, <span class="fu">sqrt</span>(<span class="dv">3</span>), <span class="dv">2</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>etiquetas <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"0"</span>, <span class="st">"1/2"</span>, <span class="st">"sqrt(2)"</span>, <span class="st">"3/2"</span>, <span class="st">"sqrt(3)"</span>, <span class="st">"2"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(valores, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(valores)), <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.1</span>, <span class="fl">2.1</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.35</span>, <span class="fl">0.35</span>),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">axes =</span> <span class="cn">FALSE</span>, <span class="at">xlab =</span> <span class="st">"recta real"</span>, <span class="at">ylab =</span> <span class="st">""</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray50"</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(valores, <span class="fu">rep</span>(<span class="fl">0.12</span>, <span class="fu">length</span>(valores)), etiquetas, <span class="at">cex =</span> <span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-jerarquia-numeros" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-jerarquia-numeros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/jerarquia-numeros.png" class="img-fluid figure-img" style="width:92.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jerarquia-numeros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.4: Los naturales, enteros, racionales e irracionales se sitúan dentro de los reales.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-propiedades-reales" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-propiedades-reales"><span class="header-section-number">2.6</span> Propiedades de los números reales</h2>
+<section id="orden-y-operaciones" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="orden-y-operaciones">Orden y operaciones</h3>
+<p>Podemos observar que multiplicar por un número negativo invierte una desigualdad.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">2</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>c_positivo <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>c_negativo <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">3</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">comparacion =</span> <span class="fu">c</span>(<span class="st">"original"</span>, <span class="st">"multiplicar por positivo"</span>, <span class="st">"multiplicar por negativo"</span>),</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">izquierda =</span> <span class="fu">c</span>(a, a <span class="sc">*</span> c_positivo, a <span class="sc">*</span> c_negativo),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">derecha =</span> <span class="fu">c</span>(b, b <span class="sc">*</span> c_positivo, b <span class="sc">*</span> c_negativo),</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">menor =</span> <span class="fu">c</span>(a <span class="sc">&lt;</span> b,</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>            a <span class="sc">*</span> c_positivo <span class="sc">&lt;</span> b <span class="sc">*</span> c_positivo,</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>            a <span class="sc">*</span> c_negativo <span class="sc">&lt;</span> b <span class="sc">*</span> c_negativo)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La tercera fila es falsa porque el sentido correcto es <span class="math inline">\(ac&gt;bc\)</span> cuando <span class="math inline">\(c&lt;0\)</span>.</p>
+</section>
+<section id="densidad-mediante-puntos-intermedios" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="densidad-mediante-puntos-intermedios">Densidad mediante puntos intermedios</h3>
+<p>Entre <span class="math inline">\(a&lt;b\)</span> podemos construir repetidamente puntos medios.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>puntos_medios <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, <span class="at">niveles =</span> <span class="dv">4</span>L) {</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  puntos <span class="ot">&lt;-</span> <span class="fu">c</span>(a, b)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(niveles)) {</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    puntos <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="fu">c</span>(puntos, <span class="fu">head</span>(puntos, <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span> <span class="fu">diff</span>(puntos) <span class="sc">/</span> <span class="dv">2</span>)))</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  puntos</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">puntos_medios</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>L)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>p</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(p, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(p)), <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"x"</span>, <span class="at">ylab =</span> <span class="st">""</span>, <span class="at">yaxt =</span> <span class="st">"n"</span>,</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Puntos intermedios entre 1 y 2"</span>)</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray50"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="aproximar-sqrt2-por-bisección" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="aproximar-sqrt2-por-bisección">Aproximar <span class="math inline">\(\sqrt2\)</span> por bisección</h3>
+<p>La completitud garantiza en <span class="math inline">\(\mathbb R\)</span> la existencia del límite que llena el corte entre números con cuadrado menor y mayor que <span class="math inline">\(2\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>aproximar_raiz2 <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">iteraciones =</span> <span class="dv">20</span>L) {</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  inferior <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  superior <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  historial <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_len</span>(iteraciones)) {</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    medio <span class="ot">&lt;-</span> (inferior <span class="sc">+</span> superior) <span class="sc">/</span> <span class="dv">2</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    historial <span class="ot">&lt;-</span> <span class="fu">rbind</span>(</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>      historial,</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>      <span class="fu">data.frame</span>(<span class="at">i =</span> i, <span class="at">inferior =</span> inferior,</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">medio =</span> medio, <span class="at">superior =</span> superior,</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">error =</span> medio<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (medio<span class="sc">^</span><span class="dv">2</span> <span class="sc">&lt;</span> <span class="dv">2</span>) inferior <span class="ot">&lt;-</span> medio <span class="cf">else</span> superior <span class="ot">&lt;-</span> medio</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  historial</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>aproximacion <span class="ot">&lt;-</span> <span class="fu">aproximar_raiz2</span>(<span class="dv">15</span>L)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(aproximacion, <span class="dv">5</span>)</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="sec-exponentes" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="sec-exponentes"><span class="header-section-number">2.7</span> Exponentes racionales y negativos</h2>
+<section id="potencias-y-dominio" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="potencias-y-dominio">Potencias y dominio</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">expresion =</span> <span class="fu">c</span>(<span class="st">"2^(-3)"</span>, <span class="st">"16^(3/4)"</span>, <span class="st">"(-8)^(1/3)"</span>),</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">valor_R =</span> <span class="fu">c</span>(<span class="dv">2</span><span class="sc">^</span>(<span class="sc">-</span><span class="dv">3</span>), <span class="dv">16</span><span class="sc">^</span>(<span class="dv">3</span><span class="sc">/</span><span class="dv">4</span>), (<span class="sc">-</span><span class="dv">8</span>)<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>))</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La última expresión muestra una dificultad: aunque la raíz cúbica real de <span class="math inline">\(-8\)</span> es <span class="math inline">\(-2\)</span>, la operación directa puede producir <code>NaN</code> porque R evalúa potencias reales mediante logaritmos complejos fuera del dominio real positivo.</p>
+<p>Podemos construir la raíz impar real:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>raiz_impar <span class="ot">&lt;-</span> <span class="cf">function</span>(x, n) {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (n <span class="sc">&lt;=</span> <span class="dv">0</span>L <span class="sc">||</span> n <span class="sc">%%</span> <span class="dv">2</span>L <span class="sc">==</span> <span class="dv">0</span>L) <span class="fu">stop</span>(<span class="st">"n debe ser impar positivo"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sign</span>(x) <span class="sc">*</span> <span class="fu">abs</span>(x)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> n)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">raiz_impar</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">3</span>L)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="verificar-leyes-con-restricciones" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="verificar-leyes-con-restricciones">Verificar leyes con restricciones</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">3</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">/</span><span class="dv">4</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> a<span class="sc">^</span>r <span class="sc">*</span> a<span class="sc">^</span>s,</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">suma_exponentes =</span> a<span class="sc">^</span>(r <span class="sc">+</span> s),</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">diferencia =</span> a<span class="sc">^</span>r <span class="sc">*</span> a<span class="sc">^</span>s <span class="sc">-</span> a<span class="sc">^</span>(r <span class="sc">+</span> s)</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Por redondeo, conviene comparar con <code>all.equal()</code>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all.equal</span>(a<span class="sc">^</span>r <span class="sc">*</span> a<span class="sc">^</span>s, a<span class="sc">^</span>(r <span class="sc">+</span> s))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="gráficas-de-potencias" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="gráficas-de-potencias">Gráficas de potencias</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fl">0.05</span>, <span class="dv">4</span>, <span class="at">length.out =</span> <span class="dv">400</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(x, x<span class="sc">^</span><span class="dv">2</span>, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"x"</span>, <span class="at">ylab =</span> <span class="st">"y"</span>, <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">8</span>),</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Exponentes sobre bases positivas"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, <span class="fu">sqrt</span>(x), <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(x, x<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span>), <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">lty =</span> <span class="dv">3</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">c</span>(<span class="st">"x^2"</span>, <span class="st">"x^(1/2)"</span>, <span class="st">"x^(-1)"</span>),</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="sec-valor-absoluto" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="sec-valor-absoluto"><span class="header-section-number">2.8</span> Valor absoluto</h2>
+<section id="distancia-en-la-recta" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="distancia-en-la-recta">Distancia en la recta</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">7</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">centro =</span> a, <span class="at">distancia =</span> <span class="fu">abs</span>(x <span class="sc">-</span> a))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-valor-absoluto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-valor-absoluto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/valor-absoluto.png" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-valor-absoluto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2.5: La desigualdad <span class="math inline">\(|x-a|\le r\)</span> selecciona un intervalo centrado en <span class="math inline">\(a\)</span>.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="resolver-inecuaciones" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="resolver-inecuaciones">Resolver inecuaciones</h3>
+<p>Para resolver <span class="math inline">\(|x-a|\le r\)</span>, el intervalo solución es <span class="math inline">\([a-r,a+r]\)</span> cuando <span class="math inline">\(r\ge0\)</span>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>intervalo_abs <span class="ot">&lt;-</span> <span class="cf">function</span>(a, r, <span class="at">tipo =</span> <span class="fu">c</span>(<span class="st">"menor_igual"</span>, <span class="st">"mayor"</span>)) {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  tipo <span class="ot">&lt;-</span> <span class="fu">match.arg</span>(tipo)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (r <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"r debe ser no negativo"</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  extremos <span class="ot">&lt;-</span> <span class="fu">c</span>(a <span class="sc">-</span> r, a <span class="sc">+</span> r)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (tipo <span class="sc">==</span> <span class="st">"menor_igual"</span>) {</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(<span class="at">intervalo =</span> extremos,</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">descripcion =</span> <span class="fu">sprintf</span>(<span class="st">"[%g, %g]"</span>, extremos[<span class="dv">1</span>], extremos[<span class="dv">2</span>]))</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">list</span>(<span class="at">intervalos =</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>, extremos[<span class="dv">1</span>], extremos[<span class="dv">2</span>], <span class="cn">Inf</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">descripcion =</span> <span class="fu">sprintf</span>(<span class="st">"(-Inf, %g) U (%g, Inf)"</span>, extremos[<span class="dv">1</span>], extremos[<span class="dv">2</span>]))</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="fu">intervalo_abs</span>(<span class="at">a =</span> <span class="dv">4</span>, <span class="at">r =</span> <span class="dv">7</span>, <span class="at">tipo =</span> <span class="st">"menor_igual"</span>)</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="fu">intervalo_abs</span>(<span class="at">a =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">r =</span> <span class="dv">2</span>, <span class="at">tipo =</span> <span class="st">"mayor"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="comprobar-la-desigualdad-triangular" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="comprobar-la-desigualdad-triangular">Comprobar la desigualdad triangular</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">abs</span>(x <span class="sc">+</span> y) <span class="sc">&lt;=</span> <span class="fu">abs</span>(x) <span class="sc">+</span> <span class="fu">abs</span>(y) <span class="sc">+</span> <span class="fl">1e-12</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">abs</span>(x <span class="sc">+</span> y) <span class="sc">-</span> (<span class="fu">abs</span>(x) <span class="sc">+</span> <span class="fu">abs</span>(y)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La simulación busca contraejemplos en mil pares. No sustituye la demostración, pero ayuda a comprobar la implementación y a observar que la diferencia nunca resulta positiva.</p>
+</section>
+<section id="interactivo-centro-radio-e-intervalo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-centro-radio-e-intervalo">Interactivo: centro, radio e intervalo</h3>
+<p>Cambie el centro <span class="math inline">\(a\)</span>, el radio <span class="math inline">\(r\)</span> y el tipo de desigualdad. La recta numérica muestra si la solución es un intervalo central o dos regiones exteriores.</p>
+<p><a href="interactivos/valor-absoluto.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de valor absoluto</a></p>
+<iframe class="interactive-frame absolute" src="interactivos/valor-absoluto.html" title="Laboratorio interactivo de valor absoluto" loading="lazy">
+</iframe>
+</section>
+</section>
+<section id="laboratorio-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-del-capítulo">Laboratorio del capítulo</h2>
+<p>La versión incorpora tres actividades autónomas:</p>
+<ol type="1">
+<li><strong>Inducción visual:</strong> construye <span class="math inline">\((n+1)^2\)</span> a partir de <span class="math inline">\(n^2\)</span> y <span class="math inline">\(2n+1\)</span>.</li>
+<li><strong>Algoritmo de Euclides:</strong> presenta cocientes y residuos hasta encontrar el MCD.</li>
+<li><strong>Valor absoluto:</strong> transforma distancia en intervalos y regiones de la recta real.</li>
+</ol>
+<p>Estas actividades funcionan en el sitio estático. El cuaderno Colab reúne además todos los algoritmos y experimentos de R.</p>
+</section>
+<section id="ejercicios-con-r" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios-con-r">Ejercicios con R</h2>
+<ol type="1">
+<li>Genere enteros aleatorios y compruebe las propiedades conmutativa, asociativa y distributiva.</li>
+<li>Construya una tabla para contrastar <span class="math inline">\(1+2+\cdots+n\)</span> con <span class="math inline">\(n(n+1)/2\)</span> hasta <span class="math inline">\(n=100\)</span>.</li>
+<li>Modifique <code>euclides()</code> para aceptar una lista de enteros y calcular su MCD.</li>
+<li>Use <code>euclides_extendido()</code> para resolver una ecuación diofántica <span class="math inline">\(ax+by=c\)</span>.</li>
+<li>Compare el tiempo de <code>es_primo()</code> y <code>criba()</code> al buscar primos hasta un límite creciente.</li>
+<li>Escriba una función que devuelva la factorización como texto, por ejemplo <code>2^2 * 3^3 * 7</code>.</li>
+<li>Genere aproximaciones racionales de <span class="math inline">\(\sqrt2\)</span> y grafique el error absoluto.</li>
+<li>Construya ejemplos donde comparar con <code>==</code> falle, pero <code>all.equal()</code> sea verdadero.</li>
+<li>Trace <span class="math inline">\(x^r\)</span> para exponentes negativos, fraccionarios y enteros en sus dominios reales.</li>
+<li>Genere puntos al azar y compruebe la desigualdad triangular inversa.</li>
+</ol>
+</section>
+<section id="proyecto-integrador" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="proyecto-integrador">Proyecto integrador</h2>
+<p>Desarrolle un pequeño analizador de enteros que reciba <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> y produzca:</p>
+<ol type="1">
+<li>clasificación de signo y paridad;</li>
+<li>divisores positivos;</li>
+<li>factorización prima;</li>
+<li>tabla completa del algoritmo de Euclides;</li>
+<li>coeficientes de Bézout;</li>
+<li>MCD y MCM calculados de dos maneras;</li>
+<li>verificaciones automáticas de las identidades utilizadas;</li>
+<li>una interpretación escrita de los resultados.</li>
+</ol>
+<p>El informe debe distinguir con claridad qué resultados son cálculos, cuáles son verificaciones finitas y cuáles dependen de un teorema general.</p>
+</section>
+<section id="síntesis" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="síntesis">Síntesis</h2>
+<p>R hace visibles los algoritmos y permite experimentar con numerosos ejemplos. El residuo implementa divisibilidad; Euclides reduce el problema del MCD; la criba y las divisiones sucesivas exploran primos; las aproximaciones muestran la diferencia entre un real matemático y su representación finita. La inducción, la unicidad de la factorización y las propiedades de completitud siguen requiriendo razonamiento matemático.</p>
+</section>
+<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<p>La secuencia sigue la unidad 2 del programa de Álgebra Superior <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. Los fundamentos se apoyan en <span class="citation" data-cites="silvaLazo2007">Silva y Lazo (<a href="references.html#ref-silvaLazo2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="rosen2019">Rosen (<a href="references.html#ref-rosen2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="burton2011">Burton (<a href="references.html#ref-burton2011" role="doc-biblioref">2011</a>)</span> y <span class="citation" data-cites="niven1991">Niven et&nbsp;al. (<a href="references.html#ref-niven1991" role="doc-biblioref">1991</a>)</span>. Los algoritmos se implementan con R base <span class="citation" data-cites="rCore2026">(<a href="references.html#ref-rCore2026" role="doc-biblioref">R Core Team 2026</a>)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-burton2011" class="csl-entry" role="listitem">
+Burton, David M. 2011. <em>Elementary Number Theory</em>. 7.ª ed. McGraw-Hill.
+</div>
+<div id="ref-niven1991" class="csl-entry" role="listitem">
+Niven, Ivan, Herbert S. Zuckerman, y Hugh L. Montgomery. 1991. <em>An Introduction to the Theory of Numbers</em>. 5.ª ed. John Wiley &amp; Sons.
+</div>
+<div id="ref-rCore2026" class="csl-entry" role="listitem">
+R Core Team. 2026. <em>R: A Language and Environment for Statistical Computing</em>. R Foundation for Statistical Computing.
+</div>
+<div id="ref-rosen2019" class="csl-entry" role="listitem">
+Rosen, Kenneth H. 2019. <em>Discrete Mathematics and Its Applications</em>. 8.ª ed. McGraw-Hill Education.
+</div>
+<div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
+Silva, Juan Manuel, y Adriana Lazo. 2007. <em>Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>. 7.ª ed. Limusa.
+</div>
+<div id="ref-uaslp2011" class="csl-entry" role="listitem">
+Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. <em>Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico</em>. Propuesta de modificación curricular.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./01-logica-conjuntos.html" class="pagination-link" aria-label="Lógica y conjuntos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./03-numeros-complejos.html" class="pagination-link" aria-label="Números complejos">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licencia CC BY-NC-SA 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

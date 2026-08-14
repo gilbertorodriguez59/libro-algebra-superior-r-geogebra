@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">Representación cartesiana y polar</title>
+  <desc id="desc">El punto tres coma cuatro se representa con componentes tres y cuatro, módulo cinco y argumento theta.</desc>
+  <defs>
+    <marker id="arrow-pc" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 z" fill="#123b6d"/>
+    </marker>
+    <marker id="arrow-pc-gold" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#b58a2a"/>
+    </marker>
+  </defs>
+  <rect width="760" height="480" rx="18" fill="#f7fbff"/>
+  <g stroke="#d5e2ee" stroke-width="1">
+    <path d="M80 65V420M150 65V420M220 65V420M290 65V420M360 65V420M430 65V420M500 65V420M570 65V420M640 65V420"/>
+    <path d="M80 90H680M80 160H680M80 230H680M80 300H680M80 370H680"/>
+  </g>
+  <g stroke="#315873" stroke-width="2.2" marker-end="url(#arrow-pc)">
+    <path d="M55 370H695"/>
+    <path d="M150 435V52"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="17" fill="#18344f">
+    <text x="700" y="365">x</text>
+    <text x="158" y="55">y</text>
+    <text x="140" y="393">0</text>
+    <text x="353" y="393">3</text>
+    <text x="126" y="95">4</text>
+  </g>
+  <path d="M150 370L360 90" fill="none" stroke="#123b6d" stroke-width="5" marker-end="url(#arrow-pc)"/>
+  <path d="M360 90V370H150" fill="none" stroke="#2c7a5a" stroke-width="3" stroke-dasharray="9 7"/>
+  <path d="M218 370 A68 68 0 0 0 191 316" fill="none" stroke="#b58a2a" stroke-width="4" marker-end="url(#arrow-pc-gold)"/>
+  <circle cx="360" cy="90" r="7" fill="#b58a2a"/>
+  <g font-family="Arial, sans-serif" fill="#18344f">
+    <text x="374" y="82" font-size="21" font-weight="700">z = (3,4) = 3 + 4i</text>
+    <text x="272" y="214" font-size="20" font-weight="700" fill="#123b6d">r = 5</text>
+    <text x="213" y="329" font-size="20" font-weight="700" fill="#8a671c">θ</text>
+    <text x="246" y="397" font-size="18" fill="#2c7a5a">x = r cos θ</text>
+    <text x="382" y="239" font-size="18" fill="#2c7a5a">y = r sen θ</text>
+    <text x="448" y="314" font-size="18">θ = atan2(4,3)</text>
+    <text x="448" y="341" font-size="18">≈ 0.9273 rad = 53.13°</text>
+  </g>
+</svg>

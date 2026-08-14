@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Operaciones con dos conjuntos mediante diagramas de Venn</title>
+  <desc id="desc">Cuatro paneles ilustran la unión, la intersección, el complemento de A y la diferencia simétrica de A y B.</desc>
+  <defs>
+    <style>
+      .panel{fill:#f8fbff;stroke:#9bb5cf;stroke-width:2}.u{fill:none;stroke:#294d73;stroke-width:2.5}.set{fill:none;stroke:#173f6b;stroke-width:3}.shade{fill:#3b82c4;fill-opacity:.62}.label{font:700 25px Arial,sans-serif;fill:#173f6b}.small{font:20px Arial,sans-serif;fill:#173f6b}.caption{font:700 22px Arial,sans-serif;fill:#173f6b}.outside{fill:#8db9df;fill-opacity:.48}
+    </style>
+    <clipPath id="clipA1"><circle cx="190" cy="245" r="105"/></clipPath>
+    <clipPath id="clipA2"><circle cx="835" cy="195" r="87"/></clipPath>
+    <clipPath id="clipA4"><circle cx="835" cy="515" r="87"/></clipPath>
+  </defs>
+
+  <rect class="panel" x="20" y="35" width="560" height="285" rx="18"/>
+  <text class="caption" x="300" y="72" text-anchor="middle">Unión: A ∪ B</text>
+  <rect class="u" x="65" y="90" width="470" height="205" rx="10"/>
+  <text class="small" x="82" y="116">U</text>
+  <circle class="shade" cx="235" cy="195" r="87"/><circle class="shade" cx="365" cy="195" r="87"/>
+  <circle class="set" cx="235" cy="195" r="87"/><circle class="set" cx="365" cy="195" r="87"/>
+  <text class="label" x="195" y="202">A</text><text class="label" x="395" y="202">B</text>
+
+  <rect class="panel" x="620" y="35" width="560" height="285" rx="18"/>
+  <text class="caption" x="900" y="72" text-anchor="middle">Intersección: A ∩ B</text>
+  <rect class="u" x="665" y="90" width="470" height="205" rx="10"/>
+  <text class="small" x="682" y="116">U</text>
+  <circle class="shade" cx="965" cy="195" r="87" clip-path="url(#clipA2)"/>
+  <circle class="set" cx="835" cy="195" r="87"/><circle class="set" cx="965" cy="195" r="87"/>
+  <text class="label" x="795" y="202">A</text><text class="label" x="995" y="202">B</text>
+
+  <rect class="panel" x="20" y="355" width="560" height="285" rx="18"/>
+  <text class="caption" x="300" y="392" text-anchor="middle">Complemento: Aᶜ</text>
+  <rect class="outside" x="65" y="410" width="470" height="205" rx="10"/>
+  <rect class="u" x="65" y="410" width="470" height="205" rx="10"/>
+  <text class="small" x="82" y="436">U</text>
+  <circle cx="300" cy="512" r="87" fill="#f8fbff"/>
+  <circle class="set" cx="300" cy="512" r="87"/>
+  <text class="label" x="290" y="520">A</text>
+
+  <rect class="panel" x="620" y="355" width="560" height="285" rx="18"/>
+  <text class="caption" x="900" y="392" text-anchor="middle">Diferencia simétrica: A △ B</text>
+  <rect class="u" x="665" y="410" width="470" height="205" rx="10"/>
+  <text class="small" x="682" y="436">U</text>
+  <circle class="shade" cx="835" cy="515" r="87"/><circle class="shade" cx="965" cy="515" r="87"/>
+  <circle cx="965" cy="515" r="87" fill="#f8fbff" clip-path="url(#clipA4)"/>
+  <circle class="set" cx="835" cy="515" r="87"/><circle class="set" cx="965" cy="515" r="87"/>
+  <text class="label" x="795" y="522">A</text><text class="label" x="995" y="522">B</text>
+</svg>

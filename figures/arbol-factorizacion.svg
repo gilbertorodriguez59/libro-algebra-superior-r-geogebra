@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Factorización prima de 756</title>
+  <desc id="desc">Una cadena de descomposiciones sustituye cada factor compuesto hasta llegar a dos al cuadrado por tres al cubo por siete.</desc>
+  <rect width="900" height="520" fill="#f7fbff"/>
+  <text x="450" y="45" text-anchor="middle" font-family="sans-serif" font-size="29" font-weight="700" fill="#123b6d">Factorización prima de 756</text>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#6f94b6"/></marker></defs>
+  <g stroke="#6f94b6" stroke-width="4" marker-end="url(#arrow)">
+    <line x1="450" y1="115" x2="450" y2="145"/>
+    <line x1="450" y1="205" x2="450" y2="235"/>
+    <line x1="450" y1="295" x2="450" y2="325"/>
+    <line x1="450" y1="385" x2="450" y2="415"/>
+  </g>
+  <g font-family="sans-serif" font-size="24" text-anchor="middle">
+    <rect x="330" y="70" width="240" height="48" rx="24" fill="#dceafa" stroke="#123b6d" stroke-width="3"/><text x="450" y="102" fill="#123b6d" font-weight="700">756</text>
+    <rect x="270" y="150" width="360" height="58" rx="16" fill="#ffffff" stroke="#6f94b6" stroke-width="2"/><text x="450" y="187" fill="#18344f">108 × <tspan fill="#b05b1d" font-weight="700">7</tspan></text>
+    <rect x="270" y="240" width="360" height="58" rx="16" fill="#ffffff" stroke="#6f94b6" stroke-width="2"/><text x="450" y="277" fill="#18344f"><tspan fill="#b05b1d" font-weight="700">2</tspan> × 54 × <tspan fill="#b05b1d" font-weight="700">7</tspan></text>
+    <rect x="270" y="330" width="360" height="58" rx="16" fill="#ffffff" stroke="#6f94b6" stroke-width="2"/><text x="450" y="367" fill="#18344f"><tspan fill="#b05b1d" font-weight="700">2 × 2</tspan> × 27 × <tspan fill="#b05b1d" font-weight="700">7</tspan></text>
+    <rect x="210" y="420" width="480" height="62" rx="18" fill="#123b6d"/><text x="450" y="460" fill="#ffffff" font-weight="700">2² × 3³ × 7</text>
+  </g>
+  <text x="720" y="183" font-family="sans-serif" font-size="19" fill="#4d6680">108 = 2 × 54</text>
+  <text x="720" y="273" font-family="sans-serif" font-size="19" fill="#4d6680">54 = 2 × 27</text>
+  <text x="720" y="363" font-family="sans-serif" font-size="19" fill="#4d6680">27 = 3 × 3 × 3</text>
+</svg>

@@ -1,0 +1,27 @@
+# Glosario {.unnumbered}
+
+**Algoritmo.** Secuencia finita y ordenada de instrucciones para resolver un problema.
+
+**Biyectiva.** Función simultáneamente inyectiva y suprayectiva.
+
+**Construcción dinámica.** Recurso de GeoGebra cuyos objetos dependen de parámetros que pueden modificarse interactivamente.
+
+**Cuaderno.** Documento ejecutable que combina explicación, fórmulas, código y resultados.
+
+**Dominio.** Conjunto de entradas para las que se define una función.
+
+**Función.** Correspondencia que asigna a cada elemento del dominio exactamente una imagen.
+
+**Iteración.** Repetición de un cálculo que produce aproximaciones sucesivas.
+
+**Objeto de R.** Estructura identificada por un nombre que almacena datos, funciones o resultados.
+
+**Polinomio.** Suma finita de términos con potencias enteras no negativas de una variable.
+
+**Raíz.** Valor que hace cero una función o un polinomio.
+
+**Reproducibilidad.** Posibilidad de repetir un análisis con los mismos datos, instrucciones y parámetros.
+
+**Tolerancia.** Umbral usado como criterio de parada en un método numérico.
+
+**Visualización dinámica.** Representación gráfica que permite modificar parámetros y observar inmediatamente sus efectos.

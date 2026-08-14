@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Jerarquía de sistemas numéricos</title>
+  <desc id="desc">Conjuntos anidados muestran que los naturales están dentro de los enteros, estos dentro de los racionales y todos dentro de los reales; los irracionales ocupan la parte real exterior a los racionales.</desc>
+  <rect width="900" height="520" fill="#f7fbff"/>
+  <text x="450" y="46" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123b6d">Sistemas numéricos</text>
+  <rect x="55" y="75" width="790" height="385" rx="28" fill="#e7f1fa" stroke="#123b6d" stroke-width="4"/>
+  <text x="80" y="112" font-family="sans-serif" font-size="25" font-weight="700" fill="#123b6d">ℝ Reales</text>
+  <rect x="95" y="130" width="550" height="290" rx="26" fill="#d6eadf" stroke="#2c7a5a" stroke-width="4"/>
+  <text x="120" y="168" font-family="sans-serif" font-size="24" font-weight="700" fill="#205e45">ℚ Racionales</text>
+  <rect x="145" y="185" width="400" height="190" rx="24" fill="#f5e6be" stroke="#b58a2a" stroke-width="4"/>
+  <text x="170" y="223" font-family="sans-serif" font-size="24" font-weight="700" fill="#745718">ℤ Enteros</text>
+  <rect x="205" y="245" width="245" height="90" rx="22" fill="#dceafa" stroke="#2f7fbd" stroke-width="4"/>
+  <text x="230" y="282" font-family="sans-serif" font-size="24" font-weight="700" fill="#174f79">ℕ Naturales</text>
+  <text x="327" y="316" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#18344f">1, 2, 3, ...</text>
+  <text x="180" y="356" font-family="sans-serif" font-size="20" fill="#18344f">..., -2, -1, 0</text>
+  <text x="480" y="400" text-anchor="end" font-family="sans-serif" font-size="20" fill="#18344f">1/2, -7/3, 0.125</text>
+  <rect x="680" y="155" width="130" height="225" rx="22" fill="#f3dfe6" stroke="#9a4763" stroke-width="4"/>
+  <text x="745" y="195" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="700" fill="#7c3450">Irracionales</text>
+  <text x="745" y="245" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#18344f">√2</text>
+  <text x="745" y="290" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#18344f">π</text>
+  <text x="745" y="335" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#18344f">e</text>
+  <text x="450" y="500" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#123b6d">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</text>
+</svg>

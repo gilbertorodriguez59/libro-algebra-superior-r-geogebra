@@ -1,0 +1,30 @@
+# Créditos editoriales {.unnumbered}
+
+**Título:** *Álgebra Superior con aplicaciones en R y GeoGebra*  
+**Subtítulo:** Teoría, visualización y experimentación  
+**Autor:** Jesús Gilberto Rodríguez Escobedo  
+**Edición:** Primera edición digital, 2026  
+**Lugar de edición:** San Luis Potosí, México  
+**Producción editorial:** edición académica abierta desarrollada con Quarto, R, GeoGebra, Jupyter, Git y GitHub Pages.  
+**Formatos:** libro web interactivo, PDF descargable, cuadernos y construcciones `.ggb`.
+
+## Cómo citar esta obra {.unnumbered .unlisted}
+
+Rodríguez Escobedo, J. G. (2026). *Álgebra Superior con aplicaciones en R y GeoGebra: teoría, visualización y experimentación*. Primera edición digital. San Luis Potosí, México.
+
+## Entrada BibTeX sugerida {.unnumbered .unlisted}
+
+```bibtex
+@book{rodriguez2026algebrargeogebra,
+  author    = {Rodríguez Escobedo, Jesús Gilberto},
+  title     = {Álgebra Superior con aplicaciones en R y GeoGebra},
+  subtitle  = {Teoría, visualización y experimentación},
+  year      = {2026},
+  address   = {San Luis Potosí, México},
+  note      = {Primera edición digital, libro web interactivo y PDF}
+}
+```
+
+## Volumen teórico complementario {.unnumbered .unlisted}
+
+Las definiciones, propiedades y demostraciones se amplían en *Fundamentos Matemáticos del Álgebra Superior*.

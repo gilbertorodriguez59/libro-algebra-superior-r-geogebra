@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">Conjugación compleja</title>
+  <desc id="desc">El complejo tres más cuatro i y su conjugado tres menos cuatro i son reflejos respecto del eje real.</desc>
+  <defs>
+    <marker id="arrow-cc-blue" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#1769a6"/></marker>
+    <marker id="arrow-cc-green" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2c7a5a"/></marker>
+  </defs>
+  <rect width="760" height="480" rx="18" fill="#f7fbff"/>
+  <g stroke="#d5e2ee" stroke-width="1">
+    <path d="M100 60V420M180 60V420M260 60V420M340 60V420M420 60V420M500 60V420M580 60V420M660 60V420"/>
+    <path d="M70 80H690M70 160H690M70 240H690M70 320H690M70 400H690"/>
+  </g>
+  <g stroke="#315873" stroke-width="2.2">
+    <path d="M65 240H700"/>
+    <path d="M180 435V45"/>
+  </g>
+  <path d="M180 240L420 80" stroke="#1769a6" stroke-width="5" fill="none" marker-end="url(#arrow-cc-blue)"/>
+  <path d="M180 240L420 400" stroke="#2c7a5a" stroke-width="5" fill="none" marker-end="url(#arrow-cc-green)"/>
+  <path d="M420 80V400" stroke="#b58a2a" stroke-width="3" stroke-dasharray="9 7"/>
+  <circle cx="420" cy="80" r="7" fill="#1769a6"/>
+  <circle cx="420" cy="400" r="7" fill="#2c7a5a"/>
+  <g font-family="Arial, sans-serif" font-size="21" font-weight="700">
+    <text x="438" y="78" fill="#1769a6">z = 3 + 2i</text>
+    <text x="438" y="406" fill="#2c7a5a">z̄ = 3 − 2i</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#18344f">
+    <text x="604" y="231">Eje real</text>
+    <text x="190" y="55">Eje imaginario</text>
+    <text x="446" y="199" fill="#8a671c">reflexión</text>
+    <text x="454" y="224" fill="#8a671c">respecto del eje real</text>
+  </g>
+</svg>

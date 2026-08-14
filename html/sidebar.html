@@ -1,0 +1,54 @@
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>

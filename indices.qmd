@@ -1,0 +1,190 @@
+# Índices de consulta {.unnumbered}
+
+Los índices permiten localizar conceptos, código, figuras y laboratorios sin aumentar la numeración principal del libro.
+
+## Índice temático {.unnumbered}
+
+| Término o recurso | Sección principal |
+|---|---|
+| **Algoritmo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Aritmética de punto flotante** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
+| **Bézout, coeficientes de** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Cardinalidad** | [1.5 Conjuntos finitos](01-logica-conjuntos.qmd#sec-cardinalidad-finita) y [1.9 Conjuntos infinitos](01-logica-conjuntos.qmd#sec-cardinalidad-infinita) |
+| **Circuitos lógicos** | aplicación integradora del capítulo 1 |
+| **Completitud** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
+| **Conjunto potencia** | [1.1 Lenguaje de conjuntos](01-logica-conjuntos.qmd#sec-lenguaje-conjuntos) |
+| **Cuantificadores en dominios finitos** | [1.3 Cuantificadores](01-logica-conjuntos.qmd#sec-cuantificadores) |
+| **Densidad** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
+| **Divisibilidad** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Exponentes** | [2.7 Exponentes](02-enteros-reales.qmd#sec-exponentes) |
+| **Factorización prima** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
+| **Funciones en R** | [1.7 Funciones](01-logica-conjuntos.qmd#sec-funciones) |
+| **Inducción y verificación** | [2.2 Inducción](02-enteros-reales.qmd#sec-induccion) |
+| **Interactivo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Interactivo de funciones** | [1.8 Tipos de funciones](01-logica-conjuntos.qmd#sec-tipos-funciones) |
+| **Interactivo de inducción** | [2.2 Inducción](02-enteros-reales.qmd#sec-induccion) |
+| **Interactivo de tablas de verdad** | [1.2 Proposiciones](01-logica-conjuntos.qmd#sec-proposiciones) |
+| **Interactivo de valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.qmd#sec-valor-absoluto) |
+| **Interactivo de Venn** | [1.4 Operaciones de conjuntos](01-logica-conjuntos.qmd#sec-operaciones-conjuntos) |
+| **Máximo común divisor** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
+| **Mínimo común múltiplo** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
+| **Números primos** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
+| **Operaciones con conjuntos en R** | [1.4 Operaciones de conjuntos](01-logica-conjuntos.qmd#sec-operaciones-conjuntos) |
+| **Racionales exactos y aproximados** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
+| **Relaciones en R** | [1.6 Producto y relaciones](01-logica-conjuntos.qmd#sec-producto-relaciones) |
+| **Valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.qmd#sec-valor-absoluto) |
+| **Argumento principal** | [3.4 Módulo y argumento](03-numeros-complejos.qmd#sec-modulo-argumento) |
+| **Complejo conjugado** | [3.7 Conjugado](03-numeros-complejos.qmd#sec-conjugado) |
+| **Conversión cartesiana-polar** | [3.2 Representaciones](03-numeros-complejos.qmd#sec-cartesiana-polar) |
+| **De Moivre en R** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
+| **Multiplicación como rotación** | [3.6 Operaciones complejas](03-numeros-complejos.qmd#sec-operaciones-complejos) |
+| **Raíces de la unidad** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
+| **División sintética** | [4.5 Residuo y división sintética](04-polinomios.qmd#sec-residuo-sintetica) |
+| **Factorización lineal** | [4.8 Factores lineales](04-polinomios.qmd#sec-factorizacion-lineal) |
+| **Fracciones parciales** | [4.11 Fracciones parciales](04-polinomios.qmd#sec-fracciones-parciales) |
+| **Función racional** | [4.10 Funciones racionales](04-polinomios.qmd#sec-funciones-racionales) |
+| **GeoGebra para polinomios** | laboratorio computacional del capítulo 4 |
+| **Multiplicidad de una raíz** | [4.6 Raíces múltiples](04-polinomios.qmd#sec-raices-multiples) |
+| **Polinomio** | [4.1 Definición](04-polinomios.qmd#sec-definicion-polinomio) |
+| **Raíces conjugadas** | [4.9 Polinomios reales](04-polinomios.qmd#sec-polinomios-reales) |
+| **Teorema fundamental del álgebra** | [4.7 Teorema fundamental](04-polinomios.qmd#sec-teorema-fundamental-algebra) |
+| **Bisección en R** | [5.5 Estimación mediante bisección](05-metodos-raices.qmd#sec-biseccion) |
+| **Cota de Cauchy** | [5.1 Acotación de raíces](05-metodos-raices.qmd#sec-acotacion-raices) |
+| **Newton-Horner** | [5.7 Estimación mediante Newton](05-metodos-raices.qmd#sec-newton) |
+| **Regla de Descartes** | [5.4 Regla de los signos de Descartes](05-metodos-raices.qmd#sec-descartes) |
+| **Secante en R** | [5.6 Estimación mediante secante](05-metodos-raices.qmd#sec-secante) |
+| **Separación de raíces** | [5.2 Separación de raíces](05-metodos-raices.qmd#sec-separacion-raices) |
+| **Teorema de Sturm** | [5.3 Teorema de Sturm](05-metodos-raices.qmd#sec-sturm) |
+
+: Índice alfabético de conceptos, código y laboratorios. {#tbl-indice-tematico}
+
+## Índice de funciones y operadores de R {.unnumbered}
+
+| Función u operador | Uso matemático | Sección |
+|---:|---|---|
+| `%in%` | pertenencia | 1.1 |
+| `union()`, `intersect()`, `setdiff()` | operaciones de conjuntos | 1.4 |
+| `expand.grid()` | tablas de verdad y productos cartesianos | 1.2 y 1.6 |
+| `all()`, `any()` | cuantificadores en dominios finitos | 1.3 |
+| `%/%`, `%%` | cociente y residuo | 2.3 |
+| `euclides()` | máximo común divisor | 2.3 |
+| `euclides_extendido()` | identidad de Bézout | 2.3 |
+| `es_primo()` | prueba de primalidad | 2.4 |
+| `criba()` | primos hasta un límite | 2.4 |
+| `factorizar()` | factores primos | 2.4 |
+| `all.equal()` | comparación numérica aproximada | 2.5 y 2.7 |
+| `abs()` | valor absoluto y distancia | 2.8 |
+| `complex()` | construir complejos desde componentes | 3.5 |
+| `Re()`, `Im()` | partes real e imaginaria | 3.5 |
+| `Mod()`, `Arg()` | módulo y argumento principal | 3.4 |
+| `Conj()` | complejo conjugado | 3.7 |
+| `exp()` | forma polar, potencias y raíces | 3.6 y 3.9 |
+| `horner()` | evaluación eficiente de polinomios | 4.5 y laboratorio del capítulo 4 |
+| `dividir_polinomios()` | cociente y residuo polinomiales | laboratorio del capítulo 4 |
+| `division_sintetica()` | división entre $x-c$ | laboratorio del capítulo 4 |
+| `multiplicidad_raiz()` | multiplicidad por divisiones sucesivas | laboratorio del capítulo 4 |
+| `polyroot()` | aproximación de todas las raíces complejas | laboratorio del capítulo 4 |
+| `solve()` | coeficientes de fracciones parciales | laboratorio del capítulo 4 |
+| `cota_cauchy()` | acotar todas las raíces | 5.1 |
+| `separar_por_signo()` | localizar intervalos con cambio de signo | 5.2 |
+| `sucesion_sturm()` | construir la sucesión de Sturm | 5.3 |
+| `contar_raices_sturm()` | contar raíces distintas en un intervalo | 5.3 |
+| `descartes()` | posibilidades de raíces positivas y negativas | 5.4 |
+| `biseccion()` | aproximación cerrada con cota de error | 5.5 |
+| `secante()` | aproximación sin derivadas | 5.6 |
+| `horner_valor_derivada()` | evaluar $p$ y $p'$ simultáneamente | 5.7 |
+| `newton_horner()` | aproximación rápida de raíces | 5.7 |
+
+: Funciones y operadores principales de R. {#tbl-indice-r}
+
+## Índice de símbolos {.unnumbered}
+
+| Símbolo | Significado | Sección |
+|---:|---|---|
+| $x\in A$, $A\subseteq B$ | pertenencia e inclusión | 1.1 |
+| $\neg,\land,\lor$ | conectivos lógicos | 1.2 |
+| $\forall,\exists$ | cuantificadores | 1.3 |
+| $A\cup B,A\cap B,A^c$ | operaciones de conjuntos | 1.4 |
+| $f:A\to B$ | función | 1.7 |
+| $\mathbb N,\mathbb Z,\mathbb Q,\mathbb R$ | sistemas numéricos | 2.1 y 2.5 |
+| $a\mid b$ | divisibilidad | 2.3 |
+| $\gcd(a,b)$ | máximo común divisor | 2.3 |
+| $\operatorname{mcm}(a,b)$ | mínimo común múltiplo | 2.4 |
+| $|x-a|$ | distancia entre $x$ y $a$ | 2.8 |
+| $\mathbb R^2,\mathbb C$ | plano real y números complejos | 3.1 y 3.5 |
+| $i^2=-1$ | unidad imaginaria | 3.5 |
+| $\overline z$ | conjugado | 3.7 |
+| $|z|,\arg(z)$ | módulo y argumento | 3.4 |
+| $e^{i\theta}$ | forma exponencial compleja | 3.9 |
+| $K[x]$ | anillo de polinomios con coeficientes en $K$ | 4.1 |
+| $\deg p$ | grado del polinomio $p$ | 4.1 |
+| $p=dq+r$ | identidad de la división polinomial | 4.3 |
+| $p(\alpha)=0$ | $\alpha$ es raíz de $p$ | 4.4 |
+| $R$ | cota global de las raíces | 5.1 |
+| $V(t)$ | variaciones de signo | 5.3 |
+| $\varepsilon$ | tolerancia numérica | 5.5 a 5.7 |
+| $f'(x)$ | derivada utilizada por Newton | 5.7 |
+
+: Símbolos matemáticos principales. {#tbl-indice-simbolos}
+
+## Índice de figuras {.unnumbered}
+
+### Capítulo 1 {.unnumbered}
+
+1. Operaciones y regiones de Venn (sección 1.4).
+2. Relación, función y no-función (sección 1.7).
+3. Composición de funciones (sección 1.7).
+4. Funciones inyectivas, suprayectivas y biyectivas (sección 1.8).
+
+### Capítulo 2 {.unnumbered}
+
+1. Suma de impares y cuadrados perfectos (sección 2.2).
+2. Residuos del algoritmo de Euclides (sección 2.3).
+3. Cadena de factorización de $756$ (sección 2.4).
+4. Jerarquía de los sistemas numéricos (sección 2.5).
+5. Valor absoluto como distancia (sección 2.8).
+
+### Capítulo 3 {.unnumbered}
+
+1. Plano complejo y coordenadas polares (sección 3.2).
+2. Suma vectorial y regla del paralelogramo (sección 3.3).
+3. Conjugación como reflexión (sección 3.7).
+4. Raíces de la unidad y polígonos regulares (sección 3.9).
+
+### Capítulo 4 {.unnumbered}
+
+1. División polinomial: dividendo, divisor, cociente y residuo (sección 4.3).
+2. Multiplicidad: raíces simples, dobles y triples (sección 4.6).
+3. Raíces conjugadas: simetría respecto del eje real (sección 4.9).
+4. Funciones racionales: huecos y asíntotas (sección 4.10).
+
+### Capítulo 5 {.unnumbered}
+
+1. Acotación global y separación de raíces (secciones 5.1 y 5.2).
+2. Primeras iteraciones de bisección (sección 5.5).
+3. Comparación geométrica de secante y Newton (secciones 5.6 y 5.7).
+
+## Índice de laboratorios {.unnumbered}
+
+| Laboratorio | Concepto | Sección |
+|---|---|---|
+| Tablas de verdad | conectivos y clasificación | 1.2 |
+| Operaciones de Venn | unión, intersección y complemento | 1.4 |
+| Clasificador de funciones | inyectividad, suprayectividad y biyección | 1.8 |
+| Inducción visual | suma de impares | 2.2 |
+| Algoritmo de Euclides | cocientes, residuos y MCD | 2.3 |
+| Valor absoluto | distancia e intervalos | 2.8 |
+| Plano complejo | coordenadas cartesianas, módulo y argumento | 3.2 |
+| Multiplicación compleja | cambio de escala y rotación | 3.6 |
+| Raíces de la unidad | ángulos y polígonos regulares | 3.9 |
+| Operaciones con polinomios | suma, producto y coeficientes | laboratorio del capítulo 4 |
+| División y residuo | teoremas del residuo y del factor | laboratorio del capítulo 4 |
+| Raíces y multiplicidad | cruce, contacto y aplanamiento | laboratorio del capítulo 4 |
+| Factorización lineal | raíces y factores | laboratorio del capítulo 4 |
+| Raíces conjugadas | simetría en el plano complejo | laboratorio del capítulo 4 |
+| Funciones racionales | huecos y asíntotas | laboratorio del capítulo 4 |
+| GeoGebra: localización de raíces | cota de Cauchy e intersecciones | 5.1 |
+| GeoGebra: bisección | intervalo, punto medio y error | 5.5 |
+| GeoGebra: secante y Newton | cuerda, tangente y siguiente aproximación | 5.6 y 5.7 |
+
+: Laboratorios interactivos incorporados. {#tbl-indice-laboratorios}

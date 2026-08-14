@@ -1,0 +1,1072 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Álgebra Superior con aplicaciones en R y GeoGebra",
+    "section": "",
+    "text": "Portada\n\n\nDescargar el libro completo en PDF\n\nJesús Gilberto Rodríguez Escobedo\nPrimera edición digital, 2026 · San Luis Potosí, México\nLibro abierto bajo licencia CC BY-NC-SA 4.0.",
+    "crumbs": [
+      "Portada"
+    ]
+  },
+  {
+    "objectID": "bienvenida.html",
+    "href": "bienvenida.html",
+    "title": "Bienvenida",
+    "section": "",
+    "text": "Objetivos generales\nBienvenido a Álgebra Superior con aplicaciones en R y GeoGebra. Este libro propone aprender mediante cuatro acciones coordinadas: resolver manualmente, implementar en R, visualizar en GeoGebra e interpretar el resultado.\nLa computadora no reemplaza el razonamiento matemático. Se utiliza para experimentar, comprobar conjeturas, comparar métodos y estudiar situaciones difíciles de explorar sólo con lápiz y papel. Cada recurso debe responder una pregunta matemática clara.\nEl volumen se coordina con Fundamentos Matemáticos del Álgebra Superior, donde se desarrollan con mayor profundidad las definiciones, propiedades y demostraciones.",
+    "crumbs": [
+      "Bienvenida"
+    ]
+  },
+  {
+    "objectID": "bienvenida.html#objetivos-generales",
+    "href": "bienvenida.html#objetivos-generales",
+    "title": "Bienvenida",
+    "section": "",
+    "text": "comprender los conceptos esenciales del Álgebra Superior;\ntraducir definiciones y procedimientos a algoritmos reproducibles;\nutilizar R para calcular, organizar y verificar resultados;\nemplear GeoGebra para visualizar relaciones, funciones, números complejos, polinomios y raíces;\ncomunicar conclusiones con notación, gráficas e interpretación correctas.",
+    "crumbs": [
+      "Bienvenida"
+    ]
+  },
+  {
+    "objectID": "creditos.html",
+    "href": "creditos.html",
+    "title": "Créditos editoriales",
+    "section": "",
+    "text": "Cómo citar esta obra\nTítulo: Álgebra Superior con aplicaciones en R y GeoGebra\nSubtítulo: Teoría, visualización y experimentación\nAutor: Jesús Gilberto Rodríguez Escobedo\nEdición: Primera edición digital, 2026\nLugar de edición: San Luis Potosí, México\nProducción editorial: edición académica abierta desarrollada con Quarto, R, GeoGebra, Jupyter, Git y GitHub Pages.\nFormatos: libro web interactivo, PDF descargable, cuadernos y construcciones .ggb.\nRodríguez Escobedo, J. G. (2026). Álgebra Superior con aplicaciones en R y GeoGebra: teoría, visualización y experimentación. Primera edición digital. San Luis Potosí, México.",
+    "crumbs": [
+      "Créditos editoriales"
+    ]
+  },
+  {
+    "objectID": "creditos.html#entrada-bibtex-sugerida",
+    "href": "creditos.html#entrada-bibtex-sugerida",
+    "title": "Créditos editoriales",
+    "section": "Entrada BibTeX sugerida",
+    "text": "Entrada BibTeX sugerida\n@book{rodriguez2026algebrargeogebra,\n  author    = {Rodríguez Escobedo, Jesús Gilberto},\n  title     = {Álgebra Superior con aplicaciones en R y GeoGebra},\n  subtitle  = {Teoría, visualización y experimentación},\n  year      = {2026},\n  address   = {San Luis Potosí, México},\n  note      = {Primera edición digital, libro web interactivo y PDF}\n}",
+    "crumbs": [
+      "Créditos editoriales"
+    ]
+  },
+  {
+    "objectID": "creditos.html#volumen-teórico-complementario",
+    "href": "creditos.html#volumen-teórico-complementario",
+    "title": "Créditos editoriales",
+    "section": "Volumen teórico complementario",
+    "text": "Volumen teórico complementario\nLas definiciones, propiedades y demostraciones se amplían en Fundamentos Matemáticos del Álgebra Superior.",
+    "crumbs": [
+      "Créditos editoriales"
+    ]
+  },
+  {
+    "objectID": "licencia.html",
+    "href": "licencia.html",
+    "title": "Licencia y uso académico",
+    "section": "",
+    "text": "Uso responsable de recursos computacionales\nEsta obra se distribuye bajo la licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0).\nPuede copiarse, redistribuirse y adaptarse con fines académicos siempre que se reconozca la autoría, no exista uso comercial sin autorización y las obras derivadas se compartan bajo la misma licencia.\nR es software libre y GeoGebra se utiliza conforme a sus condiciones de licencia. Los nombres, marcas y plataformas pertenecen a sus respectivos titulares. Los cuadernos, scripts y construcciones pueden modificarse para actividades educativas conservando la atribución y la licencia de esta obra.\nEl código y los laboratorios se proporcionan con fines educativos. El lector debe revisar datos de entrada, supuestos, tolerancias y resultados antes de reutilizarlos. Una salida numérica o gráfica no constituye por sí sola una demostración matemática.",
+    "crumbs": [
+      "Licencia y uso académico"
+    ]
+  },
+  {
+    "objectID": "prefacio.html",
+    "href": "prefacio.html",
+    "title": "Prefacio",
+    "section": "",
+    "text": "Este libro surge de una experiencia reiterada en el aula: muchos estudiantes comprenden mejor una idea algebraica cuando pueden verla, modificarla y comprobarla, pero el aprendizaje pierde profundidad si la exploración computacional no se conecta con definiciones y razonamientos precisos.\nPor ello, cada tema busca articular cuatro momentos: desarrollo manual, traducción a R, exploración visual en GeoGebra e interpretación. El propósito no es enseñar comandos aislados, sino mostrar cómo una pregunta matemática se transforma en un procedimiento reproducible y en una representación que ayuda a pensar.\nEl libro acompaña al volumen Fundamentos Matemáticos del Álgebra Superior. Mientras aquel profundiza en conceptos y demostraciones, éste concentra la experimentación y las aplicaciones. Juntos permiten pasar de la intuición a la formalización, y de la formalización a la comprobación computacional.\nEspero que los cuadernos, construcciones y actividades ayuden al lector a desarrollar autonomía: formular una conjetura, diseñar una prueba, detectar un error y explicar con claridad lo que observa.\nJesús Gilberto Rodríguez Escobedo\nSan Luis Potosí, México",
+    "crumbs": [
+      "Prefacio"
+    ]
+  },
+  {
+    "objectID": "agradecimientos.html",
+    "href": "agradecimientos.html",
+    "title": "Agradecimientos",
+    "section": "",
+    "text": "Agradezco a los estudiantes que, durante décadas de docencia, han mostrado con sus preguntas qué conceptos requieren otra explicación, una figura más clara o un experimento mejor diseñado.\nReconozco a los colegas e instituciones con quienes he compartido proyectos de matemáticas, computación, inteligencia artificial y tecnología educativa. Agradezco asimismo a las comunidades de R, Quarto, Jupyter y GeoGebra, cuyas herramientas hacen posible crear materiales abiertos y reproducibles.\nMi gratitud final es para mi familia, por su apoyo y paciencia durante la elaboración de esta obra.",
+    "crumbs": [
+      "Agradecimientos"
+    ]
+  },
+  {
+    "objectID": "presentacion.html",
+    "href": "presentacion.html",
+    "title": "Presentación",
+    "section": "",
+    "text": "Ruta didáctica\nÁlgebra Superior con aplicaciones en R y GeoGebra integra teoría, cálculo, visualización y experimentación. Está dirigido a estudiantes y profesores de matemáticas, ingeniería, computación y ciencias aplicadas que desean comprender los conceptos y, al mismo tiempo, explorar su comportamiento mediante herramientas digitales.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "presentacion.html#ruta-didáctica",
+    "href": "presentacion.html#ruta-didáctica",
+    "title": "Presentación",
+    "section": "",
+    "text": "Comprensión manual: definición, ejemplo y procedimiento paso a paso.\nImplementación en R: cálculo reproducible y verificación numérica.\nVisualización en GeoGebra: exploración dinámica de parámetros y representaciones.\nInterpretación: explicación matemática de los resultados, alcances y errores.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "presentacion.html#estructura-actual",
+    "href": "presentacion.html#estructura-actual",
+    "title": "Presentación",
+    "section": "Estructura actual",
+    "text": "Estructura actual\nLos cinco capítulos estudian lógica y conjuntos; enteros y reales; números complejos; polinomios; y métodos numéricos para raíces. Cada uno enlaza recursos descargables pertinentes. Los índices, el glosario y las referencias permiten utilizar la obra también como material de consulta.",
+    "crumbs": [
+      "Presentación"
+    ]
+  },
+  {
+    "objectID": "introduccion.html",
+    "href": "introduccion.html",
+    "title": "Introducción",
+    "section": "",
+    "text": "El Álgebra Superior proporciona el lenguaje con el que se describen estructuras, operaciones, funciones y métodos de solución. R y GeoGebra permiten ampliar ese estudio: el primero facilita programar cálculos y comparar algoritmos; el segundo convierte relaciones y variaciones en objetos visuales manipulables.\nLa integración de estas herramientas tiene sentido cuando se conserva el orden conceptual. Primero se identifica el problema y su notación; después se desarrolla un procedimiento manual; luego se implementa o visualiza; finalmente se interpreta el resultado y se contrasta con la teoría.\nLos cuadernos de R se diseñan para ejecutarse paso a paso. Las construcciones de GeoGebra permiten modificar valores y observar invariantes o cambios. En ambos casos, el lector debe registrar qué modifica, qué permanece y qué explicación matemática justifica el comportamiento observado.\nLa versión web contiene los enlaces y laboratorios interactivos; el PDF conserva la exposición, el código y las indicaciones para acceder a los recursos descargables.",
+    "crumbs": [
+      "Introducción"
+    ]
+  },
+  {
+    "objectID": "notacion.html",
+    "href": "notacion.html",
+    "title": "Notación general",
+    "section": "",
+    "text": "Notación\nSignificado general\n\n\n\n\n\\(A,B,U\\)\nconjuntos; \\(U\\) suele ser el conjunto universal\n\n\n\\(x\\in A\\), \\(A\\subseteq B\\)\npertenencia e inclusión\n\n\n\\(\\forall\\), \\(\\exists\\), \\(\\neg\\), \\(\\land\\), \\(\\lor\\)\ncuantificadores y conectivos\n\n\n\\(\\mathbb N,\\mathbb Z,\\mathbb Q,\\mathbb R,\\mathbb C\\)\nsistemas numéricos\n\n\n\\(f:A\\to B\\)\nfunción de \\(A\\) en \\(B\\)\n\n\n\\(z=a+bi\\)\nnúmero complejo\n\n\n\\(p(x)\\), \\(\\deg p\\)\npolinomio y su grado\n\n\n\\(x_k\\)\naproximación en la iteración \\(k\\)\n\n\n\\(\\varepsilon\\)\ntolerancia numérica\n\n\n&lt;-\nasignación en R\n\n\nf(x)\nllamada de una función en R\n\n\n\nEn el texto matemático se usa \\(=\\) para igualdad. En R, &lt;- asigna un valor a un objeto y == compara valores. Esta diferencia evita confundir una afirmación matemática con una instrucción de programa.",
+    "crumbs": [
+      "Notación general"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html",
+    "href": "01-logica-conjuntos.html",
+    "title": "1  Lógica y conjuntos",
+    "section": "",
+    "text": "Introducción\nExperimentación con R, GeoGebra y circuitos\nEste capítulo transforma los conceptos de lógica y conjuntos en objetos que pueden calcularse, visualizarse y comprobarse. Cada bloque parte de una idea matemática, la resuelve manualmente y después utiliza R como laboratorio. GeoGebra se reservará para las representaciones dinámicas y Shiny para actividades en las que el estudiante modifique datos y reciba retroalimentación.\nEl código inicial utiliza R base (R Core Team 2026). De esta forma puede ejecutarse en RStudio o en el cuaderno de Google Colab sin instalar paquetes.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#introducción",
+    "href": "01-logica-conjuntos.html#introducción",
+    "title": "1  Lógica y conjuntos",
+    "section": "",
+    "text": "TipCuaderno completo y ejecutable\n\n\n\nEl cuaderno reúne las nueve secciones, las aplicaciones a sistemas digitales, visualizaciones en R y ejercicios de comprobación. Puede abrirse en Colab o descargarse para conservar una copia local.\nAbrir en Google Colab Descargar el cuaderno\n\n\n\nObjetivos\nAl finalizar, el lector podrá:\n\nrepresentar conjuntos finitos mediante vectores de R;\nconstruir tablas de verdad;\nevaluar proposiciones abiertas sobre dominios finitos;\ncomprobar equivalencias lógicas y leyes de conjuntos;\nresolver problemas de inclusión-exclusión;\nrepresentar productos cartesianos, relaciones y funciones;\nclasificar funciones finitas;\nexperimentar con correspondencias biyectivas;\ncomprobar simplificaciones booleanas y diseñar circuitos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-lenguaje-conjuntos",
+    "href": "01-logica-conjuntos.html#sec-lenguaje-conjuntos",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.1 Lenguaje de conjuntos",
+    "text": "1.1 Lenguaje de conjuntos\n\nSituación inicial\nConsideremos el universo\n\\[\nU=\\{1,2,\\ldots,10\\},\n\\]\nel conjunto \\(A\\) de números pares y el conjunto \\(B\\) de números primos en \\(U\\):\n\\[\nA=\\{2,4,6,8,10\\},\\qquad B=\\{2,3,5,7\\}.\n\\]\nEn R, un conjunto finito puede representarse mediante un vector sin elementos repetidos.\nU &lt;- 1:10\nA &lt;- c(2, 4, 6, 8, 10)\nB &lt;- c(2, 3, 5, 7)\n\nA\nB\nEl operador %in% comprueba pertenencia.\n4 %in% A\n5 %in% A\nA %in% B\nPara comprobar \\(A\\subseteq B\\), no basta que algún elemento pertenezca; todos deben pertenecer:\nes_subconjunto &lt;- function(X, Y) {\n  all(X %in% Y)\n}\n\nes_subconjunto(c(2, 4), A)\nes_subconjunto(A, B)\nLa igualdad de conjuntos debe ignorar el orden:\nsetequal(c(1, 2, 3), c(3, 2, 1))\nidentical(c(1, 2, 3), c(3, 2, 1))\nLa función setequal() devuelve verdadero, mientras que identical() devuelve falso, porque esta última compara vectores ordenados, no conjuntos.\n\n\nConjunto potencia\nEl siguiente código genera todos los subconjuntos de un conjunto finito:\nconjunto_potencia &lt;- function(A) {\n  resultado &lt;- list(A[FALSE])\n  if (length(A) &gt; 0) {\n    for (k in seq_len(length(A))) {\n      resultado &lt;- c(\n        resultado,\n        combn(A, k, simplify = FALSE)\n      )\n    }\n  }\n  resultado\n}\n\nP &lt;- conjunto_potencia(c(\"a\", \"b\", \"c\"))\nP\nlength(P)\nEl resultado contiene \\(2^3=8\\) subconjuntos, incluido el conjunto vacío.\n\n\n\n\n\n\nNotaGeoGebra: actividad prevista\n\n\n\nSe construirá una mesa dinámica con los ocho subconjuntos de \\(\\{a,b,c\\}\\). El estudiante podrá seleccionar dos subconjuntos y observar su unión, intersección y diferencia simétrica. El enlace se incorporará cuando la actividad esté publicada.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-proposiciones",
+    "href": "01-logica-conjuntos.html#sec-proposiciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.2 Proposiciones y conectivos lógicos",
+    "text": "1.2 Proposiciones y conectivos lógicos\n\nConstrucción de una tabla de verdad\nR representa verdadero y falso mediante TRUE y FALSE. Las combinaciones para dos proposiciones se generan así:\ntabla &lt;- expand.grid(\n  q = c(TRUE, FALSE),\n  p = c(TRUE, FALSE)\n)[, c(\"p\", \"q\")]\n\nimplica &lt;- function(p, q) {\n  (!p) | q\n}\n\ntabla$no_p &lt;- !tabla$p\ntabla$p_y_q &lt;- tabla$p & tabla$q\ntabla$p_o_q &lt;- tabla$p | tabla$q\ntabla$p_implica_q &lt;- implica(tabla$p, tabla$q)\ntabla$p_sii_q &lt;- tabla$p == tabla$q\n\ntabla\nLa implicación se implementa mediante la equivalencia\n\\[\np\\Rightarrow q\\equiv\\neg p\\lor q.\n\\]\n\n\nTautologías, contradicciones y contingencias\nUna expresión es tautología si todas sus filas son verdaderas:\nes_tautologia &lt;- function(valores) all(valores)\nes_contradiccion &lt;- function(valores) all(!valores)\n\ntercero_excluido &lt;- tabla$p | !tabla$p\ncontradiccion &lt;- tabla$p & !tabla$p\n\nes_tautologia(tercero_excluido)\nes_contradiccion(contradiccion)\nPara comprobar\n\\[\np\\Rightarrow(q\\land r)\n\\equiv\n(p\\Rightarrow q)\\land(p\\Rightarrow r),\n\\]\ngeneramos las ocho combinaciones posibles:\nt3 &lt;- expand.grid(\n  r = c(TRUE, FALSE),\n  q = c(TRUE, FALSE),\n  p = c(TRUE, FALSE)\n)[, c(\"p\", \"q\", \"r\")]\n\nizquierda &lt;- implica(t3$p, t3$q & t3$r)\nderecha &lt;- implica(t3$p, t3$q) & implica(t3$p, t3$r)\n\ndata.frame(t3, izquierda, derecha, equivalentes = izquierda == derecha)\nall(izquierda == derecha)\nLa última instrucción devuelve verdadero; la equivalencia se cumple en todas las filas.\n\n\nInteractivo: tabla de verdad\nCambie la expresión y los valores de entrada. La fila activa se señala en la tabla y la salida se actualiza inmediatamente.\nAbrir el laboratorio de tablas de verdad",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-cuantificadores",
+    "href": "01-logica-conjuntos.html#sec-cuantificadores",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.3 Cuantificadores y equivalencias lógicas",
+    "text": "1.3 Cuantificadores y equivalencias lógicas\n\nProposiciones abiertas sobre dominios finitos\nSea\n\\[\nD=\\{-4,-3,\\ldots,4\\}\n\\]\ny sea \\(p(x):x^2\\le 4\\). Su conjunto solución se obtiene filtrando el dominio:\nD &lt;- -4:4\np &lt;- D^2 &lt;= 4\n\ndata.frame(x = D, p_x = p)\nD[p]\nEl conjunto solución es \\(\\{-2,-1,0,1,2\\}\\).\nEn un dominio finito, all() representa el cuantificador universal y any() el existencial:\nall(D^2 &gt;= 0)  # para todo x en D, x^2 &gt;= 0\nany(D^2 == 4)  # existe x en D tal que x^2 = 4\n\n\n\n\n\n\nAdvertenciaLímite de la comprobación computacional\n\n\n\nVerificar una propiedad en muchos valores no demuestra que se cumpla para todos los números reales. R sí puede decidir un cuantificador sobre un dominio finito completamente enumerado. Para dominios infinitos, la demostración matemática sigue siendo indispensable.\n\n\n\n\nNegación de cuantificadores\nLa equivalencia\n\\[\n\\neg(\\forall x\\in D\\,p(x))\n\\equiv\n\\exists x\\in D\\,\\neg p(x)\n\\]\nse comprueba con:\nlado_izquierdo &lt;- !all(p)\nlado_derecho &lt;- any(!p)\n\nc(lado_izquierdo, lado_derecho)\nNo estamos sustituyendo una demostración formal; estamos observando la equivalencia en el dominio elegido.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-operaciones-conjuntos",
+    "href": "01-logica-conjuntos.html#sec-operaciones-conjuntos",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.4 Operaciones y propiedades de los conjuntos",
+    "text": "1.4 Operaciones y propiedades de los conjuntos\n\nOperaciones en R\nR incluye funciones directas para unión, intersección y diferencia.\nunion(A, B)\nintersect(A, B)\nsetdiff(A, B)\nsetdiff(B, A)\nEl complemento depende del universo:\ncomplemento &lt;- function(X, U) {\n  setdiff(U, X)\n}\n\ncomplemento(A, U)\nLa diferencia simétrica es\n\\[\nA\\triangle B=(A\\setminus B)\\cup(B\\setminus A).\n\\]\ndiferencia_simetrica &lt;- function(X, Y) {\n  union(setdiff(X, Y), setdiff(Y, X))\n}\n\ndiferencia_simetrica(A, B)\n\n\n\n\n\n\nFigura 1.1: Cuatro operaciones representadas mediante regiones de Venn: unión, intersección, complemento y diferencia simétrica.\n\n\n\n\n\nInteractivo: operaciones de conjuntos\nSeleccione una operación y modifique los elementos de \\(A\\) y \\(B\\). El laboratorio calcula el conjunto resultante, su cardinalidad y la región correspondiente.\nAbrir el laboratorio de conjuntos\n\n\n\n\nComprobación de las leyes de De Morgan\nPara los conjuntos concretos \\(A,B\\subseteq U\\), comprobamos\n\\[\n(A\\cup B)^c=A^c\\cap B^c.\n\\]\nlado_izquierdo &lt;- complemento(union(A, B), U)\nlado_derecho &lt;- intersect(\n  complemento(A, U),\n  complemento(B, U)\n)\n\nlado_izquierdo\nlado_derecho\nsetequal(lado_izquierdo, lado_derecho)\n\n\n\n\n\n\nNotaDel interactivo a la demostración\n\n\n\nEl laboratorio permite anticipar que \\((A\\cup B)^c\\) y \\(A^c\\cap B^c\\) sombrean la misma región. La comprobación con R verifica el universo finito elegido; la demostración general se realiza mediante pertenencia.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-cardinalidad-finita",
+    "href": "01-logica-conjuntos.html#sec-cardinalidad-finita",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.5 Cardinalidad de conjuntos finitos y problemas de conteo",
+    "text": "1.5 Cardinalidad de conjuntos finitos y problemas de conteo\n\nInclusión-exclusión con dos conjuntos\nEn un grupo de \\(180\\) estudiantes, \\(95\\) usan R, \\(80\\) usan Python y \\(40\\) utilizan ambos lenguajes.\ntotal &lt;- 180\nn_R &lt;- 95\nn_Python &lt;- 80\nn_ambos &lt;- 40\n\nn_al_menos_uno &lt;- n_R + n_Python - n_ambos\nn_ninguno &lt;- total - n_al_menos_uno\n\nc(al_menos_uno = n_al_menos_uno, ninguno = n_ninguno)\n\n\nInclusión-exclusión con tres conjuntos\ninclusion_exclusion_3 &lt;- function(nA, nB, nC,\n                                 nAB, nAC, nBC, nABC) {\n  nA + nB + nC - nAB - nAC - nBC + nABC\n}\n\ntotal_dispositivos &lt;- 400\nal_menos_un_sensor &lt;- inclusion_exclusion_3(\n  nA = 170, nB = 150, nC = 140,\n  nAB = 70, nAC = 60, nBC = 50,\n  nABC = 20\n)\n\nningun_sensor &lt;- total_dispositivos - al_menos_un_sensor\nc(al_menos_un_sensor, ningun_sensor)\n\n\nInterpretación\nR no decide qué significa cada intersección. El lector debe identificar si los datos de dos conjuntos incluyen o excluyen la intersección triple. El código ejecuta correctamente una fórmula solo cuando la modelación es correcta.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-producto-relaciones",
+    "href": "01-logica-conjuntos.html#sec-producto-relaciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.6 Producto cartesiano y relaciones",
+    "text": "1.6 Producto cartesiano y relaciones\n\nProducto cartesiano como tabla\nSean \\(A=\\{1,2\\}\\) y \\(B=\\{x,y,z\\}\\). El producto \\(A\\times B\\) se genera con expand.grid():\nA1 &lt;- c(1, 2)\nB1 &lt;- c(\"x\", \"y\", \"z\")\n\nAxB &lt;- expand.grid(a = A1, b = B1)\nAxB\nnrow(AxB)\nEl número de filas confirma \\(|A\\times B|=|A||B|=6\\).\n\n\nComprobación de una identidad\nVerifiquemos\n\\[\nA\\times(B\\cup C)=(A\\times B)\\cup(A\\times C).\n\\]\nPara comparar pares ordenados utilizaremos una clave de texto.\nclave_par &lt;- function(x, y) paste(x, y, sep = \"|\")\n\nproducto_cartesiano &lt;- function(X, Y) {\n  pares &lt;- expand.grid(x = X, y = Y)\n  clave_par(pares$x, pares$y)\n}\n\nA2 &lt;- c(1, 2)\nB2 &lt;- c(\"b1\", \"b2\")\nC2 &lt;- c(\"c1\", \"c2\")\n\nizquierda &lt;- producto_cartesiano(A2, union(B2, C2))\nderecha &lt;- union(\n  producto_cartesiano(A2, B2),\n  producto_cartesiano(A2, C2)\n)\n\nsetequal(izquierda, derecha)\n\n\nPropiedades de una relación finita\nRepresentemos una relación mediante dos columnas:\nX &lt;- c(1, 2, 3)\nR &lt;- data.frame(\n  x = c(1, 1, 2, 3),\n  y = c(1, 2, 2, 3)\n)\nR\nLas siguientes funciones analizan reflexividad, simetría, antisimetría y transitividad.\nclaves_relacion &lt;- function(R) clave_par(R$x, R$y)\n\nes_reflexiva &lt;- function(R, X) {\n  all(clave_par(X, X) %in% claves_relacion(R))\n}\n\nes_simetrica &lt;- function(R) {\n  all(clave_par(R$y, R$x) %in% claves_relacion(R))\n}\n\nes_antisimetrica &lt;- function(R) {\n  reversos &lt;- clave_par(R$y, R$x) %in% claves_relacion(R)\n  all((R$x == R$y) | !reversos)\n}\n\nes_transitiva &lt;- function(R) {\n  claves &lt;- claves_relacion(R)\n  for (i in seq_len(nrow(R))) {\n    for (j in seq_len(nrow(R))) {\n      if (R$y[i] == R$x[j]) {\n        if (!(clave_par(R$x[i], R$y[j]) %in% claves)) {\n          return(FALSE)\n        }\n      }\n    }\n  }\n  TRUE\n}\n\nc(\n  reflexiva = es_reflexiva(R, X),\n  simetrica = es_simetrica(R),\n  antisimetrica = es_antisimetrica(R),\n  transitiva = es_transitiva(R)\n)\n\n\n\n\n\n\nFigura 1.2: Una relación general, una función válida y una correspondencia que no cumple la definición de función.\n\n\n\n\n\n\n\n\n\nTipInterpretación\n\n\n\nEl programa comprueba una relación finita completamente especificada. La razón matemática de cada propiedad sigue siendo la definición; el código automatiza la revisión de los pares.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-funciones",
+    "href": "01-logica-conjuntos.html#sec-funciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.7 Funciones: definición, representación y operaciones",
+    "text": "1.7 Funciones: definición, representación y operaciones\n\nUna función como tabla\nSobre conjuntos finitos, una función puede representarse por una tabla de entradas y salidas.\ndominio &lt;- c(\"s1\", \"s2\", \"s3\")\ncodominio &lt;- c(\"bajo\", \"medio\", \"alto\")\n\nf_tabla &lt;- data.frame(\n  x = dominio,\n  y = c(\"bajo\", \"alto\", \"medio\")\n)\n\nf_tabla\nUna tabla representa una función si:\n\ncada elemento del dominio aparece;\naparece exactamente una vez como entrada;\ncada salida pertenece al codominio.\n\nes_funcion &lt;- function(tabla, dominio, codominio) {\n  entradas_correctas &lt;- setequal(tabla$x, dominio)\n  entradas_unicas &lt;- !anyDuplicated(tabla$x)\n  salidas_validas &lt;- all(tabla$y %in% codominio)\n\n  entradas_correctas && entradas_unicas && salidas_validas\n}\n\nes_funcion(f_tabla, dominio, codominio)\n\n\nFunciones dadas por fórmulas\nf &lt;- function(x) 2 * x + 1\ng &lt;- function(x) x^2\n\ng_comp_f &lt;- function(x) g(f(x))\nf_comp_g &lt;- function(x) f(g(x))\n\nx &lt;- -3:3\ndata.frame(\n  x,\n  g_comp_f = g_comp_f(x),\n  f_comp_g = f_comp_g(x)\n)\nLas columnas no coinciden: en general \\(g\\circ f\\ne f\\circ g\\).\n\n\n\n\n\n\nFigura 1.3: Recorrido de un elemento mediante \\(f\\), después mediante \\(g\\) y directamente mediante la composición \\(g\\circ f\\).\n\n\n\n\n\n\n\n\n\nNotaGeoGebra: composición prevista\n\n\n\nSe mostrarán simultáneamente las gráficas de \\(f\\), \\(g\\), \\(g\\circ f\\) y \\(f\\circ g\\). Un deslizador permitirá seguir un valor \\(x\\) desde el dominio, pasar por la salida de la primera función y llegar a la composición.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-tipos-funciones",
+    "href": "01-logica-conjuntos.html#sec-tipos-funciones",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.8 Funciones inyectivas, suprayectivas y biyectivas",
+    "text": "1.8 Funciones inyectivas, suprayectivas y biyectivas\n\nClasificación automática de funciones finitas\nclasificar_funcion &lt;- function(tabla, dominio, codominio) {\n  if (!es_funcion(tabla, dominio, codominio)) {\n    return(data.frame(\n      es_funcion = FALSE,\n      inyectiva = NA,\n      suprayectiva = NA,\n      biyectiva = NA\n    ))\n  }\n\n  inyectiva &lt;- !anyDuplicated(tabla$y)\n  suprayectiva &lt;- setequal(unique(tabla$y), codominio)\n\n  data.frame(\n    es_funcion = TRUE,\n    inyectiva = inyectiva,\n    suprayectiva = suprayectiva,\n    biyectiva = inyectiva && suprayectiva\n  )\n}\n\nclasificar_funcion(f_tabla, dominio, codominio)\nProbemos ahora una función que repite una salida:\nh_tabla &lt;- data.frame(\n  x = dominio,\n  y = c(\"bajo\", \"bajo\", \"medio\")\n)\n\nclasificar_funcion(h_tabla, dominio, codominio)\nNo es inyectiva porque dos entradas producen “bajo”, y no es suprayectiva porque “alto” no aparece como imagen.\n\n\n\n\n\n\nFigura 1.4: La inyectividad evita imágenes repetidas; la suprayectividad exige cubrir todo el codominio; la biyección cumple ambas condiciones.\n\n\n\n\n\nInteractivo: clasificador de funciones\nModifique las tres imágenes, deje alguna entrada sin imagen o asigne dos imágenes al elemento \\(1\\). El diagnóstico distingue la definición de función de las propiedades de inyectividad, suprayectividad y biyección.\nAbrir el clasificador de funciones",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#sec-cardinalidad-infinita",
+    "href": "01-logica-conjuntos.html#sec-cardinalidad-infinita",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.9 Cardinalidad, equipotencia y conjuntos infinitos",
+    "text": "1.9 Cardinalidad, equipotencia y conjuntos infinitos\n\nUna biyección entre \\(\\mathbb N_0\\) y \\(\\mathbb Z\\)\nDefinimos\n\\[\n\\phi(n)=\n\\begin{cases}\n0, & n=0,\\\\\n(n+1)/2, & n\\text{ impar},\\\\\n-n/2, & n\\text{ par y }n&gt;0.\n\\end{cases}\n\\]\nphi &lt;- function(n) {\n  ifelse(\n    n == 0,\n    0,\n    ifelse(n %% 2 == 1, (n + 1) / 2, -n / 2)\n  )\n}\n\nn &lt;- 0:16\ndata.frame(n, phi_n = phi(n))\nLa salida comienza\n\\[\n0,1,-1,2,-2,3,-3,\\ldots\n\\]\ny muestra cómo los enteros pueden enumerarse mediante los naturales.\n\n\n\n\n\n\nAdvertenciaQué demuestra y qué no demuestra el experimento\n\n\n\nLa tabla solo muestra los primeros valores. La biyección se justifica demostrando que cada entero aparece exactamente una vez; observar muchos casos sirve para comprender el patrón, no para sustituir la prueba.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#aplicación-integradora-álgebra-de-boole-y-circuitos",
+    "href": "01-logica-conjuntos.html#aplicación-integradora-álgebra-de-boole-y-circuitos",
+    "title": "1  Lógica y conjuntos",
+    "section": "Aplicación integradora: álgebra de Boole y circuitos",
+    "text": "Aplicación integradora: álgebra de Boole y circuitos\nLa secuencia práctica adapta el capítulo 3 de Tocci y Widmer (2003): variables booleanas, tablas de verdad, compuertas OR, AND y NOT, traducción entre circuitos y expresiones, evaluación de salidas, NAND/NOR, De Morgan, universalidad y diagramas de temporización.\n\nCompuertas básicas en R\nNOT &lt;- function(a) !a\nOR  &lt;- function(a, b) a | b\nAND &lt;- function(a, b) a & b\nNOR &lt;- function(a, b) !(a | b)\nNAND &lt;- function(a, b) !(a & b)\n\nentradas_basicas &lt;- expand.grid(\n  b = c(TRUE, FALSE),\n  a = c(TRUE, FALSE)\n)[, c(\"a\", \"b\")]\n\ndata.frame(\n  entradas_basicas,\n  OR = OR(entradas_basicas$a, entradas_basicas$b),\n  AND = AND(entradas_basicas$a, entradas_basicas$b),\n  NOR = NOR(entradas_basicas$a, entradas_basicas$b),\n  NAND = NAND(entradas_basicas$a, entradas_basicas$b)\n)\n\n\nDe circuito a expresión y de expresión a circuito\nPara analizar un diagrama:\n\nse identifican entradas, salidas y polaridades activas;\nse asigna una variable intermedia a la salida de cada compuerta;\nse escribe la expresión de cada etapa de izquierda a derecha;\nse sustituye hasta obtener la salida en función de las entradas;\nse comprueba el resultado mediante una tabla de verdad.\n\nPara implantar una expresión se realiza el proceso inverso. Por ejemplo,\n\\[\nX=(A+\\overline B)\\,C\n\\]\nrequiere invertir \\(B\\), formar \\(A+\\overline B\\) con OR y combinar el resultado con \\(C\\) mediante AND.\n\n\n\n\n\n\nNotaFiguras previstas\n\n\n\nEl libro incorporará figuras propias con símbolos lógicos estándar. Cada ejemplo mostrará cuatro representaciones coordinadas: expresión, tabla de verdad, circuito y diagrama de temporización. No se reutilizarán las ilustraciones del texto de referencia.\n\n\n\n\nComprobación de una simplificación\nEstudiemos\n\\[\nF=\\overline a\\,b+a b+a\\overline b.\n\\]\nAlgebraicamente,\n\\[\n\\begin{aligned}\nF\n&=b(\\overline a+a)+a\\overline b\\\\\n&=b+a\\overline b\\\\\n&=(b+a)(b+\\overline b)\\\\\n&=a+b.\n\\end{aligned}\n\\]\nR comprueba la igualdad en las cuatro combinaciones:\ntv &lt;- expand.grid(\n  b = c(TRUE, FALSE),\n  a = c(TRUE, FALSE)\n)[, c(\"a\", \"b\")]\n\nF_original &lt;- (!tv$a & tv$b) |\n              (tv$a & tv$b) |\n              (tv$a & !tv$b)\n\nF_simplificada &lt;- tv$a | tv$b\n\ndata.frame(\n  tv,\n  F_original,\n  F_simplificada,\n  iguales = F_original == F_simplificada\n)\n\nall(F_original == F_simplificada)\n\n\nUniversalidad de NOR y NAND\nnor &lt;- function(x, y) !(x | y)\n\nno_con_nor &lt;- function(x) nor(x, x)\no_con_nor &lt;- function(x, y) nor(nor(x, y), nor(x, y))\ny_con_nor &lt;- function(x, y) nor(nor(x, x), nor(y, y))\n\nentradas &lt;- expand.grid(\n  b = c(TRUE, FALSE),\n  a = c(TRUE, FALSE)\n)[, c(\"a\", \"b\")]\n\ndata.frame(\n  entradas,\n  NOT_a = no_con_nor(entradas$a),\n  OR_ab = o_con_nor(entradas$a, entradas$b),\n  AND_ab = y_con_nor(entradas$a, entradas$b)\n)\nLa misma comprobación puede realizarse con NAND:\nnand &lt;- function(x, y) !(x & y)\n\nno_con_nand &lt;- function(x) nand(x, x)\ny_con_nand &lt;- function(x, y) nand(nand(x, y), nand(x, y))\no_con_nand &lt;- function(x, y) nand(nand(x, x), nand(y, y))\n\ndata.frame(\n  entradas,\n  NOT_a = no_con_nand(entradas$a),\n  OR_ab = o_con_nand(entradas$a, entradas$b),\n  AND_ab = y_con_nand(entradas$a, entradas$b)\n)\n\n\nSeñales activas en alto y en bajo\nUna señal activa en alto realiza su función cuando vale \\(1\\); una activa en bajo la realiza cuando vale \\(0\\). En un nombre de señal, la barra superior puede indicar activación en bajo. En un símbolo lógico, una burbuja indica inversión o terminal activa en bajo.\nhabilitada_alta &lt;- c(FALSE, TRUE, FALSE, TRUE)\nhabilitada_baja &lt;- !habilitada_alta\n\ndata.frame(\n  nivel_entrada = as.integer(habilitada_alta),\n  activa_en_alto = habilitada_alta,\n  activa_en_bajo = habilitada_baja\n)\n\n\n\n\n\n\nAdvertenciaModelo lógico frente a circuito físico\n\n\n\nEn R, cero y uno se modelan como estados lógicos. En el dispositivo real corresponden a intervalos de voltaje definidos por su tecnología. El modelo de este capítulo no incluye todavía márgenes de ruido ni retardos de propagación.\n\n\n\n\nFormas de onda lógicas\nEl siguiente ejemplo genera señales binarias y calcula las salidas AND y OR.\nt &lt;- 0:8\nsenal_A &lt;- c(0, 0, 1, 1, 1, 0, 1, 1, 0)\nsenal_B &lt;- c(1, 1, 1, 0, 0, 1, 0, 0, 0)\n\nsalida_AND &lt;- as.integer(as.logical(senal_A) & as.logical(senal_B))\nsalida_OR &lt;- as.integer(as.logical(senal_A) | as.logical(senal_B))\n\nmatplot(\n  t,\n  cbind(senal_A, senal_B, salida_AND, salida_OR),\n  type = \"s\",\n  lty = 1,\n  lwd = 2,\n  xlab = \"Tiempo\",\n  ylab = \"Nivel lógico\",\n  yaxt = \"n\",\n  col = c(\"#1f77b4\", \"#d62728\", \"#2ca02c\", \"#9467bd\")\n)\naxis(2, at = c(0, 1))\nlegend(\n  \"topright\",\n  legend = c(\"A\", \"B\", \"A AND B\", \"A OR B\"),\n  col = c(\"#1f77b4\", \"#d62728\", \"#2ca02c\", \"#9467bd\"),\n  lty = 1,\n  lwd = 2,\n  bty = \"n\"\n)\n\n\n\n\n\n\nNotaGeoGebra: circuitos y formas de onda\n\n\n\nEl recurso previsto permitirá accionar interruptores para \\(A\\), \\(B\\) y \\(C\\), observar la salida del circuito y comparar el resultado con la fila correspondiente de la tabla de verdad. Otro recurso permitirá mover los instantes de conmutación y observar las formas de onda. Las compuertas se presentarán con símbolos uniformes basados en la convención IEEE/ANSI estudiada por Tocci y Widmer (2003).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#laboratorio-del-capítulo",
+    "href": "01-logica-conjuntos.html#laboratorio-del-capítulo",
+    "title": "1  Lógica y conjuntos",
+    "section": "Laboratorio del capítulo",
+    "text": "Laboratorio del capítulo\nLa primera versión integra tres aplicaciones que funcionan directamente en el sitio estático, sin servidor ni instalación adicional:\n\nConstructor de tablas de verdad: selección de conectivos y clasificación como tautología, contradicción o contingencia.\nOperaciones de conjuntos: regiones de Venn, cardinalidad e inclusión-exclusión.\nClasificador de funciones: diagramas sagitales y diagnóstico de inyectividad, suprayectividad y biyectividad.\n\nEl simulador de circuitos, con compuertas, polaridades y diagramas de temporización, será la siguiente ampliación. Más adelante se preparará una versión Shiny o Shinylive cuando aporte controles que no convenga resolver en el navegador.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#ejercicios-con-r",
+    "href": "01-logica-conjuntos.html#ejercicios-con-r",
+    "title": "1  Lógica y conjuntos",
+    "section": "Ejercicios con R",
+    "text": "Ejercicios con R\n\nModifique \\(U,A,B\\) y compruebe ambas leyes de De Morgan.\nConstruya la tabla de verdad de \\([(p\\land\\neg q)\\Rightarrow(r\\land\\neg r)]\\Leftrightarrow(p\\Rightarrow q)\\).\nEscriba una función que determine si dos conjuntos finitos son disjuntos.\nExtienda el programa de relaciones para indicar qué pares impiden la simetría o la transitividad.\nConstruya tres tablas: una función solo inyectiva, otra solo suprayectiva y una biyectiva.\nCompruebe por tabla de verdad la ley de absorción \\(a+ab=a\\).\nImplemente NAND y demuestre computacionalmente que también es una compuerta universal.\nGenere dos señales binarias propias y trace las salidas XOR y NOR.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#proyecto-integrador",
+    "href": "01-logica-conjuntos.html#proyecto-integrador",
+    "title": "1  Lógica y conjuntos",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nDiseñe un sistema lógico de tres entradas relacionado con sensores electrónicos:\n\ndescriba la regla de activación;\nescriba su expresión booleana;\ngenere la tabla de verdad en R;\nsimplifique la expresión manualmente;\ncompruebe la simplificación con R;\ndibuje los circuitos original y simplificado;\ngenere una forma de onda de prueba;\ninterprete la reducción en el número de compuertas.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#recursos-interactivos-y-multimedia",
+    "href": "01-logica-conjuntos.html#recursos-interactivos-y-multimedia",
+    "title": "1  Lógica y conjuntos",
+    "section": "Recursos interactivos y multimedia",
+    "text": "Recursos interactivos y multimedia\nEsta versión ya incorpora:\n\ncuaderno completo del capítulo para Google Colab con R;\nlaboratorio de tablas de verdad;\nlaboratorio de operaciones con conjuntos y diagramas de Venn;\nclasificador de funciones mediante diagramas sagitales;\nfiguras vectoriales para operaciones, relaciones, composición y tipos de funciones.\n\nEn versiones posteriores se incorporarán:\n\nvideo introductorio sobre lógica y conjuntos;\nvideo de tablas de verdad y cuantificadores;\nvideo de simplificación booleana y universalidad de NAND/NOR;\npresentación docente;\ninfografía de correspondencia lógica-conjuntos;\ninfografía de funciones y sus clasificaciones;\ninfografía de errores frecuentes;\nactividades de GeoGebra y simulador de circuitos.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#síntesis",
+    "href": "01-logica-conjuntos.html#síntesis",
+    "title": "1  Lógica y conjuntos",
+    "section": "Síntesis",
+    "text": "Síntesis\nR permite experimentar con conjuntos finitos, tablas de verdad, relaciones y funciones. Las comprobaciones exhaustivas son concluyentes cuando el dominio es finito y se han enumerado todos los casos. Para afirmaciones generales sobre conjuntos infinitos, la demostración matemática sigue siendo el fundamento.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "01-logica-conjuntos.html#referencias-del-capítulo",
+    "href": "01-logica-conjuntos.html#referencias-del-capítulo",
+    "title": "1  Lógica y conjuntos",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia temática sigue el programa de Álgebra Superior (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Los fundamentos se apoyan en Silva y Lazo (2007), Epp (2011) y Rosen (2019). La aplicación a compuertas y álgebra booleana adapta el capítulo 3 de Tocci y Widmer (2003). El código utiliza R base (R Core Team 2026).\n\n\n\n\nEpp, Susanna S. 2011. Discrete Mathematics with Applications. 4.ª ed. Brooks/Cole, Cengage Learning.\n\n\nR Core Team. 2026. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its Applications. 8.ª ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nTocci, Ronald J., y Neal S. Widmer. 2003. Sistemas digitales: principios y aplicaciones. 8.ª ed. Pearson Educación.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html",
+    "href": "02-enteros-reales.html",
+    "title": "2  Números enteros y reales",
+    "section": "",
+    "text": "Introducción\nExperimentación con R, algoritmos y recta numérica\nEste capítulo convierte propiedades de los enteros y los reales en experimentos reproducibles. R permitirá generar ejemplos, ejecutar algoritmos, detectar patrones y visualizar distancias. La comprobación computacional será una herramienta para formular y revisar conjeturas; las afirmaciones para infinitos números continuarán requiriendo demostración.\nTodo el código principal usa R base (R Core Team 2026). Puede ejecutarse en RStudio o en Google Colab sin instalar paquetes.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#introducción",
+    "href": "02-enteros-reales.html#introducción",
+    "title": "2  Números enteros y reales",
+    "section": "",
+    "text": "TipCuaderno completo y ejecutable\n\n\n\nEl cuaderno sigue las secciones 2.1-2.8, incluye algoritmos de divisibilidad y primos, experimentos sobre precisión numérica y gráficas de exponentes y valor absoluto.\nAbrir en Google Colab Descargar el cuaderno\n\n\n\nObjetivos\nAl finalizar, el lector podrá:\n\nrepresentar enteros y operar con cociente y residuo en R;\nexperimentar con sucesiones que se demuestran por inducción;\nprogramar los algoritmos de Euclides y Euclides extendido;\ndetectar primos y obtener factorizaciones;\ndistinguir cálculo exacto simbólico de aproximación numérica;\nexplorar propiedades de orden y densidad en la recta real;\nevaluar potencias con exponentes enteros y racionales atendiendo a su dominio;\nresolver e interpretar inecuaciones con valor absoluto.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-propiedades-enteros",
+    "href": "02-enteros-reales.html#sec-propiedades-enteros",
+    "title": "2  Números enteros y reales",
+    "section": "2.1 Propiedades de los números enteros",
+    "text": "2.1 Propiedades de los números enteros\n\nEnteros y almacenamiento en R\nR distingue valores enteros escritos con el sufijo L y valores numéricos almacenados, normalmente, en doble precisión.\nz &lt;- c(-3L, -2L, -1L, 0L, 1L, 2L, 3L)\n\ntypeof(z)\ntypeof(3)\ntypeof(3L)\nPara los ejemplos habituales ambos tipos producen las mismas operaciones. Sin embargo, una computadora representa un conjunto finito de valores; no contiene literalmente todos los elementos de \\(\\mathbb Z\\) ni de \\(\\mathbb R\\).\n.Machine$integer.max\n.Machine$double.xmax\n\n\n\n\n\n\nAdvertenciaModelo matemático y representación computacional\n\n\n\nLos enteros matemáticos no tienen cota superior. Los enteros almacenados en un tipo de computadora sí la tienen. Cuando un cálculo excede el rango o la precisión disponible, el resultado puede desbordarse o redondearse.\n\n\n\n\nComprobación de propiedades\nElegimos tres enteros y comparamos ambos lados de las propiedades asociativa y distributiva.\na &lt;- -7L\nb &lt;- 5L\nc &lt;- 3L\n\ndata.frame(\n  propiedad = c(\"asociativa de la suma\", \"distributiva\"),\n  izquierda = c((a + b) + c, a * (b + c)),\n  derecha = c(a + (b + c), a * b + a * c)\n)\nLa igualdad para estos valores es una verificación, no una demostración para todos los enteros.\n\n\nOrden en la recta numérica\nx &lt;- -6:6\nplot(x, rep(0, length(x)), pch = 19,\n     xlab = \"entero\", ylab = \"\", yaxt = \"n\",\n     main = \"Enteros en la recta numérica\")\nabline(h = 0, col = \"gray50\")\ntext(x, rep(0.08, length(x)), labels = x, cex = 0.8)\nEn la recta, \\(a&lt;b\\) significa que \\(a\\) aparece a la izquierda de \\(b\\). Sumar el mismo número traslada ambos puntos sin cambiar su orden.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-induccion",
+    "href": "02-enteros-reales.html#sec-induccion",
+    "title": "2  Números enteros y reales",
+    "section": "2.2 Inducción matemática",
+    "text": "2.2 Inducción matemática\n\nExplorar antes de demostrar\nConsideremos la conjetura\n\\[\n1+3+\\cdots +(2n-1)=n^2.\n\\]\nR permite comparar ambos lados para los primeros valores.\nn &lt;- 1:12\nlado_izquierdo &lt;- cumsum(2 * n - 1)\nlado_derecho &lt;- n^2\n\ndata.frame(\n  n = n,\n  suma_impares = lado_izquierdo,\n  cuadrado = lado_derecho,\n  diferencia = lado_izquierdo - lado_derecho\n)\nQue la columna diferencia sea cero sugiere la identidad, pero la demostración inductiva explica por qué se conserva al pasar de \\(n\\) a \\(n+1\\).\n\n\n\n\n\n\nFigura 2.1: La suma acumulada de impares coincide con los cuadrados perfectos.\n\n\n\n\n\nFunción para revisar una identidad\nrevisar_identidad &lt;- function(n_max = 50L) {\n  n &lt;- seq_len(n_max)\n  izquierda &lt;- cumsum(2 * n - 1)\n  data.frame(\n    n = n,\n    izquierda = izquierda,\n    derecha = n^2,\n    coincide = izquierda == n^2\n  )\n}\n\nresultado &lt;- revisar_identidad(20L)\nall(resultado$coincide)\n\n\nInteractivo: construir el siguiente cuadrado\nSeleccione \\(n\\) y observe cómo \\(n^2\\) puntos, más una franja de \\(2n+1\\) puntos, forman \\((n+1)^2\\).\nAbrir el laboratorio de inducción\n\n\n\n\nLo que R no demuestra\nNo existe una instrucción que enumere todos los naturales y termine. La prueba formal requiere:\n\ncomprobar el caso base;\nsuponer la fórmula para un entero arbitrario \\(k\\);\ndeducir la fórmula para \\(k+1\\).\n\nR ayuda a encontrar errores y contraejemplos. Si una afirmación falla para algún valor ensayado, queda refutada; si no falla, todavía necesita demostración.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-divisibilidad",
+    "href": "02-enteros-reales.html#sec-divisibilidad",
+    "title": "2  Números enteros y reales",
+    "section": "2.3 Divisibilidad",
+    "text": "2.3 Divisibilidad\n\nCociente y residuo\nEn R, %/% calcula el cociente entero y %% el residuo.\na &lt;- c(47L, -47L)\nd &lt;- 6L\nq &lt;- a %/% d\nr &lt;- a %% d\n\ndata.frame(\n  a = a,\n  d = d,\n  q = q,\n  r = r,\n  reconstruccion = d * q + r\n)\nObserve que R elige el residuo de modo que \\(0\\le r&lt;d\\) cuando \\(d&gt;0\\).\nUna función de divisibilidad puede escribirse así:\ndivide &lt;- function(a, b) {\n  if (a == 0) stop(\"El divisor no puede ser cero\")\n  b %% a == 0\n}\n\nc(`7 divide 42` = divide(7L, 42L),\n  `7 divide 40` = divide(7L, 40L))\n\n\nAlgoritmo de Euclides\neuclides &lt;- function(a, b) {\n  a &lt;- abs(as.integer(a))\n  b &lt;- abs(as.integer(b))\n  pasos &lt;- data.frame(\n    dividendo = integer(), divisor = integer(),\n    cociente = integer(), residuo = integer()\n  )\n\n  while (b != 0L) {\n    q &lt;- a %/% b\n    r &lt;- a %% b\n    pasos &lt;- rbind(\n      pasos,\n      data.frame(dividendo = a, divisor = b,\n                 cociente = q, residuo = r)\n    )\n    a &lt;- b\n    b &lt;- r\n  }\n\n  list(mcd = a, pasos = pasos)\n}\n\nresultado &lt;- euclides(252L, 198L)\nresultado$pasos\nresultado$mcd\n\n\n\n\n\n\nFigura 2.2: Los pares sucesivos del algoritmo de Euclides terminan en el máximo común divisor.\n\n\n\n\n\nEuclides extendido y coeficientes de Bézout\neuclides_extendido &lt;- function(a, b) {\n  viejo_r &lt;- as.integer(a); r &lt;- as.integer(b)\n  viejo_s &lt;- 1L; s &lt;- 0L\n  viejo_t &lt;- 0L; t &lt;- 1L\n\n  while (r != 0L) {\n    q &lt;- viejo_r %/% r\n    aux &lt;- viejo_r - q * r; viejo_r &lt;- r; r &lt;- aux\n    aux &lt;- viejo_s - q * s; viejo_s &lt;- s; s &lt;- aux\n    aux &lt;- viejo_t - q * t; viejo_t &lt;- t; t &lt;- aux\n  }\n\n  if (viejo_r &lt; 0L) {\n    viejo_r &lt;- -viejo_r\n    viejo_s &lt;- -viejo_s\n    viejo_t &lt;- -viejo_t\n  }\n  c(mcd = viejo_r, x = viejo_s, y = viejo_t)\n}\n\nbezout &lt;- euclides_extendido(252L, 198L)\nbezout\n252L * bezout[\"x\"] + 198L * bezout[\"y\"]\n\n\nInteractivo: residuos sucesivos\nIntroduzca dos enteros positivos. El laboratorio muestra cada división y señala el último residuo no nulo.\nAbrir el algoritmo de Euclides",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-primos-factorizacion",
+    "href": "02-enteros-reales.html#sec-primos-factorizacion",
+    "title": "2  Números enteros y reales",
+    "section": "2.4 Números primos y factorización",
+    "text": "2.4 Números primos y factorización\n\nPrueba de primalidad por división\nPara decidir si \\(n\\) es primo basta probar divisores hasta \\(\\sqrt n\\).\nes_primo &lt;- function(n) {\n  n &lt;- as.integer(n)\n  if (n &lt; 2L) return(FALSE)\n  if (n == 2L) return(TRUE)\n  if (n %% 2L == 0L) return(FALSE)\n\n  limite &lt;- floor(sqrt(n))\n  if (limite &lt; 3L) return(TRUE)\n  candidatos &lt;- seq.int(3L, limite, by = 2L)\n  !any(n %% candidatos == 0L)\n}\n\nsapply(1:30, es_primo)\n(1:100)[sapply(1:100, es_primo)]\n\n\nCriba de Eratóstenes\nLa criba elimina múltiplos y conserva los primos no mayores que un límite.\ncriba &lt;- function(n) {\n  n &lt;- as.integer(n)\n  if (n &lt; 2L) return(integer())\n  primo &lt;- rep(TRUE, n)\n  primo[1] &lt;- FALSE\n\n  limite &lt;- floor(sqrt(n))\n  if (limite &gt;= 2L) {\n    for (p in 2:limite) {\n      if (primo[p]) primo[seq.int(p * p, n, by = p)] &lt;- FALSE\n    }\n  }\n  which(primo)\n}\n\ncriba(100L)\n\n\nFactorización por divisiones sucesivas\nfactorizar &lt;- function(n) {\n  n &lt;- abs(as.integer(n))\n  if (n &lt; 2L) return(integer())\n  factores &lt;- integer()\n  d &lt;- 2L\n\n  while (d * d &lt;= n) {\n    while (n %% d == 0L) {\n      factores &lt;- c(factores, d)\n      n &lt;- n %/% d\n    }\n    d &lt;- if (d == 2L) 3L else d + 2L\n  }\n  if (n &gt; 1L) factores &lt;- c(factores, n)\n  factores\n}\n\nfactorizar(756L)\ntable(factorizar(756L))\n\n\n\n\n\n\nFigura 2.3: Cadena de factorización y descomposición prima de \\(756\\).\n\n\n\n\n\nMCD y MCM\nmcd &lt;- function(a, b) euclides(a, b)$mcd\nmcm &lt;- function(a, b) {\n  if (a == 0L || b == 0L) return(0L)\n  abs(a %/% mcd(a, b) * b)\n}\n\na &lt;- 840L\nb &lt;- 378L\nc(mcd = mcd(a, b), mcm = mcm(a, b), producto = a * b)\nmcd(a, b) * mcm(a, b) == a * b",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-racionales-reales",
+    "href": "02-enteros-reales.html#sec-racionales-reales",
+    "title": "2  Números enteros y reales",
+    "section": "2.5 Números racionales y números reales",
+    "text": "2.5 Números racionales y números reales\n\nRepresentar una fracción exactamente\nR base representa 1/3 mediante una aproximación de punto flotante. Para conservar una fracción exacta podemos guardar numerador y denominador reducidos.\nfraccion &lt;- function(num, den = 1L) {\n  if (den == 0L) stop(\"El denominador no puede ser cero\")\n  num &lt;- as.integer(num)\n  den &lt;- as.integer(den)\n  if (den &lt; 0L) { num &lt;- -num; den &lt;- -den }\n  g &lt;- mcd(abs(num), den)\n  c(num = num %/% g, den = den %/% g)\n}\n\nfraccion(18L, 24L)\nfraccion(-15L, -35L)\n\n\nAproximación y precisión\nEl conocido ejemplo siguiente muestra que una igualdad matemáticamente correcta puede no ser exacta en aritmética binaria de punto flotante.\n0.1 + 0.2\n(0.1 + 0.2) == 0.3\nall.equal(0.1 + 0.2, 0.3)\nPara comparar resultados numéricos se utiliza una tolerancia:\niguales_aprox &lt;- function(x, y, tolerancia = 1e-12) {\n  abs(x - y) &lt;= tolerancia\n}\n\niguales_aprox(0.1 + 0.2, 0.3)\n\n\nRacionales e irracionales en la recta\nvalores &lt;- c(0, 1/2, sqrt(2), 3/2, sqrt(3), 2)\netiquetas &lt;- c(\"0\", \"1/2\", \"sqrt(2)\", \"3/2\", \"sqrt(3)\", \"2\")\n\nplot(valores, rep(0, length(valores)), pch = 19,\n     xlim = c(-0.1, 2.1), ylim = c(-0.35, 0.35),\n     axes = FALSE, xlab = \"recta real\", ylab = \"\")\naxis(1)\nabline(h = 0, col = \"gray50\")\ntext(valores, rep(0.12, length(valores)), etiquetas, cex = 0.8)\n\n\n\n\n\n\nFigura 2.4: Los naturales, enteros, racionales e irracionales se sitúan dentro de los reales.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-propiedades-reales",
+    "href": "02-enteros-reales.html#sec-propiedades-reales",
+    "title": "2  Números enteros y reales",
+    "section": "2.6 Propiedades de los números reales",
+    "text": "2.6 Propiedades de los números reales\n\nOrden y operaciones\nPodemos observar que multiplicar por un número negativo invierte una desigualdad.\na &lt;- -2\nb &lt;- 5\nc_positivo &lt;- 3\nc_negativo &lt;- -3\n\ndata.frame(\n  comparacion = c(\"original\", \"multiplicar por positivo\", \"multiplicar por negativo\"),\n  izquierda = c(a, a * c_positivo, a * c_negativo),\n  derecha = c(b, b * c_positivo, b * c_negativo),\n  menor = c(a &lt; b,\n            a * c_positivo &lt; b * c_positivo,\n            a * c_negativo &lt; b * c_negativo)\n)\nLa tercera fila es falsa porque el sentido correcto es \\(ac&gt;bc\\) cuando \\(c&lt;0\\).\n\n\nDensidad mediante puntos intermedios\nEntre \\(a&lt;b\\) podemos construir repetidamente puntos medios.\npuntos_medios &lt;- function(a, b, niveles = 4L) {\n  puntos &lt;- c(a, b)\n  for (i in seq_len(niveles)) {\n    puntos &lt;- sort(unique(c(puntos, head(puntos, -1) + diff(puntos) / 2)))\n  }\n  puntos\n}\n\np &lt;- puntos_medios(1, 2, 4L)\np\nplot(p, rep(0, length(p)), pch = 19,\n     xlab = \"x\", ylab = \"\", yaxt = \"n\",\n     main = \"Puntos intermedios entre 1 y 2\")\nabline(h = 0, col = \"gray50\")\n\n\nAproximar \\(\\sqrt2\\) por bisección\nLa completitud garantiza en \\(\\mathbb R\\) la existencia del límite que llena el corte entre números con cuadrado menor y mayor que \\(2\\).\naproximar_raiz2 &lt;- function(iteraciones = 20L) {\n  inferior &lt;- 1\n  superior &lt;- 2\n  historial &lt;- data.frame()\n\n  for (i in seq_len(iteraciones)) {\n    medio &lt;- (inferior + superior) / 2\n    historial &lt;- rbind(\n      historial,\n      data.frame(i = i, inferior = inferior,\n                 medio = medio, superior = superior,\n                 error = medio^2 - 2)\n    )\n    if (medio^2 &lt; 2) inferior &lt;- medio else superior &lt;- medio\n  }\n  historial\n}\n\naproximacion &lt;- aproximar_raiz2(15L)\ntail(aproximacion, 5)\nsqrt(2)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-exponentes",
+    "href": "02-enteros-reales.html#sec-exponentes",
+    "title": "2  Números enteros y reales",
+    "section": "2.7 Exponentes racionales y negativos",
+    "text": "2.7 Exponentes racionales y negativos\n\nPotencias y dominio\ndata.frame(\n  expresion = c(\"2^(-3)\", \"16^(3/4)\", \"(-8)^(1/3)\"),\n  valor_R = c(2^(-3), 16^(3/4), (-8)^(1/3))\n)\nLa última expresión muestra una dificultad: aunque la raíz cúbica real de \\(-8\\) es \\(-2\\), la operación directa puede producir NaN porque R evalúa potencias reales mediante logaritmos complejos fuera del dominio real positivo.\nPodemos construir la raíz impar real:\nraiz_impar &lt;- function(x, n) {\n  if (n &lt;= 0L || n %% 2L == 0L) stop(\"n debe ser impar positivo\")\n  sign(x) * abs(x)^(1 / n)\n}\n\nraiz_impar(-8, 3L)\n\n\nVerificar leyes con restricciones\na &lt;- 5\nr &lt;- 2/3\ns &lt;- -1/4\n\nc(\n  producto = a^r * a^s,\n  suma_exponentes = a^(r + s),\n  diferencia = a^r * a^s - a^(r + s)\n)\nPor redondeo, conviene comparar con all.equal().\nall.equal(a^r * a^s, a^(r + s))\n\n\nGráficas de potencias\nx &lt;- seq(0.05, 4, length.out = 400)\nplot(x, x^2, type = \"l\", lwd = 2,\n     xlab = \"x\", ylab = \"y\", ylim = c(0, 8),\n     main = \"Exponentes sobre bases positivas\")\nlines(x, sqrt(x), lwd = 2, lty = 2)\nlines(x, x^(-1), lwd = 2, lty = 3)\nlegend(\"topright\", c(\"x^2\", \"x^(1/2)\", \"x^(-1)\"),\n       lty = c(1, 2, 3), lwd = 2, bty = \"n\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#sec-valor-absoluto",
+    "href": "02-enteros-reales.html#sec-valor-absoluto",
+    "title": "2  Números enteros y reales",
+    "section": "2.8 Valor absoluto",
+    "text": "2.8 Valor absoluto\n\nDistancia en la recta\nx &lt;- c(-5, -2, 0, 3, 7)\na &lt;- 2\ndata.frame(x = x, centro = a, distancia = abs(x - a))\n\n\n\n\n\n\nFigura 2.5: La desigualdad \\(|x-a|\\le r\\) selecciona un intervalo centrado en \\(a\\).\n\n\n\n\n\nResolver inecuaciones\nPara resolver \\(|x-a|\\le r\\), el intervalo solución es \\([a-r,a+r]\\) cuando \\(r\\ge0\\).\nintervalo_abs &lt;- function(a, r, tipo = c(\"menor_igual\", \"mayor\")) {\n  tipo &lt;- match.arg(tipo)\n  if (r &lt; 0) stop(\"r debe ser no negativo\")\n  extremos &lt;- c(a - r, a + r)\n  if (tipo == \"menor_igual\") {\n    list(intervalo = extremos,\n         descripcion = sprintf(\"[%g, %g]\", extremos[1], extremos[2]))\n  } else {\n    list(intervalos = matrix(c(-Inf, extremos[1], extremos[2], Inf), nrow = 2, byrow = TRUE),\n         descripcion = sprintf(\"(-Inf, %g) U (%g, Inf)\", extremos[1], extremos[2]))\n  }\n}\n\nintervalo_abs(a = 4, r = 7, tipo = \"menor_igual\")\nintervalo_abs(a = -1, r = 2, tipo = \"mayor\")\n\n\nComprobar la desigualdad triangular\nset.seed(2026)\nx &lt;- runif(1000, -20, 20)\ny &lt;- runif(1000, -20, 20)\n\nall(abs(x + y) &lt;= abs(x) + abs(y) + 1e-12)\nmax(abs(x + y) - (abs(x) + abs(y)))\nLa simulación busca contraejemplos en mil pares. No sustituye la demostración, pero ayuda a comprobar la implementación y a observar que la diferencia nunca resulta positiva.\n\n\nInteractivo: centro, radio e intervalo\nCambie el centro \\(a\\), el radio \\(r\\) y el tipo de desigualdad. La recta numérica muestra si la solución es un intervalo central o dos regiones exteriores.\nAbrir el laboratorio de valor absoluto",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#laboratorio-del-capítulo",
+    "href": "02-enteros-reales.html#laboratorio-del-capítulo",
+    "title": "2  Números enteros y reales",
+    "section": "Laboratorio del capítulo",
+    "text": "Laboratorio del capítulo\nLa versión incorpora tres actividades autónomas:\n\nInducción visual: construye \\((n+1)^2\\) a partir de \\(n^2\\) y \\(2n+1\\).\nAlgoritmo de Euclides: presenta cocientes y residuos hasta encontrar el MCD.\nValor absoluto: transforma distancia en intervalos y regiones de la recta real.\n\nEstas actividades funcionan en el sitio estático. El cuaderno Colab reúne además todos los algoritmos y experimentos de R.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#ejercicios-con-r",
+    "href": "02-enteros-reales.html#ejercicios-con-r",
+    "title": "2  Números enteros y reales",
+    "section": "Ejercicios con R",
+    "text": "Ejercicios con R\n\nGenere enteros aleatorios y compruebe las propiedades conmutativa, asociativa y distributiva.\nConstruya una tabla para contrastar \\(1+2+\\cdots+n\\) con \\(n(n+1)/2\\) hasta \\(n=100\\).\nModifique euclides() para aceptar una lista de enteros y calcular su MCD.\nUse euclides_extendido() para resolver una ecuación diofántica \\(ax+by=c\\).\nCompare el tiempo de es_primo() y criba() al buscar primos hasta un límite creciente.\nEscriba una función que devuelva la factorización como texto, por ejemplo 2^2 * 3^3 * 7.\nGenere aproximaciones racionales de \\(\\sqrt2\\) y grafique el error absoluto.\nConstruya ejemplos donde comparar con == falle, pero all.equal() sea verdadero.\nTrace \\(x^r\\) para exponentes negativos, fraccionarios y enteros en sus dominios reales.\nGenere puntos al azar y compruebe la desigualdad triangular inversa.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#proyecto-integrador",
+    "href": "02-enteros-reales.html#proyecto-integrador",
+    "title": "2  Números enteros y reales",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nDesarrolle un pequeño analizador de enteros que reciba \\(a\\) y \\(b\\) y produzca:\n\nclasificación de signo y paridad;\ndivisores positivos;\nfactorización prima;\ntabla completa del algoritmo de Euclides;\ncoeficientes de Bézout;\nMCD y MCM calculados de dos maneras;\nverificaciones automáticas de las identidades utilizadas;\nuna interpretación escrita de los resultados.\n\nEl informe debe distinguir con claridad qué resultados son cálculos, cuáles son verificaciones finitas y cuáles dependen de un teorema general.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#síntesis",
+    "href": "02-enteros-reales.html#síntesis",
+    "title": "2  Números enteros y reales",
+    "section": "Síntesis",
+    "text": "Síntesis\nR hace visibles los algoritmos y permite experimentar con numerosos ejemplos. El residuo implementa divisibilidad; Euclides reduce el problema del MCD; la criba y las divisiones sucesivas exploran primos; las aproximaciones muestran la diferencia entre un real matemático y su representación finita. La inducción, la unicidad de la factorización y las propiedades de completitud siguen requiriendo razonamiento matemático.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#referencias-del-capítulo",
+    "href": "02-enteros-reales.html#referencias-del-capítulo",
+    "title": "2  Números enteros y reales",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia sigue la unidad 2 del programa de Álgebra Superior (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Los fundamentos se apoyan en Silva y Lazo (2007), Rosen (2019), Burton (2011) y Niven et al. (1991). Los algoritmos se implementan con R base (R Core Team 2026).\n\n\n\n\nBurton, David M. 2011. Elementary Number Theory. 7.ª ed. McGraw-Hill.\n\n\nNiven, Ivan, Herbert S. Zuckerman, y Hugh L. Montgomery. 1991. An Introduction to the Theory of Numbers. 5.ª ed. John Wiley & Sons.\n\n\nR Core Team. 2026. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its Applications. 8.ª ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html",
+    "href": "03-numeros-complejos.html",
+    "title": "3  Números complejos",
+    "section": "",
+    "text": "Introducción\nLos números complejos unen álgebra y geometría. En forma cartesiana se operan mediante sus partes real e imaginaria; en forma polar, la multiplicación se convierte en una combinación de cambio de escala y rotación. R incorpora números complejos en su lenguaje base, por lo que permite experimentar sin instalar paquetes.\nEl capítulo sigue las nueve secciones de la Unidad 3 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Cada sección comienza con el procedimiento manual, lo traduce a R y termina con una interpretación geométrica.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#introducción",
+    "href": "03-numeros-complejos.html#introducción",
+    "title": "3  Números complejos",
+    "section": "",
+    "text": "Objetivos\nAl terminar, el estudiante podrá:\n\nrepresentar pares, vectores y complejos en el plano;\nconvertir coordenadas cartesianas y polares;\nprogramar operaciones vectoriales con R base;\nutilizar Re(), Im(), Mod(), Arg() y Conj();\ninterpretar sumas, productos, conjugados y cocientes;\ncalcular potencias y todas las raíces de un complejo;\ncomprobar resultados numéricamente sin confundir una prueba experimental con una demostración.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-r2",
+    "href": "03-numeros-complejos.html#sec-r2",
+    "title": "3  Números complejos",
+    "section": "3.1 Definición de \\(\\mathbb R^2\\)",
+    "text": "3.1 Definición de \\(\\mathbb R^2\\)\nUn elemento de \\(\\mathbb R^2\\) es un par ordenado \\((x,y)\\). Puede representar un punto o el vector dirigido desde el origen hasta ese punto.\n\nSituación inicial\nUn robot se desplaza \\(3\\) unidades al este y \\(4\\) al norte. Su posición final es \\((3,4)\\) y la distancia al origen es\n\\[\n\\sqrt{3^2+4^2}=5.\n\\]\nEn R, un vector de dos componentes puede guardarse como un vector numérico.\np &lt;- c(x = 3, y = 4)\np\nsqrt(sum(p^2))\nPara varios puntos conviene usar un data.frame.\npuntos &lt;- data.frame(\n  nombre = c(\"A\", \"B\", \"C\", \"D\"),\n  x = c(3, -2, -3, 2),\n  y = c(4, 3, -2, -3)\n)\n\npuntos$cuadrante &lt;- with(puntos, ifelse(\n  x &gt; 0 & y &gt; 0, \"I\",\n  ifelse(x &lt; 0 & y &gt; 0, \"II\",\n         ifelse(x &lt; 0 & y &lt; 0, \"III\", \"IV\"))\n))\npuntos\n\n\nPlano cartesiano en R\nplot(puntos$x, puntos$y,\n     xlim = c(-5, 5), ylim = c(-5, 5), asp = 1,\n     xlab = \"x\", ylab = \"y\", pch = 19, col = \"#1769a6\",\n     main = \"Puntos de R²\")\nabline(h = 0, v = 0, col = \"gray65\")\ntext(puntos$x, puntos$y, labels = puntos$nombre,\n     pos = 3, col = \"#123b6d\")\n\n\nDistancia entre dos puntos\ndistancia &lt;- function(P, Q) sqrt(sum((P - Q)^2))\n\nP &lt;- c(-2, 3)\nQ &lt;- c(4, -1)\ndistancia(P, Q)\n\n\n\n\n\n\nNotaInterpretación\n\n\n\nEl código reproduce la definición. P - Q obtiene las diferencias de componentes, ^2 calcula sus cuadrados, sum() los suma y sqrt() extrae la raíz.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-cartesiana-polar",
+    "href": "03-numeros-complejos.html#sec-cartesiana-polar",
+    "title": "3  Números complejos",
+    "section": "3.2 Representaciones cartesiana y polar de vectores en \\(\\mathbb R^2\\)",
+    "text": "3.2 Representaciones cartesiana y polar de vectores en \\(\\mathbb R^2\\)\nPara \\((x,y)\\neq(0,0)\\):\n\\[\nr=\\sqrt{x^2+y^2},\\qquad\n\\theta=\\operatorname{atan2}(y,x).\n\\]\nLa función de dos argumentos atan2(y, x) identifica el cuadrante correcto. La función atan(y/x) no lo hace en todos los casos.\n\n\n\n\n\n\nFigura 3.1: Del par cartesiano \\((3,4)\\) a radio \\(5\\) y argumento \\(\\theta\\).\n\n\n\n\nConversión cartesiana a polar\ncartesiana_polar &lt;- function(x, y) {\n  r &lt;- sqrt(x^2 + y^2)\n  theta &lt;- ifelse(r == 0, NA_real_, atan2(y, x))\n  data.frame(x = x, y = y, r = r,\n             theta_rad = theta,\n             theta_grados = theta * 180 / pi)\n}\n\ncartesiana_polar(3, 4)\ncartesiana_polar(-sqrt(3), 1)\ncartesiana_polar(0, 0)\n\n\nConversión polar a cartesiana\npolar_cartesiana &lt;- function(r, theta) {\n  if (any(r &lt; 0)) stop(\"El radio debe ser no negativo\")\n  data.frame(r = r, theta = theta,\n             x = r * cos(theta),\n             y = r * sin(theta))\n}\n\npolar_cartesiana(2, 5 * pi / 6)\n\n\nConstrucción equivalente en GeoGebra\nEn la vista gráfica pueden escribirse las órdenes:\n~text O = (0, 0) Z = (3, 4) u = Vector(O, Z) r = Length(u) theta = Angle((1, 0), u)\n\nAl arrastrar $Z$, GeoGebra actualiza simultáneamente sus coordenadas, módulo y argumento.\n\n::: {.content-visible when-format=\"html\"}\n### Laboratorio: coordenadas y argumento {.unnumbered .unlisted}\n\n&lt;iframe class=\"interactive-frame complex-plane\" src=\"interactivos/plano-complejo.html\" title=\"Laboratorio de representación cartesiana y polar\"&gt;&lt;/iframe&gt;\n\n[Abrir el laboratorio en una pestaña nueva](interactivos/plano-complejo.html){.btn .btn-primary}\n:::\n\n## Operaciones con vectores en $\\mathbb R^2$ {#sec-operaciones-r2}\n\nSean $\\mathbf u=(u_1,u_2)$ y $\\mathbf v=(v_1,v_2)$. La suma, resta, multiplicación por escalar y producto punto se calculan componente a componente.\n\n```{.r}\nu &lt;- c(2, 1)\nv &lt;- c(-1, 2)\n\nlist(\n  suma = u + v,\n  resta = u - v,\n  triple_u = 3 * u,\n  producto_punto = sum(u * v)\n)\nComo sum(u * v) vale cero, los vectores son perpendiculares.\n\n\nRegla del paralelogramo\n\n\n\n\n\n\nFigura 3.2: La diagonal representa \\(\\mathbf u+\\mathbf v\\).\n\n\n\ndibujar_suma &lt;- function(u, v) {\n  s &lt;- u + v\n  limites_x &lt;- range(c(0, u[1], v[1], s[1])) + c(-1, 1)\n  limites_y &lt;- range(c(0, u[2], v[2], s[2])) + c(-1, 1)\n  plot(0, 0, type = \"n\", xlim = limites_x, ylim = limites_y,\n       asp = 1, xlab = \"x\", ylab = \"y\",\n       main = \"Suma vectorial\")\n  abline(h = 0, v = 0, col = \"gray75\")\n  arrows(0, 0, u[1], u[2], length = 0.09,\n         col = \"#1769a6\", lwd = 3)\n  arrows(0, 0, v[1], v[2], length = 0.09,\n         col = \"#2c7a5a\", lwd = 3)\n  arrows(0, 0, s[1], s[2], length = 0.09,\n         col = \"#b58a2a\", lwd = 3)\n  segments(u[1], u[2], s[1], s[2], lty = 2, col = \"gray45\")\n  segments(v[1], v[2], s[1], s[2], lty = 2, col = \"gray45\")\n}\n\ndibujar_suma(c(3, 1), c(1, 2))\n\n\nVerificación de propiedades\nLos cálculos con punto flotante deben compararse con tolerancia.\niguales_vectores &lt;- function(a, b, tol = 1e-12) {\n  length(a) == length(b) && all(abs(a - b) &lt; tol)\n}\n\nw &lt;- c(-2, 4)\nlambda &lt;- 2.5\n\nc(\n  conmutativa = iguales_vectores(u + v, v + u),\n  asociativa = iguales_vectores((u + v) + w, u + (v + w)),\n  distributiva = iguales_vectores(lambda * (u + v),\n                                  lambda * u + lambda * v)\n)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-modulo-argumento",
+    "href": "03-numeros-complejos.html#sec-modulo-argumento",
+    "title": "3  Números complejos",
+    "section": "3.3 Módulo y argumento",
+    "text": "3.3 Módulo y argumento\nEn el plano complejo se escribe\n\\[\n|z|=\\sqrt{x^2+y^2},\\qquad \\arg(z)=\\theta.\n\\]\nR calcula estas cantidades con Mod() y Arg().\nz &lt;- 3 + 4i\nc(modulo = Mod(z),\n  argumento_rad = Arg(z),\n  argumento_grados = Arg(z) * 180 / pi)\n\nArgumento principal y ángulos equivalentes\nz_cuadrantes &lt;- c(1 + 1i, -1 + 1i, -1 - 1i, 1 - 1i)\ndata.frame(\n  z = z_cuadrantes,\n  argumento_rad = Arg(z_cuadrantes),\n  argumento_grados = Arg(z_cuadrantes) * 180 / pi\n)\nArg() devuelve el argumento principal en el intervalo \\((-\\pi,\\pi]\\). A cada resultado se le puede sumar \\(2k\\pi\\) sin cambiar el punto.\n\n\n\n\n\n\nAdvertenciaEl argumento de cero\n\n\n\nR devuelve Arg(0) = 0 por conveniencia computacional. Matemáticamente, el argumento de \\(0\\) no está definido porque el vector nulo no señala ninguna dirección. La función cartesiana_polar() registra este caso como NA.\n\n\n\n\nDesigualdad triangular: experimento reproducible\nset.seed(314)\nz &lt;- complex(real = runif(1000, -5, 5),\n             imaginary = runif(1000, -5, 5))\nw &lt;- complex(real = runif(1000, -5, 5),\n             imaginary = runif(1000, -5, 5))\n\nholgura &lt;- Mod(z) + Mod(w) - Mod(z + w)\nsummary(holgura)\nall(holgura &gt;= -1e-12)\n\n\n\n\n\n\nAdvertenciaAlcance de la comprobación\n\n\n\nMil casos correctos apoyan la propiedad y ayudan a detectar errores, pero no demuestran que sea verdadera para todos los complejos. La demostración general aparece en el volumen de Fundamentos Matemáticos.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-imaginarios-complejos",
+    "href": "03-numeros-complejos.html#sec-imaginarios-complejos",
+    "title": "3  Números complejos",
+    "section": "3.4 Números imaginarios y complejos",
+    "text": "3.4 Números imaginarios y complejos\nR reconoce un literal complejo cuando aparece el sufijo i. Debe escribirse 1i, no solamente i, a menos que antes se haya creado un objeto con ese nombre.\nz &lt;- 3 + 4i\ntypeof(z)\n\nc(\n  parte_real = Re(z),\n  parte_imaginaria = Im(z),\n  modulo = Mod(z),\n  argumento = Arg(z)\n)\n\nConstrucción desde componentes\nz1 &lt;- 3 + 4i\nz2 &lt;- complex(real = 3, imaginary = 4)\nz3 &lt;- as.complex(3) + 4i\n\nc(z1 = z1, z2 = z2, z3 = z3)\nidentical(z1, z2)\n\n\nVector de números complejos\nzs &lt;- c(2 + 1i, -1 + 3i, -2 - 2i, 3 - 1i)\ntabla_z &lt;- data.frame(\n  z = zs,\n  real = Re(zs),\n  imaginaria = Im(zs),\n  modulo = Mod(zs),\n  argumento = Arg(zs)\n)\ntabla_z\n\n\nPlano complejo en R\nplot(Re(zs), Im(zs), asp = 1, pch = 19,\n     xlab = \"Parte real\", ylab = \"Parte imaginaria\",\n     col = \"#1769a6\", main = \"Números complejos\")\nabline(h = 0, v = 0, col = \"gray65\")\ntext(Re(zs), Im(zs), labels = paste0(\"z\", seq_along(zs)), pos = 3)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-operaciones-complejos",
+    "href": "03-numeros-complejos.html#sec-operaciones-complejos",
+    "title": "3  Números complejos",
+    "section": "3.5 Operaciones básicas con números complejos",
+    "text": "3.5 Operaciones básicas con números complejos\n\nSolución manual\nPara \\(z=3-2i\\) y \\(w=1+4i\\):\n\\[\nz+w=4+2i,\n\\]\n\\[\nzw=(3)(1)-(-2)(4)+\\bigl((3)(4)+(-2)(1)\\bigr)i=11+10i.\n\\]\n\n\nComprobación en R\nz &lt;- 3 - 2i\nw &lt;- 1 + 4i\n\nc(suma = z + w,\n  resta = z - w,\n  producto = z * w)\n\n\nMultiplicar significa rotar y escalar\nresumen_producto &lt;- function(z, w) {\n  producto &lt;- z * w\n  data.frame(\n    cantidad = c(\"z\", \"w\", \"z*w\"),\n    modulo = c(Mod(z), Mod(w), Mod(producto)),\n    argumento = c(Arg(z), Arg(w), Arg(producto))\n  )\n}\n\nresumen_producto(2 * exp(1i * pi / 6),\n                 1.5 * exp(1i * pi / 3))\nLa tabla permite comprobar\n\\[\n|zw|=|z||w|,\n\\qquad\n\\arg(zw)\\equiv\\arg(z)+\\arg(w)\\pmod{2\\pi}.\n\\]\n\n\nLaboratorio: producto como transformación\n\n\nAbrir el laboratorio en una pestaña nueva",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-conjugado",
+    "href": "03-numeros-complejos.html#sec-conjugado",
+    "title": "3  Números complejos",
+    "section": "3.6 Complejo conjugado y sus propiedades",
+    "text": "3.6 Complejo conjugado y sus propiedades\nEl conjugado de \\(z=a+bi\\) es \\(\\overline z=a-bi\\). R lo calcula con Conj().\n\n\n\n\n\n\nFigura 3.3: Conjugar refleja un punto respecto del eje real.\n\n\n\nz &lt;- 3 + 4i\n\nc(\n  z = z,\n  conjugado = Conj(z),\n  producto = z * Conj(z),\n  modulo_cuadrado = Mod(z)^2\n)\n\nComprobaciones vectorizadas\nz &lt;- c(1 + 2i, -3 + 4i, 2 - 5i)\nw &lt;- c(2 - 1i, 1 + 3i, -4 + 2i)\n\nc(\n  involucion = all(Conj(Conj(z)) == z),\n  suma = all(Conj(z + w) == Conj(z) + Conj(w)),\n  producto = all(Conj(z * w) == Conj(z) * Conj(w)),\n  modulo = all(abs(Mod(Conj(z)) - Mod(z)) &lt; 1e-12)\n)\n\n\nRecuperar las partes real e imaginaria\nz &lt;- -2 + 7i\nc(\n  real_por_conjugado = (z + Conj(z)) / 2,\n  imaginaria_por_conjugado = (z - Conj(z)) / (2i)\n)\nEl segundo resultado es el número real \\(7\\), no \\(7i\\), porque la fórmula calcula \\(\\operatorname{Im}(z)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-division-complejos",
+    "href": "03-numeros-complejos.html#sec-division-complejos",
+    "title": "3  Números complejos",
+    "section": "3.7 División de complejos",
+    "text": "3.7 División de complejos\n\nProcedimiento manual\n\\[\n\\frac{2+3i}{1-2i}\n=\\frac{(2+3i)(1+2i)}{1^2+(-2)^2}\n=-\\frac45+\\frac75i.\n\\]\n\n\nCálculo y verificación en R\nz &lt;- 2 + 3i\nw &lt;- 1 - 2i\ncociente &lt;- z / w\n\nc(cociente = cociente,\n  comprobacion = cociente * w,\n  error = Mod(cociente * w - z))\n\n\nProgramar la fórmula cartesiana\ndividir_complejos &lt;- function(z, w) {\n  if (any(Mod(w) == 0)) stop(\"No se puede dividir entre cero\")\n  z * Conj(w) / Mod(w)^2\n}\n\ndividir_complejos(2 + 3i, 1 - 2i)\n\n\nComparación polar\nresumen_cociente &lt;- function(z, w) {\n  q &lt;- z / w\n  data.frame(\n    calculo = c(\"|z|/|w|\", \"|z/w|\",\n                \"Arg(z)-Arg(w)\", \"Arg(z/w)\"),\n    valor = c(Mod(z) / Mod(w), Mod(q),\n              Arg(z) - Arg(w), Arg(q))\n  )\n}\n\nresumen_cociente(2 + 3i, 1 - 2i)\nLos dos argumentos pueden diferir en un múltiplo de \\(2\\pi\\) y representar la misma dirección.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#sec-potencias-raices",
+    "href": "03-numeros-complejos.html#sec-potencias-raices",
+    "title": "3  Números complejos",
+    "section": "3.8 Potencias y raíces de complejos",
+    "text": "3.8 Potencias y raíces de complejos\n\nPotencias con De Moivre\npotencia_demoivre &lt;- function(z, n) {\n  if (z == 0 && n &lt; 0) stop(\"Cero no admite exponentes negativos\")\n  Mod(z)^n * exp(1i * n * Arg(z))\n}\n\nz &lt;- 1 + 1i\nc(R = z^8,\n  De_Moivre = potencia_demoivre(z, 8),\n  diferencia = Mod(z^8 - potencia_demoivre(z, 8)))\nR utiliza la identidad de Euler\n\\[\ne^{i\\theta}=\\cos\\theta+i\\sin\\theta.\n\\]\nPor eso r * exp(1i * theta) es una forma compacta de construir un complejo polar.\n\n\nTodas las raíces \\(n\\)-ésimas\nraices_n &lt;- function(z, n) {\n  if (length(z) != 1L || length(n) != 1L || n &lt; 1 || n != floor(n)) {\n    stop(\"Use un complejo y un entero positivo n\")\n  }\n  if (z == 0) return(0 + 0i)\n  k &lt;- 0:(n - 1)\n  Mod(z)^(1 / n) * exp(1i * (Arg(z) + 2 * pi * k) / n)\n}\n\nraices_cubicas &lt;- raices_n(-8, 3)\nraices_cubicas\nraices_cubicas^3\n\n\nRaíces de la unidad\nraices_unidad &lt;- function(n) exp(2 * pi * 1i * (0:(n - 1)) / n)\n\nomega &lt;- raices_unidad(6)\nround(omega, 10)\n\n\n\n\n\n\nFigura 3.4: Las raíces sextas de la unidad son los vértices de un hexágono regular.\n\n\n\nplot(Re(omega), Im(omega), asp = 1, pch = 19,\n     xlim = c(-1.25, 1.25), ylim = c(-1.25, 1.25),\n     xlab = \"Parte real\", ylab = \"Parte imaginaria\",\n     col = \"#1769a6\", main = \"Raíces sextas de la unidad\")\nabline(h = 0, v = 0, col = \"gray75\")\nsegments(Re(omega), Im(omega),\n         Re(c(omega[-1], omega[1])), Im(c(omega[-1], omega[1])),\n         col = \"#2c7a5a\", lwd = 2)\ntext(Re(omega), Im(omega), labels = paste0(\"k=\", 0:5), pos = 3)\n\n\nLaboratorio: raíces de la unidad\n\n\nAbrir el laboratorio en una pestaña nueva",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#laboratorio-del-capítulo",
+    "href": "03-numeros-complejos.html#laboratorio-del-capítulo",
+    "title": "3  Números complejos",
+    "section": "Laboratorio del capítulo",
+    "text": "Laboratorio del capítulo\nTrabaje en este orden:\n\nelija un punto en el laboratorio cartesiano-polar y anote \\(x\\), \\(y\\), \\(r\\) y \\(\\theta\\);\ncompruebe manualmente \\(r=\\sqrt{x^2+y^2}\\);\nuse el laboratorio de multiplicación para observar la suma de argumentos;\nreproduzca el mismo ejemplo con R;\ncambie \\(n\\) en el laboratorio de raíces y describa el polígono obtenido;\ncompruebe en R que cada punto elevado a \\(n\\) produce \\(1\\) dentro de la tolerancia numérica.\n\nAbrir el cuaderno completo del capítulo 3 en Google Colab\nDescargar el cuaderno",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#ejercicios-con-r",
+    "href": "03-numeros-complejos.html#ejercicios-con-r",
+    "title": "3  Números complejos",
+    "section": "Ejercicios con R",
+    "text": "Ejercicios con R\n\nEscriba una función que reciba dos puntos de \\(\\mathbb R^2\\) y devuelva distancia y punto medio.\nGenere veinte vectores aleatorios y conviértalos a forma polar.\nCompare atan(Im(z)/Re(z)) con Arg(z) en los cuatro cuadrantes y explique las diferencias.\nEscriba una función que clasifique un complejo como real, imaginario puro o complejo general.\nCompruebe experimentalmente \\(|zw|=|z||w|\\) con mil pares aleatorios.\nRepresente \\(z,\\overline z,-z\\) y \\(1/z\\) para un mismo complejo no nulo.\nCalcule \\((1-i)^{20}\\) directamente y mediante potencia_demoivre().\nObtenga las raíces quintas de \\(-32\\) y verifique el residuo máximo \\(\\max_k|w_k^5+32|\\).\nDibuje las raíces de la unidad para \\(n=3,4,5,8,12\\) en cinco paneles.\nModifique el gráfico de raíces para mostrar también los argumentos en grados.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#proyecto-integrador",
+    "href": "03-numeros-complejos.html#proyecto-integrador",
+    "title": "3  Números complejos",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nExplorador de transformaciones complejas. Desarrolle un script en R base que:\n\nreciba un conjunto de puntos complejos;\naplique \\(T(z)=az+b\\) con parámetros elegidos por el usuario;\nmuestre los puntos originales y transformados en la misma escala;\nsepare el efecto de \\(az\\) en rotación y cambio de escala;\ninterprete el efecto de la traslación \\(b\\);\nincluya al menos una figura formada por los vértices de un polígono;\ncompruebe numéricamente dos propiedades del módulo o del conjugado;\nentregue código, gráfica, explicación matemática y conclusiones.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#síntesis",
+    "href": "03-numeros-complejos.html#síntesis",
+    "title": "3  Números complejos",
+    "section": "Síntesis",
+    "text": "Síntesis\n\nUn par de \\(\\mathbb R^2\\) se almacena como vector; una colección, como tabla.\natan2(y, x) y Arg(z) resuelven correctamente el cuadrante.\nR representa complejos con el tipo complex y el literal 1i.\nRe(), Im(), Mod(), Arg() y Conj() traducen directamente las definiciones.\nLa suma es vectorial; el producto combina escala y rotación.\nEl conjugado permite dividir y visualizar una reflexión.\nexp(1i * theta) simplifica la forma polar, De Moivre y las raíces.\nLas comparaciones numéricas deben usar tolerancia.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#referencias-del-capítulo",
+    "href": "03-numeros-complejos.html#referencias-del-capítulo",
+    "title": "3  Números complejos",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa organización matemática sigue Universidad Autónoma de San Luis Potosí, Facultad de Ciencias (2011) y Silva y Lazo (2007). La interpretación geométrica se apoya en Brown y Churchill (2014) y Needham (1997). Las funciones y la sintaxis computacional corresponden a R base (R Core Team 2026).\n\n\n\n\nBrown, James Ward, y Ruel V. Churchill. 2014. Complex Variables and Applications. 9.ª ed. McGraw-Hill Education.\n\n\nNeedham, Tristan. 1997. Visual Complex Analysis. Oxford University Press.\n\n\nR Core Team. 2026. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html",
+    "href": "04-polinomios.html",
+    "title": "4  Polinomios",
+    "section": "",
+    "text": "Introducción\nEste capítulo desarrolla la Unidad 4 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). El propósito es pasar de las operaciones formales con polinomios a la comprensión de sus raíces, su factorización y las funciones racionales.\nLos polinomios aparecen al modelar trayectorias, señales, costos, aproximaciones y ecuaciones. Tienen una doble naturaleza: son expresiones algebraicas que pueden sumarse y multiplicarse, y también funciones cuyos ceros se observan en una gráfica. La división conecta ambas perspectivas: una raíz produce un factor y un factor produce una raíz.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#introducción",
+    "href": "04-polinomios.html#introducción",
+    "title": "4  Polinomios",
+    "section": "",
+    "text": "Objetivos del capítulo\nAl terminar el capítulo, el lector podrá:\n\nidentificar coeficientes, grado y coeficiente principal;\nefectuar operaciones y justificar sus propiedades;\naplicar el algoritmo de la división en \\(K[x]\\);\nrelacionar raíces, factores y residuos;\nusar división sintética y detectar raíces múltiples;\nexplicar el alcance del teorema fundamental del álgebra;\nfactorizar sobre \\(\\mathbb C\\) y sobre \\(\\mathbb R\\);\nanalizar dominio, ceros, discontinuidades y asíntotas de funciones racionales;\ndescomponer fracciones racionales en fracciones parciales.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-definicion-polinomio",
+    "href": "04-polinomios.html#sec-definicion-polinomio",
+    "title": "4  Polinomios",
+    "section": "4.1 Definición de polinomio",
+    "text": "4.1 Definición de polinomio\nSea \\(K\\) un campo, normalmente \\(\\mathbb Q\\), \\(\\mathbb R\\) o \\(\\mathbb C\\).\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUn polinomio en la variable \\(x\\) con coeficientes en \\(K\\) es una expresión\n\\[\np(x)=a_0+a_1x+\\cdots+a_nx^n,\n\\qquad a_j\\in K,\n\\]\nen la que solo un número finito de coeficientes es distinto de cero. El conjunto de todos ellos se denota por \\(K[x]\\).\n\n\nSi \\(p\\ne0\\) y \\(a_n\\ne0\\), el grado de \\(p\\) es \\(\\deg p=n\\), \\(a_n\\) es el coeficiente principal y \\(a_0\\) el término independiente. Un polinomio es mónico cuando su coeficiente principal es \\(1\\). Por convenio, al polinomio cero no se le asigna un grado ordinario; a veces se escribe \\(\\deg 0=-\\infty\\) para conservar algunas fórmulas.\n\n\n\n\n\n\nTipEjemplo\n\n\n\nEn\n\\[\np(x)=-2x^5+3x^2-7\n\\]\nlos coeficientes omitidos son cero, el grado es \\(5\\), el coeficiente principal es \\(-2\\) y el término independiente es \\(-7\\).\n\n\n\nIgualdad y evaluación\nDos polinomios son iguales si tienen el mismo coeficiente en cada potencia de \\(x\\). Por ejemplo,\n\\[\n(x+1)^2=x^2+2x+1\n\\]\ncomo polinomios, porque al desarrollar coinciden todos sus coeficientes.\nLa evaluación en \\(c\\in K\\) es\n\\[\np(c)=a_0+a_1c+\\cdots+a_nc^n.\n\\]\nNo debe confundirse el polinomio formal con la función que induce. Sobre campos infinitos, como \\(\\mathbb R\\) y \\(\\mathbb C\\), dos polinomios que dan el mismo valor para todo \\(x\\) tienen los mismos coeficientes. Sobre un campo finito pueden existir polinomios distintos que representan la misma función.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-aritmetica-polinomios",
+    "href": "04-polinomios.html#sec-aritmetica-polinomios",
+    "title": "4  Polinomios",
+    "section": "4.2 Aritmética y propiedades de los polinomios",
+    "text": "4.2 Aritmética y propiedades de los polinomios\nPara sumar polinomios se suman coeficientes de términos del mismo grado. Para multiplicarlos se aplica la distributividad y se agrupan potencias iguales.\nSean\n\\[\np(x)=\\sum_{j=0}^{m}a_jx^j,\n\\qquad\nq(x)=\\sum_{k=0}^{n}b_kx^k.\n\\]\nEntonces\n\\[\np(x)+q(x)=\\sum_{r\\ge0}(a_r+b_r)x^r\n\\]\ny\n\\[\np(x)q(x)=\\sum_{r=0}^{m+n}\n\\left(\\sum_{j+k=r}a_jb_k\\right)x^r.\n\\]\nLa suma interior es una convolución de las sucesiones de coeficientes.\n\n\n\n\n\n\nTipEjemplo resuelto\n\n\n\nSi \\(p(x)=2x^2-x+3\\) y \\(q(x)=x^2+4x-1\\), entonces\n\\[\np+q=3x^2+3x+2,\n\\]\n\\[\npq=2x^4+7x^3-3x^2+13x-3.\n\\]\n\n\n\nPropiedades de grado\nPara polinomios no nulos sobre un campo:\n\\[\n\\deg(pq)=\\deg p+\\deg q,\n\\]\n\\[\n\\deg(p+q)\\leq\\max\\{\\deg p,\\deg q\\}.\n\\]\nEn la suma puede disminuir el grado si se cancelan los términos principales. Por ejemplo, \\((x^3+1)+(-x^3+x)=x+1\\).\nCon la suma y el producto, \\(K[x]\\) es un anillo conmutativo con identidad. No es un campo: un polinomio no constante no tiene inverso polinomial. Sus unidades son precisamente las constantes no nulas.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-divisibilidad-polinomios",
+    "href": "04-polinomios.html#sec-divisibilidad-polinomios",
+    "title": "4  Polinomios",
+    "section": "4.3 Divisibilidad",
+    "text": "4.3 Divisibilidad\n\n\n\n\n\n\nNotaDefinición\n\n\n\nDados \\(p,d\\in K[x]\\), con \\(d\\ne0\\), se dice que \\(d\\) divide a \\(p\\), y se escribe \\(d\\mid p\\), si existe \\(q\\in K[x]\\) tal que\n\\[\np=dq.\n\\]\n\n\nEl resultado fundamental es análogo al algoritmo de la división de enteros.\n\n\n\n\n\n\nImportanteAlgoritmo de la división\n\n\n\nPara \\(p,d\\in K[x]\\), con \\(d\\ne0\\), existen polinomios únicos \\(q\\) y \\(r\\) tales que\n\\[\np=dq+r,\n\\qquad r=0\\quad\\text{o}\\quad\\deg r&lt;\\deg d.\n\\]\n\n\nEl polinomio \\(q\\) es el cociente y \\(r\\) el residuo.\n\nPor qué termina el algoritmo\nSi \\(\\deg p\\geq\\deg d\\), se elige un monomio que cancele el término principal de \\(p\\). Después de restar ese múltiplo de \\(d\\), el grado disminuye. Como los grados son enteros no negativos, el proceso debe terminar.\n\n\nEjemplo de división larga\nDividamos\n\\[\np(x)=2x^4-3x^3+4x-5\n\\]\nentre \\(d(x)=x^2-x+1\\). El resultado es\n\\[\nq(x)=2x^2-x-3,\n\\qquad r(x)=2x-2.\n\\]\nLa comprobación decisiva es\n\\[\n2x^4-3x^3+4x-5\n=(x^2-x+1)(2x^2-x-3)+(2x-2).\n\\]\n\n\n\n\n\n\nFigura 4.1: La división polinomial produce un cociente y un residuo de grado menor que el divisor.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-raiz-polinomio",
+    "href": "04-polinomios.html#sec-raiz-polinomio",
+    "title": "4  Polinomios",
+    "section": "4.4 Definición de raíz de un polinomio",
+    "text": "4.4 Definición de raíz de un polinomio\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUn número \\(\\alpha\\in K\\) es raíz o cero de \\(p\\in K[x]\\) si\n\\[\np(\\alpha)=0.\n\\]\n\n\nLa conexión entre evaluación y divisibilidad es inmediata al dividir entre \\(x-\\alpha\\).\n\n\n\n\n\n\nImportanteTeorema del factor\n\n\n\n\\(\\alpha\\) es raíz de \\(p\\) si y solo si \\(x-\\alpha\\) divide a \\(p\\).\n\n\nEn efecto, por el algoritmo de la división,\n\\[\np(x)=(x-\\alpha)q(x)+r,\n\\]\ndonde \\(r\\) es constante. Al evaluar en \\(x=\\alpha\\) se obtiene \\(r=p(\\alpha)\\). Por tanto, \\(p(\\alpha)=0\\) exactamente cuando el residuo es cero.\n\nNúmero máximo de raíces\nUn polinomio no nulo de grado \\(n\\) tiene como máximo \\(n\\) raíces distintas en un campo. La prueba es inductiva: cada raíz extrae un factor lineal y reduce el grado en uno.\n\n\n\n\n\n\nAdvertenciaUna distinción esencial\n\n\n\nQue un polinomio de grado \\(n\\) tenga a lo sumo \\(n\\) raíces no afirma que tenga \\(n\\) raíces reales. Por ejemplo, \\(x^2+1\\) no tiene raíces en \\(\\mathbb R\\), aunque sí tiene dos en \\(\\mathbb C\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-residuo-sintetica",
+    "href": "04-polinomios.html#sec-residuo-sintetica",
+    "title": "4  Polinomios",
+    "section": "4.5 Teorema del residuo y división sintética",
+    "text": "4.5 Teorema del residuo y división sintética\n\n\n\n\n\n\nImportanteTeorema del residuo\n\n\n\nEl residuo de dividir \\(p(x)\\) entre \\(x-c\\) es \\(p(c)\\).\n\n\nEsto permite evaluar un polinomio sin completar toda la división. La división sintética organiza las operaciones solo con coeficientes.\n\nEjemplo resuelto\nPara dividir\n\\[\np(x)=2x^3-3x^2-11x+6\n\\]\nentre \\(x-3\\), se usan los coeficientes \\(2,-3,-11,6\\):\n\\[\n\\begin{array}{r|rrrr}\n3&2&-3&-11&6\\\\\n& &6&9&-6\\\\ \\hline\n&2&3&-2&0\n\\end{array}\n\\]\nEl cociente es \\(2x^2+3x-2\\) y el residuo es \\(0\\). En consecuencia,\n\\[\np(x)=(x-3)(2x^2+3x-2).\n\\]\n\n\n\n\n\n\nAdvertenciaCoeficientes faltantes\n\n\n\nEn \\(x^4-5x^2+4\\) deben escribirse los coeficientes \\(1,0,-5,0,4\\). Omitir los ceros desplaza las columnas y cambia el resultado.\n\n\n\n\nEvaluación de Horner\nLa misma organización conduce a\n\\[\np(c)=(((a_nc+a_{n-1})c+a_{n-2})c+\\cdots)c+a_0.\n\\]\nEl esquema de Horner necesita \\(n\\) multiplicaciones y \\(n\\) sumas, y evita calcular por separado todas las potencias de \\(c\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-raices-multiples",
+    "href": "04-polinomios.html#sec-raices-multiples",
+    "title": "4  Polinomios",
+    "section": "4.6 Obtención de raíces múltiples",
+    "text": "4.6 Obtención de raíces múltiples\n\n\n\n\n\n\nNotaMultiplicidad\n\n\n\nUna raíz \\(\\alpha\\) tiene multiplicidad \\(m\\geq1\\) si\n\\[\np(x)=(x-\\alpha)^m q(x),\n\\qquad q(\\alpha)\\ne0.\n\\]\n\n\nLa raíz es simple cuando \\(m=1\\), doble cuando \\(m=2\\), triple cuando \\(m=3\\), etcétera.\nLa derivada permite reconocer multiplicidades:\n\\[\n\\alpha\\text{ tiene multiplicidad al menos }m\n\\iff\np(\\alpha)=p'(\\alpha)=\\cdots=p^{(m-1)}(\\alpha)=0.\n\\]\nSi además \\(p^{(m)}(\\alpha)\\ne0\\), la multiplicidad es exactamente \\(m\\).\n\nEjemplo\nSea\n\\[\np(x)=(x-1)^3(x+2)^2.\n\\]\nLa raíz \\(1\\) tiene multiplicidad \\(3\\) y la raíz \\(-2\\) multiplicidad \\(2\\). En la gráfica, una raíz de multiplicidad par toca el eje y regresa; una raíz de multiplicidad impar lo cruza. Para multiplicidades impares mayores que uno, el cruce se aplana.\n\n\n\n\n\n\nFigura 4.2: Comportamiento local de raíces de multiplicidad uno, dos y tres.\n\n\n\n\n\n\n\n\n\nTipProcedimiento con divisiones sucesivas\n\n\n\nSi \\(p(\\alpha)=0\\), divida entre \\(x-\\alpha\\). Vuelva a evaluar el cociente en \\(\\alpha\\) y repita. El número de divisiones exactas es la multiplicidad.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-teorema-fundamental-algebra",
+    "href": "04-polinomios.html#sec-teorema-fundamental-algebra",
+    "title": "4  Polinomios",
+    "section": "4.7 Teorema fundamental del álgebra",
+    "text": "4.7 Teorema fundamental del álgebra\n\n\n\n\n\n\nImportanteTeorema fundamental del álgebra\n\n\n\nTodo polinomio no constante con coeficientes complejos posee al menos una raíz compleja.\n\n\nAunque el enunciado garantiza una raíz, al dividir por su factor lineal y repetir se obtiene la forma completa:\n\\[\np(x)=a_n\\prod_{j=1}^{n}(x-\\alpha_j),\n\\]\ndonde las raíces se cuentan con multiplicidad.\n\nAlcance del teorema\n\nGarantiza existencia, pero no proporciona por sí solo un algoritmo práctico para calcular las raíces.\nEl campo \\(\\mathbb C\\) es algebraicamente cerrado.\nUn polinomio real puede no factorizarse completamente en factores lineales reales, pero sí en factores lineales complejos.\nLas fórmulas generales por radicales existen hasta grado cuatro; para grado cinco o mayor no existe una fórmula por radicales válida para todos los polinomios.\n\n\n\n\n\n\n\nAdvertenciaNo es un método numérico\n\n\n\nEl teorema fundamental del álgebra no dice que todas las raíces puedan escribirse con una fórmula elemental. La aproximación numérica será el tema del capítulo 5.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-factorizacion-lineal",
+    "href": "04-polinomios.html#sec-factorizacion-lineal",
+    "title": "4  Polinomios",
+    "section": "4.8 Descomposición de un polinomio en factores lineales",
+    "text": "4.8 Descomposición de un polinomio en factores lineales\nSi \\(p\\in\\mathbb C[x]\\) tiene grado \\(n\\geq1\\), entonces\n\\[\np(x)=a_n(x-\\alpha_1)^{m_1}\\cdots(x-\\alpha_s)^{m_s},\n\\]\ndonde \\(\\alpha_1,\\ldots,\\alpha_s\\) son raíces distintas y\n\\[\nm_1+\\cdots+m_s=n.\n\\]\nEsta factorización es única salvo por el orden de los factores.\n\nEjemplo completo\nFactoricemos\n\\[\np(x)=x^4-5x^2+4.\n\\]\nAl verlo como cuadrático en \\(u=x^2\\):\n\\[\nu^2-5u+4=(u-1)(u-4).\n\\]\nPor tanto,\n\\[\np(x)=(x^2-1)(x^2-4)\n=(x-1)(x+1)(x-2)(x+2).\n\\]\nLas raíces son \\(-2,-1,1,2\\), todas simples.\n\n\nEstrategia para coeficientes enteros\nPara un polinomio\n\\[\na_nx^n+\\cdots+a_0\n\\]\ncon coeficientes enteros, toda raíz racional reducida \\(r/s\\) satisface \\(r\\mid a_0\\) y \\(s\\mid a_n\\). Este teorema de la raíz racional produce candidatos; cada candidato debe evaluarse. No asegura que exista una raíz racional.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-polinomios-reales",
+    "href": "04-polinomios.html#sec-polinomios-reales",
+    "title": "4  Polinomios",
+    "section": "4.9 Propiedades de polinomios con coeficientes reales",
+    "text": "4.9 Propiedades de polinomios con coeficientes reales\nSi \\(p\\) tiene coeficientes reales, la conjugación conmuta con la evaluación:\n\\[\np(\\overline z)=\\overline{p(z)}.\n\\]\nPor consiguiente, si \\(p(z)=0\\), entonces\n\\[\np(\\overline z)=\\overline{0}=0.\n\\]\n\n\n\n\n\n\nImportanteRaíces conjugadas\n\n\n\nLas raíces complejas no reales de un polinomio con coeficientes reales aparecen en pares conjugados y con la misma multiplicidad.\n\n\nEl producto de los factores conjugados tiene coeficientes reales:\n\\[\n(x-z)(x-\\overline z)\n=x^2-2\\operatorname{Re}(z)x+|z|^2.\n\\]\nAsí, todo polinomio real se factoriza sobre \\(\\mathbb R\\) como producto de factores lineales reales y factores cuadráticos irreducibles.\n\nEjemplo\nSi \\(2+i\\) es raíz de un polinomio real, también lo es \\(2-i\\), y\n\\[\n[x-(2+i)][x-(2-i)]=x^2-4x+5.\n\\]\n\n\n\n\n\n\nFigura 4.3: Las raíces no reales de un polinomio real son simétricas respecto del eje real.\n\n\n\n\n\nRelaciones de Viète\nPara el polinomio mónico\n\\[\np(x)=x^n+a_{n-1}x^{n-1}+\\cdots+a_0\n=\\prod_{j=1}^{n}(x-\\alpha_j),\n\\]\nse cumple, contando multiplicidades,\n\\[\n\\sum_{j=1}^{n}\\alpha_j=-a_{n-1},\n\\qquad\n\\prod_{j=1}^{n}\\alpha_j=(-1)^n a_0.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-funciones-racionales",
+    "href": "04-polinomios.html#sec-funciones-racionales",
+    "title": "4  Polinomios",
+    "section": "4.10 Funciones racionales",
+    "text": "4.10 Funciones racionales\n\n\n\n\n\n\nNotaDefinición\n\n\n\nUna función racional es un cociente\n\\[\nR(x)=\\frac{p(x)}{q(x)},\n\\]\ndonde \\(p,q\\in K[x]\\) y \\(q\\ne0\\). Su dominio excluye los ceros de \\(q\\).\n\n\nAntes de simplificar debe registrarse el dominio original. Por ejemplo,\n\\[\nR(x)=\\frac{x^2-1}{x-1}=x+1,\n\\qquad x\\ne1.\n\\]\nLa gráfica es la recta \\(y=x+1\\) con un hueco en \\((1,2)\\). La simplificación algebraica no vuelve a incluir \\(x=1\\).\n\nCeros, polos y asíntotas\n\nLos ceros provienen de factores del numerador que no se cancelan.\nLos ceros del denominador no cancelados producen polos y, usualmente, asíntotas verticales.\nSi \\(\\deg p&lt;\\deg q\\), la asíntota horizontal es \\(y=0\\).\nSi \\(\\deg p=\\deg q\\), la asíntota horizontal es el cociente de coeficientes principales.\nSi \\(\\deg p\\geq\\deg q\\), la división polinomial separa una parte polinomial y una fracción propia.\n\n\n\n\n\n\n\nFigura 4.4: Una función racional puede presentar huecos y asíntotas determinadas por sus factores.\n\n\n\n\n\n\n\n\n\nTipEjemplo\n\n\n\nPara\n\\[\nR(x)=\\frac{2x^2+1}{x-1},\n\\]\nla división da\n\\[\nR(x)=2x+2+\\frac{3}{x-1}.\n\\]\nTiene asíntota vertical \\(x=1\\) y asíntota oblicua \\(y=2x+2\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#sec-fracciones-parciales",
+    "href": "04-polinomios.html#sec-fracciones-parciales",
+    "title": "4  Polinomios",
+    "section": "4.11 Fracciones parciales",
+    "text": "4.11 Fracciones parciales\nLa descomposición en fracciones parciales expresa una fracción racional propia como suma de términos simples. Es útil para integrar, resolver ecuaciones diferenciales y transformar señales.\nPrimero, si \\(\\deg p\\geq\\deg q\\), se efectúa la división. Después se factoriza el denominador.\n\nFactores lineales distintos\nSi\n\\[\n\\frac{p(x)}{(x-a)(x-b)}\n\\]\nes propia y \\(a\\ne b\\), se propone\n\\[\n\\frac{A}{x-a}+\\frac{B}{x-b}.\n\\]\nPor ejemplo,\n\\[\n\\frac{5x+1}{(x-1)(x+2)}\n=\\frac{2}{x-1}+\\frac{3}{x+2}.\n\\]\nLa comprobación reúne el lado derecho sobre el denominador común.\n\n\nFactores lineales repetidos\nPara \\((x-a)^m\\) se requieren todos los términos\n\\[\n\\frac{A_1}{x-a}+\\frac{A_2}{(x-a)^2}\n+\\cdots+\\frac{A_m}{(x-a)^m}.\n\\]\n\n\nFactores cuadráticos irreducibles\nPor cada potencia \\((x^2+bx+c)^m\\) irreducible sobre \\(\\mathbb R\\) se incluyen numeradores lineales:\n\\[\n\\frac{A_1x+B_1}{x^2+bx+c}\n+\\cdots+\n\\frac{A_mx+B_m}{(x^2+bx+c)^m}.\n\\]\n\n\n\n\n\n\nTipEjemplo mixto\n\n\n\nLa forma de descomposición para\n\\[\n\\frac{x^2+1}{(x-1)^2(x^2+4)}\n\\]\nes\n\\[\n\\frac{A}{x-1}+\\frac{B}{(x-1)^2}\n+\\frac{Cx+D}{x^2+4}.\n\\]\nLos coeficientes se obtienen al multiplicar por el denominador común y comparar coeficientes o evaluar valores convenientes.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#síntesis-del-capítulo",
+    "href": "04-polinomios.html#síntesis-del-capítulo",
+    "title": "4  Polinomios",
+    "section": "Síntesis del capítulo",
+    "text": "Síntesis del capítulo\n\n\\(K[x]\\) es un anillo de expresiones con un número finito de coeficientes no nulos.\nEl algoritmo de la división escribe \\(p=dq+r\\) con \\(\\deg r&lt;\\deg d\\).\n\\(p(c)\\) es el residuo de dividir por \\(x-c\\).\n\\(c\\) es raíz si y solo si \\(x-c\\) es factor.\nLa multiplicidad cuenta cuántas veces aparece el factor lineal.\nTodo polinomio complejo no constante se descompone en factores lineales.\nEn polinomios reales, las raíces no reales aparecen en pares conjugados.\nUna función racional conserva las exclusiones de su denominador original.\nLas fracciones parciales dependen de la factorización y multiplicidad del denominador.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#errores-frecuentes",
+    "href": "04-polinomios.html#errores-frecuentes",
+    "title": "4  Polinomios",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nAsignar grado al polinomio cero como si fuera ordinario. Su grado se deja indefinido o se usa \\(-\\infty\\) por convenio.\nOlvidar términos ausentes. En división sintética deben colocarse coeficientes cero.\nConfundir raíz con factor. La raíz es un número; el factor correspondiente es \\(x-\\alpha\\).\nCreer que todo polinomio tiene raíces reales. La garantía completa corresponde a \\(\\mathbb C\\).\nContar solo raíces distintas. El grado coincide con el número de raíces complejas cuando se cuentan multiplicidades.\nCancelar un factor y ampliar el dominio. Una discontinuidad removible sigue excluida del dominio original.\nOmitir términos en fracciones parciales. Cada potencia repetida necesita su propio término.\nUsar una constante sobre un cuadrático irreducible. El numerador debe tener grado menor, por lo que es lineal.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#ejercicios",
+    "href": "04-polinomios.html#ejercicios",
+    "title": "4  Polinomios",
+    "section": "Ejercicios",
+    "text": "Ejercicios\n\nNivel básico\n\nIndique grado, coeficiente principal y término independiente de \\(4x^6-3x^2+8\\).\nSume y multiplique \\(p(x)=x^2-2x+3\\) y \\(q(x)=2x+1\\).\nEvalúe \\(p(x)=2x^4-x^2+5x-7\\) en \\(x=-2\\) mediante Horner.\nDivida \\(x^3-2x^2+4x-8\\) entre \\(x-2\\).\nDetermine si \\(-1\\) es raíz de \\(x^4+3x^3-x-3\\).\nFactorice \\(x^4-16\\) sobre \\(\\mathbb R\\) y sobre \\(\\mathbb C\\).\nDetermine el dominio de \\((x^2-9)/(x-3)\\) y describa el hueco.\n\n\n\nNivel intermedio\n\nDivida \\(3x^5-2x^3+x-4\\) entre \\(x^2+x-1\\) y compruebe el resultado.\nUse el teorema de la raíz racional para factorizar \\(2x^3-x^2-8x+4\\).\nDetermine las multiplicidades de las raíces de \\(x^5-2x^4+x^3\\).\nConstruya un polinomio real mónico de grado cuatro cuyas raíces sean \\(2\\), \\(-1\\) y \\(3+i\\), \\(3-i\\).\nUse Viète para comprobar la suma y el producto de las raíces de \\(2x^3-3x^2-11x+6\\).\nEncuentre ceros, huecos y asíntotas de \\((x^2-4)/(x^2-x-2)\\).\nDescomponga \\((7x+5)/[(x-1)(x+3)]\\) en fracciones parciales.\n\n\n\nNivel formal y aplicado\n\nDemuestre la unicidad del cociente y el residuo en el algoritmo de la división.\nPruebe que un polinomio no nulo de grado \\(n\\) tiene a lo sumo \\(n\\) raíces distintas.\nDemuestre que las raíces conjugadas de un polinomio real tienen la misma multiplicidad.\nDetermine la forma real más general de un polinomio de grado cinco con raíces \\(1\\) doble y \\(2+3i\\) simple.\nDescomponga \\((2x^3+x^2+4)/[(x-1)^2(x^2+1)]\\) en fracciones parciales.\nDiseñe un polinomio cuya gráfica cruce el eje en \\(x=-2\\), toque el eje en \\(x=1\\) y tenga grado mínimo.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#proyecto-integrador",
+    "href": "04-polinomios.html#proyecto-integrador",
+    "title": "4  Polinomios",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nElija un polinomio real de grado entre cuatro y seis y presente un estudio completo:\n\nidentifique grado y coeficientes;\nlocalice candidatos racionales;\naplique división sintética;\ndetermine todas las raíces y multiplicidades;\nfactorice sobre \\(\\mathbb R\\) y sobre \\(\\mathbb C\\);\ncompruebe dos relaciones de Viète;\nconstruya una función racional usando el polinomio como numerador o denominador;\nanalice dominio, ceros, huecos y asíntotas;\nobtenga, cuando corresponda, una descomposición en fracciones parciales;\nacompañe los cálculos con una representación gráfica y conclusiones.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#referencias-del-capítulo",
+    "href": "04-polinomios.html#referencias-del-capítulo",
+    "title": "4  Polinomios",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia temática sigue la Unidad 4 del programa de Álgebra Superior (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en Silva y Lazo (2007), Cárdenas et al. (1999) y Cox et al. (2015).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#laboratorio-computacional-con-r-y-geogebra",
+    "href": "04-polinomios.html#laboratorio-computacional-con-r-y-geogebra",
+    "title": "4  Polinomios",
+    "section": "Laboratorio computacional con R y GeoGebra",
+    "text": "Laboratorio computacional con R y GeoGebra\nEste laboratorio traduce las ideas del capítulo a algoritmos reproducibles. Los vectores de coeficientes se almacenan en orden descendente: \\(a_n,a_{n-1},\\ldots,a_0\\). Las funciones de R para raíces, en cambio, usan orden ascendente; esta diferencia se señala explícitamente.\n\nRepresentar y evaluar polinomios en R\nhorner &lt;- function(coeficientes, x) {\n  acumulado &lt;- 0\n  for (a in coeficientes) acumulado &lt;- acumulado * x + a\n  acumulado\n}\n\np &lt;- c(2, -3, 0, 4, -5)  # 2x^4 - 3x^3 + 0x^2 + 4x - 5\nhorner(p, 2)\nEl cero en la tercera posición es indispensable: conserva el lugar del término \\(x^2\\).\n\n\nSuma y producto por coeficientes\nrellenar_izquierda &lt;- function(a, n) c(rep(0, n - length(a)), a)\n\nsumar_polinomios &lt;- function(a, b) {\n  n &lt;- max(length(a), length(b))\n  rellenar_izquierda(a, n) + rellenar_izquierda(b, n)\n}\n\nmultiplicar_polinomios &lt;- function(a, b) {\n  resultado &lt;- numeric(length(a) + length(b) - 1)\n  for (i in seq_along(a)) {\n    for (j in seq_along(b)) {\n      resultado[i + j - 1] &lt;- resultado[i + j - 1] + a[i] * b[j]\n    }\n  }\n  resultado\n}\n\na &lt;- c(2, -1, 3)  # 2x^2 - x + 3\nb &lt;- c(1, 4, -1)  # x^2 + 4x - 1\nsumar_polinomios(a, b)\nmultiplicar_polinomios(a, b)\n\nAbrir GeoGebra: operaciones Descargar .ggb\n\n\n\n\n\nDivisión polinomial programada\nquitar_ceros_iniciales &lt;- function(a, tolerancia = 1e-12) {\n  while (length(a) &gt; 1 && abs(a[1]) &lt; tolerancia) a &lt;- a[-1]\n  a\n}\n\ndividir_polinomios &lt;- function(dividendo, divisor, tolerancia = 1e-12) {\n  dividendo &lt;- quitar_ceros_iniciales(dividendo, tolerancia)\n  divisor &lt;- quitar_ceros_iniciales(divisor, tolerancia)\n  if (length(divisor) == 1 && abs(divisor[1]) &lt; tolerancia) {\n    stop(\"El divisor no puede ser el polinomio cero\")\n  }\n  if (length(dividendo) &lt; length(divisor)) {\n    return(list(cociente = 0, residuo = dividendo))\n  }\n\n  residuo &lt;- dividendo\n  cociente &lt;- numeric(length(dividendo) - length(divisor) + 1)\n  for (i in seq_along(cociente)) {\n    factor &lt;- residuo[i] / divisor[1]\n    cociente[i] &lt;- factor\n    residuo[i:(i + length(divisor) - 1)] &lt;-\n      residuo[i:(i + length(divisor) - 1)] - factor * divisor\n  }\n  residuo[abs(residuo) &lt; tolerancia] &lt;- 0\n  list(cociente = quitar_ceros_iniciales(cociente, tolerancia),\n       residuo = quitar_ceros_iniciales(residuo, tolerancia))\n}\n\ndividir_polinomios(\n  dividendo = c(2, -3, 0, 4, -5),\n  divisor = c(1, -1, 1)\n)\n\nAbrir GeoGebra: división y residuo Descargar .ggb\n\n\n\n\n\nDivisión sintética y multiplicidad\ndivision_sintetica &lt;- function(coeficientes, c) {\n  salida &lt;- numeric(length(coeficientes))\n  salida[1] &lt;- coeficientes[1]\n  if (length(coeficientes) &gt; 1) {\n    for (j in 2:length(coeficientes)) {\n      salida[j] &lt;- coeficientes[j] + c * salida[j - 1]\n    }\n  }\n  list(cociente = salida[-length(salida)], residuo = salida[length(salida)])\n}\n\nmultiplicidad_raiz &lt;- function(coeficientes, raiz, tolerancia = 1e-9) {\n  actual &lt;- coeficientes\n  multiplicidad &lt;- 0L\n  repeat {\n    paso &lt;- division_sintetica(actual, raiz)\n    if (abs(paso$residuo) &gt; tolerancia || length(actual) == 1) break\n    multiplicidad &lt;- multiplicidad + 1L\n    actual &lt;- paso$cociente\n  }\n  multiplicidad\n}\n\np &lt;- c(1, 1, -5, -1, 8, -4)  # (x-1)^3 (x+2)^2\nmultiplicidad_raiz(p, 1)\nmultiplicidad_raiz(p, -2)\n\nAbrir GeoGebra: multiplicidad Descargar .ggb\n\n\n\n\n\nTodas las raíces y factorización\nLa función polyroot() recibe coeficientes en orden ascendente. Por eso se aplica rev() al vector usado en las funciones anteriores.\np_desc &lt;- c(1, 0, -5, 0, 4)  # x^4 - 5x^2 + 4\nraices &lt;- polyroot(rev(p_desc))\nround(raices, 10)\n\n# Verificación numérica mediante Horner\nresiduos &lt;- vapply(raices, function(z) horner(p_desc, z), complex(1))\nmax(Mod(residuos))\nEl residuo máximo debe ser cercano a cero. Las pequeñas partes imaginarias que puedan aparecer al resolver un polinomio real son efecto del redondeo numérico.\n\nAbrir GeoGebra: factorización Descargar .ggb\n\n\n\n\n\nPares conjugados\nz &lt;- 2 + 1i\nfactor_real &lt;- multiplicar_polinomios(\n  c(1, -z),\n  c(1, -Conj(z))\n)\nRe(factor_real)  # x^2 - 4x + 5\n\nAbrir GeoGebra: raíces conjugadas Descargar .ggb\n\n\n\n\n\nFunciones racionales y fracciones parciales\nPara factores lineales distintos, los coeficientes de fracciones parciales pueden obtenerse resolviendo un sistema lineal. En el ejemplo\n\\[\n\\frac{5x+1}{(x-1)(x+2)}=\\frac{A}{x-1}+\\frac{B}{x+2},\n\\]\nla identidad de numeradores es\n\\[\n5x+1=A(x+2)+B(x-1).\n\\]\nM &lt;- matrix(c(1, 1,\n              2, -1), nrow = 2, byrow = TRUE)\nobjetivo &lt;- c(5, 1)\ncoeficientes &lt;- solve(M, objetivo)\nnames(coeficientes) &lt;- c(\"A\", \"B\")\ncoeficientes\n\n# Comprobación en varios puntos del dominio\nx &lt;- c(-4, -1, 0, 2, 5)\nizquierda &lt;- (5 * x + 1) / ((x - 1) * (x + 2))\nderecha &lt;- coeficientes[\"A\"] / (x - 1) + coeficientes[\"B\"] / (x + 2)\nmax(abs(izquierda - derecha))\n\nAbrir GeoGebra: funciones racionales Descargar .ggb",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "04-polinomios.html#cuaderno-completo-del-capítulo-4",
+    "href": "04-polinomios.html#cuaderno-completo-del-capítulo-4",
+    "title": "4  Polinomios",
+    "section": "Cuaderno completo del capítulo 4",
+    "text": "Cuaderno completo del capítulo 4\nAbrir el cuaderno en Google Colab\nDescargar el cuaderno\nEl cuaderno reúne las funciones anteriores, ejemplos adicionales, gráficas y una autoevaluación computacional. Todo el código principal usa R base.\n\n\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. Álgebra superior. 2.ª ed. Trillas.\n\n\nCox, David A., John Little, y Donal O’Shea. 2015. Ideals, Varieties, and Algorithms. 4.ª ed. Springer.\n\n\nSilva, Juan Manuel, y Adriana Lazo. 2007. Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo. 7.ª ed. Limusa.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html",
+    "href": "05-metodos-raices.html",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "",
+    "text": "Introducción\nEl Teorema Fundamental del Álgebra garantiza la existencia de raíces complejas, pero un problema computacional exige localizar las raíces reales, separarlas y producir aproximaciones verificables. Este capítulo desarrolla las siete secciones de la Unidad 5 del programa de Álgebra Superior de la Facultad de Ciencias de la UASLP (Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011). Cada método se construye primero de manera manual y después se implementa con R base.\nPara\n\\[\np(x)=a_nx^n+a_{n-1}x^{n-1}+\\cdots+a_1x+a_0,\n\\qquad a_n\\ne0,\n\\]\nla búsqueda numérica seguirá esta ruta:",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#introducción",
+    "href": "05-metodos-raices.html#introducción",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "",
+    "text": "acotar: reducir \\(\\mathbb R\\) a un intervalo finito;\ncontar: determinar cuántas raíces reales hay;\nseparar: obtener intervalos con una sola raíz;\naproximar: aplicar un método iterativo;\nvalidar: revisar tolerancia, error y residuo.\n\n\nObjetivos\nAl terminar el capítulo, el lector podrá:\n\ncalcular cotas de raíces con R;\ndetectar cambios de signo sin omitir coeficientes cero;\nconstruir una sucesión de Sturm mediante división de polinomios;\nimplementar Descartes y usar Budan-Fourier;\nprogramar bisección, secante y Newton sin paquetes;\nevaluar simultáneamente \\(p\\) y \\(p'\\) con Horner;\ncomparar seguridad, velocidad y costo de los métodos;\nexperimentar con tres construcciones auténticas de GeoGebra.\n\n\n\nConvención computacional\nComo en el capítulo 4, un polinomio se representa mediante sus coeficientes en orden descendente. Por ejemplo,\n\\[\nx^3-x-1\n\\]\nse almacena como c(1, 0, -1, -1).\nnormalizar_coef &lt;- function(coef, tol = 0) {\n  coef &lt;- as.numeric(coef)\n  while (length(coef) &gt; 1L && abs(coef[1L]) &lt;= tol) {\n    coef &lt;- coef[-1L]\n  }\n  coef\n}\n\nevaluar_horner &lt;- function(coef, x) {\n  coef &lt;- normalizar_coef(coef)\n  valor &lt;- rep(coef[1L], length(x))\n  if (length(coef) &gt; 1L) {\n    for (a in coef[-1L]) valor &lt;- valor * x + a\n  }\n  valor\n}\n\nderivar_polinomio &lt;- function(coef) {\n  coef &lt;- normalizar_coef(coef)\n  grado &lt;- length(coef) - 1L\n  if (grado == 0L) return(0)\n  coef[-length(coef)] * seq(grado, 1L)\n}",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-acotacion-raices",
+    "href": "05-metodos-raices.html#sec-acotacion-raices",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.1 Acotación de raíces",
+    "text": "5.1 Acotación de raíces\nLa cota de Cauchy establece que toda raíz \\(z\\) satisface\n\\[\n|z|\\le R,\n\\qquad\nR=1+\\max_{0\\le k&lt;n}\\left|\\frac{a_k}{a_n}\\right|.\n\\]\n\nCálculo manual\nPara\n\\[\np(x)=x^4+x^3-7x^2-x+6,\n\\]\nse obtiene\n\\[\nR=1+\\max\\{1,7,1,6\\}=8.\n\\]\nPor tanto, todas las raíces reales están en \\([-8,8]\\).\n\n\nImplementación en R\ncota_cauchy &lt;- function(coef) {\n  coef &lt;- normalizar_coef(coef)\n  if (length(coef) == 1L) return(NA_real_)\n  1 + max(abs(coef[-1L] / coef[1L]))\n}\n\np4 &lt;- c(1, 1, -7, -1, 6)\nR &lt;- cota_cauchy(p4)\nc(-R, R)\nLa cota es segura, pero puede ser amplia. Una tabla de valores dentro de \\([-R,R]\\) ayuda a localizar subintervalos con cambios de signo.\nmalla &lt;- seq(-R, R, by = 0.5)\ntabla_malla &lt;- data.frame(\n  x = malla,\n  p = evaluar_horner(p4, malla)\n)\nhead(tabla_malla)\n\n\n\n\n\n\nFigura 5.1: La cota global contiene todas las raíces; la malla y los cambios de signo producen intervalos de búsqueda más pequeños.\n\n\n\n\n\nAbrir la construcción en una página independiente\n\n\nActividad GeoGebra\n\nModifique los coeficientes del polinomio desde los deslizadores.\nCompare la cota \\([-R,R]\\) con las raíces visibles.\nCambie el tamaño de la malla y registre qué intervalos presentan cambio de signo.\nConstruya un ejemplo con una raíz de multiplicidad par y explique por qué no aparece un cambio de signo.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-separacion-raices",
+    "href": "05-metodos-raices.html#sec-separacion-raices",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.2 Separación de raíces",
+    "text": "5.2 Separación de raíces\nSi \\(p(a)p(b)&lt;0\\), la continuidad garantiza al menos una raíz en \\((a,b)\\). Para detectar automáticamente estos intervalos:\nseparar_por_signo &lt;- function(coef, a, b, paso = 0.25, tol = 1e-12) {\n  x &lt;- seq(a, b, by = paso)\n  if (tail(x, 1L) &lt; b) x &lt;- c(x, b)\n  y &lt;- evaluar_horner(coef, x)\n\n  exactas &lt;- which(abs(y) &lt;= tol)\n  cambios &lt;- which(y[-length(y)] * y[-1L] &lt; 0)\n\n  intervalos &lt;- if (length(cambios)) {\n    data.frame(\n      izquierda = x[cambios],\n      derecha = x[cambios + 1L],\n      f_izquierda = y[cambios],\n      f_derecha = y[cambios + 1L]\n    )\n  } else {\n    data.frame()\n  }\n\n  list(\n    raices_en_malla = x[exactas],\n    intervalos = intervalos\n  )\n}\n\nseparar_por_signo(p4, -8, 8, paso = 0.4)\n\nVerificar unicidad\nUn cambio de signo demuestra existencia, no unicidad. Si \\(p'\\) no cambia de signo y no se anula en \\([a,b]\\), entonces \\(p\\) es estrictamente monótona y la raíz es única.\nPara \\(f(x)=x^3-x-1\\):\nfcoef &lt;- c(1, 0, -1, -1)\ndfcoef &lt;- derivar_polinomio(fcoef)\n\nc(\n  f_1 = evaluar_horner(fcoef, 1),\n  f_2 = evaluar_horner(fcoef, 2),\n  min_derivada = min(evaluar_horner(dfcoef, seq(1, 2, length.out = 201)))\n)\nEl cambio de signo prueba existencia y la derivada positiva prueba unicidad en \\([1,2]\\).\n\n\n\n\n\n\nAdvertenciaLimitación del muestreo\n\n\n\nUna raíz de multiplicidad par puede tocar el eje sin cambiar de signo. Para no omitirla, se deben analizar \\(p'\\) y el máximo común divisor de \\(p\\) con \\(p'\\), o usar un conteo de Sturm después de eliminar factores repetidos.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-sturm",
+    "href": "05-metodos-raices.html#sec-sturm",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.3 Teorema de Sturm",
+    "text": "5.3 Teorema de Sturm\nLa sucesión de Sturm se define por\n\\[\np_0=p,\\qquad p_1=p',\\qquad\np_{k+1}=-\\operatorname{residuo}(p_{k-1},p_k).\n\\]\nSi \\(V(t)\\) cuenta las variaciones de signo de los valores de la sucesión en \\(t\\), el número de raíces reales distintas en \\((a,b)\\) es \\(V(a)-V(b)\\).\n\nDivisión de polinomios en R base\ndividir_polinomios &lt;- function(dividendo, divisor, tol = 1e-12) {\n  dividendo &lt;- normalizar_coef(dividendo, tol)\n  divisor &lt;- normalizar_coef(divisor, tol)\n  if (length(divisor) == 1L && abs(divisor) &lt;= tol) {\n    stop(\"El divisor no puede ser el polinomio cero.\")\n  }\n\n  grado_a &lt;- length(dividendo) - 1L\n  grado_b &lt;- length(divisor) - 1L\n  if (grado_a &lt; grado_b) {\n    return(list(cociente = 0, residuo = dividendo))\n  }\n\n  residuo &lt;- dividendo\n  cociente &lt;- numeric(grado_a - grado_b + 1L)\n\n  for (i in seq_along(cociente)) {\n    factor &lt;- residuo[i] / divisor[1L]\n    cociente[i] &lt;- factor\n    residuo[i:(i + grado_b)] &lt;-\n      residuo[i:(i + grado_b)] - factor * divisor\n  }\n\n  residuo[abs(residuo) &lt;= tol] &lt;- 0\n  resto &lt;- if (grado_b == 0L) 0 else tail(residuo, grado_b)\n  list(\n    cociente = normalizar_coef(cociente, tol),\n    residuo = normalizar_coef(resto, tol)\n  )\n}\n\ncambios_signo &lt;- function(valores, tol = 1e-10) {\n  valores &lt;- valores[abs(valores) &gt; tol]\n  if (length(valores) &lt; 2L) return(0L)\n  sum(valores[-1L] * valores[-length(valores)] &lt; 0)\n}\n\n\nConstrucción de la sucesión\nsucesion_sturm &lt;- function(coef, tol = 1e-10) {\n  p0 &lt;- normalizar_coef(coef, tol)\n  p1 &lt;- normalizar_coef(derivar_polinomio(p0), tol)\n  sucesion &lt;- list(p0, p1)\n\n  while (length(sucesion[[length(sucesion)]]) &gt; 1L) {\n    n &lt;- length(sucesion)\n    r &lt;- dividir_polinomios(sucesion[[n - 1L]], sucesion[[n]], tol)$residuo\n    r &lt;- normalizar_coef(-r, tol)\n    if (length(r) == 1L && abs(r) &lt;= tol) break\n    sucesion[[n + 1L]] &lt;- r\n  }\n  sucesion\n}\n\nvariaciones_sturm &lt;- function(sucesion, x, tol = 1e-10) {\n  valores &lt;- vapply(sucesion, evaluar_horner, numeric(1), x = x)\n  cambios_signo(valores, tol)\n}\n\ncontar_raices_sturm &lt;- function(coef, a, b, tol = 1e-10) {\n  s &lt;- sucesion_sturm(coef, tol)\n  variaciones_sturm(s, a, tol) - variaciones_sturm(s, b, tol)\n}\n\nsturm_x3_x &lt;- sucesion_sturm(c(1, 0, -1, 0))\nsturm_x3_x\ncontar_raices_sturm(c(1, 0, -1, 0), -2, 2)\nEl resultado es 3, que coincide con las raíces \\(-1\\), \\(0\\) y \\(1\\). Para raíces múltiples debe trabajarse con la parte libre de cuadrados del polinomio.\n\n\nSeparación certificada\nUna estrategia robusta subdivide \\([-R,R]\\) y conserva los intervalos donde Sturm cuenta exactamente una raíz. A diferencia del simple cambio de signo, este procedimiento también detecta intervalos asociados a raíces pares cuando se ha preparado correctamente el polinomio.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-descartes",
+    "href": "05-metodos-raices.html#sec-descartes",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.4 Regla de los signos de Descartes",
+    "text": "5.4 Regla de los signos de Descartes\nLos coeficientes cero se eliminan antes de contar variaciones. El número de raíces positivas es el número de variaciones de \\(p(x)\\) o ese número menos un entero par. Para las negativas se usa \\(p(-x)\\).\ncoef_p_menos_x &lt;- function(coef) {\n  grado &lt;- length(normalizar_coef(coef)) - 1L\n  coef * (-1) ^ seq(grado, 0L)\n}\n\nposibilidades_descartes &lt;- function(variaciones) {\n  seq(variaciones, 0L, by = -2L)\n}\n\ndescartes &lt;- function(coef) {\n  vp &lt;- cambios_signo(coef)\n  vn &lt;- cambios_signo(coef_p_menos_x(coef))\n  list(\n    variaciones_positivas = vp,\n    posibles_positivas = posibilidades_descartes(vp),\n    variaciones_negativas = vn,\n    posibles_negativas = posibilidades_descartes(vn)\n  )\n}\n\ndescartes(p4)\nPara p4 aparecen las posibilidades \\(2\\) o \\(0\\) en ambos signos. Sturm puede resolver la ambigüedad contando exactamente las raíces en \\((-R,0)\\) y \\((0,R)\\).\nc(\n  negativas = contar_raices_sturm(p4, -R, -1e-8),\n  positivas = contar_raices_sturm(p4, 1e-8, R)\n)\n\nBudan-Fourier\nBudan-Fourier cuenta variaciones en\n\\[\np(t),p'(t),\\ldots,p^{(n)}(t).\n\\]\nLa diferencia entre las variaciones en \\(a\\) y \\(b\\) es una cota superior para el número de raíces en \\((a,b]\\) y difiere del número real por un entero par.\nvariaciones_budan &lt;- function(coef, x, tol = 1e-10) {\n  valores &lt;- numeric(0)\n  actual &lt;- normalizar_coef(coef)\n  repeat {\n    valores &lt;- c(valores, evaluar_horner(actual, x))\n    if (length(actual) == 1L) break\n    actual &lt;- derivar_polinomio(actual)\n  }\n  cambios_signo(valores, tol)\n}\n\ncota_budan &lt;- function(coef, a, b) {\n  variaciones_budan(coef, a) - variaciones_budan(coef, b)\n}\n\ncota_budan(p4, -4, 0)\nDescartes y Budan-Fourier filtran posibilidades; Sturm certifica el conteo exacto.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-biseccion",
+    "href": "05-metodos-raices.html#sec-biseccion",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.5 Estimación mediante bisección",
+    "text": "5.5 Estimación mediante bisección\nEn cada paso se calcula el punto medio y se conserva la mitad con cambio de signo.\n\nAlgoritmo en R\nbiseccion &lt;- function(coef, a, b, tol = 1e-8, max_iter = 100L) {\n  fa &lt;- evaluar_horner(coef, a)\n  fb &lt;- evaluar_horner(coef, b)\n  if (fa == 0) return(data.frame(iter = 0L, a = a, b = a, x = a, fx = 0, error = 0))\n  if (fb == 0) return(data.frame(iter = 0L, a = b, b = b, x = b, fx = 0, error = 0))\n  if (fa * fb &gt; 0) stop(\"Los extremos deben tener signos opuestos.\")\n\n  historial &lt;- vector(\"list\", max_iter)\n  for (k in seq_len(max_iter)) {\n    m &lt;- (a + b) / 2\n    fm &lt;- evaluar_horner(coef, m)\n    error &lt;- (b - a) / 2\n    historial[[k]] &lt;- data.frame(iter = k, a = a, b = b, x = m, fx = fm, error = error)\n\n    if (abs(fm) &lt;= tol || error &lt;= tol) break\n    if (fa * fm &lt; 0) {\n      b &lt;- m\n      fb &lt;- fm\n    } else {\n      a &lt;- m\n      fa &lt;- fm\n    }\n  }\n  do.call(rbind, historial[seq_len(k)])\n}\n\nhist_bis &lt;- biseccion(fcoef, 1, 2, tol = 1e-8)\nhead(hist_bis, 6)\ntail(hist_bis, 1)\n\n\n\n\n\n\nFigura 5.2: Las primeras bisecciones reducen sistemáticamente el intervalo que encierra la raíz.\n\n\n\n\n\nAbrir la construcción en una página independiente\n\n\nActividad GeoGebra\n\nInicie con \\([1,2]\\) para \\(x^3-x-1\\).\nAvance una iteración a la vez y anote el intervalo conservado.\nCompare la longitud visual con \\((b_0-a_0)/2^n\\).\nDescargue el archivo .ggb y cambie el polinomio.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-secante",
+    "href": "05-metodos-raices.html#sec-secante",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.6 Estimación mediante el método de la secante",
+    "text": "5.6 Estimación mediante el método de la secante\nLa fórmula es\n\\[\nx_{n+1}=x_n-f(x_n)\n\\frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}.\n\\]\n\nImplementación\nsecante &lt;- function(coef, x0, x1, tol = 1e-8, max_iter = 100L) {\n  f0 &lt;- evaluar_horner(coef, x0)\n  f1 &lt;- evaluar_horner(coef, x1)\n  historial &lt;- vector(\"list\", max_iter)\n\n  for (k in seq_len(max_iter)) {\n    denominador &lt;- f1 - f0\n    if (abs(denominador) &lt;= .Machine$double.eps) {\n      stop(\"La pendiente de la secante es numéricamente nula.\")\n    }\n    x2 &lt;- x1 - f1 * (x1 - x0) / denominador\n    f2 &lt;- evaluar_horner(coef, x2)\n    cambio &lt;- abs(x2 - x1)\n    historial[[k]] &lt;- data.frame(iter = k, x = x2, fx = f2, cambio = cambio)\n\n    if (abs(f2) &lt;= tol || cambio &lt;= tol) break\n    x0 &lt;- x1\n    f0 &lt;- f1\n    x1 &lt;- x2\n    f1 &lt;- f2\n  }\n  do.call(rbind, historial[seq_len(k)])\n}\n\nhist_sec &lt;- secante(fcoef, 1, 2, tol = 1e-10)\nhist_sec\nLa secante suele necesitar menos iteraciones que la bisección y no utiliza derivadas. A cambio, no conserva un intervalo seguro y puede fallar si los valores funcionales son casi iguales.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#sec-newton",
+    "href": "05-metodos-raices.html#sec-newton",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.7 Estimación mediante el método de Newton",
+    "text": "5.7 Estimación mediante el método de Newton\nNewton usa la tangente:\n\\[\nx_{n+1}=x_n-\\frac{p(x_n)}{p'(x_n)}.\n\\]\n\nHorner simultáneo para \\(p\\) y \\(p'\\)\nhorner_valor_derivada &lt;- function(coef, x) {\n  coef &lt;- normalizar_coef(coef)\n  grado &lt;- length(coef) - 1L\n  if (grado == 0L) return(c(valor = coef, derivada = 0))\n\n  b &lt;- coef[1L]\n  caux &lt;- b\n  if (grado &gt; 1L) {\n    for (i in 2L:grado) {\n      b &lt;- coef[i] + x * b\n      caux &lt;- b + x * caux\n    }\n  }\n  b &lt;- coef[length(coef)] + x * b\n  c(valor = b, derivada = caux)\n}\n\nhorner_valor_derivada(fcoef, 1.5)\n\n\nNewton-Horner en R\nnewton_horner &lt;- function(coef, x0, tol = 1e-8, max_iter = 100L, multiplicidad = 1) {\n  historial &lt;- vector(\"list\", max_iter)\n\n  for (k in seq_len(max_iter)) {\n    vd &lt;- horner_valor_derivada(coef, x0)\n    if (abs(vd[\"derivada\"]) &lt;= .Machine$double.eps) {\n      stop(\"La derivada es numéricamente nula.\")\n    }\n    x1 &lt;- x0 - multiplicidad * vd[\"valor\"] / vd[\"derivada\"]\n    f1 &lt;- evaluar_horner(coef, x1)\n    cambio &lt;- abs(x1 - x0)\n    historial[[k]] &lt;- data.frame(iter = k, x = x1, fx = f1, cambio = cambio)\n\n    if (abs(f1) &lt;= tol || cambio &lt;= tol) break\n    x0 &lt;- x1\n  }\n  do.call(rbind, historial[seq_len(k)])\n}\n\nhist_newton &lt;- newton_horner(fcoef, 1.5, tol = 1e-12)\nhist_newton\n\n\n\n\n\n\nFigura 5.3: La secante usa una cuerda definida por dos puntos; Newton usa una tangente y requiere la derivada.\n\n\n\n\n\nAbrir la construcción en una página independiente\n\n\nActividad GeoGebra\n\nDesplace los puntos iniciales de la secante y observe su intersección con el eje.\nDesplace el punto inicial de Newton y compare la tangente.\nLocalice una posición donde la derivada sea pequeña.\nExplique por qué la construcción predice un paso de Newton muy grande.\n\n\n\nRaíz múltiple\nPara \\(p(x)=(x-1)^4\\), Newton ordinario converge lentamente. Si se conoce \\(m=4\\), use:\nraiz_multiple &lt;- c(1, -4, 6, -4, 1)\nnewton_horner(raiz_multiple, 2, tol = 1e-12, multiplicidad = 1)\nnewton_horner(raiz_multiple, 2, tol = 1e-12, multiplicidad = 4)\nLa versión modificada incorpora la multiplicidad y puede recuperar convergencia cuadrática.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#comparación-reproducible",
+    "href": "05-metodos-raices.html#comparación-reproducible",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Comparación reproducible",
+    "text": "Comparación reproducible\nresumen_metodos &lt;- data.frame(\n  metodo = c(\"Bisección\", \"Secante\", \"Newton-Horner\"),\n  iteraciones = c(nrow(hist_bis), nrow(hist_sec), nrow(hist_newton)),\n  aproximacion = c(tail(hist_bis$x, 1), tail(hist_sec$x, 1), tail(hist_newton$x, 1)),\n  residuo = abs(c(tail(hist_bis$fx, 1), tail(hist_sec$fx, 1), tail(hist_newton$fx, 1)))\n)\nresumen_metodos\n\n\n\n\n\n\n\n\n\nMétodo\nRequisito\nFortaleza\nRiesgo\n\n\n\n\nBisección\nintervalo con cambio de signo\ngarantía y cota de error\nconvergencia lineal\n\n\nSecante\ndos aproximaciones\nevita derivadas\ndenominador pequeño o alejamiento\n\n\nNewton-Horner\npunto inicial y derivada\nconvergencia cuadrática local\nderivada pequeña o inicio inadecuado",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#laboratorio-del-capítulo",
+    "href": "05-metodos-raices.html#laboratorio-del-capítulo",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Laboratorio del capítulo",
+    "text": "Laboratorio del capítulo\nTrabaje con\n\\[\np(x)=x^5-3x^4-3x^3+11x^2-6x.\n\\]\n\nCalcule la cota de Cauchy.\nUse Descartes para las posibilidades positivas y negativas.\nAplique Sturm para contar raíces en \\((-R,0)\\) y \\((0,R)\\).\nSepare cada raíz en un intervalo.\nAproxime cada una con bisección, secante y Newton-Horner.\nCompare iteraciones y residuos con una misma tolerancia.\nRepresente el polinomio en la construcción GeoGebra de localización.\nDocumente un caso donde un método abierto necesite cambiar sus datos iniciales.\n\nAbrir el cuaderno completo del capítulo 5 en Google Colab\nDescargar el cuaderno",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#errores-frecuentes",
+    "href": "05-metodos-raices.html#errores-frecuentes",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Errores frecuentes",
+    "text": "Errores frecuentes\n\nOmitir coeficientes cero y alterar el grado del polinomio.\nUsar una cota como si fuera una raíz aproximada.\nConcluir unicidad a partir de un cambio de signo.\nSuponer que una malla fina detecta todas las raíces.\nContar ceros como cambios de signo en Descartes o Sturm.\nAplicar bisección sin comprobar signos opuestos.\nIgnorar un denominador casi nulo en secante.\nContinuar Newton cuando la derivada es demasiado pequeña.\nConfundir un residuo pequeño con una cota automática del error;\ncomparar métodos con tolerancias o criterios de paro diferentes.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#ejercicios-graduados",
+    "href": "05-metodos-raices.html#ejercicios-graduados",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Ejercicios graduados",
+    "text": "Ejercicios graduados\n\nNivel 1\n\nUse cota_cauchy() con \\(2x^4-3x^2+7x-5\\).\nVerifique las posibilidades de Descartes para \\(x^5-2x^4+x^2-3\\).\nEjecute seis iteraciones de bisección para \\(x^3-2\\) en \\([1,2]\\).\nGrafique el historial de error de bisección en escala logarítmica.\n\n\n\nNivel 2\n\nUse sucesion_sturm() para \\(x^3-x\\) y explique cada polinomio de la lista.\nSepare las cuatro raíces de \\(x^4-5x^2+4\\).\nCompare secante y Newton-Horner para \\(x^3-x-1\\) con tolerancia \\(10^{-10}\\).\nModifique biseccion() para registrar el número de evaluaciones funcionales.\n\n\n\nNivel 3\n\nPrograme una rutina que subdivida \\([-R,R]\\) hasta obtener intervalos con conteo de Sturm igual a uno.\nImplemente Newton con protección: si el paso sale del intervalo, use una bisección.\nEstudie la convergencia de Newton ordinario y modificado para \\((x-1)^m\\), con \\(m=2,3,4\\).\nDiseñe una prueba automática que compare las raíces encontradas con polyroot() sin usarlo como justificación teórica.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#proyecto-integrador",
+    "href": "05-metodos-raices.html#proyecto-integrador",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Proyecto integrador",
+    "text": "Proyecto integrador\nElija un polinomio real de grado entre \\(4\\) y \\(7\\) con al menos tres raíces reales. Construya un informe reproducible que incluya cota, Descartes, Sturm, separación, bisección, secante, Newton-Horner, tablas de iteraciones, gráfica del error y una exploración GeoGebra. Todas las funciones deben usar R base y todos los resultados numéricos deben acompañarse de tolerancia y residuo.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#síntesis",
+    "href": "05-metodos-raices.html#síntesis",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Síntesis",
+    "text": "Síntesis\nLa estimación confiable de raíces es un proceso, no una fórmula única. Cauchy y la malla delimitan la búsqueda; Descartes y Budan-Fourier reducen posibilidades; Sturm cuenta; bisección aporta seguridad; secante evita derivadas; Newton-Horner aprovecha la estructura polinómica para lograr rapidez. R permite conservar todo el historial de cálculo y GeoGebra hace visible la geometría de cada iteración.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#referencias-del-capítulo",
+    "href": "05-metodos-raices.html#referencias-del-capítulo",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "Referencias del capítulo",
+    "text": "Referencias del capítulo\nLa secuencia temática sigue Universidad Autónoma de San Luis Potosí, Facultad de Ciencias (2011). La teoría de raíces y polinomios se apoya en Cárdenas et al. (1999) y Kurosh (1987). Los algoritmos y criterios numéricos siguen Burden y Faires (2011) y Chapra y Canale (2015). El código utiliza R base (R Core Team 2026) y las construcciones web emplean la incrustación y la API oficiales de GeoGebra (GeoGebra 2026b, 2026a).\n\n\n\n\nBurden, Richard L., y J. Douglas Faires. 2011. Numerical Analysis. 9.ª ed. Brooks/Cole, Cengage Learning.\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. Álgebra superior. 2.ª ed. Trillas.\n\n\nChapra, Steven C., y Raymond P. Canale. 2015. Numerical Methods for Engineers. 7.ª ed. McGraw-Hill Education.\n\n\nGeoGebra. 2026a. «GeoGebra Apps API». https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_API/.\n\n\nGeoGebra. 2026b. «GeoGebra Apps Embedding». https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_Embedding/.\n\n\nKurosh, Aleksandr G. 1987. Curso de álgebra superior. Editorial Mir.\n\n\nR Core Team. 2026. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "glosario.html",
+    "href": "glosario.html",
+    "title": "Glosario",
+    "section": "",
+    "text": "Algoritmo. Secuencia finita y ordenada de instrucciones para resolver un problema.\nBiyectiva. Función simultáneamente inyectiva y suprayectiva.\nConstrucción dinámica. Recurso de GeoGebra cuyos objetos dependen de parámetros que pueden modificarse interactivamente.\nCuaderno. Documento ejecutable que combina explicación, fórmulas, código y resultados.\nDominio. Conjunto de entradas para las que se define una función.\nFunción. Correspondencia que asigna a cada elemento del dominio exactamente una imagen.\nIteración. Repetición de un cálculo que produce aproximaciones sucesivas.\nObjeto de R. Estructura identificada por un nombre que almacena datos, funciones o resultados.\nPolinomio. Suma finita de términos con potencias enteras no negativas de una variable.\nRaíz. Valor que hace cero una función o un polinomio.\nReproducibilidad. Posibilidad de repetir un análisis con los mismos datos, instrucciones y parámetros.\nTolerancia. Umbral usado como criterio de parada en un método numérico.\nVisualización dinámica. Representación gráfica que permite modificar parámetros y observar inmediatamente sus efectos.",
+    "crumbs": [
+      "Glosario"
+    ]
+  },
+  {
+    "objectID": "indices.html",
+    "href": "indices.html",
+    "title": "Índices de consulta",
+    "section": "",
+    "text": "Índice temático\nLos índices permiten localizar conceptos, código, figuras y laboratorios sin aumentar la numeración principal del libro.",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-temático",
+    "href": "indices.html#índice-temático",
+    "title": "Índices de consulta",
+    "section": "",
+    "text": "Tabla 1: Índice alfabético de conceptos, código y laboratorios.\n\n\n\n\n\nTérmino o recurso\nSección principal\n\n\n\n\nAlgoritmo de Euclides\n2.3 Divisibilidad\n\n\nAritmética de punto flotante\n2.5 Racionales y reales\n\n\nBézout, coeficientes de\n2.3 Divisibilidad\n\n\nCardinalidad\n1.5 Conjuntos finitos y 1.9 Conjuntos infinitos\n\n\nCircuitos lógicos\naplicación integradora del capítulo 1\n\n\nCompletitud\n2.6 Propiedades de los reales\n\n\nConjunto potencia\n1.1 Lenguaje de conjuntos\n\n\nCuantificadores en dominios finitos\n1.3 Cuantificadores\n\n\nDensidad\n2.6 Propiedades de los reales\n\n\nDivisibilidad\n2.3 Divisibilidad\n\n\nExponentes\n2.7 Exponentes\n\n\nFactorización prima\n2.4 Primos y factorización\n\n\nFunciones en R\n1.7 Funciones\n\n\nInducción y verificación\n2.2 Inducción\n\n\nInteractivo de Euclides\n2.3 Divisibilidad\n\n\nInteractivo de funciones\n1.8 Tipos de funciones\n\n\nInteractivo de inducción\n2.2 Inducción\n\n\nInteractivo de tablas de verdad\n1.2 Proposiciones\n\n\nInteractivo de valor absoluto\n2.8 Valor absoluto\n\n\nInteractivo de Venn\n1.4 Operaciones de conjuntos\n\n\nMáximo común divisor\n2.3 Divisibilidad\n\n\nMínimo común múltiplo\n2.4 Primos y factorización\n\n\nNúmeros primos\n2.4 Primos y factorización\n\n\nOperaciones con conjuntos en R\n1.4 Operaciones de conjuntos\n\n\nRacionales exactos y aproximados\n2.5 Racionales y reales\n\n\nRelaciones en R\n1.6 Producto y relaciones\n\n\nValor absoluto\n2.8 Valor absoluto\n\n\nArgumento principal\n3.4 Módulo y argumento\n\n\nComplejo conjugado\n3.7 Conjugado\n\n\nConversión cartesiana-polar\n3.2 Representaciones\n\n\nDe Moivre en R\n3.9 Potencias y raíces\n\n\nMultiplicación como rotación\n3.6 Operaciones complejas\n\n\nRaíces de la unidad\n3.9 Potencias y raíces\n\n\nDivisión sintética\n4.5 Residuo y división sintética\n\n\nFactorización lineal\n4.8 Factores lineales\n\n\nFracciones parciales\n4.11 Fracciones parciales\n\n\nFunción racional\n4.10 Funciones racionales\n\n\nGeoGebra para polinomios\nlaboratorio computacional del capítulo 4\n\n\nMultiplicidad de una raíz\n4.6 Raíces múltiples\n\n\nPolinomio\n4.1 Definición\n\n\nRaíces conjugadas\n4.9 Polinomios reales\n\n\nTeorema fundamental del álgebra\n4.7 Teorema fundamental\n\n\nBisección en R\n5.5 Estimación mediante bisección\n\n\nCota de Cauchy\n5.1 Acotación de raíces\n\n\nNewton-Horner\n5.7 Estimación mediante Newton\n\n\nRegla de Descartes\n5.4 Regla de los signos de Descartes\n\n\nSecante en R\n5.6 Estimación mediante secante\n\n\nSeparación de raíces\n5.2 Separación de raíces\n\n\nTeorema de Sturm\n5.3 Teorema de Sturm",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-funciones-y-operadores-de-r",
+    "href": "indices.html#índice-de-funciones-y-operadores-de-r",
+    "title": "Índices de consulta",
+    "section": "Índice de funciones y operadores de R",
+    "text": "Índice de funciones y operadores de R\n\n\n\nTabla 2: Funciones y operadores principales de R.\n\n\n\n\n\n\n\n\n\n\nFunción u operador\nUso matemático\nSección\n\n\n\n\n%in%\npertenencia\n1.1\n\n\nunion(), intersect(), setdiff()\noperaciones de conjuntos\n1.4\n\n\nexpand.grid()\ntablas de verdad y productos cartesianos\n1.2 y 1.6\n\n\nall(), any()\ncuantificadores en dominios finitos\n1.3\n\n\n%/%, %%\ncociente y residuo\n2.3\n\n\neuclides()\nmáximo común divisor\n2.3\n\n\neuclides_extendido()\nidentidad de Bézout\n2.3\n\n\nes_primo()\nprueba de primalidad\n2.4\n\n\ncriba()\nprimos hasta un límite\n2.4\n\n\nfactorizar()\nfactores primos\n2.4\n\n\nall.equal()\ncomparación numérica aproximada\n2.5 y 2.7\n\n\nabs()\nvalor absoluto y distancia\n2.8\n\n\ncomplex()\nconstruir complejos desde componentes\n3.5\n\n\nRe(), Im()\npartes real e imaginaria\n3.5\n\n\nMod(), Arg()\nmódulo y argumento principal\n3.4\n\n\nConj()\ncomplejo conjugado\n3.7\n\n\nexp()\nforma polar, potencias y raíces\n3.6 y 3.9\n\n\nhorner()\nevaluación eficiente de polinomios\n4.5 y laboratorio del capítulo 4\n\n\ndividir_polinomios()\ncociente y residuo polinomiales\nlaboratorio del capítulo 4\n\n\ndivision_sintetica()\ndivisión entre \\(x-c\\)\nlaboratorio del capítulo 4\n\n\nmultiplicidad_raiz()\nmultiplicidad por divisiones sucesivas\nlaboratorio del capítulo 4\n\n\npolyroot()\naproximación de todas las raíces complejas\nlaboratorio del capítulo 4\n\n\nsolve()\ncoeficientes de fracciones parciales\nlaboratorio del capítulo 4\n\n\ncota_cauchy()\nacotar todas las raíces\n5.1\n\n\nseparar_por_signo()\nlocalizar intervalos con cambio de signo\n5.2\n\n\nsucesion_sturm()\nconstruir la sucesión de Sturm\n5.3\n\n\ncontar_raices_sturm()\ncontar raíces distintas en un intervalo\n5.3\n\n\ndescartes()\nposibilidades de raíces positivas y negativas\n5.4\n\n\nbiseccion()\naproximación cerrada con cota de error\n5.5\n\n\nsecante()\naproximación sin derivadas\n5.6\n\n\nhorner_valor_derivada()\nevaluar \\(p\\) y \\(p'\\) simultáneamente\n5.7\n\n\nnewton_horner()\naproximación rápida de raíces\n5.7",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-símbolos",
+    "href": "indices.html#índice-de-símbolos",
+    "title": "Índices de consulta",
+    "section": "Índice de símbolos",
+    "text": "Índice de símbolos\n\n\n\nTabla 3: Símbolos matemáticos principales.\n\n\n\n\n\n\n\n\n\n\nSímbolo\nSignificado\nSección\n\n\n\n\n\\(x\\in A\\), \\(A\\subseteq B\\)\npertenencia e inclusión\n1.1\n\n\n\\(\\neg,\\land,\\lor\\)\nconectivos lógicos\n1.2\n\n\n\\(\\forall,\\exists\\)\ncuantificadores\n1.3\n\n\n\\(A\\cup B,A\\cap B,A^c\\)\noperaciones de conjuntos\n1.4\n\n\n\\(f:A\\to B\\)\nfunción\n1.7\n\n\n\\(\\mathbb N,\\mathbb Z,\\mathbb Q,\\mathbb R\\)\nsistemas numéricos\n2.1 y 2.5\n\n\n\\(a\\mid b\\)\ndivisibilidad\n2.3\n\n\n\\(\\gcd(a,b)\\)\nmáximo común divisor\n2.3\n\n\n\\(\\operatorname{mcm}(a,b)\\)\nmínimo común múltiplo\n2.4\n\n\n\\(|x-a|\\)\ndistancia entre \\(x\\) y \\(a\\)\n2.8\n\n\n\\(\\mathbb R^2,\\mathbb C\\)\nplano real y números complejos\n3.1 y 3.5\n\n\n\\(i^2=-1\\)\nunidad imaginaria\n3.5\n\n\n\\(\\overline z\\)\nconjugado\n3.7\n\n\n\\(|z|,\\arg(z)\\)\nmódulo y argumento\n3.4\n\n\n\\(e^{i\\theta}\\)\nforma exponencial compleja\n3.9\n\n\n\\(K[x]\\)\nanillo de polinomios con coeficientes en \\(K\\)\n4.1\n\n\n\\(\\deg p\\)\ngrado del polinomio \\(p\\)\n4.1\n\n\n\\(p=dq+r\\)\nidentidad de la división polinomial\n4.3\n\n\n\\(p(\\alpha)=0\\)\n\\(\\alpha\\) es raíz de \\(p\\)\n4.4\n\n\n\\(R\\)\ncota global de las raíces\n5.1\n\n\n\\(V(t)\\)\nvariaciones de signo\n5.3\n\n\n\\(\\varepsilon\\)\ntolerancia numérica\n5.5 a 5.7\n\n\n\\(f'(x)\\)\nderivada utilizada por Newton\n5.7",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-figuras",
+    "href": "indices.html#índice-de-figuras",
+    "title": "Índices de consulta",
+    "section": "Índice de figuras",
+    "text": "Índice de figuras\n\nCapítulo 1\n\nOperaciones y regiones de Venn (sección 1.4).\nRelación, función y no-función (sección 1.7).\nComposición de funciones (sección 1.7).\nFunciones inyectivas, suprayectivas y biyectivas (sección 1.8).\n\n\n\nCapítulo 2\n\nSuma de impares y cuadrados perfectos (sección 2.2).\nResiduos del algoritmo de Euclides (sección 2.3).\nCadena de factorización de \\(756\\) (sección 2.4).\nJerarquía de los sistemas numéricos (sección 2.5).\nValor absoluto como distancia (sección 2.8).\n\n\n\nCapítulo 3\n\nPlano complejo y coordenadas polares (sección 3.2).\nSuma vectorial y regla del paralelogramo (sección 3.3).\nConjugación como reflexión (sección 3.7).\nRaíces de la unidad y polígonos regulares (sección 3.9).\n\n\n\nCapítulo 4\n\nDivisión polinomial: dividendo, divisor, cociente y residuo (sección 4.3).\nMultiplicidad: raíces simples, dobles y triples (sección 4.6).\nRaíces conjugadas: simetría respecto del eje real (sección 4.9).\nFunciones racionales: huecos y asíntotas (sección 4.10).\n\n\n\nCapítulo 5\n\nAcotación global y separación de raíces (secciones 5.1 y 5.2).\nPrimeras iteraciones de bisección (sección 5.5).\nComparación geométrica de secante y Newton (secciones 5.6 y 5.7).",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "indices.html#índice-de-laboratorios",
+    "href": "indices.html#índice-de-laboratorios",
+    "title": "Índices de consulta",
+    "section": "Índice de laboratorios",
+    "text": "Índice de laboratorios\n\n\n\nTabla 4: Laboratorios interactivos incorporados.\n\n\n\n\n\n\n\n\n\n\nLaboratorio\nConcepto\nSección\n\n\n\n\nTablas de verdad\nconectivos y clasificación\n1.2\n\n\nOperaciones de Venn\nunión, intersección y complemento\n1.4\n\n\nClasificador de funciones\ninyectividad, suprayectividad y biyección\n1.8\n\n\nInducción visual\nsuma de impares\n2.2\n\n\nAlgoritmo de Euclides\ncocientes, residuos y MCD\n2.3\n\n\nValor absoluto\ndistancia e intervalos\n2.8\n\n\nPlano complejo\ncoordenadas cartesianas, módulo y argumento\n3.2\n\n\nMultiplicación compleja\ncambio de escala y rotación\n3.6\n\n\nRaíces de la unidad\nángulos y polígonos regulares\n3.9\n\n\nOperaciones con polinomios\nsuma, producto y coeficientes\nlaboratorio del capítulo 4\n\n\nDivisión y residuo\nteoremas del residuo y del factor\nlaboratorio del capítulo 4\n\n\nRaíces y multiplicidad\ncruce, contacto y aplanamiento\nlaboratorio del capítulo 4\n\n\nFactorización lineal\nraíces y factores\nlaboratorio del capítulo 4\n\n\nRaíces conjugadas\nsimetría en el plano complejo\nlaboratorio del capítulo 4\n\n\nFunciones racionales\nhuecos y asíntotas\nlaboratorio del capítulo 4\n\n\nGeoGebra: localización de raíces\ncota de Cauchy e intersecciones\n5.1\n\n\nGeoGebra: bisección\nintervalo, punto medio y error\n5.5\n\n\nGeoGebra: secante y Newton\ncuerda, tangente y siguiente aproximación\n5.6 y 5.7",
+    "crumbs": [
+      "Índices de consulta"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Referencias generales",
+    "section": "",
+    "text": "Las fuentes de todos los capítulos se reúnen aquí en una lista única. Las notas bibliográficas al final de cada capítulo indican cuáles sustentan cada bloque temático.\n\n\nBrown, James Ward, and Ruel V. Churchill. 2014. Complex Variables\nand Applications. 9th ed. McGraw-Hill Education.\n\n\nBurden, Richard L., and J. Douglas Faires. 2011. Numerical\nAnalysis. 9th ed. Brooks/Cole, Cengage Learning.\n\n\nBurton, David M. 2011. Elementary Number Theory. 7th ed.\nMcGraw-Hill.\n\n\nCárdenas, Humberto, Emilio Lluis, Francisco Raggi, and Francisco Tomás.\n1999. Álgebra Superior. 2nd ed. Trillas.\n\n\nChapra, Steven C., and Raymond P. Canale. 2015. Numerical Methods\nfor Engineers. 7th ed. McGraw-Hill Education.\n\n\nCox, David A., John Little, and Donal O’Shea. 2015. Ideals,\nVarieties, and Algorithms. 4th ed. Springer.\n\n\nEpp, Susanna S. 2011. Discrete Mathematics with Applications.\n4th ed. Brooks/Cole, Cengage Learning.\n\n\nGeoGebra. 2026a. “GeoGebra Apps API.” https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_API/.\n\n\nGeoGebra. 2026b. “GeoGebra Apps Embedding.” https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_Embedding/.\n\n\nKurosh, Aleksandr G. 1987. Curso de Álgebra Superior. Editorial\nMir.\n\n\nNeedham, Tristan. 1997. Visual Complex Analysis. Oxford\nUniversity Press.\n\n\nNiven, Ivan, Herbert S. Zuckerman, and Hugh L. Montgomery. 1991. An\nIntroduction to the Theory of Numbers. 5th ed. John Wiley &\nSons.\n\n\nR Core Team. 2026. R: A Language and Environment for Statistical\nComputing. R Foundation for Statistical Computing.\n\n\nRosen, Kenneth H. 2019. Discrete Mathematics and Its\nApplications. 8th ed. McGraw-Hill Education.\n\n\nSilva, Juan Manuel, and Adriana Lazo. 2007. Fundamentos de\nMatemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo.\n7th ed. Limusa.\n\n\nTocci, Ronald J., and Neal S. Widmer. 2003. Sistemas Digitales:\nPrincipios y Aplicaciones. 8th ed. Pearson Educación.\n\n\nUniversidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011.\nPrograma Sintético de Álgebra Superior, Carrera de Ingeniero\nElectrónico. Propuesta de modificación curricular.",
+    "crumbs": [
+      "Referencias generales"
+    ]
+  },
+  {
+    "objectID": "autor.html",
+    "href": "autor.html",
+    "title": "Acerca del autor",
+    "section": "",
+    "text": "Jesús Gilberto Rodríguez Escobedo es Licenciado en Físico-Matemáticas, Maestro en Ciencias de la Computación y Maestro en Inteligencia Artificial. Cuenta con cerca de 45 años de experiencia en docencia universitaria en matemáticas, estadística, computación, ciencia de datos y aprendizaje automático.\nSu labor académica se ha desarrollado principalmente en la Universidad Autónoma de San Luis Potosí, en las facultades de Ciencias e Ingeniería. Sus intereses incluyen la enseñanza apoyada en tecnología, la informática educativa, los sistemas tutoriales inteligentes, el análisis de datos y la inteligencia artificial.\nEn sus proyectos editoriales busca vincular el razonamiento manual con recursos interactivos y computacionales, de modo que estudiantes y profesores puedan estudiar, experimentar y reutilizar materiales abiertos.",
+    "crumbs": [
+      "Acerca del autor"
+    ]
+  }
+]

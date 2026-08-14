@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoGebra - Método de bisección</title>
+  <link rel="stylesheet" href="geogebra-common.css">
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+  <script src="geogebra-common.js"></script>
+</head>
+<body>
+<main>
+  <span class="badge">Construcción auténtica de GeoGebra</span>
+  <h1>Método de bisección</h1>
+  <p>GeoGebra muestra f(x)=x<sup>3</sup>-x-1, los extremos del intervalo y su punto medio. Avance para conservar la mitad con cambio de signo.</p>
+  <div class="controls">
+    <label>a inicial = <span id="a-value" class="value">1</span>
+      <input id="a" type="range" min="-1" max="1.3" step="0.05" value="1">
+    </label>
+    <label>b inicial = <span id="b-value" class="value">2</span>
+      <input id="b" type="range" min="1.35" max="3" step="0.05" value="2">
+    </label>
+  </div>
+  <div class="toolbar">
+    <button id="reset" type="button">Reiniciar</button>
+    <button id="next" type="button">Siguiente iteración</button>
+    <button id="download" type="button">Descargar .ggb</button>
+    <div id="status" class="status" aria-live="polite">Cargando GeoGebra...</div>
+  </div>
+  <div class="error">No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
+  <div id="ggb-element" aria-label="Método de bisección interactivo en GeoGebra"></div>
+  <p class="help">Actividad: avance hasta que la semilongitud del intervalo sea menor que 0.01 y compare con la cota teórica.</p>
+</main>
+<script>
+"use strict";
+let ggbApi = null;
+let left = 1;
+let right = 2;
+let iteration = 0;
+
+function f(x) { return x * x * x - x - 1; }
+
+function renderState(message) {
+  const middle = (left + right) / 2;
+  if (ggbApi) {
+    ggbApi.setValue("a", left);
+    ggbApi.setValue("b", right);
+    ggbApi.setValue("m", middle);
+  }
+  document.getElementById("status").textContent = message ||
+    "Iteración " + iteration + " · [" + GGBLab.fmt(left, 6) + ", " +
+    GGBLab.fmt(right, 6) + "] · error ≤ " + GGBLab.fmt((right - left) / 2, 6);
+}
+
+function reset() {
+  left = Number(document.getElementById("a").value);
+  right = Number(document.getElementById("b").value);
+  document.getElementById("a-value").textContent = GGBLab.fmt(left, 2);
+  document.getElementById("b-value").textContent = GGBLab.fmt(right, 2);
+  iteration = 0;
+  if (f(left) * f(right) >= 0) {
+    renderState("El intervalo inicial debe tener signos opuestos.");
+    return;
+  }
+  renderState();
+}
+
+function next() {
+  if (f(left) * f(right) >= 0) {
+    renderState("Reinicie con un intervalo que tenga signos opuestos.");
+    return;
+  }
+  const middle = (left + right) / 2;
+  if (f(middle) === 0) {
+    left = middle;
+    right = middle;
+  } else if (f(left) * f(middle) < 0) {
+    right = middle;
+  } else {
+    left = middle;
+  }
+  iteration += 1;
+  renderState();
+}
+
+const params = GGBLab.params(function (api) {
+  ggbApi = api;
+  GGBLab.configure(api, 0.7, 2.2, -1.5, 5.5);
+  api.evalCommand([
+    "f(x)=x^3-x-1",
+    "a=1",
+    "b=2",
+    "m=(a+b)/2",
+    "A=(a,0)",
+    "B=(b,0)",
+    "M=(m,0)",
+    "Fmid=(m,f(m))",
+    "height=Segment(M,Fmid)",
+    "interval=Segment(A,B)"
+  ].join("\n"));
+  GGBLab.style(api, "f", [23, 105, 166], 7);
+  GGBLab.style(api, "interval", [44, 122, 90], 7);
+  GGBLab.style(api, "height", [181, 138, 42], 4);
+  GGBLab.style(api, "A", [44, 122, 90]);
+  GGBLab.style(api, "B", [44, 122, 90]);
+  GGBLab.style(api, "M", [179, 75, 53]);
+  GGBLab.style(api, "Fmid", [181, 138, 42]);
+  ["A", "B", "M", "Fmid"].forEach(function (name) {
+    api.setPointSize(name, 7);
+    api.setLabelVisible(name, true);
+  });
+  GGBLab.fit(api);
+  reset();
+});
+
+window.addEventListener("load", function () { GGBLab.inject(params); });
+["a", "b"].forEach(function (id) {
+  document.getElementById(id).addEventListener("input", reset);
+});
+document.getElementById("reset").addEventListener("click", reset);
+document.getElementById("next").addEventListener("click", next);
+document.getElementById("download").addEventListener("click", function () {
+  if (ggbApi) GGBLab.download(ggbApi, "metodo-biseccion.ggb");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Números complejos – Álgebra Superior con aplicaciones en R y GeoGebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-polinomios.html" rel="next">
+<link href="./02-enteros-reales.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-numeros-complejos.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Contenido del libro</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/gilbertorodriguez59/libro-algebra-superior-r-geogebra" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Portada</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bienvenida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenida</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./creditos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Créditos editoriales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./licencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Licencia y uso académico</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prefacio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./agradecimientos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Agradecimientos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduccion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notación general</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-logica-conjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-enteros-reales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-numeros-complejos.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-polinomios.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-metodos-raices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glosario</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de consulta</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias generales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./autor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acerca del autor</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este capítulo</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-r2" id="toc-sec-r2" class="nav-link active" data-scroll-target="#sec-r2"><span class="header-section-number">3.1</span> Definición de <span class="math inline">\(\mathbb R^2\)</span></a></li>
+  <li><a href="#sec-cartesiana-polar" id="toc-sec-cartesiana-polar" class="nav-link" data-scroll-target="#sec-cartesiana-polar"><span class="header-section-number">3.2</span> Representaciones cartesiana y polar de vectores en <span class="math inline">\(\mathbb R^2\)</span></a></li>
+  <li><a href="#sec-modulo-argumento" id="toc-sec-modulo-argumento" class="nav-link" data-scroll-target="#sec-modulo-argumento"><span class="header-section-number">3.3</span> Módulo y argumento</a></li>
+  <li><a href="#sec-imaginarios-complejos" id="toc-sec-imaginarios-complejos" class="nav-link" data-scroll-target="#sec-imaginarios-complejos"><span class="header-section-number">3.4</span> Números imaginarios y complejos</a></li>
+  <li><a href="#sec-operaciones-complejos" id="toc-sec-operaciones-complejos" class="nav-link" data-scroll-target="#sec-operaciones-complejos"><span class="header-section-number">3.5</span> Operaciones básicas con números complejos</a></li>
+  <li><a href="#sec-conjugado" id="toc-sec-conjugado" class="nav-link" data-scroll-target="#sec-conjugado"><span class="header-section-number">3.6</span> Complejo conjugado y sus propiedades</a></li>
+  <li><a href="#sec-division-complejos" id="toc-sec-division-complejos" class="nav-link" data-scroll-target="#sec-division-complejos"><span class="header-section-number">3.7</span> División de complejos</a></li>
+  <li><a href="#sec-potencias-raices" id="toc-sec-potencias-raices" class="nav-link" data-scroll-target="#sec-potencias-raices"><span class="header-section-number">3.8</span> Potencias y raíces de complejos</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introducción" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="introducción">Introducción</h2>
+<p>Los números complejos unen álgebra y geometría. En forma cartesiana se operan mediante sus partes real e imaginaria; en forma polar, la multiplicación se convierte en una combinación de cambio de escala y rotación. R incorpora números complejos en su lenguaje base, por lo que permite experimentar sin instalar paquetes.</p>
+<p>El capítulo sigue las nueve secciones de la Unidad 3 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. Cada sección comienza con el procedimiento manual, lo traduce a R y termina con una interpretación geométrica.</p>
+<section id="objetivos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="objetivos">Objetivos</h3>
+<p>Al terminar, el estudiante podrá:</p>
+<ul>
+<li>representar pares, vectores y complejos en el plano;</li>
+<li>convertir coordenadas cartesianas y polares;</li>
+<li>programar operaciones vectoriales con R base;</li>
+<li>utilizar Re(), Im(), Mod(), Arg() y Conj();</li>
+<li>interpretar sumas, productos, conjugados y cocientes;</li>
+<li>calcular potencias y todas las raíces de un complejo;</li>
+<li>comprobar resultados numéricamente sin confundir una prueba experimental con una demostración.</li>
+</ul>
+</section>
+</section>
+<section id="sec-r2" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-r2"><span class="header-section-number">3.1</span> Definición de <span class="math inline">\(\mathbb R^2\)</span></h2>
+<p>Un elemento de <span class="math inline">\(\mathbb R^2\)</span> es un par ordenado <span class="math inline">\((x,y)\)</span>. Puede representar un punto o el vector dirigido desde el origen hasta ese punto.</p>
+<section id="situación-inicial" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="situación-inicial">Situación inicial</h3>
+<p>Un robot se desplaza <span class="math inline">\(3\)</span> unidades al este y <span class="math inline">\(4\)</span> al norte. Su posición final es <span class="math inline">\((3,4)\)</span> y la distancia al origen es</p>
+<p><span class="math display">\[
+\sqrt{3^2+4^2}=5.
+\]</span></p>
+<p>En R, un vector de dos componentes puede guardarse como un vector numérico.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="dv">4</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>p</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="fu">sum</span>(p<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Para varios puntos conviene usar un data.frame.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>puntos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">nombre =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">3</span>, <span class="dv">2</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">3</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">3</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>puntos<span class="sc">$</span>cuadrante <span class="ot">&lt;-</span> <span class="fu">with</span>(puntos, <span class="fu">ifelse</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  x <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> y <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"I"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ifelse</span>(x <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> y <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="st">"II"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>         <span class="fu">ifelse</span>(x <span class="sc">&lt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> y <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"III"</span>, <span class="st">"IV"</span>))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>puntos</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="plano-cartesiano-en-r" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="plano-cartesiano-en-r">Plano cartesiano en R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(puntos<span class="sc">$</span>x, puntos<span class="sc">$</span>y,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>), <span class="at">asp =</span> <span class="dv">1</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"x"</span>, <span class="at">ylab =</span> <span class="st">"y"</span>, <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"#1769a6"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Puntos de R²"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray65"</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(puntos<span class="sc">$</span>x, puntos<span class="sc">$</span>y, <span class="at">labels =</span> puntos<span class="sc">$</span>nombre,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">pos =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"#123b6d"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="distancia-entre-dos-puntos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="distancia-entre-dos-puntos">Distancia entre dos puntos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>distancia <span class="ot">&lt;-</span> <span class="cf">function</span>(P, Q) <span class="fu">sqrt</span>(<span class="fu">sum</span>((P <span class="sc">-</span> Q)<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>Q <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">distancia</span>(P, Q)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Interpretación">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Interpretación
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El código reproduce la definición. P - Q obtiene las diferencias de componentes, ^2 calcula sus cuadrados, sum() los suma y sqrt() extrae la raíz.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-cartesiana-polar" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-cartesiana-polar"><span class="header-section-number">3.2</span> Representaciones cartesiana y polar de vectores en <span class="math inline">\(\mathbb R^2\)</span></h2>
+<p>Para <span class="math inline">\((x,y)\neq(0,0)\)</span>:</p>
+<p><span class="math display">\[
+r=\sqrt{x^2+y^2},\qquad
+\theta=\operatorname{atan2}(y,x).
+\]</span></p>
+<p>La función de dos argumentos atan2(y, x) identifica el cuadrante correcto. La función atan(y/x) no lo hace en todos los casos.</p>
+<div id="fig-plano-complejo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plano-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/plano-complejo.png" class="img-fluid figure-img" style="width:78.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plano-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.1: Del par cartesiano <span class="math inline">\((3,4)\)</span> a radio <span class="math inline">\(5\)</span> y argumento <span class="math inline">\(\theta\)</span>.
+</figcaption>
+</figure>
+</div>
+<section id="conversión-cartesiana-a-polar" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="conversión-cartesiana-a-polar">Conversión cartesiana a polar</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cartesiana_polar <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  r <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  theta <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(r <span class="sc">==</span> <span class="dv">0</span>, <span class="cn">NA_real_</span>, <span class="fu">atan2</span>(y, x))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">y =</span> y, <span class="at">r =</span> r,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">theta_rad =</span> theta,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">theta_grados =</span> theta <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cartesiana_polar</span>(<span class="dv">3</span>, <span class="dv">4</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">cartesiana_polar</span>(<span class="sc">-</span><span class="fu">sqrt</span>(<span class="dv">3</span>), <span class="dv">1</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">cartesiana_polar</span>(<span class="dv">0</span>, <span class="dv">0</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="conversión-polar-a-cartesiana" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="conversión-polar-a-cartesiana">Conversión polar a cartesiana</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>polar_cartesiana <span class="ot">&lt;-</span> <span class="cf">function</span>(r, theta) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(r <span class="sc">&lt;</span> <span class="dv">0</span>)) <span class="fu">stop</span>(<span class="st">"El radio debe ser no negativo"</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">r =</span> r, <span class="at">theta =</span> theta,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>             <span class="at">x =</span> r <span class="sc">*</span> <span class="fu">cos</span>(theta),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">y =</span> r <span class="sc">*</span> <span class="fu">sin</span>(theta))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">polar_cartesiana</span>(<span class="dv">2</span>, <span class="dv">5</span> <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">6</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="construcción-equivalente-en-geogebra" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="construcción-equivalente-en-geogebra">Construcción equivalente en GeoGebra</h3>
+<p>En la vista gráfica pueden escribirse las órdenes:</p>
+<p><sub></sub>~text O = (0, 0) Z = (3, 4) u = Vector(O, Z) r = Length(u) theta = Angle((1, 0), u)</p>
+<pre><code>
+Al arrastrar $Z$, GeoGebra actualiza simultáneamente sus coordenadas, módulo y argumento.
+
+::: {.content-visible when-format="html"}
+### Laboratorio: coordenadas y argumento {.unnumbered .unlisted}
+
+&lt;iframe class="interactive-frame complex-plane" src="interactivos/plano-complejo.html" title="Laboratorio de representación cartesiana y polar"&gt;&lt;/iframe&gt;
+
+[Abrir el laboratorio en una pestaña nueva](interactivos/plano-complejo.html){.btn .btn-primary}
+:::
+
+## Operaciones con vectores en $\mathbb R^2$ {#sec-operaciones-r2}
+
+Sean $\mathbf u=(u_1,u_2)$ y $\mathbf v=(v_1,v_2)$. La suma, resta, multiplicación por escalar y producto punto se calculan componente a componente.
+
+```{.r}
+u &lt;- c(2, 1)
+v &lt;- c(-1, 2)
+
+list(
+  suma = u + v,
+  resta = u - v,
+  triple_u = 3 * u,
+  producto_punto = sum(u * v)
+)</code></pre>
+<p>Como sum(u * v) vale cero, los vectores son perpendiculares.</p>
+</section>
+<section id="regla-del-paralelogramo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="regla-del-paralelogramo">Regla del paralelogramo</h3>
+<div id="fig-suma-vectores" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-suma-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/suma-vectores.png" class="img-fluid figure-img" style="width:78.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-suma-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.2: La diagonal representa <span class="math inline">\(\mathbf u+\mathbf v\)</span>.
+</figcaption>
+</figure>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dibujar_suma <span class="ot">&lt;-</span> <span class="cf">function</span>(u, v) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> u <span class="sc">+</span> v</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  limites_x <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(<span class="dv">0</span>, u[<span class="dv">1</span>], v[<span class="dv">1</span>], s[<span class="dv">1</span>])) <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  limites_y <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(<span class="dv">0</span>, u[<span class="dv">2</span>], v[<span class="dv">2</span>], s[<span class="dv">2</span>])) <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlim =</span> limites_x, <span class="at">ylim =</span> limites_y,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">xlab =</span> <span class="st">"x"</span>, <span class="at">ylab =</span> <span class="st">"y"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="st">"Suma vectorial"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray75"</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, u[<span class="dv">1</span>], u[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, v[<span class="dv">1</span>], v[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#2c7a5a"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#b58a2a"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(u[<span class="dv">1</span>], u[<span class="dv">2</span>], s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray45"</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(v[<span class="dv">1</span>], v[<span class="dv">2</span>], s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray45"</span>)</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">dibujar_suma</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="verificación-de-propiedades" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="verificación-de-propiedades">Verificación de propiedades</h3>
+<p>Los cálculos con punto flotante deben compararse con tolerancia.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>iguales_vectores <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, <span class="at">tol =</span> <span class="fl">1e-12</span>) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(a) <span class="sc">==</span> <span class="fu">length</span>(b) <span class="sc">&amp;&amp;</span> <span class="fu">all</span>(<span class="fu">abs</span>(a <span class="sc">-</span> b) <span class="sc">&lt;</span> tol)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">4</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">conmutativa =</span> <span class="fu">iguales_vectores</span>(u <span class="sc">+</span> v, v <span class="sc">+</span> u),</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">asociativa =</span> <span class="fu">iguales_vectores</span>((u <span class="sc">+</span> v) <span class="sc">+</span> w, u <span class="sc">+</span> (v <span class="sc">+</span> w)),</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">distributiva =</span> <span class="fu">iguales_vectores</span>(lambda <span class="sc">*</span> (u <span class="sc">+</span> v),</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                                  lambda <span class="sc">*</span> u <span class="sc">+</span> lambda <span class="sc">*</span> v)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="sec-modulo-argumento" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-modulo-argumento"><span class="header-section-number">3.3</span> Módulo y argumento</h2>
+<p>En el plano complejo se escribe</p>
+<p><span class="math display">\[
+|z|=\sqrt{x^2+y^2},\qquad \arg(z)=\theta.
+\]</span></p>
+<p>R calcula estas cantidades con Mod() y Arg().</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">modulo =</span> <span class="fu">Mod</span>(z),</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_rad =</span> <span class="fu">Arg</span>(z),</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_grados =</span> <span class="fu">Arg</span>(z) <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="argumento-principal-y-ángulos-equivalentes" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="argumento-principal-y-ángulos-equivalentes">Argumento principal y ángulos equivalentes</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>z_cuadrantes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span>i)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> z_cuadrantes,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_rad =</span> <span class="fu">Arg</span>(z_cuadrantes),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_grados =</span> <span class="fu">Arg</span>(z_cuadrantes) <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Arg() devuelve el argumento principal en el intervalo <span class="math inline">\((-\pi,\pi]\)</span>. A cada resultado se le puede sumar <span class="math inline">\(2k\pi\)</span> sin cambiar el punto.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="El argumento de cero">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>El argumento de cero
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>R devuelve <code>Arg(0) = 0</code> por conveniencia computacional. Matemáticamente, el argumento de <span class="math inline">\(0\)</span> no está definido porque el vector nulo no señala ninguna dirección. La función <code>cartesiana_polar()</code> registra este caso como <code>NA</code>.</p>
+</div>
+</div>
+</section>
+<section id="desigualdad-triangular-experimento-reproducible" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="desigualdad-triangular-experimento-reproducible">Desigualdad triangular: experimento reproducible</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">314</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">imaginary =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>))</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">imaginary =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>))</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>holgura <span class="ot">&lt;-</span> <span class="fu">Mod</span>(z) <span class="sc">+</span> <span class="fu">Mod</span>(w) <span class="sc">-</span> <span class="fu">Mod</span>(z <span class="sc">+</span> w)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(holgura)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(holgura <span class="sc">&gt;=</span> <span class="sc">-</span><span class="fl">1e-12</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Alcance de la comprobación">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Alcance de la comprobación
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mil casos correctos apoyan la propiedad y ayudan a detectar errores, pero no demuestran que sea verdadera para todos los complejos. La demostración general aparece en el volumen de Fundamentos Matemáticos.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-imaginarios-complejos" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-imaginarios-complejos"><span class="header-section-number">3.4</span> Números imaginarios y complejos</h2>
+<p>R reconoce un literal complejo cuando aparece el sufijo i. Debe escribirse 1i, no solamente i, a menos que antes se haya creado un objeto con ese nombre.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(z)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">parte_real =</span> <span class="fu">Re</span>(z),</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">parte_imaginaria =</span> <span class="fu">Im</span>(z),</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">Mod</span>(z),</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento =</span> <span class="fu">Arg</span>(z)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="construcción-desde-componentes" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="construcción-desde-componentes">Construcción desde componentes</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>z1 <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>z2 <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="dv">3</span>, <span class="at">imaginary =</span> <span class="dv">4</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>z3 <span class="ot">&lt;-</span> <span class="fu">as.complex</span>(<span class="dv">3</span>) <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">z1 =</span> z1, <span class="at">z2 =</span> z2, <span class="at">z3 =</span> z3)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(z1, z2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="vector-de-números-complejos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="vector-de-números-complejos">Vector de números complejos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>zs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="sc">-</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span>i, <span class="dv">3</span> <span class="sc">-</span> <span class="dv">1</span>i)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tabla_z <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> zs,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">real =</span> <span class="fu">Re</span>(zs),</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">imaginaria =</span> <span class="fu">Im</span>(zs),</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">Mod</span>(zs),</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento =</span> <span class="fu">Arg</span>(zs)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>tabla_z</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="plano-complejo-en-r" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="plano-complejo-en-r">Plano complejo en R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">Re</span>(zs), <span class="fu">Im</span>(zs), <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Parte real"</span>, <span class="at">ylab =</span> <span class="st">"Parte imaginaria"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">main =</span> <span class="st">"Números complejos"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray65"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fu">Re</span>(zs), <span class="fu">Im</span>(zs), <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"z"</span>, <span class="fu">seq_along</span>(zs)), <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="sec-operaciones-complejos" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-operaciones-complejos"><span class="header-section-number">3.5</span> Operaciones básicas con números complejos</h2>
+<section id="solución-manual" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="solución-manual">Solución manual</h3>
+<p>Para <span class="math inline">\(z=3-2i\)</span> y <span class="math inline">\(w=1+4i\)</span>:</p>
+<p><span class="math display">\[
+z+w=4+2i,
+\]</span></p>
+<p><span class="math display">\[
+zw=(3)(1)-(-2)(4)+\bigl((3)(4)+(-2)(1)\bigr)i=11+10i.
+\]</span></p>
+</section>
+<section id="comprobación-en-r" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="comprobación-en-r">Comprobación en R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">2</span>i</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">suma =</span> z <span class="sc">+</span> w,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">resta =</span> z <span class="sc">-</span> w,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> z <span class="sc">*</span> w)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="multiplicar-significa-rotar-y-escalar" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="multiplicar-significa-rotar-y-escalar">Multiplicar significa rotar y escalar</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>resumen_producto <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  producto <span class="ot">&lt;-</span> z <span class="sc">*</span> w</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cantidad =</span> <span class="fu">c</span>(<span class="st">"z"</span>, <span class="st">"w"</span>, <span class="st">"z*w"</span>),</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">modulo =</span> <span class="fu">c</span>(<span class="fu">Mod</span>(z), <span class="fu">Mod</span>(w), <span class="fu">Mod</span>(producto)),</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">argumento =</span> <span class="fu">c</span>(<span class="fu">Arg</span>(z), <span class="fu">Arg</span>(w), <span class="fu">Arg</span>(producto))</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="fu">resumen_producto</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">6</span>),</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>                 <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">3</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>La tabla permite comprobar</p>
+<p><span class="math display">\[
+|zw|=|z||w|,
+\qquad
+\arg(zw)\equiv\arg(z)+\arg(w)\pmod{2\pi}.
+\]</span></p>
+</section>
+<section id="laboratorio-producto-como-transformación" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-producto-como-transformación">Laboratorio: producto como transformación</h3>
+<iframe class="interactive-frame complex-product" src="interactivos/multiplicacion-compleja.html" title="Laboratorio de multiplicación compleja">
+</iframe>
+<p><a href="interactivos/multiplicacion-compleja.html" class="btn btn-primary">Abrir el laboratorio en una pestaña nueva</a></p>
+</section>
+</section>
+<section id="sec-conjugado" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-conjugado"><span class="header-section-number">3.6</span> Complejo conjugado y sus propiedades</h2>
+<p>El conjugado de <span class="math inline">\(z=a+bi\)</span> es <span class="math inline">\(\overline z=a-bi\)</span>. R lo calcula con Conj().</p>
+<div id="fig-conjugado-complejo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-conjugado-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/conjugado-complejo.png" class="img-fluid figure-img" style="width:72.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conjugado-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.3: Conjugar refleja un punto respecto del eje real.
+</figcaption>
+</figure>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> z,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">conjugado =</span> <span class="fu">Conj</span>(z),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> z <span class="sc">*</span> <span class="fu">Conj</span>(z),</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo_cuadrado =</span> <span class="fu">Mod</span>(z)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="comprobaciones-vectorizadas" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="comprobaciones-vectorizadas">Comprobaciones vectorizadas</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span>i, <span class="sc">-</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i, <span class="dv">2</span> <span class="sc">-</span> <span class="dv">5</span>i)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span> <span class="sc">-</span> <span class="dv">1</span>i, <span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="sc">-</span><span class="dv">4</span> <span class="sc">+</span> <span class="dv">2</span>i)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">involucion =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(<span class="fu">Conj</span>(z)) <span class="sc">==</span> z),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">suma =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(z <span class="sc">+</span> w) <span class="sc">==</span> <span class="fu">Conj</span>(z) <span class="sc">+</span> <span class="fu">Conj</span>(w)),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(z <span class="sc">*</span> w) <span class="sc">==</span> <span class="fu">Conj</span>(z) <span class="sc">*</span> <span class="fu">Conj</span>(w)),</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">all</span>(<span class="fu">abs</span>(<span class="fu">Mod</span>(<span class="fu">Conj</span>(z)) <span class="sc">-</span> <span class="fu">Mod</span>(z)) <span class="sc">&lt;</span> <span class="fl">1e-12</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="recuperar-las-partes-real-e-imaginaria" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="recuperar-las-partes-real-e-imaginaria">Recuperar las partes real e imaginaria</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">7</span>i</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">real_por_conjugado =</span> (z <span class="sc">+</span> <span class="fu">Conj</span>(z)) <span class="sc">/</span> <span class="dv">2</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">imaginaria_por_conjugado =</span> (z <span class="sc">-</span> <span class="fu">Conj</span>(z)) <span class="sc">/</span> (<span class="dv">2</span>i)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El segundo resultado es el número real <span class="math inline">\(7\)</span>, no <span class="math inline">\(7i\)</span>, porque la fórmula calcula <span class="math inline">\(\operatorname{Im}(z)\)</span>.</p>
+</section>
+</section>
+<section id="sec-division-complejos" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="sec-division-complejos"><span class="header-section-number">3.7</span> División de complejos</h2>
+<section id="procedimiento-manual" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="procedimiento-manual">Procedimiento manual</h3>
+<p><span class="math display">\[
+\frac{2+3i}{1-2i}
+=\frac{(2+3i)(1+2i)}{1^2+(-2)^2}
+=-\frac45+\frac75i.
+\]</span></p>
+</section>
+<section id="cálculo-y-verificación-en-r" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="cálculo-y-verificación-en-r">Cálculo y verificación en R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>cociente <span class="ot">&lt;-</span> z <span class="sc">/</span> w</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">cociente =</span> cociente,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comprobacion =</span> cociente <span class="sc">*</span> w,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">error =</span> <span class="fu">Mod</span>(cociente <span class="sc">*</span> w <span class="sc">-</span> z))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="programar-la-fórmula-cartesiana" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="programar-la-fórmula-cartesiana">Programar la fórmula cartesiana</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dividir_complejos <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">Mod</span>(w) <span class="sc">==</span> <span class="dv">0</span>)) <span class="fu">stop</span>(<span class="st">"No se puede dividir entre cero"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  z <span class="sc">*</span> <span class="fu">Conj</span>(w) <span class="sc">/</span> <span class="fu">Mod</span>(w)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dividir_complejos</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="comparación-polar" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="comparación-polar">Comparación polar</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>resumen_cociente <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  q <span class="ot">&lt;-</span> z <span class="sc">/</span> w</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">calculo =</span> <span class="fu">c</span>(<span class="st">"|z|/|w|"</span>, <span class="st">"|z/w|"</span>,</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Arg(z)-Arg(w)"</span>, <span class="st">"Arg(z/w)"</span>),</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor =</span> <span class="fu">c</span>(<span class="fu">Mod</span>(z) <span class="sc">/</span> <span class="fu">Mod</span>(w), <span class="fu">Mod</span>(q),</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>              <span class="fu">Arg</span>(z) <span class="sc">-</span> <span class="fu">Arg</span>(w), <span class="fu">Arg</span>(q))</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="fu">resumen_cociente</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Los dos argumentos pueden diferir en un múltiplo de <span class="math inline">\(2\pi\)</span> y representar la misma dirección.</p>
+</section>
+</section>
+<section id="sec-potencias-raices" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="sec-potencias-raices"><span class="header-section-number">3.8</span> Potencias y raíces de complejos</h2>
+<section id="potencias-con-de-moivre" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="potencias-con-de-moivre">Potencias con De Moivre</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>potencia_demoivre <span class="ot">&lt;-</span> <span class="cf">function</span>(z, n) {</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (z <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> n <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"Cero no admite exponentes negativos"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Mod</span>(z)<span class="sc">^</span>n <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> n <span class="sc">*</span> <span class="fu">Arg</span>(z))</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">R =</span> z<span class="sc">^</span><span class="dv">8</span>,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">De_Moivre =</span> <span class="fu">potencia_demoivre</span>(z, <span class="dv">8</span>),</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">diferencia =</span> <span class="fu">Mod</span>(z<span class="sc">^</span><span class="dv">8</span> <span class="sc">-</span> <span class="fu">potencia_demoivre</span>(z, <span class="dv">8</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>R utiliza la identidad de Euler</p>
+<p><span class="math display">\[
+e^{i\theta}=\cos\theta+i\sin\theta.
+\]</span></p>
+<p>Por eso r * exp(1i * theta) es una forma compacta de construir un complejo polar.</p>
+</section>
+<section id="todas-las-raíces-n-ésimas" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="todas-las-raíces-n-ésimas">Todas las raíces <span class="math inline">\(n\)</span>-ésimas</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>raices_n <span class="ot">&lt;-</span> <span class="cf">function</span>(z, n) {</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(z) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> <span class="fu">length</span>(n) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> n <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">||</span> n <span class="sc">!=</span> <span class="fu">floor</span>(n)) {</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Use un complejo y un entero positivo n"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (z <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="dv">0</span> <span class="sc">+</span> <span class="dv">0</span>i)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Mod</span>(z)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> n) <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> (<span class="fu">Arg</span>(z) <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> k) <span class="sc">/</span> n)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>raices_cubicas <span class="ot">&lt;-</span> <span class="fu">raices_n</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">3</span>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>raices_cubicas</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>raices_cubicas<span class="sc">^</span><span class="dv">3</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="raíces-de-la-unidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="raíces-de-la-unidad">Raíces de la unidad</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>raices_unidad <span class="ot">&lt;-</span> <span class="cf">function</span>(n) <span class="fu">exp</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> <span class="dv">1</span>i <span class="sc">*</span> (<span class="dv">0</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">/</span> n)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>omega <span class="ot">&lt;-</span> <span class="fu">raices_unidad</span>(<span class="dv">6</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(omega, <span class="dv">10</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-raices-unidad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-raices-unidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/raices-unidad.png" class="img-fluid figure-img" style="width:72.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raices-unidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;3.4: Las raíces sextas de la unidad son los vértices de un hexágono regular.
+</figcaption>
+</figure>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega), <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>),</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Parte real"</span>, <span class="at">ylab =</span> <span class="st">"Parte imaginaria"</span>,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">main =</span> <span class="st">"Raíces sextas de la unidad"</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray75"</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">segments</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega),</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>         <span class="fu">Re</span>(<span class="fu">c</span>(omega[<span class="sc">-</span><span class="dv">1</span>], omega[<span class="dv">1</span>])), <span class="fu">Im</span>(<span class="fu">c</span>(omega[<span class="sc">-</span><span class="dv">1</span>], omega[<span class="dv">1</span>])),</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#2c7a5a"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega), <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"k="</span>, <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="laboratorio-raíces-de-la-unidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-raíces-de-la-unidad">Laboratorio: raíces de la unidad</h3>
+<iframe class="interactive-frame unity-roots" src="interactivos/raices-unidad.html" title="Laboratorio de raíces de la unidad">
+</iframe>
+<p><a href="interactivos/raices-unidad.html" class="btn btn-primary">Abrir el laboratorio en una pestaña nueva</a></p>
+</section>
+</section>
+<section id="laboratorio-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-del-capítulo">Laboratorio del capítulo</h2>
+<p>Trabaje en este orden:</p>
+<ol type="1">
+<li>elija un punto en el laboratorio cartesiano-polar y anote <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, <span class="math inline">\(r\)</span> y <span class="math inline">\(\theta\)</span>;</li>
+<li>compruebe manualmente <span class="math inline">\(r=\sqrt{x^2+y^2}\)</span>;</li>
+<li>use el laboratorio de multiplicación para observar la suma de argumentos;</li>
+<li>reproduzca el mismo ejemplo con R;</li>
+<li>cambie <span class="math inline">\(n\)</span> en el laboratorio de raíces y describa el polígono obtenido;</li>
+<li>compruebe en R que cada punto elevado a <span class="math inline">\(n\)</span> produce <span class="math inline">\(1\)</span> dentro de la tolerancia numérica.</li>
+</ol>
+<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-03-numeros-complejos-R.ipynb" class="btn btn-primary">Abrir el cuaderno completo del capítulo 3 en Google Colab</a></p>
+<p><a href="notebooks/capitulo-03-numeros-complejos-R.ipynb" class="btn">Descargar el cuaderno</a></p>
+</section>
+<section id="ejercicios-con-r" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios-con-r">Ejercicios con R</h2>
+<ol type="1">
+<li>Escriba una función que reciba dos puntos de <span class="math inline">\(\mathbb R^2\)</span> y devuelva distancia y punto medio.</li>
+<li>Genere veinte vectores aleatorios y conviértalos a forma polar.</li>
+<li>Compare atan(Im(z)/Re(z)) con Arg(z) en los cuatro cuadrantes y explique las diferencias.</li>
+<li>Escriba una función que clasifique un complejo como real, imaginario puro o complejo general.</li>
+<li>Compruebe experimentalmente <span class="math inline">\(|zw|=|z||w|\)</span> con mil pares aleatorios.</li>
+<li>Represente <span class="math inline">\(z,\overline z,-z\)</span> y <span class="math inline">\(1/z\)</span> para un mismo complejo no nulo.</li>
+<li>Calcule <span class="math inline">\((1-i)^{20}\)</span> directamente y mediante potencia_demoivre().</li>
+<li>Obtenga las raíces quintas de <span class="math inline">\(-32\)</span> y verifique el residuo máximo <span class="math inline">\(\max_k|w_k^5+32|\)</span>.</li>
+<li>Dibuje las raíces de la unidad para <span class="math inline">\(n=3,4,5,8,12\)</span> en cinco paneles.</li>
+<li>Modifique el gráfico de raíces para mostrar también los argumentos en grados.</li>
+</ol>
+</section>
+<section id="proyecto-integrador" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="proyecto-integrador">Proyecto integrador</h2>
+<p><strong>Explorador de transformaciones complejas.</strong> Desarrolle un script en R base que:</p>
+<ol type="1">
+<li>reciba un conjunto de puntos complejos;</li>
+<li>aplique <span class="math inline">\(T(z)=az+b\)</span> con parámetros elegidos por el usuario;</li>
+<li>muestre los puntos originales y transformados en la misma escala;</li>
+<li>separe el efecto de <span class="math inline">\(az\)</span> en rotación y cambio de escala;</li>
+<li>interprete el efecto de la traslación <span class="math inline">\(b\)</span>;</li>
+<li>incluya al menos una figura formada por los vértices de un polígono;</li>
+<li>compruebe numéricamente dos propiedades del módulo o del conjugado;</li>
+<li>entregue código, gráfica, explicación matemática y conclusiones.</li>
+</ol>
+</section>
+<section id="síntesis" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="síntesis">Síntesis</h2>
+<ul>
+<li>Un par de <span class="math inline">\(\mathbb R^2\)</span> se almacena como vector; una colección, como tabla.</li>
+<li>atan2(y, x) y Arg(z) resuelven correctamente el cuadrante.</li>
+<li>R representa complejos con el tipo complex y el literal 1i.</li>
+<li>Re(), Im(), Mod(), Arg() y Conj() traducen directamente las definiciones.</li>
+<li>La suma es vectorial; el producto combina escala y rotación.</li>
+<li>El conjugado permite dividir y visualizar una reflexión.</li>
+<li>exp(1i * theta) simplifica la forma polar, De Moivre y las raíces.</li>
+<li>Las comparaciones numéricas deben usar tolerancia.</li>
+</ul>
+</section>
+<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<p>La organización matemática sigue <span class="citation" data-cites="uaslp2011">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias (<a href="references.html#ref-uaslp2011" role="doc-biblioref">2011</a>)</span> y <span class="citation" data-cites="silvaLazo2007">Silva y Lazo (<a href="references.html#ref-silvaLazo2007" role="doc-biblioref">2007</a>)</span>. La interpretación geométrica se apoya en <span class="citation" data-cites="brownChurchill2014">Brown y Churchill (<a href="references.html#ref-brownChurchill2014" role="doc-biblioref">2014</a>)</span> y <span class="citation" data-cites="needham1997">Needham (<a href="references.html#ref-needham1997" role="doc-biblioref">1997</a>)</span>. Las funciones y la sintaxis computacional corresponden a R base <span class="citation" data-cites="rCore2026">(<a href="references.html#ref-rCore2026" role="doc-biblioref">R Core Team 2026</a>)</span>.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-brownChurchill2014" class="csl-entry" role="listitem">
+Brown, James Ward, y Ruel V. Churchill. 2014. <em>Complex Variables and Applications</em>. 9.ª ed. McGraw-Hill Education.
+</div>
+<div id="ref-needham1997" class="csl-entry" role="listitem">
+Needham, Tristan. 1997. <em>Visual Complex Analysis</em>. Oxford University Press.
+</div>
+<div id="ref-rCore2026" class="csl-entry" role="listitem">
+R Core Team. 2026. <em>R: A Language and Environment for Statistical Computing</em>. R Foundation for Statistical Computing.
+</div>
+<div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
+Silva, Juan Manuel, y Adriana Lazo. 2007. <em>Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>. 7.ª ed. Limusa.
+</div>
+<div id="ref-uaslp2011" class="csl-entry" role="listitem">
+Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. <em>Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico</em>. Propuesta de modificación curricular.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-enteros-reales.html" class="pagination-link" aria-label="Números enteros y reales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-polinomios.html" class="pagination-link" aria-label="Polinomios">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licencia CC BY-NC-SA 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,7 @@
+# Agradecimientos {.unnumbered}
+
+Agradezco a los estudiantes que, durante décadas de docencia, han mostrado con sus preguntas qué conceptos requieren otra explicación, una figura más clara o un experimento mejor diseñado.
+
+Reconozco a los colegas e instituciones con quienes he compartido proyectos de matemáticas, computación, inteligencia artificial y tecnología educativa. Agradezco asimismo a las comunidades de R, Quarto, Jupyter y GeoGebra, cuyas herramientas hacen posible crear materiales abiertos y reproducibles.
+
+Mi gratitud final es para mi familia, por su apoyo y paciencia durante la elaboración de esta obra.

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Laboratorio de operaciones con conjuntos</title>
+  <style>
+    :root{color-scheme:light dark;--bg:#f7fbff;--panel:#fff;--text:#173f6b;--muted:#4d6680;--line:#7698b7;--accent:#2f7fbd;--accent-soft:#90c6ea;--ok:#28714d;--focus:#c38c20}
+    @media(prefers-color-scheme:dark){:root{--bg:#14202b;--panel:#1c2b38;--text:#e8f3fb;--muted:#b7c9d7;--line:#8eb0ca;--accent:#64b5ed;--accent-soft:#376f96;--ok:#74d6a3;--focus:#f1bd4e}}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}.lab{max-width:980px;margin:auto;padding:20px}.controls{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:12px}.field label{display:block;font-weight:650;margin-bottom:5px}.field input,.field select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);font:inherit}.field input:focus,.field select:focus{outline:3px solid color-mix(in srgb,var(--focus) 45%,transparent)}.view{display:grid;grid-template-columns:minmax(320px,1.25fr) minmax(250px,.75fr);gap:18px;align-items:center;margin-top:18px}.diagram{width:100%;height:auto}.universe{fill:var(--panel);stroke:var(--line);stroke-width:2.5}.set-outline{fill:none;stroke:var(--text);stroke-width:3}.shade{fill:var(--accent);fill-opacity:.7}.cut{fill:var(--panel)}.svg-label{font:700 25px system-ui;fill:var(--text)}.result{background:var(--panel);border-left:5px solid var(--accent);padding:16px;border-radius:10px}.result strong{display:block;font-size:1.15rem;margin-bottom:8px}.setline{margin:6px 0;color:var(--muted)}.count{color:var(--ok);font-weight:700;margin-top:12px}.help{margin-top:10px;color:var(--muted);font-size:.93rem}.error{color:#b33b3b;font-weight:650}@media(max-width:720px){.controls,.view{grid-template-columns:1fr}.lab{padding:14px}}
+  </style>
+</head>
+<body>
+<main class="lab">
+  <div class="controls" aria-label="Controles del laboratorio">
+    <div class="field"><label for="op">Operación</label><select id="op"><option value="union">A ∪ B</option><option value="intersection">A ∩ B</option><option value="ac">Aᶜ</option><option value="bc">Bᶜ</option><option value="a-minus-b">A \ B</option><option value="b-minus-a">B \ A</option><option value="sym">A △ B</option></select></div>
+    <div class="field"><label for="setA">A (separado por comas)</label><input id="setA" value="1, 2, 4, 6" inputmode="text"></div>
+    <div class="field"><label for="setB">B (separado por comas)</label><input id="setB" value="2, 3, 4" inputmode="text"></div>
+  </div>
+  <div class="view">
+    <svg class="diagram" viewBox="0 0 600 390" role="img" aria-labelledby="vennTitle vennDesc">
+      <title id="vennTitle">Diagrama de Venn interactivo</title><desc id="vennDesc">La región sombreada cambia según la operación seleccionada.</desc>
+      <defs><clipPath id="clipA"><circle cx="250" cy="210" r="125"/></clipPath></defs>
+      <rect id="outside" class="shade" x="35" y="35" width="530" height="315" rx="14" opacity="0"/>
+      <rect class="universe" x="35" y="35" width="530" height="315" rx="14"/>
+      <text class="svg-label" x="54" y="68">U</text>
+      <circle id="fillA" class="shade" cx="250" cy="210" r="125" opacity="1"/>
+      <circle id="fillB" class="shade" cx="370" cy="210" r="125" opacity="1"/>
+      <circle id="overlap" class="cut" cx="370" cy="210" r="125" clip-path="url(#clipA)" opacity="0"/>
+      <circle class="set-outline" cx="250" cy="210" r="125"/><circle class="set-outline" cx="370" cy="210" r="125"/>
+      <text class="svg-label" x="190" y="218">A</text><text class="svg-label" x="422" y="218">B</text>
+    </svg>
+    <section class="result" aria-live="polite"><strong id="formula">A ∪ B</strong><div class="setline">U = {1, 2, 3, 4, 5, 6}</div><div class="setline" id="aLine"></div><div class="setline" id="bLine"></div><div class="setline" id="resultLine"></div><div class="count" id="count"></div><div class="help" id="help"></div></section>
+  </div>
+</main>
+<script>
+(() => {
+  const root = document.querySelector('.lab');
+  const op = root.querySelector('#op');
+  const inputA = root.querySelector('#setA');
+  const inputB = root.querySelector('#setB');
+  const outside = root.querySelector('#outside');
+  const fillA = root.querySelector('#fillA');
+  const fillB = root.querySelector('#fillB');
+  const overlap = root.querySelector('#overlap');
+  const universe = ['1','2','3','4','5','6'];
+  const labels = {union:'A ∪ B',intersection:'A ∩ B',ac:'Aᶜ',bc:'Bᶜ','a-minus-b':'A \\ B','b-minus-a':'B \\ A',sym:'A △ B'};
+  const helps = {union:'Elementos que están en A, en B o en ambos.',intersection:'Elementos comunes a A y B.',ac:'Elementos del universo que no están en A.',bc:'Elementos del universo que no están en B.','a-minus-b':'Elementos de A que no pertenecen a B.','b-minus-a':'Elementos de B que no pertenecen a A.',sym:'Elementos que pertenecen exactamente a uno de los conjuntos.'};
+  const parse = value => [...new Set(value.split(',').map(x => x.trim()).filter(Boolean))].filter(x => universe.includes(x));
+  const fmt = xs => '{' + xs.join(', ') + '}';
+  const updateShade = kind => {
+    outside.setAttribute('opacity','0'); fillA.setAttribute('opacity','0'); fillB.setAttribute('opacity','0'); overlap.setAttribute('opacity','0');
+    overlap.setAttribute('class','cut');
+    if(kind === 'union'){fillA.setAttribute('opacity','1');fillB.setAttribute('opacity','1');}
+    if(kind === 'intersection'){overlap.setAttribute('class','shade');overlap.setAttribute('opacity','1');}
+    if(kind === 'ac'){outside.setAttribute('opacity','1');fillA.setAttribute('class','cut');fillA.setAttribute('opacity','1');}
+    else{fillA.setAttribute('class','shade');}
+    if(kind === 'bc'){outside.setAttribute('opacity','1');fillB.setAttribute('class','cut');fillB.setAttribute('opacity','1');}
+    else{fillB.setAttribute('class','shade');}
+    if(kind === 'a-minus-b'){fillA.setAttribute('opacity','1');overlap.setAttribute('opacity','1');}
+    if(kind === 'b-minus-a'){fillB.setAttribute('opacity','1');overlap.setAttribute('opacity','1');}
+    if(kind === 'sym'){fillA.setAttribute('opacity','1');fillB.setAttribute('opacity','1');overlap.setAttribute('opacity','1');}
+  };
+  const update = () => {
+    const A = parse(inputA.value), B = parse(inputB.value), kind = op.value;
+    const inA = x => A.includes(x), inB = x => B.includes(x);
+    const tests = {union:x=>inA(x)||inB(x),intersection:x=>inA(x)&&inB(x),ac:x=>!inA(x),bc:x=>!inB(x),'a-minus-b':x=>inA(x)&&!inB(x),'b-minus-a':x=>inB(x)&&!inA(x),sym:x=>inA(x)!==inB(x)};
+    const result = universe.filter(tests[kind]);
+    root.querySelector('#formula').textContent = labels[kind];
+    root.querySelector('#aLine').textContent = 'A = ' + fmt(A);
+    root.querySelector('#bLine').textContent = 'B = ' + fmt(B);
+    root.querySelector('#resultLine').textContent = labels[kind] + ' = ' + fmt(result);
+    root.querySelector('#count').textContent = 'Cardinalidad: ' + result.length;
+    root.querySelector('#help').textContent = helps[kind] + ' Solo se aceptan elementos de U = {1, 2, 3, 4, 5, 6}.';
+    updateShade(kind);
+  };
+  [op,inputA,inputB].forEach(el => el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', update));
+  update();
+})();
+</script>
+</body>
+</html>

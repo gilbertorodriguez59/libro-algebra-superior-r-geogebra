@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Funciones inyectiva, suprayectiva y biyectiva</title>
+  <desc id="desc">Tres diagramas sagitales comparan una función inyectiva no suprayectiva, una suprayectiva no inyectiva y una biyectiva.</desc>
+  <defs>
+    <marker id="arr" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 z" fill="#355f86"/></marker>
+    <style>.panel{fill:#f8fbff;stroke:#9bb5cf;stroke-width:2}.oval{fill:#eef6fc;stroke:#173f6b;stroke-width:2.5}.node{fill:#fff;stroke:#173f6b;stroke-width:2}.edge{fill:none;stroke:#355f86;stroke-width:2.4;marker-end:url(#arr)}.title{font:700 22px Arial,sans-serif;fill:#173f6b}.text{font:18px Arial,sans-serif;fill:#173f6b}.note{font:18px Arial,sans-serif;fill:#335c81}</style>
+  </defs>
+  <g transform="translate(12,25)">
+    <rect class="panel" x="0" y="0" width="375" height="505" rx="18"/><text class="title" x="188" y="40" text-anchor="middle">Inyectiva, no suprayectiva</text>
+    <ellipse class="oval" cx="95" cy="270" rx="55" ry="160"/><ellipse class="oval" cx="280" cy="270" rx="55" ry="185"/>
+    <text class="text" x="95" y="86" text-anchor="middle">A</text><text class="text" x="280" y="62" text-anchor="middle">B</text>
+    <g class="text" text-anchor="middle"><circle class="node" cx="95" cy="190" r="16"/><text x="95" y="196">1</text><circle class="node" cx="95" cy="270" r="16"/><text x="95" y="276">2</text><circle class="node" cx="95" cy="350" r="16"/><text x="95" y="356">3</text><circle class="node" cx="280" cy="155" r="16"/><text x="280" y="161">a</text><circle class="node" cx="280" cy="230" r="16"/><text x="280" y="236">b</text><circle class="node" cx="280" cy="305" r="16"/><text x="280" y="311">c</text><circle class="node" cx="280" cy="380" r="16"/><text x="280" y="386">d</text></g>
+    <path class="edge" d="M112 190 C170 175 220 160 263 155"/><path class="edge" d="M112 270 C170 255 220 240 263 230"/><path class="edge" d="M112 350 C170 335 220 315 263 305"/>
+    <text class="note" x="188" y="463" text-anchor="middle">No se repiten imágenes;</text><text class="note" x="188" y="488" text-anchor="middle">d queda libre.</text>
+  </g>
+  <g transform="translate(412,25)">
+    <rect class="panel" x="0" y="0" width="375" height="505" rx="18"/><text class="title" x="188" y="40" text-anchor="middle">Suprayectiva, no inyectiva</text>
+    <ellipse class="oval" cx="95" cy="270" rx="55" ry="185"/><ellipse class="oval" cx="280" cy="270" rx="55" ry="160"/>
+    <text class="text" x="95" y="62" text-anchor="middle">A</text><text class="text" x="280" y="86" text-anchor="middle">B</text>
+    <g class="text" text-anchor="middle"><circle class="node" cx="95" cy="155" r="16"/><text x="95" y="161">1</text><circle class="node" cx="95" cy="230" r="16"/><text x="95" y="236">2</text><circle class="node" cx="95" cy="305" r="16"/><text x="95" y="311">3</text><circle class="node" cx="95" cy="380" r="16"/><text x="95" y="386">4</text><circle class="node" cx="280" cy="190" r="16"/><text x="280" y="196">a</text><circle class="node" cx="280" cy="270" r="16"/><text x="280" y="276">b</text><circle class="node" cx="280" cy="350" r="16"/><text x="280" y="356">c</text></g>
+    <path class="edge" d="M112 155 C170 165 220 180 263 190"/><path class="edge" d="M112 230 C170 220 220 200 263 190"/><path class="edge" d="M112 305 C170 295 220 280 263 270"/><path class="edge" d="M112 380 C170 370 220 355 263 350"/>
+    <text class="note" x="188" y="463" text-anchor="middle">Todo B recibe flecha;</text><text class="note" x="188" y="488" text-anchor="middle">1 y 2 comparten a.</text>
+  </g>
+  <g transform="translate(812,25)">
+    <rect class="panel" x="0" y="0" width="375" height="505" rx="18"/><text class="title" x="188" y="40" text-anchor="middle">Biyectiva</text>
+    <ellipse class="oval" cx="95" cy="270" rx="55" ry="160"/><ellipse class="oval" cx="280" cy="270" rx="55" ry="160"/>
+    <text class="text" x="95" y="86" text-anchor="middle">A</text><text class="text" x="280" y="86" text-anchor="middle">B</text>
+    <g class="text" text-anchor="middle"><circle class="node" cx="95" cy="190" r="16"/><text x="95" y="196">1</text><circle class="node" cx="95" cy="270" r="16"/><text x="95" y="276">2</text><circle class="node" cx="95" cy="350" r="16"/><text x="95" y="356">3</text><circle class="node" cx="280" cy="190" r="16"/><text x="280" y="196">a</text><circle class="node" cx="280" cy="270" r="16"/><text x="280" y="276">b</text><circle class="node" cx="280" cy="350" r="16"/><text x="280" y="356">c</text></g>
+    <path class="edge" d="M112 190 C170 190 220 190 263 190"/><path class="edge" d="M112 270 C170 270 220 270 263 270"/><path class="edge" d="M112 350 C170 350 220 350 263 350"/>
+    <text class="note" x="188" y="463" text-anchor="middle">Cada elemento de B recibe</text><text class="note" x="188" y="488" text-anchor="middle">una sola flecha.</text>
+  </g>
+</svg>

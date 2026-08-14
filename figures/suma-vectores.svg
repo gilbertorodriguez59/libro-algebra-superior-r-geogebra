@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="480" viewBox="0 0 760 480" role="img" aria-labelledby="title desc">
+  <title id="title">Regla del paralelogramo</title>
+  <desc id="desc">Los vectores u y v forman un paralelogramo cuya diagonal es u más v.</desc>
+  <defs>
+    <marker id="arrow-sv-blue" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#1769a6"/></marker>
+    <marker id="arrow-sv-green" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2c7a5a"/></marker>
+    <marker id="arrow-sv-gold" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto"><path d="M0,0 L16,8 L0,16 z" fill="#b58a2a"/></marker>
+  </defs>
+  <rect width="760" height="480" rx="18" fill="#f7fbff"/>
+  <g stroke="#d5e2ee" stroke-width="1">
+    <path d="M100 65V415M180 65V415M260 65V415M340 65V415M420 65V415M500 65V415M580 65V415M660 65V415"/>
+    <path d="M70 90H690M70 170H690M70 250H690M70 330H690M70 410H690"/>
+  </g>
+  <g stroke="#315873" stroke-width="2">
+    <path d="M65 410H700"/>
+    <path d="M100 430V55"/>
+  </g>
+  <path d="M100 410L420 330" stroke="#1769a6" stroke-width="5" fill="none" marker-end="url(#arrow-sv-blue)"/>
+  <path d="M100 410L260 170" stroke="#2c7a5a" stroke-width="5" fill="none" marker-end="url(#arrow-sv-green)"/>
+  <path d="M420 330L580 90M260 170L580 90" stroke="#6f879b" stroke-width="3" stroke-dasharray="10 7" fill="none"/>
+  <path d="M100 410L580 90" stroke="#b58a2a" stroke-width="6" fill="none" marker-end="url(#arrow-sv-gold)"/>
+  <g font-family="Arial, sans-serif" font-size="21" font-weight="700">
+    <text x="294" y="352" fill="#1769a6">u</text>
+    <text x="191" y="261" fill="#2c7a5a">v</text>
+    <text x="346" y="218" fill="#8a671c">u + v</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#18344f">
+    <text x="430" y="358">u = (4,1)</text>
+    <text x="270" y="160">v = (2,3)</text>
+    <text x="585" y="82">u + v = (6,4)</text>
+  </g>
+</svg>

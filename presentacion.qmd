@@ -1,0 +1,14 @@
+# Presentación {.unnumbered}
+
+*Álgebra Superior con aplicaciones en R y GeoGebra* integra teoría, cálculo, visualización y experimentación. Está dirigido a estudiantes y profesores de matemáticas, ingeniería, computación y ciencias aplicadas que desean comprender los conceptos y, al mismo tiempo, explorar su comportamiento mediante herramientas digitales.
+
+## Ruta didáctica {.unnumbered .unlisted}
+
+1. **Comprensión manual:** definición, ejemplo y procedimiento paso a paso.
+2. **Implementación en R:** cálculo reproducible y verificación numérica.
+3. **Visualización en GeoGebra:** exploración dinámica de parámetros y representaciones.
+4. **Interpretación:** explicación matemática de los resultados, alcances y errores.
+
+## Estructura actual {.unnumbered .unlisted}
+
+Los cinco capítulos estudian lógica y conjuntos; enteros y reales; números complejos; polinomios; y métodos numéricos para raíces. Cada uno enlaza recursos descargables pertinentes. Los índices, el glosario y las referencias permiten utilizar la obra también como material de consulta.

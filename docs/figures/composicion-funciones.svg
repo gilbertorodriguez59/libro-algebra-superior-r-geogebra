@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
+  <title id="title">Composición de funciones</title>
+  <desc id="desc">Un elemento x del conjunto A pasa mediante f a f de x en B y después mediante g a g de f de x en C.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#355f86"/></marker><style>.set{fill:#eef6fc;stroke:#173f6b;stroke-width:3}.node{fill:#fff;stroke:#173f6b;stroke-width:2.5}.edge{fill:none;stroke:#355f86;stroke-width:4;marker-end:url(#a)}.arc{fill:none;stroke:#b58a2a;stroke-width:3;stroke-dasharray:9 7;marker-end:url(#a)}.title{font:700 25px Arial,sans-serif;fill:#173f6b}.text{font:21px Arial,sans-serif;fill:#173f6b}.gold{fill:#8a671c}</style></defs>
+  <text class="title" x="550" y="38" text-anchor="middle">A → B → C</text>
+  <ellipse class="set" cx="170" cy="230" rx="105" ry="145"/><ellipse class="set" cx="550" cy="230" rx="105" ry="145"/><ellipse class="set" cx="930" cy="230" rx="105" ry="145"/>
+  <text class="title" x="170" y="90" text-anchor="middle">A</text><text class="title" x="550" y="90" text-anchor="middle">B</text><text class="title" x="930" y="90" text-anchor="middle">C</text>
+  <circle class="node" cx="170" cy="230" r="32"/><circle class="node" cx="550" cy="230" r="32"/><circle class="node" cx="930" cy="230" r="32"/>
+  <text class="text" x="170" y="237" text-anchor="middle">x</text><text class="text" x="550" y="237" text-anchor="middle">f(x)</text><text class="text" x="930" y="237" text-anchor="middle">g(f(x))</text>
+  <path class="edge" d="M204 230 C320 190 405 190 516 230"/><text class="title" x="360" y="188" text-anchor="middle">f</text>
+  <path class="edge" d="M584 230 C700 190 785 190 896 230"/><text class="title" x="740" y="188" text-anchor="middle">g</text>
+  <path class="arc" d="M196 335 C410 420 690 420 904 335"/><text class="title gold" x="550" y="408" text-anchor="middle">g ∘ f</text>
+</svg>

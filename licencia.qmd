@@ -1,0 +1,11 @@
+# Licencia y uso académico {.unnumbered}
+
+Esta obra se distribuye bajo la licencia **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**.
+
+Puede copiarse, redistribuirse y adaptarse con fines académicos siempre que se reconozca la autoría, no exista uso comercial sin autorización y las obras derivadas se compartan bajo la misma licencia.
+
+R es software libre y GeoGebra se utiliza conforme a sus condiciones de licencia. Los nombres, marcas y plataformas pertenecen a sus respectivos titulares. Los cuadernos, scripts y construcciones pueden modificarse para actividades educativas conservando la atribución y la licencia de esta obra.
+
+## Uso responsable de recursos computacionales {.unnumbered .unlisted}
+
+El código y los laboratorios se proporcionan con fines educativos. El lector debe revisar datos de entrada, supuestos, tolerancias y resultados antes de reutilizarlos. Una salida numérica o gráfica no constituye por sí sola una demostración matemática.

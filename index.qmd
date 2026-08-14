@@ -1,0 +1,13 @@
+# Portada {.unnumbered .unlisted}
+
+::: {.content-visible when-format="html"}
+![](figures/portada-editorial.png){fig-alt="Portada de Álgebra Superior con R y GeoGebra" width=100%}
+:::
+
+::: {.content-visible when-format="html"}
+<p class="pdf-download-hero"><a class="btn btn-primary" href="Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf" download>Descargar el libro completo en PDF</a></p>
+:::
+
+**Jesús Gilberto Rodríguez Escobedo**  
+Primera edición digital, 2026 · San Luis Potosí, México  
+Libro abierto bajo licencia CC BY-NC-SA 4.0.

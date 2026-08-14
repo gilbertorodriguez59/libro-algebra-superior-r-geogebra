@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-labelledby="title desc">
+  <title id="title">Inducción visual con números impares</title>
+  <desc id="desc">Un cuadrado de cinco por cinco recibe una franja de once puntos para formar un cuadrado de seis por seis.</desc>
+  <rect width="900" height="500" fill="#f7fbff"/>
+  <text x="450" y="52" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#123b6d">De n² a (n + 1)² agregando 2n + 1</text>
+  <g transform="translate(95 110)" fill="#2f7fbd">
+    <circle cx="0" cy="0" r="13"/><circle cx="55" cy="0" r="13"/><circle cx="110" cy="0" r="13"/><circle cx="165" cy="0" r="13"/><circle cx="220" cy="0" r="13"/>
+    <circle cx="0" cy="55" r="13"/><circle cx="55" cy="55" r="13"/><circle cx="110" cy="55" r="13"/><circle cx="165" cy="55" r="13"/><circle cx="220" cy="55" r="13"/>
+    <circle cx="0" cy="110" r="13"/><circle cx="55" cy="110" r="13"/><circle cx="110" cy="110" r="13"/><circle cx="165" cy="110" r="13"/><circle cx="220" cy="110" r="13"/>
+    <circle cx="0" cy="165" r="13"/><circle cx="55" cy="165" r="13"/><circle cx="110" cy="165" r="13"/><circle cx="165" cy="165" r="13"/><circle cx="220" cy="165" r="13"/>
+    <circle cx="0" cy="220" r="13"/><circle cx="55" cy="220" r="13"/><circle cx="110" cy="220" r="13"/><circle cx="165" cy="220" r="13"/><circle cx="220" cy="220" r="13"/>
+  </g>
+  <text x="205" y="405" text-anchor="middle" font-family="sans-serif" font-size="25" fill="#123b6d">n² = 5² = 25</text>
+  <path d="M365 220 H500" stroke="#b58a2a" stroke-width="5" marker-end="url(#arrow)"/>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b58a2a"/></marker></defs>
+  <g transform="translate(565 90)">
+    <rect x="-28" y="-28" width="330" height="330" rx="12" fill="#eaf2fb" stroke="#123b6d" stroke-width="3"/>
+    <g fill="#2f7fbd">
+      <circle cx="0" cy="0" r="11"/><circle cx="50" cy="0" r="11"/><circle cx="100" cy="0" r="11"/><circle cx="150" cy="0" r="11"/><circle cx="200" cy="0" r="11"/>
+      <circle cx="0" cy="50" r="11"/><circle cx="50" cy="50" r="11"/><circle cx="100" cy="50" r="11"/><circle cx="150" cy="50" r="11"/><circle cx="200" cy="50" r="11"/>
+      <circle cx="0" cy="100" r="11"/><circle cx="50" cy="100" r="11"/><circle cx="100" cy="100" r="11"/><circle cx="150" cy="100" r="11"/><circle cx="200" cy="100" r="11"/>
+      <circle cx="0" cy="150" r="11"/><circle cx="50" cy="150" r="11"/><circle cx="100" cy="150" r="11"/><circle cx="150" cy="150" r="11"/><circle cx="200" cy="150" r="11"/>
+      <circle cx="0" cy="200" r="11"/><circle cx="50" cy="200" r="11"/><circle cx="100" cy="200" r="11"/><circle cx="150" cy="200" r="11"/><circle cx="200" cy="200" r="11"/>
+    </g>
+    <g fill="#b58a2a">
+      <circle cx="250" cy="0" r="11"/><circle cx="250" cy="50" r="11"/><circle cx="250" cy="100" r="11"/><circle cx="250" cy="150" r="11"/><circle cx="250" cy="200" r="11"/><circle cx="250" cy="250" r="11"/>
+      <circle cx="0" cy="250" r="11"/><circle cx="50" cy="250" r="11"/><circle cx="100" cy="250" r="11"/><circle cx="150" cy="250" r="11"/><circle cx="200" cy="250" r="11"/>
+    </g>
+  </g>
+  <text x="700" y="425" text-anchor="middle" font-family="sans-serif" font-size="23" fill="#123b6d">25 + 11 = 36 = 6²</text>
+  <circle cx="570" cy="465" r="9" fill="#2f7fbd"/><text x="590" y="472" font-family="sans-serif" font-size="18" fill="#18344f">n²</text>
+  <circle cx="680" cy="465" r="9" fill="#b58a2a"/><text x="700" y="472" font-family="sans-serif" font-size="18" fill="#18344f">2n + 1</text>
+</svg>

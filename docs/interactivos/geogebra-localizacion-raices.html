@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoGebra - Localización de raíces</title>
+  <link rel="stylesheet" href="geogebra-common.css">
+  <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+  <script src="geogebra-common.js"></script>
+</head>
+<body>
+<main>
+  <span class="badge">Construcción auténtica de GeoGebra</span>
+  <h1>Localización y acotación de raíces</h1>
+  <p>Modifique los coeficientes de p(x)=x<sup>4</sup>+ax<sup>3</sup>+bx<sup>2</sup>+cx+d. Las rectas verticales muestran la cota de Cauchy.</p>
+  <div class="controls">
+    <label>a = <span id="a-value" class="value">1</span>
+      <input id="a" type="range" min="-4" max="4" step="0.25" value="1">
+    </label>
+    <label>b = <span id="b-value" class="value">-7</span>
+      <input id="b" type="range" min="-8" max="4" step="0.25" value="-7">
+    </label>
+    <label>c = <span id="c-value" class="value">-1</span>
+      <input id="c" type="range" min="-5" max="5" step="0.25" value="-1">
+    </label>
+    <label>d = <span id="d-value" class="value">6</span>
+      <input id="d" type="range" min="-8" max="8" step="0.25" value="6">
+    </label>
+  </div>
+  <div class="toolbar">
+    <button id="download" type="button">Descargar .ggb</button>
+    <div id="status" class="status" aria-live="polite">Cargando GeoGebra...</div>
+  </div>
+  <div class="error">No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
+  <div id="ggb-element" aria-label="Localización y acotación de raíces en GeoGebra"></div>
+  <p class="help">Actividad: compare la cota con las intersecciones reales y construya un polinomio con una raíz de multiplicidad par.</p>
+</main>
+<script>
+"use strict";
+let ggbApi = null;
+
+function sync() {
+  const ids = ["a", "b", "c", "d"];
+  const values = {};
+  ids.forEach(function (id) {
+    values[id] = Number(document.getElementById(id).value);
+    document.getElementById(id + "-value").textContent = GGBLab.fmt(values[id], 2);
+    if (ggbApi) ggbApi.setValue(id, values[id]);
+  });
+  const bound = 1 + Math.max(Math.abs(values.a), Math.abs(values.b), Math.abs(values.c), Math.abs(values.d));
+  document.getElementById("status").textContent =
+    "Cota de Cauchy: todas las raíces satisfacen |x| ≤ " + GGBLab.fmt(bound, 2);
+}
+
+const params = GGBLab.params(function (api) {
+  ggbApi = api;
+  GGBLab.configure(api, -10, 10, -24, 24);
+  api.evalCommand([
+    "a=1",
+    "b=-7",
+    "c=-1",
+    "d=6",
+    "p(x)=x^4+a*x^3+b*x^2+c*x+d",
+    "R=1+Max({Abs(a),Abs(b),Abs(c),Abs(d)})",
+    "left: x=-R",
+    "right: x=R",
+    "roots=Intersect(p,xAxis)"
+  ].join("\n"));
+  GGBLab.style(api, "p", [23, 105, 166], 7);
+  GGBLab.style(api, "left", [181, 138, 42], 4);
+  GGBLab.style(api, "right", [181, 138, 42], 4);
+  api.setLineStyle("left", 1);
+  api.setLineStyle("right", 1);
+  api.setLabelVisible("left", true);
+  api.setLabelVisible("right", true);
+  GGBLab.fit(api);
+  sync();
+});
+
+window.addEventListener("load", function () { GGBLab.inject(params); });
+["a", "b", "c", "d"].forEach(function (id) {
+  document.getElementById(id).addEventListener("input", sync);
+});
+document.getElementById("download").addEventListener("click", function () {
+  if (ggbApi) GGBLab.download(ggbApi, "localizacion-acotacion-raices.ggb");
+});
+</script>
+</body>
+</html>

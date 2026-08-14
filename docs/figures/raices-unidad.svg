@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="500" viewBox="0 0 760 500" role="img" aria-labelledby="title desc">
+  <title id="title">Raíces sextas de la unidad</title>
+  <desc id="desc">Seis puntos igualmente espaciados forman un hexágono regular sobre la circunferencia unitaria.</desc>
+  <rect width="760" height="500" rx="18" fill="#f7fbff"/>
+  <g transform="translate(300 250)">
+    <circle cx="0" cy="0" r="175" fill="none" stroke="#9fb8cc" stroke-width="3"/>
+    <path d="M-225 0H225M0 -220V220" stroke="#6f879b" stroke-width="2"/>
+    <polygon points="175,0 87.5,-151.55 -87.5,-151.55 -175,0 -87.5,151.55 87.5,151.55"
+             fill="#1769a6" fill-opacity="0.08" stroke="#2c7a5a" stroke-width="4"/>
+    <g fill="#1769a6" stroke="#f7fbff" stroke-width="3">
+      <circle cx="175" cy="0" r="8"/>
+      <circle cx="87.5" cy="-151.55" r="8"/>
+      <circle cx="-87.5" cy="-151.55" r="8"/>
+      <circle cx="-175" cy="0" r="8"/>
+      <circle cx="-87.5" cy="151.55" r="8"/>
+      <circle cx="87.5" cy="151.55" r="8"/>
+    </g>
+    <g font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#18344f">
+      <text x="190" y="6">1</text>
+      <text x="94" y="-162">ω</text>
+      <text x="-132" y="-162">ω²</text>
+      <text x="-211" y="6">ω³ = −1</text>
+      <text x="-132" y="178">ω⁴</text>
+      <text x="94" y="178">ω⁵</text>
+    </g>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#18344f">
+    <text x="535" y="110" font-size="23" font-weight="700">z⁶ = 1</text>
+    <text x="535" y="154" font-size="18">ωₖ = e^(2πik/6)</text>
+    <text x="535" y="190" font-size="18">k = 0, 1, …, 5</text>
+    <text x="535" y="246" font-size="18">Módulo: 1</text>
+    <text x="535" y="278" font-size="18">Separación: 60°</text>
+    <text x="535" y="334" font-size="18">Los vértices forman</text>
+    <text x="535" y="362" font-size="18">un hexágono regular.</text>
+  </g>
+</svg>

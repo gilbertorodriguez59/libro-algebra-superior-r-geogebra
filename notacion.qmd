@@ -1,0 +1,17 @@
+# Notación general {.unnumbered}
+
+| Notación | Significado general |
+|---|---|
+| $A,B,U$ | conjuntos; $U$ suele ser el conjunto universal |
+| $x\in A$, $A\subseteq B$ | pertenencia e inclusión |
+| $\forall$, $\exists$, $\neg$, $\land$, $\lor$ | cuantificadores y conectivos |
+| $\mathbb N,\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$ | sistemas numéricos |
+| $f:A\to B$ | función de $A$ en $B$ |
+| $z=a+bi$ | número complejo |
+| $p(x)$, $\deg p$ | polinomio y su grado |
+| $x_k$ | aproximación en la iteración $k$ |
+| $\varepsilon$ | tolerancia numérica |
+| `<-` | asignación en R |
+| `f(x)` | llamada de una función en R |
+
+En el texto matemático se usa $=$ para igualdad. En R, `<-` asigna un valor a un objeto y `==` compara valores. Esta diferencia evita confundir una afirmación matemática con una instrucción de programa.

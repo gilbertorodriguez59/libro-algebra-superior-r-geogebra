@@ -1,0 +1,15 @@
+# Bienvenida {.unnumbered}
+
+Bienvenido a *Álgebra Superior con aplicaciones en R y GeoGebra*. Este libro propone aprender mediante cuatro acciones coordinadas: resolver manualmente, implementar en R, visualizar en GeoGebra e interpretar el resultado.
+
+La computadora no reemplaza el razonamiento matemático. Se utiliza para experimentar, comprobar conjeturas, comparar métodos y estudiar situaciones difíciles de explorar sólo con lápiz y papel. Cada recurso debe responder una pregunta matemática clara.
+
+## Objetivos generales {.unnumbered .unlisted}
+
+- comprender los conceptos esenciales del Álgebra Superior;
+- traducir definiciones y procedimientos a algoritmos reproducibles;
+- utilizar R para calcular, organizar y verificar resultados;
+- emplear GeoGebra para visualizar relaciones, funciones, números complejos, polinomios y raíces;
+- comunicar conclusiones con notación, gráficas e interpretación correctas.
+
+El volumen se coordina con *Fundamentos Matemáticos del Álgebra Superior*, donde se desarrollan con mayor profundidad las definiciones, propiedades y demostraciones.

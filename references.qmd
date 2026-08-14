@@ -1,0 +1,11 @@
+---
+nocite: |
+  @*
+---
+
+# Referencias generales {.unnumbered}
+
+Las fuentes de todos los capítulos se reúnen aquí en una lista única. Las notas bibliográficas al final de cada capítulo indican cuáles sustentan cada bloque temático.
+
+::: {#refs}
+:::

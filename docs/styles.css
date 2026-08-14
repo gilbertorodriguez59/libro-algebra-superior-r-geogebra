@@ -1,0 +1,239 @@
+:root {
+  --azul-uaslp: #123b6d;
+  --azul-claro: #eaf2fb;
+  --verde-r: #2c7a5a;
+  --dorado: #b58a2a;
+}
+
+body {
+  color: #18344f;
+  line-height: 1.58;
+}
+
+a { color: #1769a6; }
+img { max-width: 100%; height: auto; }
+code { color: #155f43; }
+
+h1, h2, h3 { color: var(--azul-uaslp); }
+
+.quarto-title-banner {
+  background: linear-gradient(120deg, #123b6d, #2873a8);
+}
+
+.callout,
+.callout-note,
+.callout-tip,
+.callout-warning,
+.callout-important {
+  border-radius: 0.45rem;
+  border-left: 4px solid var(--dorado);
+  background: #f4f8fb;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+pre.sourceCode {
+  border-left: 4px solid var(--verde-r);
+  background: #f6faf8;
+}
+
+table { font-size: 0.96rem; }
+
+.btn {
+  display: inline-block;
+  padding: 0.55rem 0.85rem;
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  border: 1px solid #2b6f9f;
+  border-radius: 0.42rem;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0.18rem 0.45rem rgba(18, 59, 109, 0.16);
+}
+
+.btn-primary {
+  color: #fff;
+  background: #1f6698;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background: #154d77;
+}
+
+.pdf-download-hero { margin: 1.35rem 0 1.6rem; }
+.pdf-download-hero .btn::before { content: "↓ "; }
+
+.quarto-cover-image,
+.quarto-title-block img,
+main img[alt^="Portada"] {
+  border-radius: 0.55rem;
+  box-shadow: 0 0.55rem 1.5rem rgba(5, 51, 48, 0.24);
+}
+
+.interactive-frame {
+  width: 100%;
+  min-height: 610px;
+  border: 1px solid #b8cadb;
+  border-radius: 0.6rem;
+  background: #f7fbff;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.interactive-frame.functions { min-height: 580px; }
+.interactive-frame.truth { min-height: 560px; }
+.interactive-frame.induction { min-height: 560px; }
+.interactive-frame.euclid { min-height: 520px; }
+.interactive-frame.absolute { min-height: 480px; }
+.interactive-frame.complex-plane { min-height: 560px; }
+.interactive-frame.complex-product { min-height: 580px; }
+.interactive-frame.unity-roots { min-height: 570px; }
+.interactive-frame.polynomial { min-height: 720px; }
+
+.quarto-figure img {
+  border-radius: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .interactive-frame { min-height: 850px; }
+  .interactive-frame.functions { min-height: 840px; }
+  .interactive-frame.truth { min-height: 820px; }
+  .interactive-frame.induction { min-height: 780px; }
+  .interactive-frame.euclid { min-height: 720px; }
+  .interactive-frame.absolute { min-height: 720px; }
+  .interactive-frame.complex-plane,
+  .interactive-frame.complex-product,
+  .interactive-frame.unity-roots { min-height: 760px; }
+  .interactive-frame.polynomial { min-height: 840px; }
+}
+
+/* Navegación lateral para la salida autónoma de Pandoc. En una salida
+   normal de Quarto, la barra propia del libro mantiene el control. */
+.book-menu-toggle { display: none; }
+
+body > nav#TOC {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 1050;
+  width: 330px;
+  max-width: 88vw;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 1.25rem 1.05rem 1.4rem;
+  color: #143654;
+  background: linear-gradient(180deg, #f7fbff 0%, #eef8f4 100%);
+  border-right: 1px solid #c8d8e7;
+  box-shadow: 0.15rem 0 0.8rem rgba(18, 59, 109, 0.1);
+}
+
+body > nav#TOC::before {
+  display: block;
+  margin: 0 0 0.85rem;
+  padding: 0 0.35rem 0.75rem;
+  content: "Contenido del libro";
+  color: var(--azul-uaslp);
+  border-bottom: 2px solid var(--dorado);
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+body > nav#TOC ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body > nav#TOC > ul > li { margin: 0 0 0.9rem; }
+
+body > nav#TOC > ul > li > a {
+  color: var(--azul-uaslp);
+  font-weight: 750;
+}
+
+body > nav#TOC li ul {
+  margin: 0.35rem 0 0.2rem 0.35rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid #cadae8;
+}
+
+body > nav#TOC a {
+  display: block;
+  padding: 0.28rem 0.4rem;
+  color: #315873;
+  border-radius: 0.34rem;
+  line-height: 1.32;
+  text-decoration: none;
+}
+
+body > nav#TOC a:hover,
+body > nav#TOC a:focus,
+body > nav#TOC a.active {
+  color: #0d385d;
+  background: #dcecf9;
+}
+
+.sidebar-pdf-download {
+  margin-top: 0.7rem;
+  padding: 0.68rem 0.8rem !important;
+  color: #fff !important;
+  background: var(--azul-uaslp) !important;
+  border: 1px solid var(--azul-uaslp);
+  text-align: center;
+  font-weight: 750;
+}
+
+.sidebar-pdf-download::before { content: "↓ "; }
+
+@media (min-width: 992px) {
+  body:has(> nav#TOC) {
+    max-width: none;
+    margin: 0;
+    padding: 2.3rem 3.2rem 4.5rem 373px;
+  }
+
+  body:has(> nav#TOC) > :not(nav):not(script):not(.book-menu-toggle) {
+    max-width: 1040px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body:has(> nav#TOC) {
+    max-width: none;
+    margin: 0;
+    padding: 4.6rem 1.1rem 3rem;
+  }
+
+  body > nav#TOC {
+    transform: translateX(-105%);
+    transition: transform 180ms ease-in-out;
+  }
+
+  body.book-menu-open > nav#TOC { transform: translateX(0); }
+
+  .book-menu-toggle {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 1100;
+    display: inline-flex;
+    gap: 0.45rem;
+    align-items: center;
+    padding: 0.58rem 0.78rem;
+    color: #fff;
+    background: var(--azul-uaslp);
+    border: 0;
+    border-radius: 0.42rem;
+    box-shadow: 0 0.2rem 0.55rem rgba(18, 59, 109, 0.25);
+    font-weight: 750;
+  }
+}
+
+@media print {
+  body > nav#TOC,
+  .book-menu-toggle,
+  .pdf-download-hero { display: none !important; }
+
+  body:has(> nav#TOC) { max-width: none; margin: 0; padding: 0; }
+}

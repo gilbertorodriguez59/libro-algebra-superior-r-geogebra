@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>4&nbsp; Polinomios – Álgebra Superior con aplicaciones en R y GeoGebra</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./05-metodos-raices.html" rel="next">
+<link href="./03-numeros-complejos.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-polinomios.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Contenido del libro</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/gilbertorodriguez59/libro-algebra-superior-r-geogebra" title="Ejecutar el código" class="quarto-navigation-tool px-1" aria-label="Ejecutar el código"><i class="bi bi-github"></i></a>
+    <a href="./Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Portada</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bienvenida.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bienvenida</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./creditos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Créditos editoriales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./licencia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Licencia y uso académico</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./prefacio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./agradecimientos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Agradecimientos</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./presentacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Presentación</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduccion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introducción</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Notación general</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-logica-conjuntos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lógica y conjuntos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-enteros-reales.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Números enteros y reales</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-numeros-complejos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-polinomios.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-metodos-raices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./glosario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glosario</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./indices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Índices de consulta</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias generales</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./autor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acerca del autor</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En este capítulo</h2>
+   
+  <ul class="collapse">
+  <li><a href="#sec-definicion-polinomio" id="toc-sec-definicion-polinomio" class="nav-link active" data-scroll-target="#sec-definicion-polinomio"><span class="header-section-number">4.1</span> Definición de polinomio</a></li>
+  <li><a href="#sec-aritmetica-polinomios" id="toc-sec-aritmetica-polinomios" class="nav-link" data-scroll-target="#sec-aritmetica-polinomios"><span class="header-section-number">4.2</span> Aritmética y propiedades de los polinomios</a></li>
+  <li><a href="#sec-divisibilidad-polinomios" id="toc-sec-divisibilidad-polinomios" class="nav-link" data-scroll-target="#sec-divisibilidad-polinomios"><span class="header-section-number">4.3</span> Divisibilidad</a></li>
+  <li><a href="#sec-raiz-polinomio" id="toc-sec-raiz-polinomio" class="nav-link" data-scroll-target="#sec-raiz-polinomio"><span class="header-section-number">4.4</span> Definición de raíz de un polinomio</a></li>
+  <li><a href="#sec-residuo-sintetica" id="toc-sec-residuo-sintetica" class="nav-link" data-scroll-target="#sec-residuo-sintetica"><span class="header-section-number">4.5</span> Teorema del residuo y división sintética</a></li>
+  <li><a href="#sec-raices-multiples" id="toc-sec-raices-multiples" class="nav-link" data-scroll-target="#sec-raices-multiples"><span class="header-section-number">4.6</span> Obtención de raíces múltiples</a></li>
+  <li><a href="#sec-teorema-fundamental-algebra" id="toc-sec-teorema-fundamental-algebra" class="nav-link" data-scroll-target="#sec-teorema-fundamental-algebra"><span class="header-section-number">4.7</span> Teorema fundamental del álgebra</a></li>
+  <li><a href="#sec-factorizacion-lineal" id="toc-sec-factorizacion-lineal" class="nav-link" data-scroll-target="#sec-factorizacion-lineal"><span class="header-section-number">4.8</span> Descomposición de un polinomio en factores lineales</a></li>
+  <li><a href="#sec-polinomios-reales" id="toc-sec-polinomios-reales" class="nav-link" data-scroll-target="#sec-polinomios-reales"><span class="header-section-number">4.9</span> Propiedades de polinomios con coeficientes reales</a></li>
+  <li><a href="#sec-funciones-racionales" id="toc-sec-funciones-racionales" class="nav-link" data-scroll-target="#sec-funciones-racionales"><span class="header-section-number">4.10</span> Funciones racionales</a></li>
+  <li><a href="#sec-fracciones-parciales" id="toc-sec-fracciones-parciales" class="nav-link" data-scroll-target="#sec-fracciones-parciales"><span class="header-section-number">4.11</span> Fracciones parciales</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Polinomios</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este capítulo desarrolla la Unidad 4 del programa oficial de Álgebra Superior de la Facultad de Ciencias de la UASLP <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. El propósito es pasar de las operaciones formales con polinomios a la comprensión de sus raíces, su factorización y las funciones racionales.</p>
+<section id="introducción" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="introducción">Introducción</h2>
+<p>Los polinomios aparecen al modelar trayectorias, señales, costos, aproximaciones y ecuaciones. Tienen una doble naturaleza: son expresiones algebraicas que pueden sumarse y multiplicarse, y también funciones cuyos ceros se observan en una gráfica. La división conecta ambas perspectivas: una raíz produce un factor y un factor produce una raíz.</p>
+<section id="objetivos-del-capítulo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="objetivos-del-capítulo">Objetivos del capítulo</h3>
+<p>Al terminar el capítulo, el lector podrá:</p>
+<ul>
+<li>identificar coeficientes, grado y coeficiente principal;</li>
+<li>efectuar operaciones y justificar sus propiedades;</li>
+<li>aplicar el algoritmo de la división en <span class="math inline">\(K[x]\)</span>;</li>
+<li>relacionar raíces, factores y residuos;</li>
+<li>usar división sintética y detectar raíces múltiples;</li>
+<li>explicar el alcance del teorema fundamental del álgebra;</li>
+<li>factorizar sobre <span class="math inline">\(\mathbb C\)</span> y sobre <span class="math inline">\(\mathbb R\)</span>;</li>
+<li>analizar dominio, ceros, discontinuidades y asíntotas de funciones racionales;</li>
+<li>descomponer fracciones racionales en fracciones parciales.</li>
+</ul>
+</section>
+</section>
+<section id="sec-definicion-polinomio" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="sec-definicion-polinomio"><span class="header-section-number">4.1</span> Definición de polinomio</h2>
+<p>Sea <span class="math inline">\(K\)</span> un campo, normalmente <span class="math inline">\(\mathbb Q\)</span>, <span class="math inline">\(\mathbb R\)</span> o <span class="math inline">\(\mathbb C\)</span>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un polinomio en la variable <span class="math inline">\(x\)</span> con coeficientes en <span class="math inline">\(K\)</span> es una expresión</p>
+<p><span class="math display">\[
+p(x)=a_0+a_1x+\cdots+a_nx^n,
+\qquad a_j\in K,
+\]</span></p>
+<p>en la que solo un número finito de coeficientes es distinto de cero. El conjunto de todos ellos se denota por <span class="math inline">\(K[x]\)</span>.</p>
+</div>
+</div>
+<p>Si <span class="math inline">\(p\ne0\)</span> y <span class="math inline">\(a_n\ne0\)</span>, el <strong>grado</strong> de <span class="math inline">\(p\)</span> es <span class="math inline">\(\deg p=n\)</span>, <span class="math inline">\(a_n\)</span> es el coeficiente principal y <span class="math inline">\(a_0\)</span> el término independiente. Un polinomio es <strong>mónico</strong> cuando su coeficiente principal es <span class="math inline">\(1\)</span>. Por convenio, al polinomio cero no se le asigna un grado ordinario; a veces se escribe <span class="math inline">\(\deg 0=-\infty\)</span> para conservar algunas fórmulas.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En</p>
+<p><span class="math display">\[
+p(x)=-2x^5+3x^2-7
+\]</span></p>
+<p>los coeficientes omitidos son cero, el grado es <span class="math inline">\(5\)</span>, el coeficiente principal es <span class="math inline">\(-2\)</span> y el término independiente es <span class="math inline">\(-7\)</span>.</p>
+</div>
+</div>
+<section id="igualdad-y-evaluación" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="igualdad-y-evaluación">Igualdad y evaluación</h3>
+<p>Dos polinomios son iguales si tienen el mismo coeficiente en cada potencia de <span class="math inline">\(x\)</span>. Por ejemplo,</p>
+<p><span class="math display">\[
+(x+1)^2=x^2+2x+1
+\]</span></p>
+<p>como polinomios, porque al desarrollar coinciden todos sus coeficientes.</p>
+<p>La evaluación en <span class="math inline">\(c\in K\)</span> es</p>
+<p><span class="math display">\[
+p(c)=a_0+a_1c+\cdots+a_nc^n.
+\]</span></p>
+<p>No debe confundirse el polinomio formal con la función que induce. Sobre campos infinitos, como <span class="math inline">\(\mathbb R\)</span> y <span class="math inline">\(\mathbb C\)</span>, dos polinomios que dan el mismo valor para todo <span class="math inline">\(x\)</span> tienen los mismos coeficientes. Sobre un campo finito pueden existir polinomios distintos que representan la misma función.</p>
+</section>
+</section>
+<section id="sec-aritmetica-polinomios" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="sec-aritmetica-polinomios"><span class="header-section-number">4.2</span> Aritmética y propiedades de los polinomios</h2>
+<p>Para sumar polinomios se suman coeficientes de términos del mismo grado. Para multiplicarlos se aplica la distributividad y se agrupan potencias iguales.</p>
+<p>Sean</p>
+<p><span class="math display">\[
+p(x)=\sum_{j=0}^{m}a_jx^j,
+\qquad
+q(x)=\sum_{k=0}^{n}b_kx^k.
+\]</span></p>
+<p>Entonces</p>
+<p><span class="math display">\[
+p(x)+q(x)=\sum_{r\ge0}(a_r+b_r)x^r
+\]</span></p>
+<p>y</p>
+<p><span class="math display">\[
+p(x)q(x)=\sum_{r=0}^{m+n}
+\left(\sum_{j+k=r}a_jb_k\right)x^r.
+\]</span></p>
+<p>La suma interior es una <strong>convolución</strong> de las sucesiones de coeficientes.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo resuelto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo resuelto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(p(x)=2x^2-x+3\)</span> y <span class="math inline">\(q(x)=x^2+4x-1\)</span>, entonces</p>
+<p><span class="math display">\[
+p+q=3x^2+3x+2,
+\]</span></p>
+<p><span class="math display">\[
+pq=2x^4+7x^3-3x^2+13x-3.
+\]</span></p>
+</div>
+</div>
+<section id="propiedades-de-grado" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="propiedades-de-grado">Propiedades de grado</h3>
+<p>Para polinomios no nulos sobre un campo:</p>
+<p><span class="math display">\[
+\deg(pq)=\deg p+\deg q,
+\]</span></p>
+<p><span class="math display">\[
+\deg(p+q)\leq\max\{\deg p,\deg q\}.
+\]</span></p>
+<p>En la suma puede disminuir el grado si se cancelan los términos principales. Por ejemplo, <span class="math inline">\((x^3+1)+(-x^3+x)=x+1\)</span>.</p>
+<p>Con la suma y el producto, <span class="math inline">\(K[x]\)</span> es un anillo conmutativo con identidad. No es un campo: un polinomio no constante no tiene inverso polinomial. Sus unidades son precisamente las constantes no nulas.</p>
+</section>
+</section>
+<section id="sec-divisibilidad-polinomios" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="sec-divisibilidad-polinomios"><span class="header-section-number">4.3</span> Divisibilidad</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dados <span class="math inline">\(p,d\in K[x]\)</span>, con <span class="math inline">\(d\ne0\)</span>, se dice que <span class="math inline">\(d\)</span> divide a <span class="math inline">\(p\)</span>, y se escribe <span class="math inline">\(d\mid p\)</span>, si existe <span class="math inline">\(q\in K[x]\)</span> tal que</p>
+<p><span class="math display">\[
+p=dq.
+\]</span></p>
+</div>
+</div>
+<p>El resultado fundamental es análogo al algoritmo de la división de enteros.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Algoritmo de la división">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Algoritmo de la división
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para <span class="math inline">\(p,d\in K[x]\)</span>, con <span class="math inline">\(d\ne0\)</span>, existen polinomios únicos <span class="math inline">\(q\)</span> y <span class="math inline">\(r\)</span> tales que</p>
+<p><span class="math display">\[
+p=dq+r,
+\qquad r=0\quad\text{o}\quad\deg r&lt;\deg d.
+\]</span></p>
+</div>
+</div>
+<p>El polinomio <span class="math inline">\(q\)</span> es el cociente y <span class="math inline">\(r\)</span> el residuo.</p>
+<section id="por-qué-termina-el-algoritmo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="por-qué-termina-el-algoritmo">Por qué termina el algoritmo</h3>
+<p>Si <span class="math inline">\(\deg p\geq\deg d\)</span>, se elige un monomio que cancele el término principal de <span class="math inline">\(p\)</span>. Después de restar ese múltiplo de <span class="math inline">\(d\)</span>, el grado disminuye. Como los grados son enteros no negativos, el proceso debe terminar.</p>
+</section>
+<section id="ejemplo-de-división-larga" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-de-división-larga">Ejemplo de división larga</h3>
+<p>Dividamos</p>
+<p><span class="math display">\[
+p(x)=2x^4-3x^3+4x-5
+\]</span></p>
+<p>entre <span class="math inline">\(d(x)=x^2-x+1\)</span>. El resultado es</p>
+<p><span class="math display">\[
+q(x)=2x^2-x-3,
+\qquad r(x)=2x-2.
+\]</span></p>
+<p>La comprobación decisiva es</p>
+<p><span class="math display">\[
+2x^4-3x^3+4x-5
+=(x^2-x+1)(2x^2-x-3)+(2x-2).
+\]</span></p>
+<div id="fig-division-polinomios" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-division-polinomios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/division-polinomios.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-division-polinomios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.1: La división polinomial produce un cociente y un residuo de grado menor que el divisor.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-raiz-polinomio" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="sec-raiz-polinomio"><span class="header-section-number">4.4</span> Definición de raíz de un polinomio</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un número <span class="math inline">\(\alpha\in K\)</span> es raíz o cero de <span class="math inline">\(p\in K[x]\)</span> si</p>
+<p><span class="math display">\[
+p(\alpha)=0.
+\]</span></p>
+</div>
+</div>
+<p>La conexión entre evaluación y divisibilidad es inmediata al dividir entre <span class="math inline">\(x-\alpha\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Teorema del factor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Teorema del factor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\alpha\)</span> es raíz de <span class="math inline">\(p\)</span> si y solo si <span class="math inline">\(x-\alpha\)</span> divide a <span class="math inline">\(p\)</span>.</p>
+</div>
+</div>
+<p>En efecto, por el algoritmo de la división,</p>
+<p><span class="math display">\[
+p(x)=(x-\alpha)q(x)+r,
+\]</span></p>
+<p>donde <span class="math inline">\(r\)</span> es constante. Al evaluar en <span class="math inline">\(x=\alpha\)</span> se obtiene <span class="math inline">\(r=p(\alpha)\)</span>. Por tanto, <span class="math inline">\(p(\alpha)=0\)</span> exactamente cuando el residuo es cero.</p>
+<section id="número-máximo-de-raíces" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="número-máximo-de-raíces">Número máximo de raíces</h3>
+<p>Un polinomio no nulo de grado <span class="math inline">\(n\)</span> tiene como máximo <span class="math inline">\(n\)</span> raíces distintas en un campo. La prueba es inductiva: cada raíz extrae un factor lineal y reduce el grado en uno.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Una distinción esencial">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Una distinción esencial
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Que un polinomio de grado <span class="math inline">\(n\)</span> tenga a lo sumo <span class="math inline">\(n\)</span> raíces no afirma que tenga <span class="math inline">\(n\)</span> raíces reales. Por ejemplo, <span class="math inline">\(x^2+1\)</span> no tiene raíces en <span class="math inline">\(\mathbb R\)</span>, aunque sí tiene dos en <span class="math inline">\(\mathbb C\)</span>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-residuo-sintetica" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="sec-residuo-sintetica"><span class="header-section-number">4.5</span> Teorema del residuo y división sintética</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Teorema del residuo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Teorema del residuo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El residuo de dividir <span class="math inline">\(p(x)\)</span> entre <span class="math inline">\(x-c\)</span> es <span class="math inline">\(p(c)\)</span>.</p>
+</div>
+</div>
+<p>Esto permite evaluar un polinomio sin completar toda la división. La <strong>división sintética</strong> organiza las operaciones solo con coeficientes.</p>
+<section id="ejemplo-resuelto" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-resuelto">Ejemplo resuelto</h3>
+<p>Para dividir</p>
+<p><span class="math display">\[
+p(x)=2x^3-3x^2-11x+6
+\]</span></p>
+<p>entre <span class="math inline">\(x-3\)</span>, se usan los coeficientes <span class="math inline">\(2,-3,-11,6\)</span>:</p>
+<p><span class="math display">\[
+\begin{array}{r|rrrr}
+3&amp;2&amp;-3&amp;-11&amp;6\\
+&amp; &amp;6&amp;9&amp;-6\\ \hline
+&amp;2&amp;3&amp;-2&amp;0
+\end{array}
+\]</span></p>
+<p>El cociente es <span class="math inline">\(2x^2+3x-2\)</span> y el residuo es <span class="math inline">\(0\)</span>. En consecuencia,</p>
+<p><span class="math display">\[
+p(x)=(x-3)(2x^2+3x-2).
+\]</span></p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Coeficientes faltantes">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>Coeficientes faltantes
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>En <span class="math inline">\(x^4-5x^2+4\)</span> deben escribirse los coeficientes <span class="math inline">\(1,0,-5,0,4\)</span>. Omitir los ceros desplaza las columnas y cambia el resultado.</p>
+</div>
+</div>
+</section>
+<section id="evaluación-de-horner" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="evaluación-de-horner">Evaluación de Horner</h3>
+<p>La misma organización conduce a</p>
+<p><span class="math display">\[
+p(c)=(((a_nc+a_{n-1})c+a_{n-2})c+\cdots)c+a_0.
+\]</span></p>
+<p>El esquema de Horner necesita <span class="math inline">\(n\)</span> multiplicaciones y <span class="math inline">\(n\)</span> sumas, y evita calcular por separado todas las potencias de <span class="math inline">\(c\)</span>.</p>
+</section>
+</section>
+<section id="sec-raices-multiples" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="sec-raices-multiples"><span class="header-section-number">4.6</span> Obtención de raíces múltiples</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Multiplicidad">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Multiplicidad
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una raíz <span class="math inline">\(\alpha\)</span> tiene multiplicidad <span class="math inline">\(m\geq1\)</span> si</p>
+<p><span class="math display">\[
+p(x)=(x-\alpha)^m q(x),
+\qquad q(\alpha)\ne0.
+\]</span></p>
+</div>
+</div>
+<p>La raíz es simple cuando <span class="math inline">\(m=1\)</span>, doble cuando <span class="math inline">\(m=2\)</span>, triple cuando <span class="math inline">\(m=3\)</span>, etcétera.</p>
+<p>La derivada permite reconocer multiplicidades:</p>
+<p><span class="math display">\[
+\alpha\text{ tiene multiplicidad al menos }m
+\iff
+p(\alpha)=p'(\alpha)=\cdots=p^{(m-1)}(\alpha)=0.
+\]</span></p>
+<p>Si además <span class="math inline">\(p^{(m)}(\alpha)\ne0\)</span>, la multiplicidad es exactamente <span class="math inline">\(m\)</span>.</p>
+<section id="ejemplo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo">Ejemplo</h3>
+<p>Sea</p>
+<p><span class="math display">\[
+p(x)=(x-1)^3(x+2)^2.
+\]</span></p>
+<p>La raíz <span class="math inline">\(1\)</span> tiene multiplicidad <span class="math inline">\(3\)</span> y la raíz <span class="math inline">\(-2\)</span> multiplicidad <span class="math inline">\(2\)</span>. En la gráfica, una raíz de multiplicidad par toca el eje y regresa; una raíz de multiplicidad impar lo cruza. Para multiplicidades impares mayores que uno, el cruce se aplana.</p>
+<div id="fig-multiplicidad-raices" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-multiplicidad-raices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/multiplicidad-raices.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-multiplicidad-raices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.2: Comportamiento local de raíces de multiplicidad uno, dos y tres.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Procedimiento con divisiones sucesivas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Procedimiento con divisiones sucesivas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si <span class="math inline">\(p(\alpha)=0\)</span>, divida entre <span class="math inline">\(x-\alpha\)</span>. Vuelva a evaluar el cociente en <span class="math inline">\(\alpha\)</span> y repita. El número de divisiones exactas es la multiplicidad.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-teorema-fundamental-algebra" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="sec-teorema-fundamental-algebra"><span class="header-section-number">4.7</span> Teorema fundamental del álgebra</h2>
+<div class="callout callout-style-default callout-important callout-titled" title="Teorema fundamental del álgebra">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Teorema fundamental del álgebra
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Todo polinomio no constante con coeficientes complejos posee al menos una raíz compleja.</p>
+</div>
+</div>
+<p>Aunque el enunciado garantiza una raíz, al dividir por su factor lineal y repetir se obtiene la forma completa:</p>
+<p><span class="math display">\[
+p(x)=a_n\prod_{j=1}^{n}(x-\alpha_j),
+\]</span></p>
+<p>donde las raíces se cuentan con multiplicidad.</p>
+<section id="alcance-del-teorema" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="alcance-del-teorema">Alcance del teorema</h3>
+<ul>
+<li>Garantiza existencia, pero no proporciona por sí solo un algoritmo práctico para calcular las raíces.</li>
+<li>El campo <span class="math inline">\(\mathbb C\)</span> es algebraicamente cerrado.</li>
+<li>Un polinomio real puede no factorizarse completamente en factores lineales reales, pero sí en factores lineales complejos.</li>
+<li>Las fórmulas generales por radicales existen hasta grado cuatro; para grado cinco o mayor no existe una fórmula por radicales válida para todos los polinomios.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled" title="No es un método numérico">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Advertencia</span>No es un método numérico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>El teorema fundamental del álgebra no dice que todas las raíces puedan escribirse con una fórmula elemental. La aproximación numérica será el tema del capítulo 5.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-factorizacion-lineal" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="sec-factorizacion-lineal"><span class="header-section-number">4.8</span> Descomposición de un polinomio en factores lineales</h2>
+<p>Si <span class="math inline">\(p\in\mathbb C[x]\)</span> tiene grado <span class="math inline">\(n\geq1\)</span>, entonces</p>
+<p><span class="math display">\[
+p(x)=a_n(x-\alpha_1)^{m_1}\cdots(x-\alpha_s)^{m_s},
+\]</span></p>
+<p>donde <span class="math inline">\(\alpha_1,\ldots,\alpha_s\)</span> son raíces distintas y</p>
+<p><span class="math display">\[
+m_1+\cdots+m_s=n.
+\]</span></p>
+<p>Esta factorización es única salvo por el orden de los factores.</p>
+<section id="ejemplo-completo" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-completo">Ejemplo completo</h3>
+<p>Factoricemos</p>
+<p><span class="math display">\[
+p(x)=x^4-5x^2+4.
+\]</span></p>
+<p>Al verlo como cuadrático en <span class="math inline">\(u=x^2\)</span>:</p>
+<p><span class="math display">\[
+u^2-5u+4=(u-1)(u-4).
+\]</span></p>
+<p>Por tanto,</p>
+<p><span class="math display">\[
+p(x)=(x^2-1)(x^2-4)
+=(x-1)(x+1)(x-2)(x+2).
+\]</span></p>
+<p>Las raíces son <span class="math inline">\(-2,-1,1,2\)</span>, todas simples.</p>
+</section>
+<section id="estrategia-para-coeficientes-enteros" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="estrategia-para-coeficientes-enteros">Estrategia para coeficientes enteros</h3>
+<p>Para un polinomio</p>
+<p><span class="math display">\[
+a_nx^n+\cdots+a_0
+\]</span></p>
+<p>con coeficientes enteros, toda raíz racional reducida <span class="math inline">\(r/s\)</span> satisface <span class="math inline">\(r\mid a_0\)</span> y <span class="math inline">\(s\mid a_n\)</span>. Este <strong>teorema de la raíz racional</strong> produce candidatos; cada candidato debe evaluarse. No asegura que exista una raíz racional.</p>
+</section>
+</section>
+<section id="sec-polinomios-reales" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="sec-polinomios-reales"><span class="header-section-number">4.9</span> Propiedades de polinomios con coeficientes reales</h2>
+<p>Si <span class="math inline">\(p\)</span> tiene coeficientes reales, la conjugación conmuta con la evaluación:</p>
+<p><span class="math display">\[
+p(\overline z)=\overline{p(z)}.
+\]</span></p>
+<p>Por consiguiente, si <span class="math inline">\(p(z)=0\)</span>, entonces</p>
+<p><span class="math display">\[
+p(\overline z)=\overline{0}=0.
+\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Raíces conjugadas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Importante</span>Raíces conjugadas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Las raíces complejas no reales de un polinomio con coeficientes reales aparecen en pares conjugados y con la misma multiplicidad.</p>
+</div>
+</div>
+<p>El producto de los factores conjugados tiene coeficientes reales:</p>
+<p><span class="math display">\[
+(x-z)(x-\overline z)
+=x^2-2\operatorname{Re}(z)x+|z|^2.
+\]</span></p>
+<p>Así, todo polinomio real se factoriza sobre <span class="math inline">\(\mathbb R\)</span> como producto de factores lineales reales y factores cuadráticos irreducibles.</p>
+<section id="ejemplo-1" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ejemplo-1">Ejemplo</h3>
+<p>Si <span class="math inline">\(2+i\)</span> es raíz de un polinomio real, también lo es <span class="math inline">\(2-i\)</span>, y</p>
+<p><span class="math display">\[
+[x-(2+i)][x-(2-i)]=x^2-4x+5.
+\]</span></p>
+<div id="fig-raices-conjugadas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-raices-conjugadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/raices-conjugadas.png" class="img-fluid figure-img" style="width:76.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raices-conjugadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.3: Las raíces no reales de un polinomio real son simétricas respecto del eje real.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="relaciones-de-viète" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="relaciones-de-viète">Relaciones de Viète</h3>
+<p>Para el polinomio mónico</p>
+<p><span class="math display">\[
+p(x)=x^n+a_{n-1}x^{n-1}+\cdots+a_0
+=\prod_{j=1}^{n}(x-\alpha_j),
+\]</span></p>
+<p>se cumple, contando multiplicidades,</p>
+<p><span class="math display">\[
+\sum_{j=1}^{n}\alpha_j=-a_{n-1},
+\qquad
+\prod_{j=1}^{n}\alpha_j=(-1)^n a_0.
+\]</span></p>
+</section>
+</section>
+<section id="sec-funciones-racionales" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="sec-funciones-racionales"><span class="header-section-number">4.10</span> Funciones racionales</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Definición">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Definición
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Una función racional es un cociente</p>
+<p><span class="math display">\[
+R(x)=\frac{p(x)}{q(x)},
+\]</span></p>
+<p>donde <span class="math inline">\(p,q\in K[x]\)</span> y <span class="math inline">\(q\ne0\)</span>. Su dominio excluye los ceros de <span class="math inline">\(q\)</span>.</p>
+</div>
+</div>
+<p>Antes de simplificar debe registrarse el dominio original. Por ejemplo,</p>
+<p><span class="math display">\[
+R(x)=\frac{x^2-1}{x-1}=x+1,
+\qquad x\ne1.
+\]</span></p>
+<p>La gráfica es la recta <span class="math inline">\(y=x+1\)</span> con un hueco en <span class="math inline">\((1,2)\)</span>. La simplificación algebraica no vuelve a incluir <span class="math inline">\(x=1\)</span>.</p>
+<section id="ceros-polos-y-asíntotas" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="ceros-polos-y-asíntotas">Ceros, polos y asíntotas</h3>
+<ul>
+<li>Los ceros provienen de factores del numerador que no se cancelan.</li>
+<li>Los ceros del denominador no cancelados producen polos y, usualmente, asíntotas verticales.</li>
+<li>Si <span class="math inline">\(\deg p&lt;\deg q\)</span>, la asíntota horizontal es <span class="math inline">\(y=0\)</span>.</li>
+<li>Si <span class="math inline">\(\deg p=\deg q\)</span>, la asíntota horizontal es el cociente de coeficientes principales.</li>
+<li>Si <span class="math inline">\(\deg p\geq\deg q\)</span>, la división polinomial separa una parte polinomial y una fracción propia.</li>
+</ul>
+<div id="fig-funcion-racional" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-funcion-racional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/funcion-racional.png" class="img-fluid figure-img" style="width:88.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-funcion-racional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;4.4: Una función racional puede presentar huecos y asíntotas determinadas por sus factores.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para</p>
+<p><span class="math display">\[
+R(x)=\frac{2x^2+1}{x-1},
+\]</span></p>
+<p>la división da</p>
+<p><span class="math display">\[
+R(x)=2x+2+\frac{3}{x-1}.
+\]</span></p>
+<p>Tiene asíntota vertical <span class="math inline">\(x=1\)</span> y asíntota oblicua <span class="math inline">\(y=2x+2\)</span>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-fracciones-parciales" class="level2" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="sec-fracciones-parciales"><span class="header-section-number">4.11</span> Fracciones parciales</h2>
+<p>La descomposición en fracciones parciales expresa una fracción racional propia como suma de términos simples. Es útil para integrar, resolver ecuaciones diferenciales y transformar señales.</p>
+<p>Primero, si <span class="math inline">\(\deg p\geq\deg q\)</span>, se efectúa la división. Después se factoriza el denominador.</p>
+<section id="factores-lineales-distintos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="factores-lineales-distintos">Factores lineales distintos</h3>
+<p>Si</p>
+<p><span class="math display">\[
+\frac{p(x)}{(x-a)(x-b)}
+\]</span></p>
+<p>es propia y <span class="math inline">\(a\ne b\)</span>, se propone</p>
+<p><span class="math display">\[
+\frac{A}{x-a}+\frac{B}{x-b}.
+\]</span></p>
+<p>Por ejemplo,</p>
+<p><span class="math display">\[
+\frac{5x+1}{(x-1)(x+2)}
+=\frac{2}{x-1}+\frac{3}{x+2}.
+\]</span></p>
+<p>La comprobación reúne el lado derecho sobre el denominador común.</p>
+</section>
+<section id="factores-lineales-repetidos" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="factores-lineales-repetidos">Factores lineales repetidos</h3>
+<p>Para <span class="math inline">\((x-a)^m\)</span> se requieren todos los términos</p>
+<p><span class="math display">\[
+\frac{A_1}{x-a}+\frac{A_2}{(x-a)^2}
++\cdots+\frac{A_m}{(x-a)^m}.
+\]</span></p>
+</section>
+<section id="factores-cuadráticos-irreducibles" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="factores-cuadráticos-irreducibles">Factores cuadráticos irreducibles</h3>
+<p>Por cada potencia <span class="math inline">\((x^2+bx+c)^m\)</span> irreducible sobre <span class="math inline">\(\mathbb R\)</span> se incluyen numeradores lineales:</p>
+<p><span class="math display">\[
+\frac{A_1x+B_1}{x^2+bx+c}
++\cdots+
+\frac{A_mx+B_m}{(x^2+bx+c)^m}.
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Ejemplo mixto">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Ejemplo mixto
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La forma de descomposición para</p>
+<p><span class="math display">\[
+\frac{x^2+1}{(x-1)^2(x^2+4)}
+\]</span></p>
+<p>es</p>
+<p><span class="math display">\[
+\frac{A}{x-1}+\frac{B}{(x-1)^2}
++\frac{Cx+D}{x^2+4}.
+\]</span></p>
+<p>Los coeficientes se obtienen al multiplicar por el denominador común y comparar coeficientes o evaluar valores convenientes.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="síntesis-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="síntesis-del-capítulo">Síntesis del capítulo</h2>
+<ul>
+<li><span class="math inline">\(K[x]\)</span> es un anillo de expresiones con un número finito de coeficientes no nulos.</li>
+<li>El algoritmo de la división escribe <span class="math inline">\(p=dq+r\)</span> con <span class="math inline">\(\deg r&lt;\deg d\)</span>.</li>
+<li><span class="math inline">\(p(c)\)</span> es el residuo de dividir por <span class="math inline">\(x-c\)</span>.</li>
+<li><span class="math inline">\(c\)</span> es raíz si y solo si <span class="math inline">\(x-c\)</span> es factor.</li>
+<li>La multiplicidad cuenta cuántas veces aparece el factor lineal.</li>
+<li>Todo polinomio complejo no constante se descompone en factores lineales.</li>
+<li>En polinomios reales, las raíces no reales aparecen en pares conjugados.</li>
+<li>Una función racional conserva las exclusiones de su denominador original.</li>
+<li>Las fracciones parciales dependen de la factorización y multiplicidad del denominador.</li>
+</ul>
+</section>
+<section id="errores-frecuentes" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>
+<ol type="1">
+<li><strong>Asignar grado al polinomio cero como si fuera ordinario.</strong> Su grado se deja indefinido o se usa <span class="math inline">\(-\infty\)</span> por convenio.</li>
+<li><strong>Olvidar términos ausentes.</strong> En división sintética deben colocarse coeficientes cero.</li>
+<li><strong>Confundir raíz con factor.</strong> La raíz es un número; el factor correspondiente es <span class="math inline">\(x-\alpha\)</span>.</li>
+<li><strong>Creer que todo polinomio tiene raíces reales.</strong> La garantía completa corresponde a <span class="math inline">\(\mathbb C\)</span>.</li>
+<li><strong>Contar solo raíces distintas.</strong> El grado coincide con el número de raíces complejas cuando se cuentan multiplicidades.</li>
+<li><strong>Cancelar un factor y ampliar el dominio.</strong> Una discontinuidad removible sigue excluida del dominio original.</li>
+<li><strong>Omitir términos en fracciones parciales.</strong> Cada potencia repetida necesita su propio término.</li>
+<li><strong>Usar una constante sobre un cuadrático irreducible.</strong> El numerador debe tener grado menor, por lo que es lineal.</li>
+</ol>
+</section>
+<section id="ejercicios" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios">Ejercicios</h2>
+<section id="nivel-básico" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-básico">Nivel básico</h3>
+<ol type="1">
+<li>Indique grado, coeficiente principal y término independiente de <span class="math inline">\(4x^6-3x^2+8\)</span>.</li>
+<li>Sume y multiplique <span class="math inline">\(p(x)=x^2-2x+3\)</span> y <span class="math inline">\(q(x)=2x+1\)</span>.</li>
+<li>Evalúe <span class="math inline">\(p(x)=2x^4-x^2+5x-7\)</span> en <span class="math inline">\(x=-2\)</span> mediante Horner.</li>
+<li>Divida <span class="math inline">\(x^3-2x^2+4x-8\)</span> entre <span class="math inline">\(x-2\)</span>.</li>
+<li>Determine si <span class="math inline">\(-1\)</span> es raíz de <span class="math inline">\(x^4+3x^3-x-3\)</span>.</li>
+<li>Factorice <span class="math inline">\(x^4-16\)</span> sobre <span class="math inline">\(\mathbb R\)</span> y sobre <span class="math inline">\(\mathbb C\)</span>.</li>
+<li>Determine el dominio de <span class="math inline">\((x^2-9)/(x-3)\)</span> y describa el hueco.</li>
+</ol>
+</section>
+<section id="nivel-intermedio" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-intermedio">Nivel intermedio</h3>
+<ol start="8" type="1">
+<li>Divida <span class="math inline">\(3x^5-2x^3+x-4\)</span> entre <span class="math inline">\(x^2+x-1\)</span> y compruebe el resultado.</li>
+<li>Use el teorema de la raíz racional para factorizar <span class="math inline">\(2x^3-x^2-8x+4\)</span>.</li>
+<li>Determine las multiplicidades de las raíces de <span class="math inline">\(x^5-2x^4+x^3\)</span>.</li>
+<li>Construya un polinomio real mónico de grado cuatro cuyas raíces sean <span class="math inline">\(2\)</span>, <span class="math inline">\(-1\)</span> y <span class="math inline">\(3+i\)</span>, <span class="math inline">\(3-i\)</span>.</li>
+<li>Use Viète para comprobar la suma y el producto de las raíces de <span class="math inline">\(2x^3-3x^2-11x+6\)</span>.</li>
+<li>Encuentre ceros, huecos y asíntotas de <span class="math inline">\((x^2-4)/(x^2-x-2)\)</span>.</li>
+<li>Descomponga <span class="math inline">\((7x+5)/[(x-1)(x+3)]\)</span> en fracciones parciales.</li>
+</ol>
+</section>
+<section id="nivel-formal-y-aplicado" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="nivel-formal-y-aplicado">Nivel formal y aplicado</h3>
+<ol start="15" type="1">
+<li>Demuestre la unicidad del cociente y el residuo en el algoritmo de la división.</li>
+<li>Pruebe que un polinomio no nulo de grado <span class="math inline">\(n\)</span> tiene a lo sumo <span class="math inline">\(n\)</span> raíces distintas.</li>
+<li>Demuestre que las raíces conjugadas de un polinomio real tienen la misma multiplicidad.</li>
+<li>Determine la forma real más general de un polinomio de grado cinco con raíces <span class="math inline">\(1\)</span> doble y <span class="math inline">\(2+3i\)</span> simple.</li>
+<li>Descomponga <span class="math inline">\((2x^3+x^2+4)/[(x-1)^2(x^2+1)]\)</span> en fracciones parciales.</li>
+<li>Diseñe un polinomio cuya gráfica cruce el eje en <span class="math inline">\(x=-2\)</span>, toque el eje en <span class="math inline">\(x=1\)</span> y tenga grado mínimo.</li>
+</ol>
+</section>
+</section>
+<section id="proyecto-integrador" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="proyecto-integrador">Proyecto integrador</h2>
+<p>Elija un polinomio real de grado entre cuatro y seis y presente un estudio completo:</p>
+<ol type="1">
+<li>identifique grado y coeficientes;</li>
+<li>localice candidatos racionales;</li>
+<li>aplique división sintética;</li>
+<li>determine todas las raíces y multiplicidades;</li>
+<li>factorice sobre <span class="math inline">\(\mathbb R\)</span> y sobre <span class="math inline">\(\mathbb C\)</span>;</li>
+<li>compruebe dos relaciones de Viète;</li>
+<li>construya una función racional usando el polinomio como numerador o denominador;</li>
+<li>analice dominio, ceros, huecos y asíntotas;</li>
+<li>obtenga, cuando corresponda, una descomposición en fracciones parciales;</li>
+<li>acompañe los cálculos con una representación gráfica y conclusiones.</li>
+</ol>
+</section>
+<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<p>La secuencia temática sigue la Unidad 4 del programa de Álgebra Superior <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en <span class="citation" data-cites="silvaLazo2007">Silva y Lazo (<a href="references.html#ref-silvaLazo2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="cardenas1999">Cárdenas et&nbsp;al. (<a href="references.html#ref-cardenas1999" role="doc-biblioref">1999</a>)</span> y <span class="citation" data-cites="cox2015">Cox et&nbsp;al. (<a href="references.html#ref-cox2015" role="doc-biblioref">2015</a>)</span>.</p>
+</section>
+<section id="laboratorio-computacional-con-r-y-geogebra" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-computacional-con-r-y-geogebra">Laboratorio computacional con R y GeoGebra</h2>
+<p>Este laboratorio traduce las ideas del capítulo a algoritmos reproducibles. Los vectores de coeficientes se almacenan en orden descendente: <span class="math inline">\(a_n,a_{n-1},\ldots,a_0\)</span>. Las funciones de R para raíces, en cambio, usan orden ascendente; esta diferencia se señala explícitamente.</p>
+<section id="representar-y-evaluar-polinomios-en-r" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="representar-y-evaluar-polinomios-en-r">Representar y evaluar polinomios en R</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>horner <span class="ot">&lt;-</span> <span class="cf">function</span>(coeficientes, x) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  acumulado <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (a <span class="cf">in</span> coeficientes) acumulado <span class="ot">&lt;-</span> acumulado <span class="sc">*</span> x <span class="sc">+</span> a</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  acumulado</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">5</span>)  <span class="co"># 2x^4 - 3x^3 + 0x^2 + 4x - 5</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">horner</span>(p, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El cero en la tercera posición es indispensable: conserva el lugar del término <span class="math inline">\(x^2\)</span>.</p>
+</section>
+<section id="suma-y-producto-por-coeficientes" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="suma-y-producto-por-coeficientes">Suma y producto por coeficientes</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rellenar_izquierda <span class="ot">&lt;-</span> <span class="cf">function</span>(a, n) <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">0</span>, n <span class="sc">-</span> <span class="fu">length</span>(a)), a)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sumar_polinomios <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">max</span>(<span class="fu">length</span>(a), <span class="fu">length</span>(b))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rellenar_izquierda</span>(a, n) <span class="sc">+</span> <span class="fu">rellenar_izquierda</span>(b, n)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>multiplicar_polinomios <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) {</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  resultado <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(a) <span class="sc">+</span> <span class="fu">length</span>(b) <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(a)) {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="fu">seq_along</span>(b)) {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      resultado[i <span class="sc">+</span> j <span class="sc">-</span> <span class="dv">1</span>] <span class="ot">&lt;-</span> resultado[i <span class="sc">+</span> j <span class="sc">-</span> <span class="dv">1</span>] <span class="sc">+</span> a[i] <span class="sc">*</span> b[j]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  resultado</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">3</span>)  <span class="co"># 2x^2 - x + 3</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">1</span>)  <span class="co"># x^2 + 4x - 1</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">sumar_polinomios</span>(a, b)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">multiplicar_polinomios</span>(a, b)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>
+<a class="btn btn-primary" href="interactivos/operaciones-polinomios.html" target="_blank">Abrir GeoGebra: operaciones</a> <a class="btn" href="interactivos/geogebra/operaciones-polinomios.ggb" download="">Descargar .ggb</a>
+</p>
+<iframe class="interactive-frame polynomial" src="interactivos/operaciones-polinomios.html" title="Operaciones con polinomios en GeoGebra" loading="lazy">
+</iframe>
+</section>
+<section id="división-polinomial-programada" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="división-polinomial-programada">División polinomial programada</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>quitar_ceros_iniciales <span class="ot">&lt;-</span> <span class="cf">function</span>(a, <span class="at">tolerancia =</span> <span class="fl">1e-12</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (<span class="fu">length</span>(a) <span class="sc">&gt;</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> <span class="fu">abs</span>(a[<span class="dv">1</span>]) <span class="sc">&lt;</span> tolerancia) a <span class="ot">&lt;-</span> a[<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  a</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dividir_polinomios <span class="ot">&lt;-</span> <span class="cf">function</span>(dividendo, divisor, <span class="at">tolerancia =</span> <span class="fl">1e-12</span>) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  dividendo <span class="ot">&lt;-</span> <span class="fu">quitar_ceros_iniciales</span>(dividendo, tolerancia)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  divisor <span class="ot">&lt;-</span> <span class="fu">quitar_ceros_iniciales</span>(divisor, tolerancia)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(divisor) <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;&amp;</span> <span class="fu">abs</span>(divisor[<span class="dv">1</span>]) <span class="sc">&lt;</span> tolerancia) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"El divisor no puede ser el polinomio cero"</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(dividendo) <span class="sc">&lt;</span> <span class="fu">length</span>(divisor)) {</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">cociente =</span> <span class="dv">0</span>, <span class="at">residuo =</span> dividendo))</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  residuo <span class="ot">&lt;-</span> dividendo</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  cociente <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(dividendo) <span class="sc">-</span> <span class="fu">length</span>(divisor) <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(cociente)) {</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    factor <span class="ot">&lt;-</span> residuo[i] <span class="sc">/</span> divisor[<span class="dv">1</span>]</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    cociente[i] <span class="ot">&lt;-</span> factor</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    residuo[i<span class="sc">:</span>(i <span class="sc">+</span> <span class="fu">length</span>(divisor) <span class="sc">-</span> <span class="dv">1</span>)] <span class="ot">&lt;-</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>      residuo[i<span class="sc">:</span>(i <span class="sc">+</span> <span class="fu">length</span>(divisor) <span class="sc">-</span> <span class="dv">1</span>)] <span class="sc">-</span> factor <span class="sc">*</span> divisor</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  residuo[<span class="fu">abs</span>(residuo) <span class="sc">&lt;</span> tolerancia] <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">cociente =</span> <span class="fu">quitar_ceros_iniciales</span>(cociente, tolerancia),</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>       <span class="at">residuo =</span> <span class="fu">quitar_ceros_iniciales</span>(residuo, tolerancia))</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="fu">dividir_polinomios</span>(</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">dividendo =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="sc">-</span><span class="dv">5</span>),</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">divisor =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>
+<a class="btn btn-primary" href="interactivos/division-residuo.html" target="_blank">Abrir GeoGebra: división y residuo</a> <a class="btn" href="interactivos/geogebra/division-residuo.ggb" download="">Descargar .ggb</a>
+</p>
+<iframe class="interactive-frame polynomial" src="interactivos/division-residuo.html" title="División y residuo en GeoGebra" loading="lazy">
+</iframe>
+</section>
+<section id="división-sintética-y-multiplicidad" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="división-sintética-y-multiplicidad">División sintética y multiplicidad</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>division_sintetica <span class="ot">&lt;-</span> <span class="cf">function</span>(coeficientes, c) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  salida <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fu">length</span>(coeficientes))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  salida[<span class="dv">1</span>] <span class="ot">&lt;-</span> coeficientes[<span class="dv">1</span>]</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(coeficientes) <span class="sc">&gt;</span> <span class="dv">1</span>) {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(coeficientes)) {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      salida[j] <span class="ot">&lt;-</span> coeficientes[j] <span class="sc">+</span> c <span class="sc">*</span> salida[j <span class="sc">-</span> <span class="dv">1</span>]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">cociente =</span> salida[<span class="sc">-</span><span class="fu">length</span>(salida)], <span class="at">residuo =</span> salida[<span class="fu">length</span>(salida)])</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>multiplicidad_raiz <span class="ot">&lt;-</span> <span class="cf">function</span>(coeficientes, raiz, <span class="at">tolerancia =</span> <span class="fl">1e-9</span>) {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  actual <span class="ot">&lt;-</span> coeficientes</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  multiplicidad <span class="ot">&lt;-</span> <span class="dv">0</span>L</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">repeat</span> {</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    paso <span class="ot">&lt;-</span> <span class="fu">division_sintetica</span>(actual, raiz)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">abs</span>(paso<span class="sc">$</span>residuo) <span class="sc">&gt;</span> tolerancia <span class="sc">||</span> <span class="fu">length</span>(actual) <span class="sc">==</span> <span class="dv">1</span>) <span class="cf">break</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    multiplicidad <span class="ot">&lt;-</span> multiplicidad <span class="sc">+</span> <span class="dv">1</span>L</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    actual <span class="ot">&lt;-</span> paso<span class="sc">$</span>cociente</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  multiplicidad</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">8</span>, <span class="sc">-</span><span class="dv">4</span>)  <span class="co"># (x-1)^3 (x+2)^2</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="fu">multiplicidad_raiz</span>(p, <span class="dv">1</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="fu">multiplicidad_raiz</span>(p, <span class="sc">-</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>
+<a class="btn btn-primary" href="interactivos/raices-multiplicidad.html" target="_blank">Abrir GeoGebra: multiplicidad</a> <a class="btn" href="interactivos/geogebra/raices-multiplicidad.ggb" download="">Descargar .ggb</a>
+</p>
+<iframe class="interactive-frame polynomial" src="interactivos/raices-multiplicidad.html" title="Raíces y multiplicidad en GeoGebra" loading="lazy">
+</iframe>
+</section>
+<section id="todas-las-raíces-y-factorización" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="todas-las-raíces-y-factorización">Todas las raíces y factorización</h3>
+<p>La función <code>polyroot()</code> recibe coeficientes en orden ascendente. Por eso se aplica <code>rev()</code> al vector usado en las funciones anteriores.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>p_desc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">0</span>, <span class="dv">4</span>)  <span class="co"># x^4 - 5x^2 + 4</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>raices <span class="ot">&lt;-</span> <span class="fu">polyroot</span>(<span class="fu">rev</span>(p_desc))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(raices, <span class="dv">10</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificación numérica mediante Horner</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>residuos <span class="ot">&lt;-</span> <span class="fu">vapply</span>(raices, <span class="cf">function</span>(z) <span class="fu">horner</span>(p_desc, z), <span class="fu">complex</span>(<span class="dv">1</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">Mod</span>(residuos))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>El residuo máximo debe ser cercano a cero. Las pequeñas partes imaginarias que puedan aparecer al resolver un polinomio real son efecto del redondeo numérico.</p>
+<p>
+<a class="btn btn-primary" href="interactivos/factorizacion-lineal.html" target="_blank">Abrir GeoGebra: factorización</a> <a class="btn" href="interactivos/geogebra/factorizacion-lineal.ggb" download="">Descargar .ggb</a>
+</p>
+<iframe class="interactive-frame polynomial" src="interactivos/factorizacion-lineal.html" title="Factorización lineal en GeoGebra" loading="lazy">
+</iframe>
+</section>
+<section id="pares-conjugados" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="pares-conjugados">Pares conjugados</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span>i</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>factor_real <span class="ot">&lt;-</span> <span class="fu">multiplicar_polinomios</span>(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span>z),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="fu">Conj</span>(z))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">Re</span>(factor_real)  <span class="co"># x^2 - 4x + 5</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>
+<a class="btn btn-primary" href="interactivos/raices-conjugadas.html" target="_blank">Abrir GeoGebra: raíces conjugadas</a> <a class="btn" href="interactivos/geogebra/raices-conjugadas.ggb" download="">Descargar .ggb</a>
+</p>
+<iframe class="interactive-frame polynomial" src="interactivos/raices-conjugadas.html" title="Raíces conjugadas en GeoGebra" loading="lazy">
+</iframe>
+</section>
+<section id="funciones-racionales-y-fracciones-parciales" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="funciones-racionales-y-fracciones-parciales">Funciones racionales y fracciones parciales</h3>
+<p>Para factores lineales distintos, los coeficientes de fracciones parciales pueden obtenerse resolviendo un sistema lineal. En el ejemplo</p>
+<p><span class="math display">\[
+\frac{5x+1}{(x-1)(x+2)}=\frac{A}{x-1}+\frac{B}{x+2},
+\]</span></p>
+<p>la identidad de numeradores es</p>
+<p><span class="math display">\[
+5x+1=A(x+2)+B(x-1).
+\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>,</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>              <span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>objetivo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">1</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>coeficientes <span class="ot">&lt;-</span> <span class="fu">solve</span>(M, objetivo)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(coeficientes) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>coeficientes</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Comprobación en varios puntos del dominio</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">5</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>izquierda <span class="ot">&lt;-</span> (<span class="dv">5</span> <span class="sc">*</span> x <span class="sc">+</span> <span class="dv">1</span>) <span class="sc">/</span> ((x <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> (x <span class="sc">+</span> <span class="dv">2</span>))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>derecha <span class="ot">&lt;-</span> coeficientes[<span class="st">"A"</span>] <span class="sc">/</span> (x <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">+</span> coeficientes[<span class="st">"B"</span>] <span class="sc">/</span> (x <span class="sc">+</span> <span class="dv">2</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(<span class="fu">abs</span>(izquierda <span class="sc">-</span> derecha))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>
+<a class="btn btn-primary" href="interactivos/funciones-racionales.html" target="_blank">Abrir GeoGebra: funciones racionales</a> <a class="btn" href="interactivos/geogebra/funciones-racionales.ggb" download="">Descargar .ggb</a>
+</p>
+<iframe class="interactive-frame polynomial" src="interactivos/funciones-racionales.html" title="Funciones racionales en GeoGebra" loading="lazy">
+</iframe>
+</section>
+</section>
+<section id="cuaderno-completo-del-capítulo-4" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="cuaderno-completo-del-capítulo-4">Cuaderno completo del capítulo 4</h2>
+<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-04-polinomios-R.ipynb" class="btn btn-primary" target="_blank">Abrir el cuaderno en Google Colab</a></p>
+<p><a href="notebooks/capitulo-04-polinomios-R.ipynb" class="btn">Descargar el cuaderno</a></p>
+<p>El cuaderno reúne las funciones anteriores, ejemplos adicionales, gráficas y una autoevaluación computacional. Todo el código principal usa R base.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-cardenas1999" class="csl-entry" role="listitem">
+Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. <em>Álgebra superior</em>. 2.ª ed. Trillas.
+</div>
+<div id="ref-cox2015" class="csl-entry" role="listitem">
+Cox, David A., John Little, y Donal O’Shea. 2015. <em>Ideals, Varieties, and Algorithms</em>. 4.ª ed. Springer.
+</div>
+<div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
+Silva, Juan Manuel, y Adriana Lazo. 2007. <em>Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>. 7.ª ed. Limusa.
+</div>
+<div id="ref-uaslp2011" class="csl-entry" role="listitem">
+Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. <em>Programa sintético de Álgebra Superior, carrera de Ingeniero Electrónico</em>. Propuesta de modificación curricular.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<button class="book-menu-toggle" type="button" aria-controls="TOC" aria-expanded="false">
+  <span aria-hidden="true">☰</span> Menú del libro
+</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toc = document.querySelector("body > nav#TOC");
+  if (!toc) return;
+
+  toc.setAttribute("aria-label", "Capítulos y subtemas");
+
+  const download = document.createElement("a");
+  download.className = "sidebar-pdf-download";
+  download.href = "Algebra-Superior-R-GeoGebra-Capitulos-1-5.pdf";
+  download.setAttribute("download", "");
+  download.textContent = "Descargar PDF";
+  toc.appendChild(download);
+
+  const toggle = document.querySelector(".book-menu-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      const open = document.body.classList.toggle("book-menu-open");
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+  }
+
+  toc.querySelectorAll("a[href^='#']").forEach(function (link) {
+    link.addEventListener("click", function () {
+      document.body.classList.remove("book-menu-open");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  const links = Array.from(toc.querySelectorAll("a[href^='#']"));
+  const targets = links.map(function (link) {
+    const id = decodeURIComponent(link.getAttribute("href").slice(1));
+    return { link: link, target: document.getElementById(id) };
+  }).filter(function (item) { return item.target; });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      const visible = entries.filter(function (entry) { return entry.isIntersecting; })
+        .sort(function (a, b) { return a.boundingClientRect.top - b.boundingClientRect.top; });
+      if (!visible.length) return;
+      links.forEach(function (link) { link.classList.remove("active"); });
+      const current = targets.find(function (item) { return item.target === visible[0].target; });
+      if (current) {
+        current.link.classList.add("active");
+        current.link.scrollIntoView({ block: "nearest" });
+      }
+    }, { rootMargin: "-12% 0px -76% 0px", threshold: 0 });
+    targets.forEach(function (item) { observer.observe(item.target); });
+  }
+});
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./03-numeros-complejos.html" class="pagination-link" aria-label="Números complejos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Números complejos</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./05-metodos-raices.html" class="pagination-link" aria-label="Métodos numéricos para la estimación de raíces">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Métodos numéricos para la estimación de raíces</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Licencia CC BY-NC-SA 4.0</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

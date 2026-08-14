@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530" role="img" aria-labelledby="title desc">
+  <title id="title">Relación, función y ejemplo que no es función</title>
+  <desc id="desc">Tres diagramas sagitales muestran una relación general, una función válida y una correspondencia que no es función.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0,0 L9,3.5 L0,7 z" fill="#355f86"/></marker>
+    <style>
+      .panel{fill:#f8fbff;stroke:#9bb5cf;stroke-width:2}.oval{fill:#eef6fc;stroke:#173f6b;stroke-width:2.5}.node{fill:#fff;stroke:#173f6b;stroke-width:2}.edge{fill:none;stroke:#355f86;stroke-width:2.5;marker-end:url(#arrow)}.bad{stroke:#b23a3a}.title{font:700 23px Arial,sans-serif;fill:#173f6b}.text{font:19px Arial,sans-serif;fill:#173f6b}.ok{font:700 19px Arial,sans-serif;fill:#24724b}.warn{font:700 19px Arial,sans-serif;fill:#a33232}
+    </style>
+  </defs>
+  <rect class="panel" x="18" y="30" width="370" height="470" rx="18"/>
+  <text class="title" x="203" y="68" text-anchor="middle">Relación R ⊆ A × B</text>
+  <ellipse class="oval" cx="112" cy="270" rx="58" ry="155"/><ellipse class="oval" cx="294" cy="270" rx="58" ry="155"/>
+  <text class="text" x="112" y="100" text-anchor="middle">A</text><text class="text" x="294" y="100" text-anchor="middle">B</text>
+  <circle class="node" cx="112" cy="180" r="17"/><circle class="node" cx="112" cy="270" r="17"/><circle class="node" cx="112" cy="360" r="17"/>
+  <circle class="node" cx="294" cy="180" r="17"/><circle class="node" cx="294" cy="270" r="17"/><circle class="node" cx="294" cy="360" r="17"/>
+  <text class="text" x="112" y="187" text-anchor="middle">1</text><text class="text" x="112" y="277" text-anchor="middle">2</text><text class="text" x="112" y="367" text-anchor="middle">3</text>
+  <text class="text" x="294" y="187" text-anchor="middle">a</text><text class="text" x="294" y="277" text-anchor="middle">b</text><text class="text" x="294" y="367" text-anchor="middle">c</text>
+  <path class="edge" d="M130 180 C185 150 230 150 276 180"/><path class="edge" d="M130 180 C190 215 225 250 276 270"/><path class="edge" d="M130 270 C190 270 225 270 276 270"/>
+  <text class="text" x="203" y="468" text-anchor="middle">Puede dejar elementos sin relacionar</text>
+
+  <rect class="panel" x="415" y="30" width="370" height="470" rx="18"/>
+  <text class="title" x="600" y="68" text-anchor="middle">Función f: A → B</text>
+  <ellipse class="oval" cx="509" cy="270" rx="58" ry="155"/><ellipse class="oval" cx="691" cy="270" rx="58" ry="155"/>
+  <text class="text" x="509" y="100" text-anchor="middle">A</text><text class="text" x="691" y="100" text-anchor="middle">B</text>
+  <circle class="node" cx="509" cy="180" r="17"/><circle class="node" cx="509" cy="270" r="17"/><circle class="node" cx="509" cy="360" r="17"/>
+  <circle class="node" cx="691" cy="180" r="17"/><circle class="node" cx="691" cy="270" r="17"/><circle class="node" cx="691" cy="360" r="17"/>
+  <text class="text" x="509" y="187" text-anchor="middle">1</text><text class="text" x="509" y="277" text-anchor="middle">2</text><text class="text" x="509" y="367" text-anchor="middle">3</text>
+  <text class="text" x="691" y="187" text-anchor="middle">a</text><text class="text" x="691" y="277" text-anchor="middle">b</text><text class="text" x="691" y="367" text-anchor="middle">c</text>
+  <path class="edge" d="M527 180 C585 180 625 180 673 180"/><path class="edge" d="M527 270 C585 240 625 205 673 180"/><path class="edge" d="M527 360 C585 360 625 360 673 360"/>
+  <text class="ok" x="600" y="448" text-anchor="middle">Cada entrada tiene</text><text class="ok" x="600" y="474" text-anchor="middle">una sola imagen</text>
+
+  <rect class="panel" x="812" y="30" width="370" height="470" rx="18"/>
+  <text class="title" x="997" y="68" text-anchor="middle">No es función</text>
+  <ellipse class="oval" cx="906" cy="270" rx="58" ry="155"/><ellipse class="oval" cx="1088" cy="270" rx="58" ry="155"/>
+  <text class="text" x="906" y="100" text-anchor="middle">A</text><text class="text" x="1088" y="100" text-anchor="middle">B</text>
+  <circle class="node" cx="906" cy="180" r="17"/><circle class="node" cx="906" cy="270" r="17"/><circle class="node" cx="906" cy="360" r="17"/>
+  <circle class="node" cx="1088" cy="180" r="17"/><circle class="node" cx="1088" cy="270" r="17"/><circle class="node" cx="1088" cy="360" r="17"/>
+  <text class="text" x="906" y="187" text-anchor="middle">1</text><text class="text" x="906" y="277" text-anchor="middle">2</text><text class="text" x="906" y="367" text-anchor="middle">3</text>
+  <text class="text" x="1088" y="187" text-anchor="middle">a</text><text class="text" x="1088" y="277" text-anchor="middle">b</text><text class="text" x="1088" y="367" text-anchor="middle">c</text>
+  <path class="edge bad" d="M924 180 C980 165 1020 165 1070 180"/><path class="edge bad" d="M924 180 C980 205 1020 245 1070 270"/><path class="edge" d="M924 270 C980 270 1020 270 1070 270"/>
+  <text class="warn" x="997" y="446" text-anchor="middle">1 tiene dos imágenes;</text><text class="warn" x="997" y="472" text-anchor="middle">3 no tiene ninguna</text>
+</svg>

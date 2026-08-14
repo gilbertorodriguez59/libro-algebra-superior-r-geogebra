@@ -1,0 +1,82 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - figures/**
+    - interactivos/**
+    - notebooks/**
+    - html/**
+
+book:
+  title: "Álgebra Superior con aplicaciones en R y GeoGebra"
+  subtitle: "Teoría, visualización y experimentación"
+  author: "Jesús Gilberto Rodríguez Escobedo"
+  cover-image: figures/portada-editorial.png
+  date: "2026-08-11"
+  output-file: "Algebra-Superior-R-GeoGebra-Capitulos-1-5"
+  chapters:
+    - index.qmd
+    - bienvenida.qmd
+    - creditos.qmd
+    - licencia.qmd
+    - prefacio.qmd
+    - agradecimientos.qmd
+    - presentacion.qmd
+    - introduccion.qmd
+    - notacion.qmd
+    - 01-logica-conjuntos.qmd
+    - 02-enteros-reales.qmd
+    - 03-numeros-complejos.qmd
+    - 04-polinomios.qmd
+    - 05-metodos-raices.qmd
+    - glosario.qmd
+    - indices.qmd
+    - references.qmd
+    - autor.qmd
+  page-footer:
+    center: "Licencia CC BY-NC-SA 4.0"
+  page-navigation: true
+  sidebar:
+    title: "Contenido del libro"
+    style: docked
+    collapse-level: 1
+  downloads: [pdf]
+  repo-url: https://github.com/gilbertorodriguez59/libro-algebra-superior-r-geogebra
+
+bibliography: references.bib
+lang: es
+number-depth: 2
+toc-depth: 2
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    html-math-method:
+      method: mathjax
+      url: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"
+    toc: true
+    toc-title: "En este capítulo"
+    code-copy: true
+    code-fold: false
+    anchor-sections: true
+    search: true
+    include-after-body: html/sidebar.html
+  pdf:
+    documentclass: scrreprt
+    pdf-engine: xelatex
+    include-in-header: header.tex
+    template-partials:
+      - before-body.tex
+    toc: true
+    colorlinks: true
+    keep-tex: false
+    fig-pos: H
+    lof: true
+    lot: true
+
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false

@@ -1,0 +1,12 @@
+# Prefacio {.unnumbered}
+
+Este libro surge de una experiencia reiterada en el aula: muchos estudiantes comprenden mejor una idea algebraica cuando pueden verla, modificarla y comprobarla, pero el aprendizaje pierde profundidad si la exploración computacional no se conecta con definiciones y razonamientos precisos.
+
+Por ello, cada tema busca articular cuatro momentos: desarrollo manual, traducción a R, exploración visual en GeoGebra e interpretación. El propósito no es enseñar comandos aislados, sino mostrar cómo una pregunta matemática se transforma en un procedimiento reproducible y en una representación que ayuda a pensar.
+
+El libro acompaña al volumen *Fundamentos Matemáticos del Álgebra Superior*. Mientras aquel profundiza en conceptos y demostraciones, éste concentra la experimentación y las aplicaciones. Juntos permiten pasar de la intuición a la formalización, y de la formalización a la comprobación computacional.
+
+Espero que los cuadernos, construcciones y actividades ayuden al lector a desarrollar autonomía: formular una conjetura, diseñar una prueba, detectar un error y explicar con claridad lo que observa.
+
+Jesús Gilberto Rodríguez Escobedo  
+San Luis Potosí, México

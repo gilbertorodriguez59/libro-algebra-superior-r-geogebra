@@ -1,0 +1,9 @@
+# Introducción {.unnumbered}
+
+El Álgebra Superior proporciona el lenguaje con el que se describen estructuras, operaciones, funciones y métodos de solución. R y GeoGebra permiten ampliar ese estudio: el primero facilita programar cálculos y comparar algoritmos; el segundo convierte relaciones y variaciones en objetos visuales manipulables.
+
+La integración de estas herramientas tiene sentido cuando se conserva el orden conceptual. Primero se identifica el problema y su notación; después se desarrolla un procedimiento manual; luego se implementa o visualiza; finalmente se interpreta el resultado y se contrasta con la teoría.
+
+Los cuadernos de R se diseñan para ejecutarse paso a paso. Las construcciones de GeoGebra permiten modificar valores y observar invariantes o cambios. En ambos casos, el lector debe registrar qué modifica, qué permanece y qué explicación matemática justifica el comportamiento observado.
+
+La versión web contiene los enlaces y laboratorios interactivos; el PDF conserva la exposición, el código y las indicaciones para acceder a los recursos descargables.

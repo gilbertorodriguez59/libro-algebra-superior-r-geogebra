@@ -1,0 +1,15 @@
+/.quarto/
+/_book/
+.Rhistory
+.RData
+.Rproj.user/
+*.tex
+!header.tex
+!before-body.tex
+
+**/*.quarto_ipynb
+
+# Material de evaluación excluido permanentemente
+**/Examen Parcial 1 Algebra Superior (13-09-2017).pdf
+**/Tarea 1.pdf
+**/Preimer Examen Algebra Superior (05-09-2024).pdf
