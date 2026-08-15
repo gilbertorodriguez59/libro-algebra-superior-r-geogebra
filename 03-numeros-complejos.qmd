@@ -593,6 +593,19 @@ Trabaje en este orden:
 - exp(1i * theta) simplifica la forma polar, De Moivre y las raíces.
 - Las comparaciones numéricas deben usar tolerancia.
 
+## Materiales complementarios del capítulo
+
+### Video del capítulo
+
+El enlace al video se incorporará cuando esté disponible.
+
+| Material | Descripción | Acceso |
+|---|---|---|
+| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
+| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
+| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
+| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-03-numeros-complejos-R.ipynb){target="_blank"} |
+
 ## Referencias del capítulo {.unnumbered .unlisted}
 
 La organización matemática sigue @uaslp2011 y @silvaLazo2007. La interpretación geométrica se apoya en @brownChurchill2014 y @needham1997. Las funciones y la sintaxis computacional corresponden a R base [@rCore2026].

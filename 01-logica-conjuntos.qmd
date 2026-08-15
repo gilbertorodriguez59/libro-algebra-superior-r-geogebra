@@ -863,6 +863,19 @@ Esta versión ya incorpora:
 
 R permite experimentar con conjuntos finitos, tablas de verdad, relaciones y funciones. Las comprobaciones exhaustivas son concluyentes cuando el dominio es finito y se han enumerado todos los casos. Para afirmaciones generales sobre conjuntos infinitos, la demostración matemática sigue siendo el fundamento.
 
+## Materiales complementarios del capítulo
+
+### Video del capítulo
+
+El enlace al video se incorporará cuando esté disponible.
+
+| Material | Descripción | Acceso |
+|---|---|---|
+| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
+| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
+| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
+| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-01-logica-conjuntos-R.ipynb){target="_blank"} |
+
 ## Referencias del capítulo {.unnumbered .unlisted}
 
 La secuencia temática sigue el programa de Álgebra Superior [@uaslp2011]. Los fundamentos se apoyan en @silvaLazo2007, @epp2011 y @rosen2019. La aplicación a compuertas y álgebra booleana adapta el capítulo 3 de @tocci2003. El código utiliza R base [@rCore2026].

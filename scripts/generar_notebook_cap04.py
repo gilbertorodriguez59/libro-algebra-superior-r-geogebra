@@ -97,7 +97,7 @@ Las comprobaciones siguientes deben terminar sin error. Una tolerancia pequeña 
 """))
 cells.append(code_cell("""
 stopifnot(
-  horner(c(2, -3, 0, 4, -5), 2) == 7,
+  horner(c(2, -3, 0, 4, -5), 2) == 11,
   identical(sumar_polinomios(c(2, -1, 3), c(1, 4, -1)), c(3, 3, 2)),
   identical(multiplicar_polinomios(c(2, -1, 3), c(1, 4, -1)), c(2, 7, -3, 13, -3)),
   division_sintetica(c(2, -3, -11, 6), 3)$residuo == 0,
