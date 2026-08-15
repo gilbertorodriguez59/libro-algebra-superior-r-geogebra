@@ -27,6 +27,19 @@ Al finalizar, el lector podrá:
 - evaluar potencias con exponentes enteros y racionales atendiendo a su dominio;
 - resolver e interpretar inecuaciones con valor absoluto.
 
+## Materiales complementarios del capítulo
+
+### Video del capítulo
+
+El enlace al video se incorporará cuando esté disponible.
+
+| Material | Descripción | Acceso |
+|---|---|---|
+| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
+| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
+| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
+| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-02-enteros-reales-R.ipynb){target="_blank"} |
+
 ## Propiedades de los números enteros {#sec-propiedades-enteros}
 
 ### Enteros y almacenamiento en R {.unnumbered .unlisted}
@@ -627,19 +640,6 @@ El informe debe distinguir con claridad qué resultados son cálculos, cuáles s
 ## Síntesis {.unnumbered .unlisted}
 
 R hace visibles los algoritmos y permite experimentar con numerosos ejemplos. El residuo implementa divisibilidad; Euclides reduce el problema del MCD; la criba y las divisiones sucesivas exploran primos; las aproximaciones muestran la diferencia entre un real matemático y su representación finita. La inducción, la unicidad de la factorización y las propiedades de completitud siguen requiriendo razonamiento matemático.
-
-## Materiales complementarios del capítulo
-
-### Video del capítulo
-
-El enlace al video se incorporará cuando esté disponible.
-
-| Material | Descripción | Acceso |
-|---|---|---|
-| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
-| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
-| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
-| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-02-enteros-reales-R.ipynb){target="_blank"} |
 
 ## Referencias del capítulo {.unnumbered .unlisted}
 

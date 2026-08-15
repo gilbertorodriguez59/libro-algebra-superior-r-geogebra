@@ -18,6 +18,19 @@ Al terminar, el estudiante podrá:
 - calcular potencias y todas las raíces de un complejo;
 - comprobar resultados numéricamente sin confundir una prueba experimental con una demostración.
 
+## Materiales complementarios del capítulo
+
+### Video del capítulo
+
+El enlace al video se incorporará cuando esté disponible.
+
+| Material | Descripción | Acceso |
+|---|---|---|
+| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
+| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
+| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
+| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-03-numeros-complejos-R.ipynb){target="_blank"} |
+
 ## Definición de $\mathbb R^2$ {#sec-r2}
 
 Un elemento de $\mathbb R^2$ es un par ordenado $(x,y)$. Puede representar un punto o el vector dirigido desde el origen hasta ese punto.
@@ -592,19 +605,6 @@ Trabaje en este orden:
 - El conjugado permite dividir y visualizar una reflexión.
 - exp(1i * theta) simplifica la forma polar, De Moivre y las raíces.
 - Las comparaciones numéricas deben usar tolerancia.
-
-## Materiales complementarios del capítulo
-
-### Video del capítulo
-
-El enlace al video se incorporará cuando esté disponible.
-
-| Material | Descripción | Acceso |
-|---|---|---|
-| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
-| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
-| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
-| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-03-numeros-complejos-R.ipynb){target="_blank"} |
 
 ## Referencias del capítulo {.unnumbered .unlisted}
 
