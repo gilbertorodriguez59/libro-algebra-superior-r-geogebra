@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra.">
 
 <title>3&nbsp; Números complejos – Álgebra Superior con aplicaciones en R y GeoGebra</title>
 <style>
@@ -98,10 +99,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -321,12 +322,13 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-r2" id="toc-sec-r2" class="nav-link active" data-scroll-target="#sec-r2"><span class="header-section-number">3.1</span> Definición de <span class="math inline">\(\mathbb R^2\)</span></a></li>
   <li><a href="#sec-cartesiana-polar" id="toc-sec-cartesiana-polar" class="nav-link" data-scroll-target="#sec-cartesiana-polar"><span class="header-section-number">3.2</span> Representaciones cartesiana y polar de vectores en <span class="math inline">\(\mathbb R^2\)</span></a></li>
-  <li><a href="#sec-modulo-argumento" id="toc-sec-modulo-argumento" class="nav-link" data-scroll-target="#sec-modulo-argumento"><span class="header-section-number">3.3</span> Módulo y argumento</a></li>
-  <li><a href="#sec-imaginarios-complejos" id="toc-sec-imaginarios-complejos" class="nav-link" data-scroll-target="#sec-imaginarios-complejos"><span class="header-section-number">3.4</span> Números imaginarios y complejos</a></li>
-  <li><a href="#sec-operaciones-complejos" id="toc-sec-operaciones-complejos" class="nav-link" data-scroll-target="#sec-operaciones-complejos"><span class="header-section-number">3.5</span> Operaciones básicas con números complejos</a></li>
-  <li><a href="#sec-conjugado" id="toc-sec-conjugado" class="nav-link" data-scroll-target="#sec-conjugado"><span class="header-section-number">3.6</span> Complejo conjugado y sus propiedades</a></li>
-  <li><a href="#sec-division-complejos" id="toc-sec-division-complejos" class="nav-link" data-scroll-target="#sec-division-complejos"><span class="header-section-number">3.7</span> División de complejos</a></li>
-  <li><a href="#sec-potencias-raices" id="toc-sec-potencias-raices" class="nav-link" data-scroll-target="#sec-potencias-raices"><span class="header-section-number">3.8</span> Potencias y raíces de complejos</a></li>
+  <li><a href="#sec-operaciones-r2" id="toc-sec-operaciones-r2" class="nav-link" data-scroll-target="#sec-operaciones-r2"><span class="header-section-number">3.3</span> Operaciones con vectores en <span class="math inline">\(\mathbb R^2\)</span></a></li>
+  <li><a href="#sec-modulo-argumento" id="toc-sec-modulo-argumento" class="nav-link" data-scroll-target="#sec-modulo-argumento"><span class="header-section-number">3.4</span> Módulo y argumento</a></li>
+  <li><a href="#sec-imaginarios-complejos" id="toc-sec-imaginarios-complejos" class="nav-link" data-scroll-target="#sec-imaginarios-complejos"><span class="header-section-number">3.5</span> Números imaginarios y complejos</a></li>
+  <li><a href="#sec-operaciones-complejos" id="toc-sec-operaciones-complejos" class="nav-link" data-scroll-target="#sec-operaciones-complejos"><span class="header-section-number">3.6</span> Operaciones básicas con números complejos</a></li>
+  <li><a href="#sec-conjugado" id="toc-sec-conjugado" class="nav-link" data-scroll-target="#sec-conjugado"><span class="header-section-number">3.7</span> Complejo conjugado y sus propiedades</a></li>
+  <li><a href="#sec-division-complejos" id="toc-sec-division-complejos" class="nav-link" data-scroll-target="#sec-division-complejos"><span class="header-section-number">3.8</span> División de complejos</a></li>
+  <li><a href="#sec-potencias-raices" id="toc-sec-potencias-raices" class="nav-link" data-scroll-target="#sec-potencias-raices"><span class="header-section-number">3.9</span> Potencias y raíces de complejos</a></li>
   </ul>
 </nav>
     </div>
@@ -437,10 +439,10 @@ r=\sqrt{x^2+y^2},\qquad
 \theta=\operatorname{atan2}(y,x).
 \]</span></p>
 <p>La función de dos argumentos atan2(y, x) identifica el cuadrante correcto. La función atan(y/x) no lo hace en todos los casos.</p>
-<div id="fig-plano-complejo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-plano-complejo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Punto en el plano complejo con sus coordenadas cartesianas, módulo y argumento.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-plano-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/plano-complejo.png" class="img-fluid figure-img" style="width:78.0%">
+<img src="figures/plano-complejo.png" class="img-fluid figure-img" style="width:78.0%" alt="Punto en el plano complejo con sus coordenadas cartesianas, módulo y argumento.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plano-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3.1: Del par cartesiano <span class="math inline">\((3,4)\)</span> a radio <span class="math inline">\(5\)</span> y argumento <span class="math inline">\(\theta\)</span>.
@@ -475,103 +477,102 @@ Figura&nbsp;3.1: Del par cartesiano <span class="math inline">\((3,4)\)</span> a
 <section id="construcción-equivalente-en-geogebra" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="construcción-equivalente-en-geogebra">Construcción equivalente en GeoGebra</h3>
 <p>En la vista gráfica pueden escribirse las órdenes:</p>
-<p><sub></sub>~text O = (0, 0) Z = (3, 4) u = Vector(O, Z) r = Length(u) theta = Angle((1, 0), u)</p>
-<pre><code>
-Al arrastrar $Z$, GeoGebra actualiza simultáneamente sus coordenadas, módulo y argumento.
-
-::: {.content-visible when-format="html"}
-### Laboratorio: coordenadas y argumento {.unnumbered .unlisted}
-
-&lt;iframe class="interactive-frame complex-plane" src="interactivos/plano-complejo.html" title="Laboratorio de representación cartesiana y polar"&gt;&lt;/iframe&gt;
-
-[Abrir el laboratorio en una pestaña nueva](interactivos/plano-complejo.html){.btn .btn-primary}
-:::
-
-## Operaciones con vectores en $\mathbb R^2$ {#sec-operaciones-r2}
-
-Sean $\mathbf u=(u_1,u_2)$ y $\mathbf v=(v_1,v_2)$. La suma, resta, multiplicación por escalar y producto punto se calculan componente a componente.
-
-```{.r}
-u &lt;- c(2, 1)
-v &lt;- c(-1, 2)
-
-list(
-  suma = u + v,
-  resta = u - v,
-  triple_u = 3 * u,
-  producto_punto = sum(u * v)
-)</code></pre>
-<p>Como sum(u * v) vale cero, los vectores son perpendiculares.</p>
+<pre class="text"><code>O = (0, 0)
+Z = (3, 4)
+u = Vector(O, Z)
+r = Length(u)
+theta = Angle((1, 0), u)</code></pre>
+<p>Al arrastrar <span class="math inline">\(Z\)</span>, GeoGebra actualiza simultáneamente sus coordenadas, módulo y argumento.</p>
 </section>
+<section id="laboratorio-web-coordenadas-y-argumento" class="level3 unnumbered unlisted">
+<h3 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-web-coordenadas-y-argumento">Laboratorio web: coordenadas y argumento</h3>
+<iframe class="interactive-frame complex-plane" src="interactivos/plano-complejo.html" title="Laboratorio web de representación cartesiana y polar">
+</iframe>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/plano-complejo.html" class="btn btn-primary">Abrir el laboratorio web en una pestaña nueva</a></p>
+</section>
+</section>
+<section id="sec-operaciones-r2" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="sec-operaciones-r2"><span class="header-section-number">3.3</span> Operaciones con vectores en <span class="math inline">\(\mathbb R^2\)</span></h2>
+<p>Sean <span class="math inline">\(\mathbf u=(u_1,u_2)\)</span> y <span class="math inline">\(\mathbf v=(v_1,v_2)\)</span>. La suma, resta, multiplicación por escalar y producto punto se calculan componente a componente.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">suma =</span> u <span class="sc">+</span> v,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">resta =</span> u <span class="sc">-</span> v,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">triple_u =</span> <span class="dv">3</span> <span class="sc">*</span> u,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto_punto =</span> <span class="fu">sum</span>(u <span class="sc">*</span> v)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Como sum(u * v) vale cero, los vectores son perpendiculares.</p>
 <section id="regla-del-paralelogramo" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="regla-del-paralelogramo">Regla del paralelogramo</h3>
-<div id="fig-suma-vectores" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-suma-vectores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Regla del paralelogramo para la suma de dos vectores en el plano.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-suma-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/suma-vectores.png" class="img-fluid figure-img" style="width:78.0%">
+<img src="figures/suma-vectores.png" class="img-fluid figure-img" style="width:78.0%" alt="Regla del paralelogramo para la suma de dos vectores en el plano.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-suma-vectores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3.2: La diagonal representa <span class="math inline">\(\mathbf u+\mathbf v\)</span>.
 </figcaption>
 </figure>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dibujar_suma <span class="ot">&lt;-</span> <span class="cf">function</span>(u, v) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> u <span class="sc">+</span> v</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  limites_x <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(<span class="dv">0</span>, u[<span class="dv">1</span>], v[<span class="dv">1</span>], s[<span class="dv">1</span>])) <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  limites_y <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(<span class="dv">0</span>, u[<span class="dv">2</span>], v[<span class="dv">2</span>], s[<span class="dv">2</span>])) <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlim =</span> limites_x, <span class="at">ylim =</span> limites_y,</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">xlab =</span> <span class="st">"x"</span>, <span class="at">ylab =</span> <span class="st">"y"</span>,</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="st">"Suma vectorial"</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray75"</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, u[<span class="dv">1</span>], u[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, v[<span class="dv">1</span>], v[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#2c7a5a"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#b58a2a"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(u[<span class="dv">1</span>], u[<span class="dv">2</span>], s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray45"</span>)</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(v[<span class="dv">1</span>], v[<span class="dv">2</span>], s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray45"</span>)</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="fu">dibujar_suma</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dibujar_suma <span class="ot">&lt;-</span> <span class="cf">function</span>(u, v) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> u <span class="sc">+</span> v</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  limites_x <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(<span class="dv">0</span>, u[<span class="dv">1</span>], v[<span class="dv">1</span>], s[<span class="dv">1</span>])) <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  limites_y <span class="ot">&lt;-</span> <span class="fu">range</span>(<span class="fu">c</span>(<span class="dv">0</span>, u[<span class="dv">2</span>], v[<span class="dv">2</span>], s[<span class="dv">2</span>])) <span class="sc">+</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="at">type =</span> <span class="st">"n"</span>, <span class="at">xlim =</span> limites_x, <span class="at">ylim =</span> limites_y,</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">xlab =</span> <span class="st">"x"</span>, <span class="at">ylab =</span> <span class="st">"y"</span>,</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">main =</span> <span class="st">"Suma vectorial"</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray75"</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, u[<span class="dv">1</span>], u[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, v[<span class="dv">1</span>], v[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#2c7a5a"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrows</span>(<span class="dv">0</span>, <span class="dv">0</span>, s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">length =</span> <span class="fl">0.09</span>,</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#b58a2a"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(u[<span class="dv">1</span>], u[<span class="dv">2</span>], s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray45"</span>)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">segments</span>(v[<span class="dv">1</span>], v[<span class="dv">2</span>], s[<span class="dv">1</span>], s[<span class="dv">2</span>], <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">col =</span> <span class="st">"gray45"</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="fu">dibujar_suma</span>(<span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>), <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="verificación-de-propiedades" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="verificación-de-propiedades">Verificación de propiedades</h3>
 <p>Los cálculos con punto flotante deben compararse con tolerancia.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>iguales_vectores <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, <span class="at">tol =</span> <span class="fl">1e-12</span>) {</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(a) <span class="sc">==</span> <span class="fu">length</span>(b) <span class="sc">&amp;&amp;</span> <span class="fu">all</span>(<span class="fu">abs</span>(a <span class="sc">-</span> b) <span class="sc">&lt;</span> tol)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">4</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">conmutativa =</span> <span class="fu">iguales_vectores</span>(u <span class="sc">+</span> v, v <span class="sc">+</span> u),</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">asociativa =</span> <span class="fu">iguales_vectores</span>((u <span class="sc">+</span> v) <span class="sc">+</span> w, u <span class="sc">+</span> (v <span class="sc">+</span> w)),</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">distributiva =</span> <span class="fu">iguales_vectores</span>(lambda <span class="sc">*</span> (u <span class="sc">+</span> v),</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>                                  lambda <span class="sc">*</span> u <span class="sc">+</span> lambda <span class="sc">*</span> v)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>iguales_vectores <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, <span class="at">tol =</span> <span class="fl">1e-12</span>) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(a) <span class="sc">==</span> <span class="fu">length</span>(b) <span class="sc">&amp;&amp;</span> <span class="fu">all</span>(<span class="fu">abs</span>(a <span class="sc">-</span> b) <span class="sc">&lt;</span> tol)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="dv">4</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">conmutativa =</span> <span class="fu">iguales_vectores</span>(u <span class="sc">+</span> v, v <span class="sc">+</span> u),</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">asociativa =</span> <span class="fu">iguales_vectores</span>((u <span class="sc">+</span> v) <span class="sc">+</span> w, u <span class="sc">+</span> (v <span class="sc">+</span> w)),</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">distributiva =</span> <span class="fu">iguales_vectores</span>(lambda <span class="sc">*</span> (u <span class="sc">+</span> v),</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                                  lambda <span class="sc">*</span> u <span class="sc">+</span> lambda <span class="sc">*</span> v)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="sec-modulo-argumento" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="sec-modulo-argumento"><span class="header-section-number">3.3</span> Módulo y argumento</h2>
+<section id="sec-modulo-argumento" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-modulo-argumento"><span class="header-section-number">3.4</span> Módulo y argumento</h2>
 <p>En el plano complejo se escribe</p>
 <p><span class="math display">\[
 |z|=\sqrt{x^2+y^2},\qquad \arg(z)=\theta.
 \]</span></p>
 <p>R calcula estas cantidades con Mod() y Arg().</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">modulo =</span> <span class="fu">Mod</span>(z),</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_rad =</span> <span class="fu">Arg</span>(z),</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_grados =</span> <span class="fu">Arg</span>(z) <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">modulo =</span> <span class="fu">Mod</span>(z),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_rad =</span> <span class="fu">Arg</span>(z),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_grados =</span> <span class="fu">Arg</span>(z) <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="argumento-principal-y-ángulos-equivalentes" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="argumento-principal-y-ángulos-equivalentes">Argumento principal y ángulos equivalentes</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>z_cuadrantes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span>i)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> z_cuadrantes,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_rad =</span> <span class="fu">Arg</span>(z_cuadrantes),</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_grados =</span> <span class="fu">Arg</span>(z_cuadrantes) <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>z_cuadrantes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span>i)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> z_cuadrantes,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_rad =</span> <span class="fu">Arg</span>(z_cuadrantes),</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento_grados =</span> <span class="fu">Arg</span>(z_cuadrantes) <span class="sc">*</span> <span class="dv">180</span> <span class="sc">/</span> pi</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Arg() devuelve el argumento principal en el intervalo <span class="math inline">\((-\pi,\pi]\)</span>. A cada resultado se le puede sumar <span class="math inline">\(2k\pi\)</span> sin cambiar el punto.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="El argumento de cero">
 <div class="callout-header d-flex align-content-center">
@@ -589,15 +590,15 @@ Figura&nbsp;3.2: La diagonal representa <span class="math inline">\(\mathbf u+\m
 </section>
 <section id="desigualdad-triangular-experimento-reproducible" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="desigualdad-triangular-experimento-reproducible">Desigualdad triangular: experimento reproducible</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">314</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">imaginary =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>))</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">imaginary =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>))</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>holgura <span class="ot">&lt;-</span> <span class="fu">Mod</span>(z) <span class="sc">+</span> <span class="fu">Mod</span>(w) <span class="sc">-</span> <span class="fu">Mod</span>(z <span class="sc">+</span> w)</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(holgura)</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(holgura <span class="sc">&gt;=</span> <span class="sc">-</span><span class="fl">1e-12</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">314</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">imaginary =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>))</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>),</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">imaginary =</span> <span class="fu">runif</span>(<span class="dv">1000</span>, <span class="sc">-</span><span class="dv">5</span>, <span class="dv">5</span>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>holgura <span class="ot">&lt;-</span> <span class="fu">Mod</span>(z) <span class="sc">+</span> <span class="fu">Mod</span>(w) <span class="sc">-</span> <span class="fu">Mod</span>(z <span class="sc">+</span> w)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(holgura)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(holgura <span class="sc">&gt;=</span> <span class="sc">-</span><span class="fl">1e-12</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-warning callout-titled" title="Alcance de la comprobación">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -613,50 +614,50 @@ Figura&nbsp;3.2: La diagonal representa <span class="math inline">\(\mathbf u+\m
 </div>
 </section>
 </section>
-<section id="sec-imaginarios-complejos" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="sec-imaginarios-complejos"><span class="header-section-number">3.4</span> Números imaginarios y complejos</h2>
+<section id="sec-imaginarios-complejos" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="sec-imaginarios-complejos"><span class="header-section-number">3.5</span> Números imaginarios y complejos</h2>
 <p>R reconoce un literal complejo cuando aparece el sufijo i. Debe escribirse 1i, no solamente i, a menos que antes se haya creado un objeto con ese nombre.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(z)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">parte_real =</span> <span class="fu">Re</span>(z),</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">parte_imaginaria =</span> <span class="fu">Im</span>(z),</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">Mod</span>(z),</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento =</span> <span class="fu">Arg</span>(z)</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">typeof</span>(z)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">parte_real =</span> <span class="fu">Re</span>(z),</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">parte_imaginaria =</span> <span class="fu">Im</span>(z),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">Mod</span>(z),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento =</span> <span class="fu">Arg</span>(z)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="construcción-desde-componentes" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="construcción-desde-componentes">Construcción desde componentes</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>z1 <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>z2 <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="dv">3</span>, <span class="at">imaginary =</span> <span class="dv">4</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>z3 <span class="ot">&lt;-</span> <span class="fu">as.complex</span>(<span class="dv">3</span>) <span class="sc">+</span> <span class="dv">4</span>i</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">z1 =</span> z1, <span class="at">z2 =</span> z2, <span class="at">z3 =</span> z3)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(z1, z2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>z1 <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>z2 <span class="ot">&lt;-</span> <span class="fu">complex</span>(<span class="at">real =</span> <span class="dv">3</span>, <span class="at">imaginary =</span> <span class="dv">4</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>z3 <span class="ot">&lt;-</span> <span class="fu">as.complex</span>(<span class="dv">3</span>) <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">z1 =</span> z1, <span class="at">z2 =</span> z2, <span class="at">z3 =</span> z3)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="fu">identical</span>(z1, z2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="vector-de-números-complejos" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="vector-de-números-complejos">Vector de números complejos</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>zs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="sc">-</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span>i, <span class="dv">3</span> <span class="sc">-</span> <span class="dv">1</span>i)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>tabla_z <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> zs,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">real =</span> <span class="fu">Re</span>(zs),</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">imaginaria =</span> <span class="fu">Im</span>(zs),</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">Mod</span>(zs),</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento =</span> <span class="fu">Arg</span>(zs)</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>tabla_z</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>zs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">1</span>i, <span class="sc">-</span><span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="sc">-</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">2</span>i, <span class="dv">3</span> <span class="sc">-</span> <span class="dv">1</span>i)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>tabla_z <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> zs,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">real =</span> <span class="fu">Re</span>(zs),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">imaginaria =</span> <span class="fu">Im</span>(zs),</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">Mod</span>(zs),</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">argumento =</span> <span class="fu">Arg</span>(zs)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>tabla_z</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="plano-complejo-en-r" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="plano-complejo-en-r">Plano complejo en R</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">Re</span>(zs), <span class="fu">Im</span>(zs), <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">19</span>,</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Parte real"</span>, <span class="at">ylab =</span> <span class="st">"Parte imaginaria"</span>,</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">main =</span> <span class="st">"Números complejos"</span>)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray65"</span>)</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fu">Re</span>(zs), <span class="fu">Im</span>(zs), <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"z"</span>, <span class="fu">seq_along</span>(zs)), <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">Re</span>(zs), <span class="fu">Im</span>(zs), <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Parte real"</span>, <span class="at">ylab =</span> <span class="st">"Parte imaginaria"</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">main =</span> <span class="st">"Números complejos"</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray65"</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fu">Re</span>(zs), <span class="fu">Im</span>(zs), <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"z"</span>, <span class="fu">seq_along</span>(zs)), <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="sec-operaciones-complejos" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="sec-operaciones-complejos"><span class="header-section-number">3.5</span> Operaciones básicas con números complejos</h2>
+<section id="sec-operaciones-complejos" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="sec-operaciones-complejos"><span class="header-section-number">3.6</span> Operaciones básicas con números complejos</h2>
 <section id="solución-manual" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="solución-manual">Solución manual</h3>
 <p>Para <span class="math inline">\(z=3-2i\)</span> y <span class="math inline">\(w=1+4i\)</span>:</p>
@@ -669,26 +670,26 @@ zw=(3)(1)-(-2)(4)+\bigl((3)(4)+(-2)(1)\bigr)i=11+10i.
 </section>
 <section id="comprobación-en-r" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="comprobación-en-r">Comprobación en R</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">2</span>i</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">suma =</span> z <span class="sc">+</span> w,</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">resta =</span> z <span class="sc">-</span> w,</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> z <span class="sc">*</span> w)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">-</span> <span class="dv">2</span>i</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">suma =</span> z <span class="sc">+</span> w,</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">resta =</span> z <span class="sc">-</span> w,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> z <span class="sc">*</span> w)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="multiplicar-significa-rotar-y-escalar" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="multiplicar-significa-rotar-y-escalar">Multiplicar significa rotar y escalar</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>resumen_producto <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  producto <span class="ot">&lt;-</span> z <span class="sc">*</span> w</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cantidad =</span> <span class="fu">c</span>(<span class="st">"z"</span>, <span class="st">"w"</span>, <span class="st">"z*w"</span>),</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">modulo =</span> <span class="fu">c</span>(<span class="fu">Mod</span>(z), <span class="fu">Mod</span>(w), <span class="fu">Mod</span>(producto)),</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">argumento =</span> <span class="fu">c</span>(<span class="fu">Arg</span>(z), <span class="fu">Arg</span>(w), <span class="fu">Arg</span>(producto))</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="fu">resumen_producto</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">6</span>),</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>                 <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">3</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>resumen_producto <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  producto <span class="ot">&lt;-</span> z <span class="sc">*</span> w</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">cantidad =</span> <span class="fu">c</span>(<span class="st">"z"</span>, <span class="st">"w"</span>, <span class="st">"z*w"</span>),</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">modulo =</span> <span class="fu">c</span>(<span class="fu">Mod</span>(z), <span class="fu">Mod</span>(w), <span class="fu">Mod</span>(producto)),</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">argumento =</span> <span class="fu">c</span>(<span class="fu">Arg</span>(z), <span class="fu">Arg</span>(w), <span class="fu">Arg</span>(producto))</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">resumen_producto</span>(<span class="dv">2</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">6</span>),</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>                 <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> pi <span class="sc">/</span> <span class="dv">3</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>La tabla permite comprobar</p>
 <p><span class="math display">\[
 |zw|=|z||w|,
@@ -700,54 +701,54 @@ zw=(3)(1)-(-2)(4)+\bigl((3)(4)+(-2)(1)\bigr)i=11+10i.
 <h3 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-producto-como-transformación">Laboratorio: producto como transformación</h3>
 <iframe class="interactive-frame complex-product" src="interactivos/multiplicacion-compleja.html" title="Laboratorio de multiplicación compleja">
 </iframe>
-<p><a href="interactivos/multiplicacion-compleja.html" class="btn btn-primary">Abrir el laboratorio en una pestaña nueva</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/multiplicacion-compleja.html" class="btn btn-primary">Abrir el laboratorio web en una pestaña nueva</a></p>
 </section>
 </section>
-<section id="sec-conjugado" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="sec-conjugado"><span class="header-section-number">3.6</span> Complejo conjugado y sus propiedades</h2>
+<section id="sec-conjugado" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="sec-conjugado"><span class="header-section-number">3.7</span> Complejo conjugado y sus propiedades</h2>
 <p>El conjugado de <span class="math inline">\(z=a+bi\)</span> es <span class="math inline">\(\overline z=a-bi\)</span>. R lo calcula con Conj().</p>
-<div id="fig-conjugado-complejo" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-conjugado-complejo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Un número complejo y su conjugado aparecen reflejados respecto del eje real.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-conjugado-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/conjugado-complejo.png" class="img-fluid figure-img" style="width:72.0%">
+<img src="figures/conjugado-complejo.png" class="img-fluid figure-img" style="width:72.0%" alt="Un número complejo y su conjugado aparecen reflejados respecto del eje real.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-conjugado-complejo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3.3: Conjugar refleja un punto respecto del eje real.
 </figcaption>
 </figure>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> z,</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">conjugado =</span> <span class="fu">Conj</span>(z),</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> z <span class="sc">*</span> <span class="fu">Conj</span>(z),</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo_cuadrado =</span> <span class="fu">Mod</span>(z)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">z =</span> z,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">conjugado =</span> <span class="fu">Conj</span>(z),</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> z <span class="sc">*</span> <span class="fu">Conj</span>(z),</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo_cuadrado =</span> <span class="fu">Mod</span>(z)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <section id="comprobaciones-vectorizadas" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="comprobaciones-vectorizadas">Comprobaciones vectorizadas</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span>i, <span class="sc">-</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i, <span class="dv">2</span> <span class="sc">-</span> <span class="dv">5</span>i)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span> <span class="sc">-</span> <span class="dv">1</span>i, <span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="sc">-</span><span class="dv">4</span> <span class="sc">+</span> <span class="dv">2</span>i)</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">involucion =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(<span class="fu">Conj</span>(z)) <span class="sc">==</span> z),</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">suma =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(z <span class="sc">+</span> w) <span class="sc">==</span> <span class="fu">Conj</span>(z) <span class="sc">+</span> <span class="fu">Conj</span>(w)),</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(z <span class="sc">*</span> w) <span class="sc">==</span> <span class="fu">Conj</span>(z) <span class="sc">*</span> <span class="fu">Conj</span>(w)),</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">all</span>(<span class="fu">abs</span>(<span class="fu">Mod</span>(<span class="fu">Conj</span>(z)) <span class="sc">-</span> <span class="fu">Mod</span>(z)) <span class="sc">&lt;</span> <span class="fl">1e-12</span>)</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span>i, <span class="sc">-</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">4</span>i, <span class="dv">2</span> <span class="sc">-</span> <span class="dv">5</span>i)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span> <span class="sc">-</span> <span class="dv">1</span>i, <span class="dv">1</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="sc">-</span><span class="dv">4</span> <span class="sc">+</span> <span class="dv">2</span>i)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">involucion =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(<span class="fu">Conj</span>(z)) <span class="sc">==</span> z),</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">suma =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(z <span class="sc">+</span> w) <span class="sc">==</span> <span class="fu">Conj</span>(z) <span class="sc">+</span> <span class="fu">Conj</span>(w)),</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">producto =</span> <span class="fu">all</span>(<span class="fu">Conj</span>(z <span class="sc">*</span> w) <span class="sc">==</span> <span class="fu">Conj</span>(z) <span class="sc">*</span> <span class="fu">Conj</span>(w)),</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">modulo =</span> <span class="fu">all</span>(<span class="fu">abs</span>(<span class="fu">Mod</span>(<span class="fu">Conj</span>(z)) <span class="sc">-</span> <span class="fu">Mod</span>(z)) <span class="sc">&lt;</span> <span class="fl">1e-12</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="recuperar-las-partes-real-e-imaginaria" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="recuperar-las-partes-real-e-imaginaria">Recuperar las partes real e imaginaria</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">7</span>i</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">real_por_conjugado =</span> (z <span class="sc">+</span> <span class="fu">Conj</span>(z)) <span class="sc">/</span> <span class="dv">2</span>,</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">imaginaria_por_conjugado =</span> (z <span class="sc">-</span> <span class="fu">Conj</span>(z)) <span class="sc">/</span> (<span class="dv">2</span>i)</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">7</span>i</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">real_por_conjugado =</span> (z <span class="sc">+</span> <span class="fu">Conj</span>(z)) <span class="sc">/</span> <span class="dv">2</span>,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">imaginaria_por_conjugado =</span> (z <span class="sc">-</span> <span class="fu">Conj</span>(z)) <span class="sc">/</span> (<span class="dv">2</span>i)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>El segundo resultado es el número real <span class="math inline">\(7\)</span>, no <span class="math inline">\(7i\)</span>, porque la fórmula calcula <span class="math inline">\(\operatorname{Im}(z)\)</span>.</p>
 </section>
 </section>
-<section id="sec-division-complejos" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="sec-division-complejos"><span class="header-section-number">3.7</span> División de complejos</h2>
+<section id="sec-division-complejos" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="sec-division-complejos"><span class="header-section-number">3.8</span> División de complejos</h2>
 <section id="procedimiento-manual" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="procedimiento-manual">Procedimiento manual</h3>
 <p><span class="math display">\[
@@ -758,52 +759,56 @@ Figura&nbsp;3.3: Conjugar refleja un punto respecto del eje real.
 </section>
 <section id="cálculo-y-verificación-en-r" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="cálculo-y-verificación-en-r">Cálculo y verificación en R</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>cociente <span class="ot">&lt;-</span> z <span class="sc">/</span> w</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">cociente =</span> cociente,</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comprobacion =</span> cociente <span class="sc">*</span> w,</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">error =</span> <span class="fu">Mod</span>(cociente <span class="sc">*</span> w <span class="sc">-</span> z))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>cociente <span class="ot">&lt;-</span> z <span class="sc">/</span> w</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">cociente =</span> cociente,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">comprobacion =</span> cociente <span class="sc">*</span> w,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">error =</span> <span class="fu">Mod</span>(cociente <span class="sc">*</span> w <span class="sc">-</span> z))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="programar-la-fórmula-cartesiana" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="programar-la-fórmula-cartesiana">Programar la fórmula cartesiana</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>dividir_complejos <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">Mod</span>(w) <span class="sc">==</span> <span class="dv">0</span>)) <span class="fu">stop</span>(<span class="st">"No se puede dividir entre cero"</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  z <span class="sc">*</span> <span class="fu">Conj</span>(w) <span class="sc">/</span> <span class="fu">Mod</span>(w)<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dividir_complejos</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>dividir_complejos <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(<span class="fu">Mod</span>(w) <span class="sc">==</span> <span class="dv">0</span>)) <span class="fu">stop</span>(<span class="st">"No se puede dividir entre cero"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  z <span class="sc">*</span> <span class="fu">Conj</span>(w) <span class="sc">/</span> <span class="fu">Mod</span>(w)<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="fu">dividir_complejos</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="comparación-polar" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="comparación-polar">Comparación polar</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>resumen_cociente <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  q <span class="ot">&lt;-</span> z <span class="sc">/</span> w</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">calculo =</span> <span class="fu">c</span>(<span class="st">"|z|/|w|"</span>, <span class="st">"|z/w|"</span>,</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Arg(z)-Arg(w)"</span>, <span class="st">"Arg(z/w)"</span>),</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor =</span> <span class="fu">c</span>(<span class="fu">Mod</span>(z) <span class="sc">/</span> <span class="fu">Mod</span>(w), <span class="fu">Mod</span>(q),</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>              <span class="fu">Arg</span>(z) <span class="sc">-</span> <span class="fu">Arg</span>(w), <span class="fu">Arg</span>(q))</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="fu">resumen_cociente</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>resumen_cociente <span class="ot">&lt;-</span> <span class="cf">function</span>(z, w) {</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  q <span class="ot">&lt;-</span> z <span class="sc">/</span> w</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">calculo =</span> <span class="fu">c</span>(<span class="st">"|z|/|w|"</span>, <span class="st">"|z/w|"</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Arg(z)-Arg(w)"</span>, <span class="st">"Arg(z/w)"</span>),</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">valor =</span> <span class="fu">c</span>(<span class="fu">Mod</span>(z) <span class="sc">/</span> <span class="fu">Mod</span>(w), <span class="fu">Mod</span>(q),</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>              <span class="fu">Arg</span>(z) <span class="sc">-</span> <span class="fu">Arg</span>(w), <span class="fu">Arg</span>(q))</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="fu">resumen_cociente</span>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">3</span>i, <span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span>i)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Los dos argumentos pueden diferir en un múltiplo de <span class="math inline">\(2\pi\)</span> y representar la misma dirección.</p>
 </section>
 </section>
-<section id="sec-potencias-raices" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="sec-potencias-raices"><span class="header-section-number">3.8</span> Potencias y raíces de complejos</h2>
+<section id="sec-potencias-raices" class="level2" data-number="3.9">
+<h2 data-number="3.9" class="anchored" data-anchor-id="sec-potencias-raices"><span class="header-section-number">3.9</span> Potencias y raíces de complejos</h2>
 <section id="potencias-con-de-moivre" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="potencias-con-de-moivre">Potencias con De Moivre</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>potencia_demoivre <span class="ot">&lt;-</span> <span class="cf">function</span>(z, n) {</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (z <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> n <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"Cero no admite exponentes negativos"</span>)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Mod</span>(z)<span class="sc">^</span>n <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> n <span class="sc">*</span> <span class="fu">Arg</span>(z))</span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">R =</span> z<span class="sc">^</span><span class="dv">8</span>,</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">De_Moivre =</span> <span class="fu">potencia_demoivre</span>(z, <span class="dv">8</span>),</span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">diferencia =</span> <span class="fu">Mod</span>(z<span class="sc">^</span><span class="dv">8</span> <span class="sc">-</span> <span class="fu">potencia_demoivre</span>(z, <span class="dv">8</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>potencia_demoivre <span class="ot">&lt;-</span> <span class="cf">function</span>(z, n) {</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(n) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(n) <span class="sc">||</span> <span class="fu">abs</span>(n <span class="sc">-</span> <span class="fu">round</span>(n)) <span class="sc">&gt;</span> <span class="fu">sqrt</span>(.Machine<span class="sc">$</span>double.eps)) {</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"n debe ser un entero finito"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(<span class="fu">round</span>(n))</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (z <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;&amp;</span> n <span class="sc">&lt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"Cero no admite exponentes negativos"</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Mod</span>(z)<span class="sc">^</span>n <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> n <span class="sc">*</span> <span class="fu">Arg</span>(z))</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span>i</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="at">R =</span> z<span class="sc">^</span><span class="dv">8</span>,</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">De_Moivre =</span> <span class="fu">potencia_demoivre</span>(z, <span class="dv">8</span>),</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">diferencia =</span> <span class="fu">Mod</span>(z<span class="sc">^</span><span class="dv">8</span> <span class="sc">-</span> <span class="fu">potencia_demoivre</span>(z, <span class="dv">8</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>R utiliza la identidad de Euler</p>
 <p><span class="math display">\[
 e^{i\theta}=\cos\theta+i\sin\theta.
@@ -812,50 +817,50 @@ e^{i\theta}=\cos\theta+i\sin\theta.
 </section>
 <section id="todas-las-raíces-n-ésimas" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="todas-las-raíces-n-ésimas">Todas las raíces <span class="math inline">\(n\)</span>-ésimas</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>raices_n <span class="ot">&lt;-</span> <span class="cf">function</span>(z, n) {</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(z) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> <span class="fu">length</span>(n) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> n <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">||</span> n <span class="sc">!=</span> <span class="fu">floor</span>(n)) {</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Use un complejo y un entero positivo n"</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (z <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="dv">0</span> <span class="sc">+</span> <span class="dv">0</span>i)</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Mod</span>(z)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> n) <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> (<span class="fu">Arg</span>(z) <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> k) <span class="sc">/</span> n)</span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>raices_cubicas <span class="ot">&lt;-</span> <span class="fu">raices_n</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">3</span>)</span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>raices_cubicas</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>raices_cubicas<span class="sc">^</span><span class="dv">3</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>raices_n <span class="ot">&lt;-</span> <span class="cf">function</span>(z, n) {</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(z) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> <span class="fu">length</span>(n) <span class="sc">!=</span> <span class="dv">1</span>L <span class="sc">||</span> n <span class="sc">&lt;</span> <span class="dv">1</span> <span class="sc">||</span> n <span class="sc">!=</span> <span class="fu">floor</span>(n)) {</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Use un complejo y un entero positivo n"</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (z <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="dv">0</span> <span class="sc">+</span> <span class="dv">0</span>i)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Mod</span>(z)<span class="sc">^</span>(<span class="dv">1</span> <span class="sc">/</span> n) <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span>i <span class="sc">*</span> (<span class="fu">Arg</span>(z) <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> k) <span class="sc">/</span> n)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>raices_cubicas <span class="ot">&lt;-</span> <span class="fu">raices_n</span>(<span class="sc">-</span><span class="dv">8</span>, <span class="dv">3</span>)</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>raices_cubicas</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>raices_cubicas<span class="sc">^</span><span class="dv">3</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="raíces-de-la-unidad" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="raíces-de-la-unidad">Raíces de la unidad</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>raices_unidad <span class="ot">&lt;-</span> <span class="cf">function</span>(n) <span class="fu">exp</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> <span class="dv">1</span>i <span class="sc">*</span> (<span class="dv">0</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">/</span> n)</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>omega <span class="ot">&lt;-</span> <span class="fu">raices_unidad</span>(<span class="dv">6</span>)</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(omega, <span class="dv">10</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-raices-unidad" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>raices_unidad <span class="ot">&lt;-</span> <span class="cf">function</span>(n) <span class="fu">exp</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> <span class="dv">1</span>i <span class="sc">*</span> (<span class="dv">0</span><span class="sc">:</span>(n <span class="sc">-</span> <span class="dv">1</span>)) <span class="sc">/</span> n)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>omega <span class="ot">&lt;-</span> <span class="fu">raices_unidad</span>(<span class="dv">6</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(omega, <span class="dv">10</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="fig-raices-unidad" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seis raíces de la unidad distribuidas uniformemente sobre la circunferencia unitaria.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-raices-unidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/raices-unidad.png" class="img-fluid figure-img" style="width:72.0%">
+<img src="figures/raices-unidad.png" class="img-fluid figure-img" style="width:72.0%" alt="Seis raíces de la unidad distribuidas uniformemente sobre la circunferencia unitaria.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raices-unidad-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;3.4: Las raíces sextas de la unidad son los vértices de un hexágono regular.
 </figcaption>
 </figure>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega), <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">19</span>,</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>),</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Parte real"</span>, <span class="at">ylab =</span> <span class="st">"Parte imaginaria"</span>,</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">main =</span> <span class="st">"Raíces sextas de la unidad"</span>)</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray75"</span>)</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="fu">segments</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega),</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>         <span class="fu">Re</span>(<span class="fu">c</span>(omega[<span class="sc">-</span><span class="dv">1</span>], omega[<span class="dv">1</span>])), <span class="fu">Im</span>(<span class="fu">c</span>(omega[<span class="sc">-</span><span class="dv">1</span>], omega[<span class="dv">1</span>])),</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#2c7a5a"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega), <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"k="</span>, <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega), <span class="at">asp =</span> <span class="dv">1</span>, <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>),</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Parte real"</span>, <span class="at">ylab =</span> <span class="st">"Parte imaginaria"</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"#1769a6"</span>, <span class="at">main =</span> <span class="st">"Raíces sextas de la unidad"</span>)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">v =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray75"</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">segments</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega),</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>         <span class="fu">Re</span>(<span class="fu">c</span>(omega[<span class="sc">-</span><span class="dv">1</span>], omega[<span class="dv">1</span>])), <span class="fu">Im</span>(<span class="fu">c</span>(omega[<span class="sc">-</span><span class="dv">1</span>], omega[<span class="dv">1</span>])),</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"#2c7a5a"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fu">Re</span>(omega), <span class="fu">Im</span>(omega), <span class="at">labels =</span> <span class="fu">paste0</span>(<span class="st">"k="</span>, <span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">pos =</span> <span class="dv">3</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="laboratorio-raíces-de-la-unidad" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-raíces-de-la-unidad">Laboratorio: raíces de la unidad</h3>
 <iframe class="interactive-frame unity-roots" src="interactivos/raices-unidad.html" title="Laboratorio de raíces de la unidad">
 </iframe>
-<p><a href="interactivos/raices-unidad.html" class="btn btn-primary">Abrir el laboratorio en una pestaña nueva</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/raices-unidad.html" class="btn btn-primary">Abrir el laboratorio web en una pestaña nueva</a></p>
 </section>
 </section>
 <section id="laboratorio-del-capítulo" class="level2 unnumbered unlisted">
@@ -870,7 +875,7 @@ Figura&nbsp;3.4: Las raíces sextas de la unidad son los vértices de un hexágo
 <li>compruebe en R que cada punto elevado a <span class="math inline">\(n\)</span> produce <span class="math inline">\(1\)</span> dentro de la tolerancia numérica.</li>
 </ol>
 <p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-03-numeros-complejos-R.ipynb" class="btn btn-primary">Abrir el cuaderno completo del capítulo 3 en Google Colab</a></p>
-<p><a href="notebooks/capitulo-03-numeros-complejos-R.ipynb" class="btn">Descargar el cuaderno</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-03-numeros-complejos-R.ipynb" class="btn">Descargar el cuaderno</a></p>
 </section>
 <section id="ejercicios-con-r" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios-con-r">Ejercicios con R</h2>

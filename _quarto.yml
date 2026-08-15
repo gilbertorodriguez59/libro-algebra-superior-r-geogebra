@@ -10,9 +10,11 @@ project:
 book:
   title: "Álgebra Superior con aplicaciones en R y GeoGebra"
   subtitle: "Teoría, visualización y experimentación"
+  description: "Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra."
   author: "Jesús Gilberto Rodríguez Escobedo"
   cover-image: figures/portada-editorial.png
-  date: "2026-08-11"
+  cover-image-alt: "Portada de Álgebra Superior con aplicaciones en R y GeoGebra"
+  date: "2026-08-14"
   output-file: "Algebra-Superior-R-GeoGebra-Capitulos-1-5"
   chapters:
     - index.qmd

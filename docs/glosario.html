@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra.">
 
 <title>Glosario – Álgebra Superior con aplicaciones en R y GeoGebra</title>
 <style>
@@ -44,10 +45,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -76,6 +77,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -257,16 +287,36 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><strong>Algoritmo.</strong> Secuencia finita y ordenada de instrucciones para resolver un problema.</p>
+<p><strong>Argumento principal.</strong> Ángulo elegido en un intervalo convencional, normalmente <span class="math inline">\((-\pi,\pi]\)</span>, para describir la dirección de un número complejo no nulo.</p>
+<p><strong>Bisección.</strong> Método que conserva repetidamente la mitad de un intervalo donde una función continua cambia de signo.</p>
 <p><strong>Biyectiva.</strong> Función simultáneamente inyectiva y suprayectiva.</p>
+<p><strong>Cardinalidad.</strong> Número de elementos de un conjunto finito o medida de tamaño para conjuntos más generales.</p>
+<p><strong>Codominio.</strong> Conjunto declarado de valores de salida posibles de una función.</p>
+<p><strong>Complejo conjugado.</strong> Para <span class="math inline">\(z=a+bi\)</span>, número <span class="math inline">\(\overline z=a-bi\)</span> obtenido al cambiar el signo de la parte imaginaria.</p>
+<p><strong>Conjunto.</strong> Colección bien definida de objetos llamados elementos.</p>
 <p><strong>Construcción dinámica.</strong> Recurso de GeoGebra cuyos objetos dependen de parámetros que pueden modificarse interactivamente.</p>
+<p><strong>Cota de Cauchy.</strong> Límite superior que encierra, en módulo, todas las raíces de un polinomio.</p>
 <p><strong>Cuaderno.</strong> Documento ejecutable que combina explicación, fórmulas, código y resultados.</p>
+<p><strong>Divisibilidad.</strong> Relación <span class="math inline">\(a\mid b\)</span> que indica que existe un entero <span class="math inline">\(k\)</span> tal que <span class="math inline">\(b=ak\)</span>.</p>
 <p><strong>Dominio.</strong> Conjunto de entradas para las que se define una función.</p>
+<p><strong>Factorización.</strong> Escritura de una expresión, entero o polinomio como producto de factores más simples.</p>
 <p><strong>Función.</strong> Correspondencia que asigna a cada elemento del dominio exactamente una imagen.</p>
+<p><strong>Horner, método de.</strong> Esquema anidado para evaluar un polinomio y, en algunas variantes, su derivada con menos operaciones.</p>
+<p><strong>Inyectiva.</strong> Función en la que entradas distintas tienen imágenes distintas.</p>
 <p><strong>Iteración.</strong> Repetición de un cálculo que produce aproximaciones sucesivas.</p>
+<p><strong>Módulo.</strong> Distancia de un número complejo al origen; para <span class="math inline">\(z=a+bi\)</span>, <span class="math inline">\(|z|=\sqrt{a^2+b^2}\)</span>.</p>
+<p><strong>Multiplicidad.</strong> Número de veces que un factor <span class="math inline">\(x-\alpha\)</span> aparece en la factorización de un polinomio.</p>
+<p><strong>Método de Newton.</strong> Iteración que usa la tangente, <span class="math inline">\(x_{n+1}=x_n-f(x_n)/f'(x_n)\)</span>, para aproximar una raíz.</p>
+<p><strong>Número complejo.</strong> Número de la forma <span class="math inline">\(a+bi\)</span>, donde <span class="math inline">\(a,b\in\mathbb R\)</span> e <span class="math inline">\(i^2=-1\)</span>.</p>
 <p><strong>Objeto de R.</strong> Estructura identificada por un nombre que almacena datos, funciones o resultados.</p>
 <p><strong>Polinomio.</strong> Suma finita de términos con potencias enteras no negativas de una variable.</p>
 <p><strong>Raíz.</strong> Valor que hace cero una función o un polinomio.</p>
+<p><strong>Relación.</strong> Subconjunto de un producto cartesiano.</p>
 <p><strong>Reproducibilidad.</strong> Posibilidad de repetir un análisis con los mismos datos, instrucciones y parámetros.</p>
+<p><strong>Residuo.</strong> Resto de una división entera o polinomial; en aproximación numérica también puede significar el valor <span class="math inline">\(|f(x)|\)</span>.</p>
+<p><strong>Secante, método de la.</strong> Iteración que aproxima una raíz mediante la recta que pasa por dos puntos de la gráfica.</p>
+<p><strong>Sucesión de Sturm.</strong> Lista de polinomios construida mediante residuos que permite contar exactamente raíces reales distintas en un intervalo.</p>
+<p><strong>Suprayectiva.</strong> Función cuya imagen coincide con todo el codominio.</p>
 <p><strong>Tolerancia.</strong> Umbral usado como criterio de parada en un método numérico.</p>
 <p><strong>Visualización dinámica.</strong> Representación gráfica que permite modificar parámetros y observar inmediatamente sus efectos.</p>
 

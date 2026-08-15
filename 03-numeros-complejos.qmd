@@ -92,7 +92,7 @@ $$
 
 La función de dos argumentos atan2(y, x) identifica el cuadrante correcto. La función atan(y/x) no lo hace en todos los casos.
 
-![Del par cartesiano $(3,4)$ a radio $5$ y argumento $\theta$.](figures/plano-complejo.png){#fig-plano-complejo width=78%}
+![Del par cartesiano $(3,4)$ a radio $5$ y argumento $\theta$.](figures/plano-complejo.png){#fig-plano-complejo width=78% fig-alt="Punto en el plano complejo con sus coordenadas cartesianas, módulo y argumento."}
 
 ### Conversión cartesiana a polar {.unnumbered .unlisted}
 
@@ -133,16 +133,16 @@ Z = (3, 4)
 u = Vector(O, Z)
 r = Length(u)
 theta = Angle((1, 0), u)
-```
+~~~
 
 Al arrastrar $Z$, GeoGebra actualiza simultáneamente sus coordenadas, módulo y argumento.
 
 ::: {.content-visible when-format="html"}
-### Laboratorio: coordenadas y argumento {.unnumbered .unlisted}
+### Laboratorio web: coordenadas y argumento {.unnumbered .unlisted}
 
-<iframe class="interactive-frame complex-plane" src="interactivos/plano-complejo.html" title="Laboratorio de representación cartesiana y polar"></iframe>
+<iframe class="interactive-frame complex-plane" src="interactivos/plano-complejo.html" title="Laboratorio web de representación cartesiana y polar"></iframe>
 
-[Abrir el laboratorio en una pestaña nueva](interactivos/plano-complejo.html){.btn .btn-primary}
+[Abrir el laboratorio web en una pestaña nueva](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/plano-complejo.html){.btn .btn-primary}
 :::
 
 ## Operaciones con vectores en $\mathbb R^2$ {#sec-operaciones-r2}
@@ -165,7 +165,7 @@ Como sum(u * v) vale cero, los vectores son perpendiculares.
 
 ### Regla del paralelogramo {.unnumbered .unlisted}
 
-![La diagonal representa $\mathbf u+\mathbf v$.](figures/suma-vectores.png){#fig-suma-vectores width=78%}
+![La diagonal representa $\mathbf u+\mathbf v$.](figures/suma-vectores.png){#fig-suma-vectores width=78% fig-alt="Regla del paralelogramo para la suma de dos vectores en el plano."}
 
 ```{.r}
 dibujar_suma <- function(u, v) {
@@ -366,14 +366,14 @@ $$
 
 <iframe class="interactive-frame complex-product" src="interactivos/multiplicacion-compleja.html" title="Laboratorio de multiplicación compleja"></iframe>
 
-[Abrir el laboratorio en una pestaña nueva](interactivos/multiplicacion-compleja.html){.btn .btn-primary}
+[Abrir el laboratorio web en una pestaña nueva](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/multiplicacion-compleja.html){.btn .btn-primary}
 :::
 
 ## Complejo conjugado y sus propiedades {#sec-conjugado}
 
 El conjugado de $z=a+bi$ es $\overline z=a-bi$. R lo calcula con Conj().
 
-![Conjugar refleja un punto respecto del eje real.](figures/conjugado-complejo.png){#fig-conjugado-complejo width=72%}
+![Conjugar refleja un punto respecto del eje real.](figures/conjugado-complejo.png){#fig-conjugado-complejo width=72% fig-alt="Un número complejo y su conjugado aparecen reflejados respecto del eje real."}
 
 ```{.r}
 z <- 3 + 4i
@@ -469,6 +469,10 @@ Los dos argumentos pueden diferir en un múltiplo de $2\pi$ y representar la mis
 
 ```{.r}
 potencia_demoivre <- function(z, n) {
+  if (length(n) != 1L || !is.finite(n) || abs(n - round(n)) > sqrt(.Machine$double.eps)) {
+    stop("n debe ser un entero finito")
+  }
+  n <- as.integer(round(n))
   if (z == 0 && n < 0) stop("Cero no admite exponentes negativos")
   Mod(z)^n * exp(1i * n * Arg(z))
 }
@@ -513,7 +517,7 @@ omega <- raices_unidad(6)
 round(omega, 10)
 ```
 
-![Las raíces sextas de la unidad son los vértices de un hexágono regular.](figures/raices-unidad.png){#fig-raices-unidad width=72%}
+![Las raíces sextas de la unidad son los vértices de un hexágono regular.](figures/raices-unidad.png){#fig-raices-unidad width=72% fig-alt="Seis raíces de la unidad distribuidas uniformemente sobre la circunferencia unitaria."}
 
 ```{.r}
 plot(Re(omega), Im(omega), asp = 1, pch = 19,
@@ -532,7 +536,7 @@ text(Re(omega), Im(omega), labels = paste0("k=", 0:5), pos = 3)
 
 <iframe class="interactive-frame unity-roots" src="interactivos/raices-unidad.html" title="Laboratorio de raíces de la unidad"></iframe>
 
-[Abrir el laboratorio en una pestaña nueva](interactivos/raices-unidad.html){.btn .btn-primary}
+[Abrir el laboratorio web en una pestaña nueva](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/raices-unidad.html){.btn .btn-primary}
 :::
 
 ## Laboratorio del capítulo {.unnumbered .unlisted}
@@ -549,7 +553,7 @@ Trabaje en este orden:
 ::: {.content-visible when-format="html"}
 [Abrir el cuaderno completo del capítulo 3 en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-03-numeros-complejos-R.ipynb){.btn .btn-primary}
 
-[Descargar el cuaderno](notebooks/capitulo-03-numeros-complejos-R.ipynb){.btn}
+[Descargar el cuaderno](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-03-numeros-complejos-R.ipynb){.btn}
 :::
 
 ## Ejercicios con R {.unnumbered .unlisted}

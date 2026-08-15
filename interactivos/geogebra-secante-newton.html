@@ -25,10 +25,11 @@
     </label>
   </div>
   <div class="toolbar">
-    <button id="download" type="button">Descargar .ggb</button>
+    <button id="download" type="button">Descargar estado actual .ggb</button>
+    <a class="download-link" href="geogebra/secante-newton.ggb" download>Descargar construcción base .ggb</a>
     <div id="status" class="status" aria-live="polite">Cargando GeoGebra...</div>
   </div>
-  <div class="error">No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
+  <div class="error" role="alert" hidden>No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
   <div id="ggb-element" aria-label="Comparación interactiva de secante y Newton en GeoGebra"></div>
   <p class="help">Actividad: acerque x₀ y x₁ hasta que la secante casi sea tangente; después mueva Newton cerca de un punto con derivada cero.</p>
 </main>

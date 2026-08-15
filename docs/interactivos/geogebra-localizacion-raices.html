@@ -28,10 +28,11 @@
     </label>
   </div>
   <div class="toolbar">
-    <button id="download" type="button">Descargar .ggb</button>
+    <button id="download" type="button">Descargar estado actual .ggb</button>
+    <a class="download-link" href="geogebra/localizacion-acotacion-raices.ggb" download>Descargar construcción base .ggb</a>
     <div id="status" class="status" aria-live="polite">Cargando GeoGebra...</div>
   </div>
-  <div class="error">No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
+  <div class="error" role="alert" hidden>No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
   <div id="ggb-element" aria-label="Localización y acotación de raíces en GeoGebra"></div>
   <p class="help">Actividad: compare la cota con las intersecciones reales y construya un polinomio con una raíz de multiplicidad par.</p>
 </main>

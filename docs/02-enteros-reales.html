@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra.">
 
 <title>2&nbsp; Números enteros y reales – Álgebra Superior con aplicaciones en R y GeoGebra</title>
 <style>
@@ -98,10 +99,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -368,7 +369,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>El cuaderno sigue las secciones 2.1-2.8, incluye algoritmos de divisibilidad y primos, experimentos sobre precisión numérica y gráficas de exponentes y valor absoluto.</p>
-<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-02-enteros-reales-R.ipynb" class="btn btn-primary" target="_blank">Abrir en Google Colab</a> <a href="notebooks/capitulo-02-enteros-reales-R.ipynb" class="btn" target="_blank">Descargar el cuaderno</a></p>
+<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-02-enteros-reales-R.ipynb" class="btn btn-primary" target="_blank">Abrir en Google Colab</a> <a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-02-enteros-reales-R.ipynb" class="btn" target="_blank">Descargar el cuaderno</a></p>
 </div>
 </div>
 <section id="objetivos" class="level3 unnumbered unlisted">
@@ -458,10 +459,10 @@ window.Quarto = {
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">diferencia =</span> lado_izquierdo <span class="sc">-</span> lado_derecho</span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Que la columna <code>diferencia</code> sea cero sugiere la identidad, pero la demostración inductiva explica por qué se conserva al pasar de <span class="math inline">\(n\)</span> a <span class="math inline">\(n+1\)</span>.</p>
-<div id="fig-induccion-impares" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-induccion-impares" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Arreglos de puntos muestran que la suma de números impares consecutivos forma cuadrados perfectos.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-induccion-impares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/induccion-impares.png" class="img-fluid figure-img" style="width:88.0%">
+<img src="figures/induccion-impares.png" class="img-fluid figure-img" style="width:88.0%" alt="Arreglos de puntos muestran que la suma de números impares consecutivos forma cuadrados perfectos.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-induccion-impares-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.1: La suma acumulada de impares coincide con los cuadrados perfectos.
@@ -488,7 +489,7 @@ Figura&nbsp;2.1: La suma acumulada de impares coincide con los cuadrados perfect
 <section id="interactivo-construir-el-siguiente-cuadrado" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-construir-el-siguiente-cuadrado">Interactivo: construir el siguiente cuadrado</h3>
 <p>Seleccione <span class="math inline">\(n\)</span> y observe cómo <span class="math inline">\(n^2\)</span> puntos, más una franja de <span class="math inline">\(2n+1\)</span> puntos, forman <span class="math inline">\((n+1)^2\)</span>.</p>
-<p><a href="interactivos/induccion-impares.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de inducción</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/induccion-impares.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de inducción</a></p>
 <iframe class="interactive-frame induction" src="interactivos/induccion-impares.html" title="Construcción interactiva de la suma de números impares" loading="lazy">
 </iframe>
 </section>
@@ -558,10 +559,10 @@ Figura&nbsp;2.1: La suma acumulada de impares coincide con los cuadrados perfect
 <span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> <span class="fu">euclides</span>(<span class="dv">252</span>L, <span class="dv">198</span>L)</span>
 <span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>resultado<span class="sc">$</span>pasos</span>
 <span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>resultado<span class="sc">$</span>mcd</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-algoritmo-euclides" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-algoritmo-euclides" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema de las divisiones sucesivas del algoritmo de Euclides hasta obtener el máximo común divisor.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-algoritmo-euclides-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/algoritmo-euclides.png" class="img-fluid figure-img" style="width:88.0%">
+<img src="figures/algoritmo-euclides.png" class="img-fluid figure-img" style="width:88.0%" alt="Esquema de las divisiones sucesivas del algoritmo de Euclides hasta obtener el máximo común divisor.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-algoritmo-euclides-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.2: Los pares sucesivos del algoritmo de Euclides terminan en el máximo común divisor.
@@ -598,7 +599,7 @@ Figura&nbsp;2.2: Los pares sucesivos del algoritmo de Euclides terminan en el m�
 <section id="interactivo-residuos-sucesivos" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-residuos-sucesivos">Interactivo: residuos sucesivos</h3>
 <p>Introduzca dos enteros positivos. El laboratorio muestra cada división y señala el último residuo no nulo.</p>
-<p><a href="interactivos/algoritmo-euclides.html" class="btn btn-primary" target="_blank">Abrir el algoritmo de Euclides</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/algoritmo-euclides.html" class="btn btn-primary" target="_blank">Abrir el algoritmo de Euclides</a></p>
 <iframe class="interactive-frame euclid" src="interactivos/algoritmo-euclides.html" title="Algoritmo de Euclides interactivo" loading="lazy">
 </iframe>
 </section>
@@ -664,10 +665,10 @@ Figura&nbsp;2.2: Los pares sucesivos del algoritmo de Euclides terminan en el m�
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">factorizar</span>(<span class="dv">756</span>L)</span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">factorizar</span>(<span class="dv">756</span>L))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-arbol-factorizacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-arbol-factorizacion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Árbol que descompone 756 paso a paso hasta obtener únicamente factores primos.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-arbol-factorizacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/arbol-factorizacion.png" class="img-fluid figure-img" style="width:82.0%">
+<img src="figures/arbol-factorizacion.png" class="img-fluid figure-img" style="width:82.0%" alt="Árbol que descompone 756 paso a paso hasta obtener únicamente factores primos.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-arbol-factorizacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.3: Cadena de factorización y descomposición prima de <span class="math inline">\(756\)</span>.
@@ -730,10 +731,10 @@ Figura&nbsp;2.3: Cadena de factorización y descomposición prima de <span class
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>)</span>
 <span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"gray50"</span>)</span>
 <span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(valores, <span class="fu">rep</span>(<span class="fl">0.12</span>, <span class="fu">length</span>(valores)), etiquetas, <span class="at">cex =</span> <span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-jerarquia-numeros" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-jerarquia-numeros" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama de inclusión de los números naturales, enteros, racionales y reales.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-jerarquia-numeros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/jerarquia-numeros.png" class="img-fluid figure-img" style="width:92.0%">
+<img src="figures/jerarquia-numeros.png" class="img-fluid figure-img" style="width:92.0%" alt="Diagrama de inclusión de los números naturales, enteros, racionales y reales.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-jerarquia-numeros-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.4: Los naturales, enteros, racionales e irracionales se sitúan dentro de los reales.
@@ -856,10 +857,10 @@ Figura&nbsp;2.4: Los naturales, enteros, racionales e irracionales se sitúan de
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">7</span>)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">2</span></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> x, <span class="at">centro =</span> a, <span class="at">distancia =</span> <span class="fu">abs</span>(x <span class="sc">-</span> a))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-valor-absoluto" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-valor-absoluto" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Recta numérica que interpreta el valor absoluto como distancia a un punto central.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-valor-absoluto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/valor-absoluto.png" class="img-fluid figure-img" style="width:90.0%">
+<img src="figures/valor-absoluto.png" class="img-fluid figure-img" style="width:90.0%" alt="Recta numérica que interpreta el valor absoluto como distancia a un punto central.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-valor-absoluto-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;2.5: La desigualdad <span class="math inline">\(|x-a|\le r\)</span> selecciona un intervalo centrado en <span class="math inline">\(a\)</span>.
@@ -899,7 +900,7 @@ Figura&nbsp;2.5: La desigualdad <span class="math inline">\(|x-a|\le r\)</span> 
 <section id="interactivo-centro-radio-e-intervalo" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-centro-radio-e-intervalo">Interactivo: centro, radio e intervalo</h3>
 <p>Cambie el centro <span class="math inline">\(a\)</span>, el radio <span class="math inline">\(r\)</span> y el tipo de desigualdad. La recta numérica muestra si la solución es un intervalo central o dos regiones exteriores.</p>
-<p><a href="interactivos/valor-absoluto.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de valor absoluto</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/valor-absoluto.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de valor absoluto</a></p>
 <iframe class="interactive-frame absolute" src="interactivos/valor-absoluto.html" title="Laboratorio interactivo de valor absoluto" loading="lazy">
 </iframe>
 </section>

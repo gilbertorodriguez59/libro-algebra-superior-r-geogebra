@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra.">
 
 <title>4&nbsp; Polinomios – Álgebra Superior con aplicaciones en R y GeoGebra</title>
 <style>
@@ -98,10 +99,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -536,10 +537,10 @@ q(x)=2x^2-x-3,
 2x^4-3x^3+4x-5
 =(x^2-x+1)(2x^2-x-3)+(2x-2).
 \]</span></p>
-<div id="fig-division-polinomios" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-division-polinomios" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Esquema del algoritmo de división polinomial con dividendo, divisor, cociente y residuo.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-division-polinomios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/division-polinomios.png" class="img-fluid figure-img" style="width:88.0%">
+<img src="figures/division-polinomios.png" class="img-fluid figure-img" style="width:88.0%" alt="Esquema del algoritmo de división polinomial con dividendo, divisor, cociente y residuo.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-division-polinomios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.1: La división polinomial produce un cociente y un residuo de grado menor que el divisor.
@@ -694,10 +695,10 @@ p(\alpha)=p'(\alpha)=\cdots=p^{(m-1)}(\alpha)=0.
 p(x)=(x-1)^3(x+2)^2.
 \]</span></p>
 <p>La raíz <span class="math inline">\(1\)</span> tiene multiplicidad <span class="math inline">\(3\)</span> y la raíz <span class="math inline">\(-2\)</span> multiplicidad <span class="math inline">\(2\)</span>. En la gráfica, una raíz de multiplicidad par toca el eje y regresa; una raíz de multiplicidad impar lo cruza. Para multiplicidades impares mayores que uno, el cruce se aplana.</p>
-<div id="fig-multiplicidad-raices" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-multiplicidad-raices" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres gráficas comparan el comportamiento local de raíces simples, dobles y triples.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-multiplicidad-raices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/multiplicidad-raices.png" class="img-fluid figure-img" style="width:88.0%">
+<img src="figures/multiplicidad-raices.png" class="img-fluid figure-img" style="width:88.0%" alt="Tres gráficas comparan el comportamiento local de raíces simples, dobles y triples.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-multiplicidad-raices-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.2: Comportamiento local de raíces de multiplicidad uno, dos y tres.
@@ -834,10 +835,10 @@ p(\overline z)=\overline{0}=0.
 <p><span class="math display">\[
 [x-(2+i)][x-(2-i)]=x^2-4x+5.
 \]</span></p>
-<div id="fig-raices-conjugadas" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-raices-conjugadas" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dos raíces complejas conjugadas aparecen simétricas respecto del eje real.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-raices-conjugadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/raices-conjugadas.png" class="img-fluid figure-img" style="width:76.0%">
+<img src="figures/raices-conjugadas.png" class="img-fluid figure-img" style="width:76.0%" alt="Dos raíces complejas conjugadas aparecen simétricas respecto del eje real.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raices-conjugadas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.3: Las raíces no reales de un polinomio real son simétricas respecto del eje real.
@@ -894,10 +895,10 @@ R(x)=\frac{x^2-1}{x-1}=x+1,
 <li>Si <span class="math inline">\(\deg p=\deg q\)</span>, la asíntota horizontal es el cociente de coeficientes principales.</li>
 <li>Si <span class="math inline">\(\deg p\geq\deg q\)</span>, la división polinomial separa una parte polinomial y una fracción propia.</li>
 </ul>
-<div id="fig-funcion-racional" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-funcion-racional" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Dos gráficas ilustran un hueco removible y una asíntota vertical en funciones racionales.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-funcion-racional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/funcion-racional.png" class="img-fluid figure-img" style="width:88.0%">
+<img src="figures/funcion-racional.png" class="img-fluid figure-img" style="width:88.0%" alt="Dos gráficas ilustran un hueco removible y una asíntota vertical en funciones racionales.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-funcion-racional-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;4.4: Una función racional puede presentar huecos y asíntotas determinadas por sus factores.
@@ -1068,10 +1069,6 @@ R(x)=2x+2+\frac{3}{x-1}.
 <li>obtenga, cuando corresponda, una descomposición en fracciones parciales;</li>
 <li>acompañe los cálculos con una representación gráfica y conclusiones.</li>
 </ol>
-</section>
-<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
-<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
-<p>La secuencia temática sigue la Unidad 4 del programa de Álgebra Superior <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en <span class="citation" data-cites="silvaLazo2007">Silva y Lazo (<a href="references.html#ref-silvaLazo2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="cardenas1999">Cárdenas et&nbsp;al. (<a href="references.html#ref-cardenas1999" role="doc-biblioref">1999</a>)</span> y <span class="citation" data-cites="cox2015">Cox et&nbsp;al. (<a href="references.html#ref-cox2015" role="doc-biblioref">2015</a>)</span>.</p>
 </section>
 <section id="laboratorio-computacional-con-r-y-geogebra" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-computacional-con-r-y-geogebra">Laboratorio computacional con R y GeoGebra</h2>
@@ -1254,8 +1251,12 @@ R(x)=2x+2+\frac{3}{x-1}.
 <section id="cuaderno-completo-del-capítulo-4" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="cuaderno-completo-del-capítulo-4">Cuaderno completo del capítulo 4</h2>
 <p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-04-polinomios-R.ipynb" class="btn btn-primary" target="_blank">Abrir el cuaderno en Google Colab</a></p>
-<p><a href="notebooks/capitulo-04-polinomios-R.ipynb" class="btn">Descargar el cuaderno</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-04-polinomios-R.ipynb" class="btn">Descargar el cuaderno</a></p>
 <p>El cuaderno reúne las funciones anteriores, ejemplos adicionales, gráficas y una autoevaluación computacional. Todo el código principal usa R base.</p>
+</section>
+<section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
+<p>La secuencia temática sigue la Unidad 4 del programa de Álgebra Superior <span class="citation" data-cites="uaslp2011">(<a href="references.html#ref-uaslp2011" role="doc-biblioref">Universidad Autónoma de San Luis Potosí, Facultad de Ciencias 2011</a>)</span>. Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en <span class="citation" data-cites="silvaLazo2007">Silva y Lazo (<a href="references.html#ref-silvaLazo2007" role="doc-biblioref">2007</a>)</span>, <span class="citation" data-cites="cardenas1999">Cárdenas et&nbsp;al. (<a href="references.html#ref-cardenas1999" role="doc-biblioref">1999</a>)</span> y <span class="citation" data-cites="cox2015">Cox et&nbsp;al. (<a href="references.html#ref-cox2015" role="doc-biblioref">2015</a>)</span>. La integración de construcciones dinámicas utiliza la documentación oficial de GeoGebra <span class="citation" data-cites="geogebraEmbedding2026 geogebraAPI2026">(<a href="references.html#ref-geogebraEmbedding2026" role="doc-biblioref">GeoGebra 2026b</a>, <a href="references.html#ref-geogebraAPI2026" role="doc-biblioref">2026a</a>)</span>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -1264,6 +1265,12 @@ Cárdenas, Humberto, Emilio Lluis, Francisco Raggi, y Francisco Tomás. 1999. <e
 </div>
 <div id="ref-cox2015" class="csl-entry" role="listitem">
 Cox, David A., John Little, y Donal O’Shea. 2015. <em>Ideals, Varieties, and Algorithms</em>. 4.ª ed. Springer.
+</div>
+<div id="ref-geogebraAPI2026" class="csl-entry" role="listitem">
+GeoGebra. 2026a. <span>«GeoGebra Apps API»</span>. <a href="https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_API/">https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_API/</a>.
+</div>
+<div id="ref-geogebraEmbedding2026" class="csl-entry" role="listitem">
+GeoGebra. 2026b. <span>«GeoGebra Apps Embedding»</span>. <a href="https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_Embedding/">https://geogebra.github.io/docs/reference/en/GeoGebra_Apps_Embedding/</a>.
 </div>
 <div id="ref-silvaLazo2007" class="csl-entry" role="listitem">
 Silva, Juan Manuel, y Adriana Lazo. 2007. <em>Fundamentos de Matemáticas: Álgebra, Trigonometría, Geometría Analítica y Cálculo</em>. 7.ª ed. Limusa.

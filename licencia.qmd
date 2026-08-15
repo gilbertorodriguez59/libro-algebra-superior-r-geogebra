@@ -1,6 +1,6 @@
 # Licencia y uso académico {.unnumbered}
 
-Esta obra se distribuye bajo la licencia **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**.
+Esta obra se distribuye bajo la licencia [**Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es).
 
 Puede copiarse, redistribuirse y adaptarse con fines académicos siempre que se reconozca la autoría, no exista uso comercial sin autorización y las obras derivadas se compartan bajo la misma licencia.
 

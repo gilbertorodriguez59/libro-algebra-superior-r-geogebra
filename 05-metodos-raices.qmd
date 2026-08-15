@@ -119,7 +119,7 @@ tabla_malla <- data.frame(
 head(tabla_malla)
 ```
 
-![La cota global contiene todas las raíces; la malla y los cambios de signo producen intervalos de búsqueda más pequeños.](figures/acotacion-separacion-raices.png){#fig-acotacion-separacion width=90%}
+![La cota global contiene todas las raíces; la malla y los cambios de signo producen intervalos de búsqueda más pequeños.](figures/acotacion-separacion-raices.png){#fig-acotacion-separacion width=90% fig-alt="Gráfica de un polinomio con cota global e intervalos que separan sus raíces reales."}
 
 ::: {.content-visible when-format="html"}
 <iframe class="interactive-frame" src="interactivos/geogebra-localizacion-raices.html" title="GeoGebra: localización y acotación de raíces" loading="lazy"></iframe>
@@ -133,6 +133,8 @@ head(tabla_malla)
 2. Compare la cota $[-R,R]$ con las raíces visibles.
 3. Cambie el tamaño de la malla y registre qué intervalos presentan cambio de signo.
 4. Construya un ejemplo con una raíz de multiplicidad par y explique por qué no aparece un cambio de signo.
+
+[Descargar la construcción base `.ggb`](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/geogebra/localizacion-acotacion-raices.ggb){.btn .btn-outline-primary}
 
 ## Separación de raíces {#sec-separacion-raices}
 
@@ -171,7 +173,13 @@ separar_por_signo(p4, -8, 8, paso = 0.4)
 
 Un cambio de signo demuestra existencia, no unicidad. Si $p'$ no cambia de signo y no se anula en $[a,b]$, entonces $p$ es estrictamente monótona y la raíz es única.
 
-Para $f(x)=x^3-x-1$:
+Para $f(x)=x^3-x-1$ se tiene, exactamente,
+
+$$
+f'(x)=3x^2-1\geq 2\qquad\text{para }x\in[1,2].
+$$
+
+Por tanto, $f$ es estrictamente creciente y la raíz es única. El siguiente cálculo sólo confirma numéricamente esa cota; el muestreo no sustituye la demostración anterior.
 
 ```{.r}
 fcoef <- c(1, 0, -1, -1)
@@ -184,7 +192,7 @@ c(
 )
 ```
 
-El cambio de signo prueba existencia y la derivada positiva prueba unicidad en $[1,2]$.
+El cambio de signo prueba existencia y la desigualdad exacta para la derivada prueba unicidad en $[1,2]$.
 
 ::: {.callout-warning title="Limitación del muestreo"}
 Una raíz de multiplicidad par puede tocar el eje sin cambiar de signo. Para no omitirla, se deben analizar $p'$ y el máximo común divisor de $p$ con $p'$, o usar un conteo de Sturm después de eliminar factores repetidos.
@@ -266,6 +274,11 @@ variaciones_sturm <- function(sucesion, x, tol = 1e-10) {
 }
 
 contar_raices_sturm <- function(coef, a, b, tol = 1e-10) {
+  if (a >= b) stop("Se requiere a < b.")
+  if (abs(evaluar_horner(coef, a)) <= tol ||
+      abs(evaluar_horner(coef, b)) <= tol) {
+    stop("Los extremos del intervalo no deben ser raíces del polinomio.")
+  }
   s <- sucesion_sturm(coef, tol)
   variaciones_sturm(s, a, tol) - variaciones_sturm(s, b, tol)
 }
@@ -287,7 +300,8 @@ Los coeficientes cero se eliminan antes de contar variaciones. El número de ra�
 
 ```{.r}
 coef_p_menos_x <- function(coef) {
-  grado <- length(normalizar_coef(coef)) - 1L
+  coef <- normalizar_coef(coef)
+  grado <- length(coef) - 1L
   coef * (-1) ^ seq(grado, 0L)
 }
 
@@ -359,8 +373,8 @@ En cada paso se calcula el punto medio y se conserva la mitad con cambio de sign
 biseccion <- function(coef, a, b, tol = 1e-8, max_iter = 100L) {
   fa <- evaluar_horner(coef, a)
   fb <- evaluar_horner(coef, b)
-  if (fa == 0) return(data.frame(iter = 0L, a = a, b = a, x = a, fx = 0, error = 0))
-  if (fb == 0) return(data.frame(iter = 0L, a = b, b = b, x = b, fx = 0, error = 0))
+  if (abs(fa) <= tol) return(data.frame(iter = 0L, a = a, b = a, x = a, fx = fa, error = 0))
+  if (abs(fb) <= tol) return(data.frame(iter = 0L, a = b, b = b, x = b, fx = fb, error = 0))
   if (fa * fb > 0) stop("Los extremos deben tener signos opuestos.")
 
   historial <- vector("list", max_iter)
@@ -387,7 +401,7 @@ head(hist_bis, 6)
 tail(hist_bis, 1)
 ```
 
-![Las primeras bisecciones reducen sistemáticamente el intervalo que encierra la raíz.](figures/biseccion-raiz.png){#fig-biseccion width=86%}
+![Las primeras bisecciones reducen sistemáticamente el intervalo que encierra la raíz.](figures/biseccion-raiz.png){#fig-biseccion width=86% fig-alt="Gráfica que muestra las primeras reducciones de un intervalo mediante bisección."}
 
 ::: {.content-visible when-format="html"}
 <iframe class="interactive-frame" src="interactivos/geogebra-biseccion.html" title="GeoGebra: método de bisección" loading="lazy"></iframe>
@@ -401,6 +415,8 @@ tail(hist_bis, 1)
 2. Avance una iteración a la vez y anote el intervalo conservado.
 3. Compare la longitud visual con $(b_0-a_0)/2^n$.
 4. Descargue el archivo `.ggb` y cambie el polinomio.
+
+[Descargar la construcción base `.ggb`](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/geogebra/metodo-biseccion.ggb){.btn .btn-outline-primary}
 
 ## Estimación mediante el método de la secante {#sec-secante}
 
@@ -501,7 +517,7 @@ hist_newton <- newton_horner(fcoef, 1.5, tol = 1e-12)
 hist_newton
 ```
 
-![La secante usa una cuerda definida por dos puntos; Newton usa una tangente y requiere la derivada.](figures/secante-newton.png){#fig-secante-newton width=92%}
+![La secante usa una cuerda definida por dos puntos; Newton usa una tangente y requiere la derivada.](figures/secante-newton.png){#fig-secante-newton width=92% fig-alt="Comparación geométrica entre una recta secante y la tangente utilizada por el método de Newton."}
 
 ::: {.content-visible when-format="html"}
 <iframe class="interactive-frame" src="interactivos/geogebra-secante-newton.html" title="GeoGebra: comparación entre secante y Newton" loading="lazy"></iframe>
@@ -515,6 +531,8 @@ hist_newton
 2. Desplace el punto inicial de Newton y compare la tangente.
 3. Localice una posición donde la derivada sea pequeña.
 4. Explique por qué la construcción predice un paso de Newton muy grande.
+
+[Descargar la construcción base `.ggb`](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/geogebra/secante-newton.ggb){.btn .btn-outline-primary}
 
 ### Raíz múltiple {.unnumbered .unlisted}
 
@@ -566,7 +584,7 @@ $$
 ::: {.content-visible when-format="html"}
 [Abrir el cuaderno completo del capítulo 5 en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-05-metodos-raices-R.ipynb){.btn .btn-primary}
 
-[Descargar el cuaderno](notebooks/capitulo-05-metodos-raices-R.ipynb){.btn}
+[Descargar el cuaderno](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-05-metodos-raices-R.ipynb){.btn}
 :::
 
 ## Errores frecuentes {.unnumbered .unlisted}

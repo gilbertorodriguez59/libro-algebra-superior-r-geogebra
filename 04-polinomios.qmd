@@ -169,7 +169,7 @@ $$
 =(x^2-x+1)(2x^2-x-3)+(2x-2).
 $$
 
-![La división polinomial produce un cociente y un residuo de grado menor que el divisor.](figures/division-polinomios.png){#fig-division-polinomios width=88%}
+![La división polinomial produce un cociente y un residuo de grado menor que el divisor.](figures/division-polinomios.png){#fig-division-polinomios width=88% fig-alt="Esquema del algoritmo de división polinomial con dividendo, divisor, cociente y residuo."}
 
 ## Definición de raíz de un polinomio {#sec-raiz-polinomio}
 
@@ -282,7 +282,7 @@ $$
 
 La raíz $1$ tiene multiplicidad $3$ y la raíz $-2$ multiplicidad $2$. En la gráfica, una raíz de multiplicidad par toca el eje y regresa; una raíz de multiplicidad impar lo cruza. Para multiplicidades impares mayores que uno, el cruce se aplana.
 
-![Comportamiento local de raíces de multiplicidad uno, dos y tres.](figures/multiplicidad-raices.png){#fig-multiplicidad-raices width=88%}
+![Comportamiento local de raíces de multiplicidad uno, dos y tres.](figures/multiplicidad-raices.png){#fig-multiplicidad-raices width=88% fig-alt="Tres gráficas comparan el comportamiento local de raíces simples, dobles y triples."}
 
 ::: {.callout-tip title="Procedimiento con divisiones sucesivas"}
 Si $p(\alpha)=0$, divida entre $x-\alpha$. Vuelva a evaluar el cociente en $\alpha$ y repita. El número de divisiones exactas es la multiplicidad.
@@ -397,7 +397,7 @@ $$
 [x-(2+i)][x-(2-i)]=x^2-4x+5.
 $$
 
-![Las raíces no reales de un polinomio real son simétricas respecto del eje real.](figures/raices-conjugadas.png){#fig-raices-conjugadas width=76%}
+![Las raíces no reales de un polinomio real son simétricas respecto del eje real.](figures/raices-conjugadas.png){#fig-raices-conjugadas width=76% fig-alt="Dos raíces complejas conjugadas aparecen simétricas respecto del eje real."}
 
 ### Relaciones de Viète {.unnumbered .unlisted}
 
@@ -445,7 +445,7 @@ La gráfica es la recta $y=x+1$ con un hueco en $(1,2)$. La simplificación alge
 - Si $\deg p=\deg q$, la asíntota horizontal es el cociente de coeficientes principales.
 - Si $\deg p\geq\deg q$, la división polinomial separa una parte polinomial y una fracción propia.
 
-![Una función racional puede presentar huecos y asíntotas determinadas por sus factores.](figures/funcion-racional.png){#fig-funcion-racional width=88%}
+![Una función racional puede presentar huecos y asíntotas determinadas por sus factores.](figures/funcion-racional.png){#fig-funcion-racional width=88% fig-alt="Dos gráficas ilustran un hueco removible y una asíntota vertical en funciones racionales."}
 
 ::: {.callout-tip title="Ejemplo"}
 Para
@@ -596,10 +596,6 @@ Elija un polinomio real de grado entre cuatro y seis y presente un estudio compl
 8. analice dominio, ceros, huecos y asíntotas;
 9. obtenga, cuando corresponda, una descomposición en fracciones parciales;
 10. acompañe los cálculos con una representación gráfica y conclusiones.
-
-## Referencias del capítulo {.unnumbered .unlisted}
-
-La secuencia temática sigue la Unidad 4 del programa de Álgebra Superior [@uaslp2011]. Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en @silvaLazo2007, @cardenas1999 y @cox2015.
 
 ## Laboratorio computacional con R y GeoGebra {.unnumbered .unlisted}
 
@@ -804,6 +800,10 @@ max(abs(izquierda - derecha))
 
 [Abrir el cuaderno en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-04-polinomios-R.ipynb){.btn .btn-primary target="_blank"}
 
-[Descargar el cuaderno](notebooks/capitulo-04-polinomios-R.ipynb){.btn}
+[Descargar el cuaderno](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-04-polinomios-R.ipynb){.btn}
 
 El cuaderno reúne las funciones anteriores, ejemplos adicionales, gráficas y una autoevaluación computacional. Todo el código principal usa R base.
+
+## Referencias del capítulo {.unnumbered .unlisted}
+
+La secuencia temática sigue la Unidad 4 del programa de Álgebra Superior [@uaslp2011]. Las definiciones, el algoritmo de la división, la factorización y las funciones racionales se apoyan en @silvaLazo2007, @cardenas1999 y @cox2015. La integración de construcciones dinámicas utiliza la documentación oficial de GeoGebra [@geogebraEmbedding2026; @geogebraAPI2026].

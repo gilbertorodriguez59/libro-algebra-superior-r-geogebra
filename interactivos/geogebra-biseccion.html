@@ -24,10 +24,11 @@
   <div class="toolbar">
     <button id="reset" type="button">Reiniciar</button>
     <button id="next" type="button">Siguiente iteración</button>
-    <button id="download" type="button">Descargar .ggb</button>
+    <button id="download" type="button">Descargar estado actual .ggb</button>
+    <a class="download-link" href="geogebra/metodo-biseccion.ggb" download>Descargar construcción base .ggb</a>
     <div id="status" class="status" aria-live="polite">Cargando GeoGebra...</div>
   </div>
-  <div class="error">No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
+  <div class="error" role="alert" hidden>No fue posible cargar GeoGebra. Compruebe la conexión a Internet y recargue la página.</div>
   <div id="ggb-element" aria-label="Método de bisección interactivo en GeoGebra"></div>
   <p class="help">Actividad: avance hasta que la semilongitud del intervalo sea menor que 0.01 y compare con la cota teórica.</p>
 </main>

@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra.">
 
 <title>5&nbsp; Métodos numéricos para la estimación de raíces – Álgebra Superior con aplicaciones en R y GeoGebra</title>
 <style>
@@ -98,10 +99,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -451,10 +452,10 @@ R=1+\max\{1,7,1,6\}=8.
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">p =</span> <span class="fu">evaluar_horner</span>(p4, malla)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(tabla_malla)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-acotacion-separacion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-acotacion-separacion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfica de un polinomio con cota global e intervalos que separan sus raíces reales.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-acotacion-separacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/acotacion-separacion-raices.png" class="img-fluid figure-img" style="width:90.0%">
+<img src="figures/acotacion-separacion-raices.png" class="img-fluid figure-img" style="width:90.0%" alt="Gráfica de un polinomio con cota global e intervalos que separan sus raíces reales.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-acotacion-separacion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.1: La cota global contiene todas las raíces; la malla y los cambios de signo producen intervalos de búsqueda más pequeños.
@@ -473,6 +474,7 @@ Figura&nbsp;5.1: La cota global contiene todas las raíces; la malla y los cambi
 <li>Cambie el tamaño de la malla y registre qué intervalos presentan cambio de signo.</li>
 <li>Construya un ejemplo con una raíz de multiplicidad par y explique por qué no aparece un cambio de signo.</li>
 </ol>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/geogebra/localizacion-acotacion-raices.ggb" class="btn btn-outline-primary">Descargar la construcción base <code>.ggb</code></a></p>
 </section>
 </section>
 <section id="sec-separacion-raices" class="level2" data-number="5.2">
@@ -507,7 +509,11 @@ Figura&nbsp;5.1: La cota global contiene todas las raíces; la malla y los cambi
 <section id="verificar-unicidad" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="verificar-unicidad">Verificar unicidad</h3>
 <p>Un cambio de signo demuestra existencia, no unicidad. Si <span class="math inline">\(p'\)</span> no cambia de signo y no se anula en <span class="math inline">\([a,b]\)</span>, entonces <span class="math inline">\(p\)</span> es estrictamente monótona y la raíz es única.</p>
-<p>Para <span class="math inline">\(f(x)=x^3-x-1\)</span>:</p>
+<p>Para <span class="math inline">\(f(x)=x^3-x-1\)</span> se tiene, exactamente,</p>
+<p><span class="math display">\[
+f'(x)=3x^2-1\geq 2\qquad\text{para }x\in[1,2].
+\]</span></p>
+<p>Por tanto, <span class="math inline">\(f\)</span> es estrictamente creciente y la raíz es única. El siguiente cálculo sólo confirma numéricamente esa cota; el muestreo no sustituye la demostración anterior.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>fcoef <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dfcoef <span class="ot">&lt;-</span> <span class="fu">derivar_polinomio</span>(fcoef)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -516,7 +522,7 @@ Figura&nbsp;5.1: La cota global contiene todas las raíces; la malla y los cambi
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">f_2 =</span> <span class="fu">evaluar_horner</span>(fcoef, <span class="dv">2</span>),</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">min_derivada =</span> <span class="fu">min</span>(<span class="fu">evaluar_horner</span>(dfcoef, <span class="fu">seq</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="at">length.out =</span> <span class="dv">201</span>)))</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>El cambio de signo prueba existencia y la derivada positiva prueba unicidad en <span class="math inline">\([1,2]\)</span>.</p>
+<p>El cambio de signo prueba existencia y la desigualdad exacta para la derivada prueba unicidad en <span class="math inline">\([1,2]\)</span>.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Limitación del muestreo">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -602,13 +608,18 @@ p_{k+1}=-\operatorname{residuo}(p_{k-1},p_k).
 <span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>contar_raices_sturm <span class="ot">&lt;-</span> <span class="cf">function</span>(coef, a, b, <span class="at">tol =</span> <span class="fl">1e-10</span>) {</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">sucesion_sturm</span>(coef, tol)</span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">variaciones_sturm</span>(s, a, tol) <span class="sc">-</span> <span class="fu">variaciones_sturm</span>(s, b, tol)</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>sturm_x3_x <span class="ot">&lt;-</span> <span class="fu">sucesion_sturm</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>))</span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>sturm_x3_x</span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="fu">contar_raices_sturm</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>), <span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (a <span class="sc">&gt;=</span> b) <span class="fu">stop</span>(<span class="st">"Se requiere a &lt; b."</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(<span class="fu">evaluar_horner</span>(coef, a)) <span class="sc">&lt;=</span> tol <span class="sc">||</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">abs</span>(<span class="fu">evaluar_horner</span>(coef, b)) <span class="sc">&lt;=</span> tol) {</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Los extremos del intervalo no deben ser raíces del polinomio."</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  s <span class="ot">&lt;-</span> <span class="fu">sucesion_sturm</span>(coef, tol)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">variaciones_sturm</span>(s, a, tol) <span class="sc">-</span> <span class="fu">variaciones_sturm</span>(s, b, tol)</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>sturm_x3_x <span class="ot">&lt;-</span> <span class="fu">sucesion_sturm</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>))</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>sturm_x3_x</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a><span class="fu">contar_raices_sturm</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>), <span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>El resultado es <code>3</code>, que coincide con las raíces <span class="math inline">\(-1\)</span>, <span class="math inline">\(0\)</span> y <span class="math inline">\(1\)</span>. Para raíces múltiples debe trabajarse con la parte libre de cuadrados del polinomio.</p>
 </section>
 <section id="separación-certificada" class="level3 unnumbered unlisted">
@@ -620,26 +631,27 @@ p_{k+1}=-\operatorname{residuo}(p_{k-1},p_k).
 <h2 data-number="5.4" class="anchored" data-anchor-id="sec-descartes"><span class="header-section-number">5.4</span> Regla de los signos de Descartes</h2>
 <p>Los coeficientes cero se eliminan antes de contar variaciones. El número de raíces positivas es el número de variaciones de <span class="math inline">\(p(x)\)</span> o ese número menos un entero par. Para las negativas se usa <span class="math inline">\(p(-x)\)</span>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>coef_p_menos_x <span class="ot">&lt;-</span> <span class="cf">function</span>(coef) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  grado <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">normalizar_coef</span>(coef)) <span class="sc">-</span> <span class="dv">1</span>L</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  coef <span class="sc">*</span> (<span class="sc">-</span><span class="dv">1</span>) <span class="sc">^</span> <span class="fu">seq</span>(grado, <span class="dv">0</span>L)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>posibilidades_descartes <span class="ot">&lt;-</span> <span class="cf">function</span>(variaciones) {</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">seq</span>(variaciones, <span class="dv">0</span>L, <span class="at">by =</span> <span class="sc">-</span><span class="dv">2</span>L)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>descartes <span class="ot">&lt;-</span> <span class="cf">function</span>(coef) {</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  vp <span class="ot">&lt;-</span> <span class="fu">cambios_signo</span>(coef)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  vn <span class="ot">&lt;-</span> <span class="fu">cambios_signo</span>(<span class="fu">coef_p_menos_x</span>(coef))</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">variaciones_positivas =</span> vp,</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">posibles_positivas =</span> <span class="fu">posibilidades_descartes</span>(vp),</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">variaciones_negativas =</span> vn,</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">posibles_negativas =</span> <span class="fu">posibilidades_descartes</span>(vn)</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="fu">descartes</span>(p4)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  coef <span class="ot">&lt;-</span> <span class="fu">normalizar_coef</span>(coef)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  grado <span class="ot">&lt;-</span> <span class="fu">length</span>(coef) <span class="sc">-</span> <span class="dv">1</span>L</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  coef <span class="sc">*</span> (<span class="sc">-</span><span class="dv">1</span>) <span class="sc">^</span> <span class="fu">seq</span>(grado, <span class="dv">0</span>L)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>posibilidades_descartes <span class="ot">&lt;-</span> <span class="cf">function</span>(variaciones) {</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">seq</span>(variaciones, <span class="dv">0</span>L, <span class="at">by =</span> <span class="sc">-</span><span class="dv">2</span>L)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>descartes <span class="ot">&lt;-</span> <span class="cf">function</span>(coef) {</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  vp <span class="ot">&lt;-</span> <span class="fu">cambios_signo</span>(coef)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  vn <span class="ot">&lt;-</span> <span class="fu">cambios_signo</span>(<span class="fu">coef_p_menos_x</span>(coef))</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">variaciones_positivas =</span> vp,</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">posibles_positivas =</span> <span class="fu">posibilidades_descartes</span>(vp),</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">variaciones_negativas =</span> vn,</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">posibles_negativas =</span> <span class="fu">posibilidades_descartes</span>(vn)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="fu">descartes</span>(p4)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para <code>p4</code> aparecen las posibilidades <span class="math inline">\(2\)</span> o <span class="math inline">\(0\)</span> en ambos signos. Sturm puede resolver la ambigüedad contando exactamente las raíces en <span class="math inline">\((-R,0)\)</span> y <span class="math inline">\((0,R)\)</span>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">negativas =</span> <span class="fu">contar_raices_sturm</span>(p4, <span class="sc">-</span>R, <span class="sc">-</span><span class="fl">1e-8</span>),</span>
@@ -679,8 +691,8 @@ p(t),p'(t),\ldots,p^{(n)}(t).
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>biseccion <span class="ot">&lt;-</span> <span class="cf">function</span>(coef, a, b, <span class="at">tol =</span> <span class="fl">1e-8</span>, <span class="at">max_iter =</span> <span class="dv">100</span>L) {</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  fa <span class="ot">&lt;-</span> <span class="fu">evaluar_horner</span>(coef, a)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  fb <span class="ot">&lt;-</span> <span class="fu">evaluar_horner</span>(coef, b)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (fa <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">iter =</span> <span class="dv">0</span>L, <span class="at">a =</span> a, <span class="at">b =</span> a, <span class="at">x =</span> a, <span class="at">fx =</span> <span class="dv">0</span>, <span class="at">error =</span> <span class="dv">0</span>))</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (fb <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">iter =</span> <span class="dv">0</span>L, <span class="at">a =</span> b, <span class="at">b =</span> b, <span class="at">x =</span> b, <span class="at">fx =</span> <span class="dv">0</span>, <span class="at">error =</span> <span class="dv">0</span>))</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(fa) <span class="sc">&lt;=</span> tol) <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">iter =</span> <span class="dv">0</span>L, <span class="at">a =</span> a, <span class="at">b =</span> a, <span class="at">x =</span> a, <span class="at">fx =</span> fa, <span class="at">error =</span> <span class="dv">0</span>))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">abs</span>(fb) <span class="sc">&lt;=</span> tol) <span class="fu">return</span>(<span class="fu">data.frame</span>(<span class="at">iter =</span> <span class="dv">0</span>L, <span class="at">a =</span> b, <span class="at">b =</span> b, <span class="at">x =</span> b, <span class="at">fx =</span> fb, <span class="at">error =</span> <span class="dv">0</span>))</span>
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (fa <span class="sc">*</span> fb <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">stop</span>(<span class="st">"Los extremos deben tener signos opuestos."</span>)</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  historial <span class="ot">&lt;-</span> <span class="fu">vector</span>(<span class="st">"list"</span>, max_iter)</span>
@@ -705,10 +717,10 @@ p(t),p'(t),\ldots,p^{(n)}(t).
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>hist_bis <span class="ot">&lt;-</span> <span class="fu">biseccion</span>(fcoef, <span class="dv">1</span>, <span class="dv">2</span>, <span class="at">tol =</span> <span class="fl">1e-8</span>)</span>
 <span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(hist_bis, <span class="dv">6</span>)</span>
 <span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(hist_bis, <span class="dv">1</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-biseccion" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-biseccion" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfica que muestra las primeras reducciones de un intervalo mediante bisección.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-biseccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/biseccion-raiz.png" class="img-fluid figure-img" style="width:86.0%">
+<img src="figures/biseccion-raiz.png" class="img-fluid figure-img" style="width:86.0%" alt="Gráfica que muestra las primeras reducciones de un intervalo mediante bisección.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-biseccion-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.2: Las primeras bisecciones reducen sistemáticamente el intervalo que encierra la raíz.
@@ -727,6 +739,7 @@ Figura&nbsp;5.2: Las primeras bisecciones reducen sistemáticamente el intervalo
 <li>Compare la longitud visual con <span class="math inline">\((b_0-a_0)/2^n\)</span>.</li>
 <li>Descargue el archivo <code>.ggb</code> y cambie el polinomio.</li>
 </ol>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/geogebra/metodo-biseccion.ggb" class="btn btn-outline-primary">Descargar la construcción base <code>.ggb</code></a></p>
 </section>
 </section>
 <section id="sec-secante" class="level2" data-number="5.6">
@@ -817,10 +830,10 @@ x_{n+1}=x_n-\frac{p(x_n)}{p'(x_n)}.
 <span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>hist_newton <span class="ot">&lt;-</span> <span class="fu">newton_horner</span>(fcoef, <span class="fl">1.5</span>, <span class="at">tol =</span> <span class="fl">1e-12</span>)</span>
 <span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>hist_newton</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-secante-newton" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-secante-newton" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparación geométrica entre una recta secante y la tangente utilizada por el método de Newton.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-secante-newton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/secante-newton.png" class="img-fluid figure-img" style="width:92.0%">
+<img src="figures/secante-newton.png" class="img-fluid figure-img" style="width:92.0%" alt="Comparación geométrica entre una recta secante y la tangente utilizada por el método de Newton.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-secante-newton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;5.3: La secante usa una cuerda definida por dos puntos; Newton usa una tangente y requiere la derivada.
@@ -839,6 +852,7 @@ Figura&nbsp;5.3: La secante usa una cuerda definida por dos puntos; Newton usa u
 <li>Localice una posición donde la derivada sea pequeña.</li>
 <li>Explique por qué la construcción predice un paso de Newton muy grande.</li>
 </ol>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/geogebra/secante-newton.ggb" class="btn btn-outline-primary">Descargar la construcción base <code>.ggb</code></a></p>
 </section>
 <section id="raíz-múltiple" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="raíz-múltiple">Raíz múltiple</h3>
@@ -912,7 +926,7 @@ p(x)=x^5-3x^4-3x^3+11x^2-6x.
 <li>Documente un caso donde un método abierto necesite cambiar sus datos iniciales.</li>
 </ol>
 <p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-05-metodos-raices-R.ipynb" class="btn btn-primary">Abrir el cuaderno completo del capítulo 5 en Google Colab</a></p>
-<p><a href="notebooks/capitulo-05-metodos-raices-R.ipynb" class="btn">Descargar el cuaderno</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-05-metodos-raices-R.ipynb" class="btn">Descargar el cuaderno</a></p>
 </section>
 <section id="errores-frecuentes" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="errores-frecuentes">Errores frecuentes</h2>

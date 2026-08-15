@@ -9,6 +9,19 @@
 
 **/*.quarto_ipynb
 
+# Salidas intermedias que algunas versiones de Quarto dejan en la raíz
+/*.html
+/*_files/
+/site_libs/
+/Rplots.pdf
+__pycache__/
+*.aux
+*.lof
+*.log
+*.lot
+*.toc
+/index.pdf
+
 # Material de evaluación excluido permanentemente
 **/Examen Parcial 1 Algebra Superior (13-09-2017).pdf
 **/Tarea 1.pdf

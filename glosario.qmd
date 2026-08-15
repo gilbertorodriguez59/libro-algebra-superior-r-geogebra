@@ -2,17 +2,47 @@
 
 **Algoritmo.** Secuencia finita y ordenada de instrucciones para resolver un problema.
 
+**Argumento principal.** Ángulo elegido en un intervalo convencional, normalmente $(-\pi,\pi]$, para describir la dirección de un número complejo no nulo.
+
+**Bisección.** Método que conserva repetidamente la mitad de un intervalo donde una función continua cambia de signo.
+
 **Biyectiva.** Función simultáneamente inyectiva y suprayectiva.
+
+**Cardinalidad.** Número de elementos de un conjunto finito o medida de tamaño para conjuntos más generales.
+
+**Codominio.** Conjunto declarado de valores de salida posibles de una función.
+
+**Complejo conjugado.** Para $z=a+bi$, número $\overline z=a-bi$ obtenido al cambiar el signo de la parte imaginaria.
+
+**Conjunto.** Colección bien definida de objetos llamados elementos.
 
 **Construcción dinámica.** Recurso de GeoGebra cuyos objetos dependen de parámetros que pueden modificarse interactivamente.
 
+**Cota de Cauchy.** Límite superior que encierra, en módulo, todas las raíces de un polinomio.
+
 **Cuaderno.** Documento ejecutable que combina explicación, fórmulas, código y resultados.
+
+**Divisibilidad.** Relación $a\mid b$ que indica que existe un entero $k$ tal que $b=ak$.
 
 **Dominio.** Conjunto de entradas para las que se define una función.
 
+**Factorización.** Escritura de una expresión, entero o polinomio como producto de factores más simples.
+
 **Función.** Correspondencia que asigna a cada elemento del dominio exactamente una imagen.
 
+**Horner, método de.** Esquema anidado para evaluar un polinomio y, en algunas variantes, su derivada con menos operaciones.
+
+**Inyectiva.** Función en la que entradas distintas tienen imágenes distintas.
+
 **Iteración.** Repetición de un cálculo que produce aproximaciones sucesivas.
+
+**Módulo.** Distancia de un número complejo al origen; para $z=a+bi$, $|z|=\sqrt{a^2+b^2}$.
+
+**Multiplicidad.** Número de veces que un factor $x-\alpha$ aparece en la factorización de un polinomio.
+
+**Método de Newton.** Iteración que usa la tangente, $x_{n+1}=x_n-f(x_n)/f'(x_n)$, para aproximar una raíz.
+
+**Número complejo.** Número de la forma $a+bi$, donde $a,b\in\mathbb R$ e $i^2=-1$.
 
 **Objeto de R.** Estructura identificada por un nombre que almacena datos, funciones o resultados.
 
@@ -20,7 +50,17 @@
 
 **Raíz.** Valor que hace cero una función o un polinomio.
 
+**Relación.** Subconjunto de un producto cartesiano.
+
 **Reproducibilidad.** Posibilidad de repetir un análisis con los mismos datos, instrucciones y parámetros.
+
+**Residuo.** Resto de una división entera o polinomial; en aproximación numérica también puede significar el valor $|f(x)|$.
+
+**Secante, método de la.** Iteración que aproxima una raíz mediante la recta que pasa por dos puntos de la gráfica.
+
+**Sucesión de Sturm.** Lista de polinomios construida mediante residuos que permite contar exactamente raíces reales distintas en un intervalo.
+
+**Suprayectiva.** Función cuya imagen coincide con todo el codominio.
 
 **Tolerancia.** Umbral usado como criterio de parada en un método numérico.
 

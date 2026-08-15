@@ -11,7 +11,7 @@ El código inicial utiliza R base [@rCore2026]. De esta forma puede ejecutarse e
 ::: {.callout-tip title="Cuaderno completo y ejecutable"}
 El cuaderno reúne las nueve secciones, las aplicaciones a sistemas digitales, visualizaciones en R y ejercicios de comprobación. Puede abrirse en Colab o descargarse para conservar una copia local.
 
-[Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-01-logica-conjuntos-R.ipynb){.btn .btn-primary target="_blank"} [Descargar el cuaderno](notebooks/capitulo-01-logica-conjuntos-R.ipynb){.btn target="_blank"}
+[Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-01-logica-conjuntos-R.ipynb){.btn .btn-primary target="_blank"} [Descargar el cuaderno](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-01-logica-conjuntos-R.ipynb){.btn target="_blank"}
 :::
 
 ### Objetivos {.unnumbered .unlisted}
@@ -108,8 +108,8 @@ length(P)
 
 El resultado contiene $2^3=8$ subconjuntos, incluido el conjunto vacío.
 
-::: {.callout-note title="GeoGebra: actividad prevista"}
-Se construirá una mesa dinámica con los ocho subconjuntos de $\{a,b,c\}$. El estudiante podrá seleccionar dos subconjuntos y observar su unión, intersección y diferencia simétrica. El enlace se incorporará cuando la actividad esté publicada.
+::: {.callout-tip title="Actividad con el laboratorio publicado"}
+Use la salida de `conjunto_potencia()` para elegir dos subconjuntos de $\{a,b,c\}$. Después, compruebe su unión, intersección y diferencia en el [laboratorio de operaciones con conjuntos](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/operaciones-conjuntos.html). Así se coordinan la enumeración en R y la representación mediante regiones de Venn.
 :::
 
 ## Proposiciones y conectivos lógicos {#sec-proposiciones}
@@ -188,7 +188,7 @@ La última instrucción devuelve verdadero; la equivalencia se cumple en todas l
 
 Cambie la expresión y los valores de entrada. La fila activa se señala en la tabla y la salida se actualiza inmediatamente.
 
-[Abrir el laboratorio de tablas de verdad](interactivos/tablas-verdad.html){.btn .btn-primary target="_blank"}
+[Abrir el laboratorio de tablas de verdad](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/tablas-verdad.html){.btn .btn-primary target="_blank"}
 
 ::: {.content-visible when-format="html"}
 <iframe class="interactive-frame truth" src="interactivos/tablas-verdad.html" title="Laboratorio interactivo de tablas de verdad" loading="lazy"></iframe>
@@ -285,13 +285,13 @@ diferencia_simetrica <- function(X, Y) {
 diferencia_simetrica(A, B)
 ```
 
-![Cuatro operaciones representadas mediante regiones de Venn: unión, intersección, complemento y diferencia simétrica.](figures/venn-operaciones.png){#fig-venn-aplicado width=96%}
+![Cuatro operaciones representadas mediante regiones de Venn: unión, intersección, complemento y diferencia simétrica.](figures/venn-operaciones.png){#fig-venn-aplicado width=96% fig-alt="Cuatro diagramas de Venn muestran unión, intersección, complemento y diferencia simétrica."}
 
 ### Interactivo: operaciones de conjuntos {.unnumbered .unlisted}
 
 Seleccione una operación y modifique los elementos de $A$ y $B$. El laboratorio calcula el conjunto resultante, su cardinalidad y la región correspondiente.
 
-[Abrir el laboratorio de conjuntos](interactivos/operaciones-conjuntos.html){.btn .btn-primary target="_blank"}
+[Abrir el laboratorio de conjuntos](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/operaciones-conjuntos.html){.btn .btn-primary target="_blank"}
 
 ::: {.content-visible when-format="html"}
 <iframe class="interactive-frame" src="interactivos/operaciones-conjuntos.html" title="Laboratorio interactivo de operaciones con conjuntos" loading="lazy"></iframe>
@@ -463,7 +463,7 @@ c(
 )
 ```
 
-![Una relación general, una función válida y una correspondencia que no cumple la definición de función.](figures/relacion-funcion.png){#fig-relacion-funcion-aplicado width=98%}
+![Una relación general, una función válida y una correspondencia que no cumple la definición de función.](figures/relacion-funcion.png){#fig-relacion-funcion-aplicado width=98% fig-alt="Tres diagramas sagitales comparan una relación general, una función y una correspondencia que no es función."}
 
 ::: {.callout-tip title="Interpretación"}
 El programa comprueba una relación finita completamente especificada. La razón matemática de cada propiedad sigue siendo la definición; el código automatiza la revisión de los pares.
@@ -524,10 +524,10 @@ data.frame(
 
 Las columnas no coinciden: en general $g\circ f\ne f\circ g$.
 
-![Recorrido de un elemento mediante $f$, después mediante $g$ y directamente mediante la composición $g\circ f$.](figures/composicion-funciones.png){#fig-composicion-aplicada width=90%}
+![Recorrido de un elemento mediante $f$, después mediante $g$ y directamente mediante la composición $g\circ f$.](figures/composicion-funciones.png){#fig-composicion-aplicada width=90% fig-alt="Diagrama sagital que sigue un elemento mediante f y después mediante g para formar la composición."}
 
-::: {.callout-note title="GeoGebra: composición prevista"}
-Se mostrarán simultáneamente las gráficas de $f$, $g$, $g\circ f$ y $f\circ g$. Un deslizador permitirá seguir un valor $x$ desde el dominio, pasar por la salida de la primera función y llegar a la composición.
+::: {.callout-tip title="Actividad de exploración"}
+Cambie las definiciones de $f$ y $g$, calcule ambas composiciones sobre el mismo vector `x` y use la figura anterior para seguir un valor desde el dominio hasta la salida. Identifique después condiciones particulares bajo las cuales $g\circ f=f\circ g$.
 :::
 
 ## Funciones inyectivas, suprayectivas y biyectivas {#sec-tipos-funciones}
@@ -572,13 +572,13 @@ clasificar_funcion(h_tabla, dominio, codominio)
 
 No es inyectiva porque dos entradas producen “bajo”, y no es suprayectiva porque “alto” no aparece como imagen.
 
-![La inyectividad evita imágenes repetidas; la suprayectividad exige cubrir todo el codominio; la biyección cumple ambas condiciones.](figures/tipos-funciones.png){#fig-tipos-funciones-aplicado width=98%}
+![La inyectividad evita imágenes repetidas; la suprayectividad exige cubrir todo el codominio; la biyección cumple ambas condiciones.](figures/tipos-funciones.png){#fig-tipos-funciones-aplicado width=98% fig-alt="Tres diagramas sagitales comparan funciones inyectiva, suprayectiva y biyectiva."}
 
 ### Interactivo: clasificador de funciones {.unnumbered .unlisted}
 
 Modifique las tres imágenes, deje alguna entrada sin imagen o asigne dos imágenes al elemento $1$. El diagnóstico distingue la definición de función de las propiedades de inyectividad, suprayectividad y biyección.
 
-[Abrir el clasificador de funciones](interactivos/clasificador-funciones.html){.btn .btn-primary target="_blank"}
+[Abrir el clasificador de funciones](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/clasificador-funciones.html){.btn .btn-primary target="_blank"}
 
 ::: {.content-visible when-format="html"}
 <iframe class="interactive-frame functions" src="interactivos/clasificador-funciones.html" title="Clasificador interactivo de funciones finitas" loading="lazy"></iframe>
@@ -669,9 +669,7 @@ $$
 
 requiere invertir $B$, formar $A+\overline B$ con OR y combinar el resultado con $C$ mediante AND.
 
-::: {.callout-note title="Figuras previstas"}
-El libro incorporará figuras propias con símbolos lógicos estándar. Cada ejemplo mostrará cuatro representaciones coordinadas: expresión, tabla de verdad, circuito y diagrama de temporización. No se reutilizarán las ilustraciones del texto de referencia.
-:::
+![Implementación de $X=(A+\overline B)C$ con inversor, compuerta OR y compuerta AND.](figures/circuito-logico-booleano.png){#fig-circuito-booleano width=96% fig-alt="Circuito lógico: A y la negación de B entran a una compuerta OR; su salida y C entran a una compuerta AND que produce X."}
 
 ### Comprobación de una simplificación {.unnumbered .unlisted}
 
@@ -809,19 +807,21 @@ legend(
 )
 ```
 
-::: {.callout-note title="GeoGebra: circuitos y formas de onda"}
-El recurso previsto permitirá accionar interruptores para $A$, $B$ y $C$, observar la salida del circuito y comparar el resultado con la fila correspondiente de la tabla de verdad. Otro recurso permitirá mover los instantes de conmutación y observar las formas de onda. Las compuertas se presentarán con símbolos uniformes basados en la convención IEEE/ANSI estudiada por @tocci2003.
+![Las señales se dividen en intervalos constantes; en cada uno se evalúa $X=(A+\overline B)C$.](figures/temporizacion-circuito.png){#fig-temporizacion-circuito width=96% fig-alt="Diagrama de temporización de las entradas A, B y C y la salida X durante seis intervalos."}
+
+::: {.callout-note title="Lectura coordinada del circuito"}
+Compare cada intervalo del diagrama de temporización con la fila correspondiente de la tabla de verdad y con el circuito de la @fig-circuito-booleano. Las compuertas y la burbuja del inversor siguen una convención gráfica uniforme basada en los símbolos lógicos estudiados por @tocci2003.
 :::
 
 ## Laboratorio del capítulo {.unnumbered .unlisted}
 
-La primera versión integra tres aplicaciones que funcionan directamente en el sitio estático, sin servidor ni instalación adicional:
+La edición integra tres aplicaciones que funcionan directamente en el sitio estático, sin servidor ni instalación adicional:
 
 1. **Constructor de tablas de verdad:** selección de conectivos y clasificación como tautología, contradicción o contingencia.
 2. **Operaciones de conjuntos:** regiones de Venn, cardinalidad e inclusión-exclusión.
 3. **Clasificador de funciones:** diagramas sagitales y diagnóstico de inyectividad, suprayectividad y biyectividad.
 
-El **simulador de circuitos**, con compuertas, polaridades y diagramas de temporización, será la siguiente ampliación. Más adelante se preparará una versión Shiny o Shinylive cuando aporte controles que no convenga resolver en el navegador.
+El análisis de circuitos se apoya en figuras propias, tablas de verdad y código R reproducible. De esta manera se conserva la trazabilidad entre expresión, circuito y forma de onda sin depender de un servidor.
 
 ## Ejercicios con R {.unnumbered .unlisted}
 
@@ -855,18 +855,9 @@ Esta versión ya incorpora:
 - laboratorio de tablas de verdad;
 - laboratorio de operaciones con conjuntos y diagramas de Venn;
 - clasificador de funciones mediante diagramas sagitales;
-- figuras vectoriales para operaciones, relaciones, composición y tipos de funciones.
-
-En versiones posteriores se incorporarán:
-
-- video introductorio sobre lógica y conjuntos;
-- video de tablas de verdad y cuantificadores;
-- video de simplificación booleana y universalidad de NAND/NOR;
-- presentación docente;
-- infografía de correspondencia lógica-conjuntos;
-- infografía de funciones y sus clasificaciones;
-- infografía de errores frecuentes;
-- actividades de GeoGebra y simulador de circuitos.
+- figuras vectoriales para operaciones, relaciones, composición y tipos de funciones;
+- circuito lógico propio para $X=(A+\overline B)C$;
+- diagrama de temporización coordinado con la expresión y la tabla de verdad.
 
 ## Síntesis {.unnumbered .unlisted}
 

@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
+<meta name="generator" content="quarto-1.11.1">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Libro abierto de Álgebra Superior con teoría, código reproducible en R, laboratorios web y construcciones GeoGebra.">
 
 <title>1&nbsp; Lógica y conjuntos – Álgebra Superior con aplicaciones en R y GeoGebra</title>
 <style>
@@ -98,10 +99,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-18c138f178b08f297b460cc043f8d691.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -369,7 +370,7 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>El cuaderno reúne las nueve secciones, las aplicaciones a sistemas digitales, visualizaciones en R y ejercicios de comprobación. Puede abrirse en Colab o descargarse para conservar una copia local.</p>
-<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-01-logica-conjuntos-R.ipynb" class="btn btn-primary" target="_blank">Abrir en Google Colab</a> <a href="notebooks/capitulo-01-logica-conjuntos-R.ipynb" class="btn" target="_blank">Descargar el cuaderno</a></p>
+<p><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-01-logica-conjuntos-R.ipynb" class="btn btn-primary" target="_blank">Abrir en Google Colab</a> <a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-01-logica-conjuntos-R.ipynb" class="btn" target="_blank">Descargar el cuaderno</a></p>
 </div>
 </div>
 <section id="objetivos" class="level3 unnumbered unlisted">
@@ -443,17 +444,17 @@ A=\{2,4,6,8,10\},\qquad B=\{2,3,5,7\}.
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>P</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(P)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>El resultado contiene <span class="math inline">\(2^3=8\)</span> subconjuntos, incluido el conjunto vacío.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="GeoGebra: actividad prevista">
+<div class="callout callout-style-default callout-tip callout-titled" title="Actividad con el laboratorio publicado">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>GeoGebra: actividad prevista
+<span class="screen-reader-only">Tip</span>Actividad con el laboratorio publicado
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Se construirá una mesa dinámica con los ocho subconjuntos de <span class="math inline">\(\{a,b,c\}\)</span>. El estudiante podrá seleccionar dos subconjuntos y observar su unión, intersección y diferencia simétrica. El enlace se incorporará cuando la actividad esté publicada.</p>
+<p>Use la salida de <code>conjunto_potencia()</code> para elegir dos subconjuntos de <span class="math inline">\(\{a,b,c\}\)</span>. Después, compruebe su unión, intersección y diferencia en el <a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/operaciones-conjuntos.html">laboratorio de operaciones con conjuntos</a>. Así se coordinan la enumeración en R y la representación mediante regiones de Venn.</p>
 </div>
 </div>
 </section>
@@ -518,7 +519,7 @@ p\Rightarrow(q\land r)
 <section id="interactivo-tabla-de-verdad" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-tabla-de-verdad">Interactivo: tabla de verdad</h3>
 <p>Cambie la expresión y los valores de entrada. La fila activa se señala en la tabla y la salida se actualiza inmediatamente.</p>
-<p><a href="interactivos/tablas-verdad.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de tablas de verdad</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/tablas-verdad.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de tablas de verdad</a></p>
 <iframe class="interactive-frame truth" src="interactivos/tablas-verdad.html" title="Laboratorio interactivo de tablas de verdad" loading="lazy">
 </iframe>
 </section>
@@ -595,10 +596,10 @@ A\triangle B=(A\setminus B)\cup(B\setminus A).
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">diferencia_simetrica</span>(A, B)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-venn-aplicado" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-venn-aplicado" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cuatro diagramas de Venn muestran unión, intersección, complemento y diferencia simétrica.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-venn-aplicado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/venn-operaciones.png" class="img-fluid figure-img" style="width:96.0%">
+<img src="figures/venn-operaciones.png" class="img-fluid figure-img" style="width:96.0%" alt="Cuatro diagramas de Venn muestran unión, intersección, complemento y diferencia simétrica.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-venn-aplicado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1.1: Cuatro operaciones representadas mediante regiones de Venn: unión, intersección, complemento y diferencia simétrica.
@@ -609,7 +610,7 @@ Figura&nbsp;1.1: Cuatro operaciones representadas mediante regiones de Venn: uni
 <section id="interactivo-operaciones-de-conjuntos" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-operaciones-de-conjuntos">Interactivo: operaciones de conjuntos</h3>
 <p>Seleccione una operación y modifique los elementos de <span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>. El laboratorio calcula el conjunto resultante, su cardinalidad y la región correspondiente.</p>
-<p><a href="interactivos/operaciones-conjuntos.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de conjuntos</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/operaciones-conjuntos.html" class="btn btn-primary" target="_blank">Abrir el laboratorio de conjuntos</a></p>
 <iframe class="interactive-frame" src="interactivos/operaciones-conjuntos.html" title="Laboratorio interactivo de operaciones con conjuntos" loading="lazy">
 </iframe>
 </section>
@@ -764,10 +765,10 @@ A\times(B\cup C)=(A\times B)\cup(A\times C).
 <span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">antisimetrica =</span> <span class="fu">es_antisimetrica</span>(R),</span>
 <span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>  <span class="at">transitiva =</span> <span class="fu">es_transitiva</span>(R)</span>
 <span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="fig-relacion-funcion-aplicado" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-relacion-funcion-aplicado" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres diagramas sagitales comparan una relación general, una función y una correspondencia que no es función.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-relacion-funcion-aplicado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/relacion-funcion.png" class="img-fluid figure-img" style="width:98.0%">
+<img src="figures/relacion-funcion.png" class="img-fluid figure-img" style="width:98.0%" alt="Tres diagramas sagitales comparan una relación general, una función y una correspondencia que no es función.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-relacion-funcion-aplicado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1.2: Una relación general, una función válida y una correspondencia que no cumple la definición de función.
@@ -834,27 +835,27 @@ Figura&nbsp;1.2: Una relación general, una función válida y una correspondenc
 <span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">f_comp_g =</span> <span class="fu">f_comp_g</span>(x)</span>
 <span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Las columnas no coinciden: en general <span class="math inline">\(g\circ f\ne f\circ g\)</span>.</p>
-<div id="fig-composicion-aplicada" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-composicion-aplicada" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama sagital que sigue un elemento mediante f y después mediante g para formar la composición.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-composicion-aplicada-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/composicion-funciones.png" class="img-fluid figure-img" style="width:90.0%">
+<img src="figures/composicion-funciones.png" class="img-fluid figure-img" style="width:90.0%" alt="Diagrama sagital que sigue un elemento mediante f y después mediante g para formar la composición.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-composicion-aplicada-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1.3: Recorrido de un elemento mediante <span class="math inline">\(f\)</span>, después mediante <span class="math inline">\(g\)</span> y directamente mediante la composición <span class="math inline">\(g\circ f\)</span>.
 </figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="GeoGebra: composición prevista">
+<div class="callout callout-style-default callout-tip callout-titled" title="Actividad de exploración">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>GeoGebra: composición prevista
+<span class="screen-reader-only">Tip</span>Actividad de exploración
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Se mostrarán simultáneamente las gráficas de <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>, <span class="math inline">\(g\circ f\)</span> y <span class="math inline">\(f\circ g\)</span>. Un deslizador permitirá seguir un valor <span class="math inline">\(x\)</span> desde el dominio, pasar por la salida de la primera función y llegar a la composición.</p>
+<p>Cambie las definiciones de <span class="math inline">\(f\)</span> y <span class="math inline">\(g\)</span>, calcule ambas composiciones sobre el mismo vector <code>x</code> y use la figura anterior para seguir un valor desde el dominio hasta la salida. Identifique después condiciones particulares bajo las cuales <span class="math inline">\(g\circ f=f\circ g\)</span>.</p>
 </div>
 </div>
 </section>
@@ -893,10 +894,10 @@ Figura&nbsp;1.3: Recorrido de un elemento mediante <span class="math inline">\(f
 <span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="fu">clasificar_funcion</span>(h_tabla, dominio, codominio)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>No es inyectiva porque dos entradas producen “bajo”, y no es suprayectiva porque “alto” no aparece como imagen.</p>
-<div id="fig-tipos-funciones-aplicado" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-tipos-funciones-aplicado" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tres diagramas sagitales comparan funciones inyectiva, suprayectiva y biyectiva.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tipos-funciones-aplicado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/tipos-funciones.png" class="img-fluid figure-img" style="width:98.0%">
+<img src="figures/tipos-funciones.png" class="img-fluid figure-img" style="width:98.0%" alt="Tres diagramas sagitales comparan funciones inyectiva, suprayectiva y biyectiva.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tipos-funciones-aplicado-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figura&nbsp;1.4: La inyectividad evita imágenes repetidas; la suprayectividad exige cubrir todo el codominio; la biyección cumple ambas condiciones.
@@ -907,7 +908,7 @@ Figura&nbsp;1.4: La inyectividad evita imágenes repetidas; la suprayectividad e
 <section id="interactivo-clasificador-de-funciones" class="level3 unnumbered unlisted">
 <h3 class="unnumbered unlisted anchored" data-anchor-id="interactivo-clasificador-de-funciones">Interactivo: clasificador de funciones</h3>
 <p>Modifique las tres imágenes, deje alguna entrada sin imagen o asigne dos imágenes al elemento <span class="math inline">\(1\)</span>. El diagnóstico distingue la definición de función de las propiedades de inyectividad, suprayectividad y biyección.</p>
-<p><a href="interactivos/clasificador-funciones.html" class="btn btn-primary" target="_blank">Abrir el clasificador de funciones</a></p>
+<p><a href="https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/interactivos/clasificador-funciones.html" class="btn btn-primary" target="_blank">Abrir el clasificador de funciones</a></p>
 <iframe class="interactive-frame functions" src="interactivos/clasificador-funciones.html" title="Clasificador interactivo de funciones finitas" loading="lazy">
 </iframe>
 </section>
@@ -994,18 +995,15 @@ Figura&nbsp;1.4: La inyectividad evita imágenes repetidas; la suprayectividad e
 X=(A+\overline B)\,C
 \]</span></p>
 <p>requiere invertir <span class="math inline">\(B\)</span>, formar <span class="math inline">\(A+\overline B\)</span> con OR y combinar el resultado con <span class="math inline">\(C\)</span> mediante AND.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Figuras previstas">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="fig-circuito-booleano" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Circuito lógico: A y la negación de B entran a una compuerta OR; su salida y C entran a una compuerta AND que produce X.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-circuito-booleano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/circuito-logico-booleano.png" class="img-fluid figure-img" style="width:96.0%" alt="Circuito lógico: A y la negación de B entran a una compuerta OR; su salida y C entran a una compuerta AND que produce X.">
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>Figuras previstas
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>El libro incorporará figuras propias con símbolos lógicos estándar. Cada ejemplo mostrará cuatro representaciones coordinadas: expresión, tabla de verdad, circuito y diagrama de temporización. No se reutilizarán las ilustraciones del texto de referencia.</p>
-</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-circuito-booleano-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.5: Implementación de <span class="math inline">\(X=(A+\overline B)C\)</span> con inversor, compuerta OR y compuerta AND.
+</figcaption>
+</figure>
 </div>
 </section>
 <section id="comprobación-de-una-simplificación" class="level3 unnumbered unlisted">
@@ -1133,30 +1131,40 @@ F
 <span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">lwd =</span> <span class="dv">2</span>,</span>
 <span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">bty =</span> <span class="st">"n"</span></span>
 <span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-note callout-titled" title="GeoGebra: circuitos y formas de onda">
+<div id="fig-temporizacion-circuito" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama de temporización de las entradas A, B y C y la salida X durante seis intervalos.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-temporizacion-circuito-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/temporizacion-circuito.png" class="img-fluid figure-img" style="width:96.0%" alt="Diagrama de temporización de las entradas A, B y C y la salida X durante seis intervalos.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-temporizacion-circuito-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1.6: Las señales se dividen en intervalos constantes; en cada uno se evalúa <span class="math inline">\(X=(A+\overline B)C\)</span>.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Lectura coordinada del circuito">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Nota</span>GeoGebra: circuitos y formas de onda
+<span class="screen-reader-only">Nota</span>Lectura coordinada del circuito
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>El recurso previsto permitirá accionar interruptores para <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> y <span class="math inline">\(C\)</span>, observar la salida del circuito y comparar el resultado con la fila correspondiente de la tabla de verdad. Otro recurso permitirá mover los instantes de conmutación y observar las formas de onda. Las compuertas se presentarán con símbolos uniformes basados en la convención IEEE/ANSI estudiada por <span class="citation" data-cites="tocci2003">Tocci y Widmer (<a href="references.html#ref-tocci2003" role="doc-biblioref">2003</a>)</span>.</p>
+<p>Compare cada intervalo del diagrama de temporización con la fila correspondiente de la tabla de verdad y con el circuito de la <a href="#fig-circuito-booleano" class="quarto-xref">Figura&nbsp;<span>1.5</span></a>. Las compuertas y la burbuja del inversor siguen una convención gráfica uniforme basada en los símbolos lógicos estudiados por <span class="citation" data-cites="tocci2003">Tocci y Widmer (<a href="references.html#ref-tocci2003" role="doc-biblioref">2003</a>)</span>.</p>
 </div>
 </div>
 </section>
 </section>
 <section id="laboratorio-del-capítulo" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="laboratorio-del-capítulo">Laboratorio del capítulo</h2>
-<p>La primera versión integra tres aplicaciones que funcionan directamente en el sitio estático, sin servidor ni instalación adicional:</p>
+<p>La edición integra tres aplicaciones que funcionan directamente en el sitio estático, sin servidor ni instalación adicional:</p>
 <ol type="1">
 <li><strong>Constructor de tablas de verdad:</strong> selección de conectivos y clasificación como tautología, contradicción o contingencia.</li>
 <li><strong>Operaciones de conjuntos:</strong> regiones de Venn, cardinalidad e inclusión-exclusión.</li>
 <li><strong>Clasificador de funciones:</strong> diagramas sagitales y diagnóstico de inyectividad, suprayectividad y biyectividad.</li>
 </ol>
-<p>El <strong>simulador de circuitos</strong>, con compuertas, polaridades y diagramas de temporización, será la siguiente ampliación. Más adelante se preparará una versión Shiny o Shinylive cuando aporte controles que no convenga resolver en el navegador.</p>
+<p>El análisis de circuitos se apoya en figuras propias, tablas de verdad y código R reproducible. De esta manera se conserva la trazabilidad entre expresión, circuito y forma de onda sin depender de un servidor.</p>
 </section>
 <section id="ejercicios-con-r" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="ejercicios-con-r">Ejercicios con R</h2>
@@ -1193,18 +1201,9 @@ F
 <li>laboratorio de tablas de verdad;</li>
 <li>laboratorio de operaciones con conjuntos y diagramas de Venn;</li>
 <li>clasificador de funciones mediante diagramas sagitales;</li>
-<li>figuras vectoriales para operaciones, relaciones, composición y tipos de funciones.</li>
-</ul>
-<p>En versiones posteriores se incorporarán:</p>
-<ul>
-<li>video introductorio sobre lógica y conjuntos;</li>
-<li>video de tablas de verdad y cuantificadores;</li>
-<li>video de simplificación booleana y universalidad de NAND/NOR;</li>
-<li>presentación docente;</li>
-<li>infografía de correspondencia lógica-conjuntos;</li>
-<li>infografía de funciones y sus clasificaciones;</li>
-<li>infografía de errores frecuentes;</li>
-<li>actividades de GeoGebra y simulador de circuitos.</li>
+<li>figuras vectoriales para operaciones, relaciones, composición y tipos de funciones;</li>
+<li>circuito lógico propio para <span class="math inline">\(X=(A+\overline B)C\)</span>;</li>
+<li>diagrama de temporización coordinado con la expresión y la tabla de verdad.</li>
 </ul>
 </section>
 <section id="síntesis" class="level2 unnumbered unlisted">

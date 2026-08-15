@@ -135,6 +135,8 @@ Los índices permiten localizar conceptos, código, figuras y laboratorios sin a
 2. Relación, función y no-función (sección 1.7).
 3. Composición de funciones (sección 1.7).
 4. Funciones inyectivas, suprayectivas y biyectivas (sección 1.8).
+5. Circuito para $X=(A+\overline B)C$ (aplicación integradora).
+6. Diagrama de temporización del circuito (aplicación integradora).
 
 ### Capítulo 2 {.unnumbered}
 

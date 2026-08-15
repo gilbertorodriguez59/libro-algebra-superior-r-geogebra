@@ -25,4 +25,4 @@ quarto render
 
 La salida HTML y PDF se genera en `docs/` para su publicación mediante GitHub Pages.
 
-Licencia: CC BY-NC-SA 4.0.
+Licencia: [CC BY-NC-SA 4.0](LICENSE).
