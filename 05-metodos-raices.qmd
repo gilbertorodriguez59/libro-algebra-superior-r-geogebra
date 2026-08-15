@@ -68,19 +68,6 @@ derivar_polinomio <- function(coef) {
 }
 ```
 
-## Materiales complementarios del capítulo
-
-### Video del capítulo
-
-El enlace al video se incorporará cuando esté disponible.
-
-| Material | Descripción | Acceso |
-|---|---|---|
-| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
-| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
-| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
-| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-05-metodos-raices-R.ipynb){target="_blank"} |
-
 ## Acotación de raíces {#sec-acotacion-raices}
 
 La cota de Cauchy establece que toda raíz $z$ satisface
@@ -645,6 +632,19 @@ Elija un polinomio real de grado entre $4$ y $7$ con al menos tres raíces reale
 ## Síntesis {.unnumbered .unlisted}
 
 La estimación confiable de raíces es un proceso, no una fórmula única. Cauchy y la malla delimitan la búsqueda; Descartes y Budan-Fourier reducen posibilidades; Sturm cuenta; bisección aporta seguridad; secante evita derivadas; Newton-Horner aprovecha la estructura polinómica para lograr rapidez. R permite conservar todo el historial de cálculo y GeoGebra hace visible la geometría de cada iteración.
+
+## Materiales complementarios del capítulo
+
+### Video del capítulo
+
+El enlace al video se incorporará cuando esté disponible.
+
+| Material | Descripción | Acceso |
+|---|---|---|
+| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
+| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
+| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
+| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-05-metodos-raices-R.ipynb){target="_blank"} |
 
 ## Referencias del capítulo {.unnumbered .unlisted}
 

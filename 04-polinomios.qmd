@@ -20,19 +20,6 @@ Al terminar el capítulo, el lector podrá:
 - analizar dominio, ceros, discontinuidades y asíntotas de funciones racionales;
 - descomponer fracciones racionales en fracciones parciales.
 
-## Materiales complementarios del capítulo
-
-### Video del capítulo
-
-El enlace al video se incorporará cuando esté disponible.
-
-| Material | Descripción | Acceso |
-|---|---|---|
-| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
-| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
-| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
-| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-04-polinomios-R.ipynb){target="_blank"} |
-
 ## Definición de polinomio {#sec-definicion-polinomio}
 
 Sea $K$ un campo, normalmente $\mathbb Q$, $\mathbb R$ o $\mathbb C$.
@@ -816,6 +803,19 @@ max(abs(izquierda - derecha))
 [Descargar el cuaderno](https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/notebooks/capitulo-04-polinomios-R.ipynb){.btn}
 
 El cuaderno reúne las funciones anteriores, ejemplos adicionales, gráficas y una autoevaluación computacional. Todo el código principal usa R base.
+
+## Materiales complementarios del capítulo
+
+### Video del capítulo
+
+El enlace al video se incorporará cuando esté disponible.
+
+| Material | Descripción | Acceso |
+|---|---|---|
+| Presentación en PDF | Diapositivas del capítulo para consulta y exposición. | Enlace pendiente |
+| Presentación editable | Diapositivas en formato PowerPoint. | Enlace pendiente |
+| Infografía | Síntesis visual de los conceptos principales. | Enlace pendiente |
+| Cuaderno de Google Colab | Cuaderno completo del capítulo con código y ejercicios en R. | [Abrir en Google Colab](https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-04-polinomios-R.ipynb){target="_blank"} |
 
 ## Referencias del capítulo {.unnumbered .unlisted}
 
