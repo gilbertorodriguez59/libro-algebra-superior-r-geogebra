@@ -9,7 +9,7 @@
   <g fill="#e8f5f2" stroke="#e8f5f2"><circle cx="265" cy="965" r="12"/><circle cx="470" cy="1115" r="12"/><circle cx="645" cy="920" r="12"/><circle cx="820" cy="1012" r="12"/><circle cx="1010" cy="805" r="12"/></g>
   <text x="90" y="170" fill="#f0c654" font-family="DejaVu Sans, sans-serif" font-size="34" letter-spacing="5">LIBRO ABIERTO · EDICIÓN INTERACTIVA</text>
   <text x="90" y="400" fill="white" font-family="DejaVu Sans, sans-serif" font-size="84" font-weight="700">Álgebra Superior</text>
-  <text x="90" y="495" fill="white" font-family="DejaVu Sans, sans-serif" font-size="70" font-weight="700">con R y GeoGebra</text>
+  <text x="90" y="495" fill="white" font-family="DejaVu Sans, sans-serif" font-size="54" font-weight="700">con aplicaciones en R y GeoGebra</text>
   <rect x="92" y="555" width="185" height="8" fill="#f0c654"/>
   <text x="90" y="635" fill="#d5ece8" font-family="DejaVu Sans, sans-serif" font-size="39">Teoría, visualización y experimentación</text>
   <text x="90" y="1370" fill="white" font-family="DejaVu Sans, sans-serif" font-size="39" font-weight="600">Jesús Gilberto Rodríguez Escobedo</text>

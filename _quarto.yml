@@ -14,7 +14,7 @@ book:
   author: "Jesús Gilberto Rodríguez Escobedo"
   cover-image: figures/portada-editorial.png
   cover-image-alt: "Portada de Álgebra Superior con aplicaciones en R y GeoGebra"
-  date: "2026-08-14"
+  date: "2026-08-15"
   output-file: "Algebra-Superior-R-GeoGebra-Capitulos-1-5"
   chapters:
     - index.qmd

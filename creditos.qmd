@@ -4,7 +4,7 @@
 **Subtítulo:** Teoría, visualización y experimentación  
 **Autor:** Jesús Gilberto Rodríguez Escobedo  
 **Edición:** Primera edición digital, 2026  
-**Revisión:** 14 de agosto de 2026\
+**Revisión:** 15 de agosto de 2026\
 **Lugar de edición:** San Luis Potosí, México  
 **Producción editorial:** edición académica abierta desarrollada con Quarto, R, GeoGebra, Jupyter, Git y GitHub Pages.  
 **Formatos:** libro web interactivo, PDF descargable, cuadernos y construcciones `.ggb`.
@@ -22,7 +22,7 @@ Rodríguez Escobedo, J. G. (2026). *Álgebra Superior con aplicaciones en R y Ge
   subtitle  = {Teoría, visualización y experimentación},
   year      = {2026},
   address   = {San Luis Potosí, México},
-  note      = {Primera edición digital, libro web interactivo y PDF; revisión del 14 de agosto de 2026},
+  note      = {Primera edición digital, libro web interactivo y PDF; revisión del 15 de agosto de 2026},
   url       = {https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/}
 }
 ```

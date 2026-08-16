@@ -3,57 +3,7 @@
 </button>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const complementaryByPage = {
-    "01-logica-conjuntos.html": {
-      topic: "lógica, conjuntos, relaciones y funciones",
-      notebook: "capitulo-01-logica-conjuntos-R.ipynb"
-    },
-    "02-enteros-reales.html": {
-      topic: "enteros, divisibilidad, inducción y números reales",
-      notebook: "capitulo-02-enteros-reales-R.ipynb"
-    },
-    "03-numeros-complejos.html": {
-      topic: "números complejos, forma polar y raíces",
-      notebook: "capitulo-03-numeros-complejos-R.ipynb"
-    },
-    "04-polinomios.html": {
-      topic: "operaciones, factorización y raíces de polinomios",
-      notebook: "capitulo-04-polinomios-R.ipynb"
-    },
-    "05-metodos-raices.html": {
-      topic: "localización y aproximación de raíces",
-      notebook: "capitulo-05-metodos-raices-R.ipynb"
-    }
-  };
-  const currentPage = window.location.pathname.split("/").pop();
-  const complementary = complementaryByPage[currentPage];
-  if (complementary && !document.getElementById("materiales-complementarios-del-capitulo")) {
-    const references = document.getElementById("referencias-del-capitulo");
-    if (references && references.parentNode) {
-      const section = document.createElement("section");
-      section.id = "materiales-complementarios-del-capitulo";
-      section.className = "level2";
-      const colab = "https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/" + complementary.notebook;
-      section.innerHTML =
-        "<h2>Materiales complementarios del capítulo</h2>" +
-        "<section id=\"video-del-capitulo\" class=\"level3\">" +
-        "<h3>Video del capítulo</h3>" +
-        "<p>El enlace al video se incorporará cuando esté disponible.</p>" +
-        "</section>" +
-        "<div class=\"cell-output-display\"><table class=\"table\">" +
-        "<thead><tr><th>Material</th><th>Descripción</th><th>Acceso</th></tr></thead>" +
-        "<tbody>" +
-        "<tr><td>Presentación en PDF</td><td>Diapositivas del capítulo para consulta y exposición.</td><td>Enlace pendiente</td></tr>" +
-        "<tr><td>Presentación editable</td><td>Diapositivas en formato PowerPoint.</td><td>Enlace pendiente</td></tr>" +
-        "<tr><td>Infografía</td><td>Síntesis visual de los conceptos principales.</td><td>Enlace pendiente</td></tr>" +
-        "<tr><td>Cuaderno de Google Colab</td><td>Cuaderno práctico en R sobre " + complementary.topic + ".</td><td><a href=\"" + colab + "\" target=\"_blank\" rel=\"noopener noreferrer\">Abrir en Google Colab</a></td></tr>" +
-        "</tbody></table></div>";
-      references.parentNode.insertBefore(section, references);
-    }
-  }
-
-
-  const toc = document.querySelector("body > nav#TOC");
+  const toc = document.querySelector("nav#TOC");
   if (!toc) return;
 
   toc.setAttribute("aria-label", "Capítulos y subtemas");

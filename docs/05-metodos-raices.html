@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.11.1">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -99,10 +99,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bc71527b47141832018571d022014e48.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-31cc422547c5db16006f9b771013522d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -320,7 +320,6 @@ window.Quarto = {
     <h2 id="toc-title">En este capítulo</h2>
    
   <ul class="collapse">
-  <li><a href="#materiales-complementarios-del-capítulo" id="toc-materiales-complementarios-del-capítulo" class="nav-link" data-scroll-target="#materiales-complementarios-del-capítulo">Materiales complementarios</a></li>
   <li><a href="#sec-acotacion-raices" id="toc-sec-acotacion-raices" class="nav-link active" data-scroll-target="#sec-acotacion-raices"><span class="header-section-number">5.1</span> Acotación de raíces</a></li>
   <li><a href="#sec-separacion-raices" id="toc-sec-separacion-raices" class="nav-link" data-scroll-target="#sec-separacion-raices"><span class="header-section-number">5.2</span> Separación de raíces</a></li>
   <li><a href="#sec-sturm" id="toc-sec-sturm" class="nav-link" data-scroll-target="#sec-sturm"><span class="header-section-number">5.3</span> Teorema de Sturm</a></li>
@@ -328,6 +327,7 @@ window.Quarto = {
   <li><a href="#sec-biseccion" id="toc-sec-biseccion" class="nav-link" data-scroll-target="#sec-biseccion"><span class="header-section-number">5.5</span> Estimación mediante bisección</a></li>
   <li><a href="#sec-secante" id="toc-sec-secante" class="nav-link" data-scroll-target="#sec-secante"><span class="header-section-number">5.6</span> Estimación mediante el método de la secante</a></li>
   <li><a href="#sec-newton" id="toc-sec-newton" class="nav-link" data-scroll-target="#sec-newton"><span class="header-section-number">5.7</span> Estimación mediante el método de Newton</a></li>
+  <li><a href="#materiales-complementarios-del-capítulo" id="toc-materiales-complementarios-del-capítulo" class="nav-link" data-scroll-target="#materiales-complementarios-del-capítulo"><span class="header-section-number">5.8</span> Materiales complementarios del capítulo</a></li>
   </ul>
 </nav>
     </div>
@@ -415,8 +415,6 @@ x^3-x-1
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-
-
 <section id="sec-acotacion-raices" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="sec-acotacion-raices"><span class="header-section-number">5.1</span> Acotación de raíces</h2>
 <p>La cota de Cauchy establece que toda raíz <span class="math inline">\(z\)</span> satisface</p>
@@ -805,7 +803,7 @@ x_{n+1}=x_n-\frac{p(x_n)}{p'(x_n)}.
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  b <span class="ot">&lt;-</span> coef[<span class="fu">length</span>(coef)] <span class="sc">+</span> x <span class="sc">*</span> b</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">valor =</span> b, <span class="at">derivada =</span> caux)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(<span class="at">valor =</span> <span class="fu">unname</span>(b), <span class="at">derivada =</span> <span class="fu">unname</span>(caux))</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">horner_valor_derivada</span>(fcoef, <span class="fl">1.5</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -817,22 +815,24 @@ x_{n+1}=x_n-\frac{p(x_n)}{p'(x_n)}.
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (k <span class="cf">in</span> <span class="fu">seq_len</span>(max_iter)) {</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    vd <span class="ot">&lt;-</span> <span class="fu">horner_valor_derivada</span>(coef, x0)</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">abs</span>(vd[<span class="st">"derivada"</span>]) <span class="sc">&lt;=</span> .Machine<span class="sc">$</span>double.eps) {</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">stop</span>(<span class="st">"La derivada es numéricamente nula."</span>)</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    x1 <span class="ot">&lt;-</span> x0 <span class="sc">-</span> multiplicidad <span class="sc">*</span> vd[<span class="st">"valor"</span>] <span class="sc">/</span> vd[<span class="st">"derivada"</span>]</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    f1 <span class="ot">&lt;-</span> <span class="fu">evaluar_horner</span>(coef, x1)</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    cambio <span class="ot">&lt;-</span> <span class="fu">abs</span>(x1 <span class="sc">-</span> x0)</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    historial[[k]] <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">iter =</span> k, <span class="at">x =</span> x1, <span class="at">fx =</span> f1, <span class="at">cambio =</span> cambio)</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">abs</span>(f1) <span class="sc">&lt;=</span> tol <span class="sc">||</span> cambio <span class="sc">&lt;=</span> tol) <span class="cf">break</span></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    x0 <span class="ot">&lt;-</span> x1</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(rbind, historial[<span class="fu">seq_len</span>(k)])</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>hist_newton <span class="ot">&lt;-</span> <span class="fu">newton_horner</span>(fcoef, <span class="fl">1.5</span>, <span class="at">tol =</span> <span class="fl">1e-12</span>)</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>hist_newton</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    valor <span class="ot">&lt;-</span> vd[[<span class="st">"valor"</span>]]</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    derivada <span class="ot">&lt;-</span> vd[[<span class="st">"derivada"</span>]]</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">abs</span>(derivada) <span class="sc">&lt;=</span> .Machine<span class="sc">$</span>double.eps) {</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">stop</span>(<span class="st">"La derivada es numéricamente nula."</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>    x1 <span class="ot">&lt;-</span> x0 <span class="sc">-</span> multiplicidad <span class="sc">*</span> valor <span class="sc">/</span> derivada</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    f1 <span class="ot">&lt;-</span> <span class="fu">evaluar_horner</span>(coef, x1)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    cambio <span class="ot">&lt;-</span> <span class="fu">abs</span>(x1 <span class="sc">-</span> x0)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    historial[[k]] <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">iter =</span> k, <span class="at">x =</span> x1, <span class="at">fx =</span> f1, <span class="at">cambio =</span> cambio)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">abs</span>(f1) <span class="sc">&lt;=</span> tol <span class="sc">||</span> cambio <span class="sc">&lt;=</span> tol) <span class="cf">break</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    x0 <span class="ot">&lt;-</span> x1</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">do.call</span>(rbind, historial[<span class="fu">seq_len</span>(k)])</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>hist_newton <span class="ot">&lt;-</span> <span class="fu">newton_horner</span>(fcoef, <span class="fl">1.5</span>, <span class="at">tol =</span> <span class="fl">1e-12</span>)</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>hist_newton</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="fig-secante-newton" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Comparación geométrica entre una recta secante y la tangente utilizada por el método de Newton.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-secante-newton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -984,24 +984,43 @@ p(x)=x^5-3x^4-3x^3+11x^2-6x.
 <h2 class="unnumbered unlisted anchored" data-anchor-id="síntesis">Síntesis</h2>
 <p>La estimación confiable de raíces es un proceso, no una fórmula única. Cauchy y la malla delimitan la búsqueda; Descartes y Budan-Fourier reducen posibilidades; Sturm cuenta; bisección aporta seguridad; secante evita derivadas; Newton-Horner aprovecha la estructura polinómica para lograr rapidez. R permite conservar todo el historial de cálculo y GeoGebra hace visible la geometría de cada iteración.</p>
 </section>
-
-<section id="materiales-complementarios-del-capítulo" class="level2">
-<h2 class="anchored" data-anchor-id="materiales-complementarios-del-capítulo">Materiales complementarios del capítulo</h2>
+<section id="materiales-complementarios-del-capítulo" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="materiales-complementarios-del-capítulo"><span class="header-section-number">5.8</span> Materiales complementarios del capítulo</h2>
 <section id="video-del-capítulo" class="level3">
 <h3 class="anchored" data-anchor-id="video-del-capítulo">Video del capítulo</h3>
 <p>El enlace al video se incorporará cuando esté disponible.</p>
-</section>
-<div class="cell-output-display">
-<table class="table">
-<thead><tr><th>Material</th><th>Descripción</th><th>Acceso</th></tr></thead>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Material</th>
+<th>Descripción</th>
+<th>Acceso</th>
+</tr>
+</thead>
 <tbody>
-<tr><td>Presentación en PDF</td><td>Diapositivas del capítulo para consulta y exposición.</td><td>Enlace pendiente</td></tr>
-<tr><td>Presentación editable</td><td>Diapositivas en formato PowerPoint.</td><td>Enlace pendiente</td></tr>
-<tr><td>Infografía</td><td>Síntesis visual de los conceptos principales.</td><td>Enlace pendiente</td></tr>
-<tr><td>Cuaderno de Google Colab</td><td>Cuaderno práctico en R sobre localización y aproximación de raíces.</td><td><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-05-metodos-raices-R.ipynb" target="_blank" rel="noopener noreferrer">Abrir en Google Colab</a></td></tr>
+<tr class="odd">
+<td>Presentación en PDF</td>
+<td>Diapositivas del capítulo para consulta y exposición.</td>
+<td>Enlace pendiente</td>
+</tr>
+<tr class="even">
+<td>Presentación editable</td>
+<td>Diapositivas en formato PowerPoint.</td>
+<td>Enlace pendiente</td>
+</tr>
+<tr class="odd">
+<td>Infografía</td>
+<td>Síntesis visual de los conceptos principales.</td>
+<td>Enlace pendiente</td>
+</tr>
+<tr class="even">
+<td>Cuaderno de Google Colab</td>
+<td>Cuaderno completo del capítulo con código y ejercicios en R.</td>
+<td><a href="https://colab.research.google.com/github/gilbertorodriguez59/libro-algebra-superior-r-geogebra/blob/main/notebooks/capitulo-05-metodos-raices-R.ipynb" target="_blank">Abrir en Google Colab</a></td>
+</tr>
 </tbody>
 </table>
-</div>
+</section>
 </section>
 <section id="referencias-del-capítulo" class="level2 unnumbered unlisted">
 <h2 class="unnumbered unlisted anchored" data-anchor-id="referencias-del-capítulo">Referencias del capítulo</h2>
@@ -1042,7 +1061,7 @@ Universidad Autónoma de San Luis Potosí, Facultad de Ciencias. 2011. <em>Progr
 </button>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const toc = document.querySelector("body > nav#TOC");
+  const toc = document.querySelector("nav#TOC");
   if (!toc) return;
 
   toc.setAttribute("aria-label", "Capítulos y subtemas");

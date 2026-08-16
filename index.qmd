@@ -1,7 +1,7 @@
 # Portada {.unnumbered .unlisted}
 
 ::: {.content-visible when-format="html"}
-![](figures/portada-editorial.png){fig-alt="Portada de Álgebra Superior con R y GeoGebra" width=100%}
+![](figures/portada-editorial.png){fig-alt="Portada de Álgebra Superior con aplicaciones en R y GeoGebra" width=100%}
 :::
 
 ::: {.content-visible when-format="html"}

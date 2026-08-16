@@ -6,55 +6,55 @@ Los índices permiten localizar conceptos, código, figuras y laboratorios sin a
 
 | Término o recurso | Sección principal |
 |---|---|
-| **Algoritmo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
-| **Aritmética de punto flotante** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
-| **Bézout, coeficientes de** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
-| **Cardinalidad** | [1.5 Conjuntos finitos](01-logica-conjuntos.qmd#sec-cardinalidad-finita) y [1.9 Conjuntos infinitos](01-logica-conjuntos.qmd#sec-cardinalidad-infinita) |
+| **Algoritmo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.html#sec-divisibilidad) |
+| **Aritmética de punto flotante** | [2.5 Racionales y reales](02-enteros-reales.html#sec-racionales-reales) |
+| **Bézout, coeficientes de** | [2.3 Divisibilidad](02-enteros-reales.html#sec-divisibilidad) |
+| **Cardinalidad** | [1.5 Conjuntos finitos](01-logica-conjuntos.html#sec-cardinalidad-finita) y [1.9 Conjuntos infinitos](01-logica-conjuntos.html#sec-cardinalidad-infinita) |
 | **Circuitos lógicos** | aplicación integradora del capítulo 1 |
-| **Completitud** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
-| **Conjunto potencia** | [1.1 Lenguaje de conjuntos](01-logica-conjuntos.qmd#sec-lenguaje-conjuntos) |
-| **Cuantificadores en dominios finitos** | [1.3 Cuantificadores](01-logica-conjuntos.qmd#sec-cuantificadores) |
-| **Densidad** | [2.6 Propiedades de los reales](02-enteros-reales.qmd#sec-propiedades-reales) |
-| **Divisibilidad** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
-| **Exponentes** | [2.7 Exponentes](02-enteros-reales.qmd#sec-exponentes) |
-| **Factorización prima** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
-| **Funciones en R** | [1.7 Funciones](01-logica-conjuntos.qmd#sec-funciones) |
-| **Inducción y verificación** | [2.2 Inducción](02-enteros-reales.qmd#sec-induccion) |
-| **Interactivo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
-| **Interactivo de funciones** | [1.8 Tipos de funciones](01-logica-conjuntos.qmd#sec-tipos-funciones) |
-| **Interactivo de inducción** | [2.2 Inducción](02-enteros-reales.qmd#sec-induccion) |
-| **Interactivo de tablas de verdad** | [1.2 Proposiciones](01-logica-conjuntos.qmd#sec-proposiciones) |
-| **Interactivo de valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.qmd#sec-valor-absoluto) |
-| **Interactivo de Venn** | [1.4 Operaciones de conjuntos](01-logica-conjuntos.qmd#sec-operaciones-conjuntos) |
-| **Máximo común divisor** | [2.3 Divisibilidad](02-enteros-reales.qmd#sec-divisibilidad) |
-| **Mínimo común múltiplo** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
-| **Números primos** | [2.4 Primos y factorización](02-enteros-reales.qmd#sec-primos-factorizacion) |
-| **Operaciones con conjuntos en R** | [1.4 Operaciones de conjuntos](01-logica-conjuntos.qmd#sec-operaciones-conjuntos) |
-| **Racionales exactos y aproximados** | [2.5 Racionales y reales](02-enteros-reales.qmd#sec-racionales-reales) |
-| **Relaciones en R** | [1.6 Producto y relaciones](01-logica-conjuntos.qmd#sec-producto-relaciones) |
-| **Valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.qmd#sec-valor-absoluto) |
-| **Argumento principal** | [3.4 Módulo y argumento](03-numeros-complejos.qmd#sec-modulo-argumento) |
-| **Complejo conjugado** | [3.7 Conjugado](03-numeros-complejos.qmd#sec-conjugado) |
-| **Conversión cartesiana-polar** | [3.2 Representaciones](03-numeros-complejos.qmd#sec-cartesiana-polar) |
-| **De Moivre en R** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
-| **Multiplicación como rotación** | [3.6 Operaciones complejas](03-numeros-complejos.qmd#sec-operaciones-complejos) |
-| **Raíces de la unidad** | [3.9 Potencias y raíces](03-numeros-complejos.qmd#sec-potencias-raices) |
-| **División sintética** | [4.5 Residuo y división sintética](04-polinomios.qmd#sec-residuo-sintetica) |
-| **Factorización lineal** | [4.8 Factores lineales](04-polinomios.qmd#sec-factorizacion-lineal) |
-| **Fracciones parciales** | [4.11 Fracciones parciales](04-polinomios.qmd#sec-fracciones-parciales) |
-| **Función racional** | [4.10 Funciones racionales](04-polinomios.qmd#sec-funciones-racionales) |
+| **Completitud** | [2.6 Propiedades de los reales](02-enteros-reales.html#sec-propiedades-reales) |
+| **Conjunto potencia** | [1.1 Lenguaje de conjuntos](01-logica-conjuntos.html#sec-lenguaje-conjuntos) |
+| **Cuantificadores en dominios finitos** | [1.3 Cuantificadores](01-logica-conjuntos.html#sec-cuantificadores) |
+| **Densidad** | [2.6 Propiedades de los reales](02-enteros-reales.html#sec-propiedades-reales) |
+| **Divisibilidad** | [2.3 Divisibilidad](02-enteros-reales.html#sec-divisibilidad) |
+| **Exponentes** | [2.7 Exponentes](02-enteros-reales.html#sec-exponentes) |
+| **Factorización prima** | [2.4 Primos y factorización](02-enteros-reales.html#sec-primos-factorizacion) |
+| **Funciones en R** | [1.7 Funciones](01-logica-conjuntos.html#sec-funciones) |
+| **Inducción y verificación** | [2.2 Inducción](02-enteros-reales.html#sec-induccion) |
+| **Interactivo de Euclides** | [2.3 Divisibilidad](02-enteros-reales.html#sec-divisibilidad) |
+| **Interactivo de funciones** | [1.8 Tipos de funciones](01-logica-conjuntos.html#sec-tipos-funciones) |
+| **Interactivo de inducción** | [2.2 Inducción](02-enteros-reales.html#sec-induccion) |
+| **Interactivo de tablas de verdad** | [1.2 Proposiciones](01-logica-conjuntos.html#sec-proposiciones) |
+| **Interactivo de valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.html#sec-valor-absoluto) |
+| **Interactivo de Venn** | [1.4 Operaciones de conjuntos](01-logica-conjuntos.html#sec-operaciones-conjuntos) |
+| **Máximo común divisor** | [2.3 Divisibilidad](02-enteros-reales.html#sec-divisibilidad) |
+| **Mínimo común múltiplo** | [2.4 Primos y factorización](02-enteros-reales.html#sec-primos-factorizacion) |
+| **Números primos** | [2.4 Primos y factorización](02-enteros-reales.html#sec-primos-factorizacion) |
+| **Operaciones con conjuntos en R** | [1.4 Operaciones de conjuntos](01-logica-conjuntos.html#sec-operaciones-conjuntos) |
+| **Racionales exactos y aproximados** | [2.5 Racionales y reales](02-enteros-reales.html#sec-racionales-reales) |
+| **Relaciones en R** | [1.6 Producto y relaciones](01-logica-conjuntos.html#sec-producto-relaciones) |
+| **Valor absoluto** | [2.8 Valor absoluto](02-enteros-reales.html#sec-valor-absoluto) |
+| **Argumento principal** | [3.4 Módulo y argumento](03-numeros-complejos.html#sec-modulo-argumento) |
+| **Complejo conjugado** | [3.7 Conjugado](03-numeros-complejos.html#sec-conjugado) |
+| **Conversión cartesiana-polar** | [3.2 Representaciones](03-numeros-complejos.html#sec-cartesiana-polar) |
+| **De Moivre en R** | [3.9 Potencias y raíces](03-numeros-complejos.html#sec-potencias-raices) |
+| **Multiplicación como rotación** | [3.6 Operaciones complejas](03-numeros-complejos.html#sec-operaciones-complejos) |
+| **Raíces de la unidad** | [3.9 Potencias y raíces](03-numeros-complejos.html#sec-potencias-raices) |
+| **División sintética** | [4.5 Residuo y división sintética](04-polinomios.html#sec-residuo-sintetica) |
+| **Factorización lineal** | [4.8 Factores lineales](04-polinomios.html#sec-factorizacion-lineal) |
+| **Fracciones parciales** | [4.11 Fracciones parciales](04-polinomios.html#sec-fracciones-parciales) |
+| **Función racional** | [4.10 Funciones racionales](04-polinomios.html#sec-funciones-racionales) |
 | **GeoGebra para polinomios** | laboratorio computacional del capítulo 4 |
-| **Multiplicidad de una raíz** | [4.6 Raíces múltiples](04-polinomios.qmd#sec-raices-multiples) |
-| **Polinomio** | [4.1 Definición](04-polinomios.qmd#sec-definicion-polinomio) |
-| **Raíces conjugadas** | [4.9 Polinomios reales](04-polinomios.qmd#sec-polinomios-reales) |
-| **Teorema fundamental del álgebra** | [4.7 Teorema fundamental](04-polinomios.qmd#sec-teorema-fundamental-algebra) |
-| **Bisección en R** | [5.5 Estimación mediante bisección](05-metodos-raices.qmd#sec-biseccion) |
-| **Cota de Cauchy** | [5.1 Acotación de raíces](05-metodos-raices.qmd#sec-acotacion-raices) |
-| **Newton-Horner** | [5.7 Estimación mediante Newton](05-metodos-raices.qmd#sec-newton) |
-| **Regla de Descartes** | [5.4 Regla de los signos de Descartes](05-metodos-raices.qmd#sec-descartes) |
-| **Secante en R** | [5.6 Estimación mediante secante](05-metodos-raices.qmd#sec-secante) |
-| **Separación de raíces** | [5.2 Separación de raíces](05-metodos-raices.qmd#sec-separacion-raices) |
-| **Teorema de Sturm** | [5.3 Teorema de Sturm](05-metodos-raices.qmd#sec-sturm) |
+| **Multiplicidad de una raíz** | [4.6 Raíces múltiples](04-polinomios.html#sec-raices-multiples) |
+| **Polinomio** | [4.1 Definición](04-polinomios.html#sec-definicion-polinomio) |
+| **Raíces conjugadas** | [4.9 Polinomios reales](04-polinomios.html#sec-polinomios-reales) |
+| **Teorema fundamental del álgebra** | [4.7 Teorema fundamental](04-polinomios.html#sec-teorema-fundamental-algebra) |
+| **Bisección en R** | [5.5 Estimación mediante bisección](05-metodos-raices.html#sec-biseccion) |
+| **Cota de Cauchy** | [5.1 Acotación de raíces](05-metodos-raices.html#sec-acotacion-raices) |
+| **Newton-Horner** | [5.7 Estimación mediante Newton](05-metodos-raices.html#sec-newton) |
+| **Regla de Descartes** | [5.4 Regla de los signos de Descartes](05-metodos-raices.html#sec-descartes) |
+| **Secante en R** | [5.6 Estimación mediante secante](05-metodos-raices.html#sec-secante) |
+| **Separación de raíces** | [5.2 Separación de raíces](05-metodos-raices.html#sec-separacion-raices) |
+| **Teorema de Sturm** | [5.3 Teorema de Sturm](05-metodos-raices.html#sec-sturm) |
 
 : Índice alfabético de conceptos, código y laboratorios. {#tbl-indice-tematico}
 

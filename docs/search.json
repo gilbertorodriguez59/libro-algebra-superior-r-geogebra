@@ -34,7 +34,7 @@
     "href": "creditos.html",
     "title": "Créditos editoriales",
     "section": "",
-    "text": "Cómo citar esta obra\nTítulo: Álgebra Superior con aplicaciones en R y GeoGebra\nSubtítulo: Teoría, visualización y experimentación\nAutor: Jesús Gilberto Rodríguez Escobedo\nEdición: Primera edición digital, 2026\nRevisión: 14 de agosto de 2026\nLugar de edición: San Luis Potosí, México\nProducción editorial: edición académica abierta desarrollada con Quarto, R, GeoGebra, Jupyter, Git y GitHub Pages.\nFormatos: libro web interactivo, PDF descargable, cuadernos y construcciones .ggb.\nRodríguez Escobedo, J. G. (2026). Álgebra Superior con aplicaciones en R y GeoGebra: teoría, visualización y experimentación. Primera edición digital. San Luis Potosí, México. https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/",
+    "text": "Cómo citar esta obra\nTítulo: Álgebra Superior con aplicaciones en R y GeoGebra\nSubtítulo: Teoría, visualización y experimentación\nAutor: Jesús Gilberto Rodríguez Escobedo\nEdición: Primera edición digital, 2026\nRevisión: 15 de agosto de 2026\nLugar de edición: San Luis Potosí, México\nProducción editorial: edición académica abierta desarrollada con Quarto, R, GeoGebra, Jupyter, Git y GitHub Pages.\nFormatos: libro web interactivo, PDF descargable, cuadernos y construcciones .ggb.\nRodríguez Escobedo, J. G. (2026). Álgebra Superior con aplicaciones en R y GeoGebra: teoría, visualización y experimentación. Primera edición digital. San Luis Potosí, México. https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/",
     "crumbs": [
       "Créditos editoriales"
     ]
@@ -44,7 +44,7 @@
     "href": "creditos.html#entrada-bibtex-sugerida",
     "title": "Créditos editoriales",
     "section": "Entrada BibTeX sugerida",
-    "text": "Entrada BibTeX sugerida\n@book{rodriguez2026algebrargeogebra,\n  author    = {Rodríguez Escobedo, Jesús Gilberto},\n  title     = {Álgebra Superior con aplicaciones en R y GeoGebra},\n  subtitle  = {Teoría, visualización y experimentación},\n  year      = {2026},\n  address   = {San Luis Potosí, México},\n  note      = {Primera edición digital, libro web interactivo y PDF; revisión del 14 de agosto de 2026},\n  url       = {https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/}\n}",
+    "text": "Entrada BibTeX sugerida\n@book{rodriguez2026algebrargeogebra,\n  author    = {Rodríguez Escobedo, Jesús Gilberto},\n  title     = {Álgebra Superior con aplicaciones en R y GeoGebra},\n  subtitle  = {Teoría, visualización y experimentación},\n  year      = {2026},\n  address   = {San Luis Potosí, México},\n  note      = {Primera edición digital, libro web interactivo y PDF; revisión del 15 de agosto de 2026},\n  url       = {https://gilbertorodriguez59.github.io/libro-algebra-superior-r-geogebra/}\n}",
     "crumbs": [
       "Créditos editoriales"
     ]
@@ -310,6 +310,16 @@
     ]
   },
   {
+    "objectID": "01-logica-conjuntos.html#materiales-complementarios-del-capítulo",
+    "href": "01-logica-conjuntos.html#materiales-complementarios-del-capítulo",
+    "title": "1  Lógica y conjuntos",
+    "section": "1.10 Materiales complementarios del capítulo",
+    "text": "1.10 Materiales complementarios del capítulo\n\nVideo del capítulo\nEl enlace al video se incorporará cuando esté disponible.\n\n\n\nMaterial\nDescripción\nAcceso\n\n\n\n\nPresentación en PDF\nDiapositivas del capítulo para consulta y exposición.\nEnlace pendiente\n\n\nPresentación editable\nDiapositivas en formato PowerPoint.\nEnlace pendiente\n\n\nInfografía\nSíntesis visual de los conceptos principales.\nEnlace pendiente\n\n\nCuaderno de Google Colab\nCuaderno completo del capítulo con código y ejercicios en R.\nAbrir en Google Colab",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lógica y conjuntos</span>"
+    ]
+  },
+  {
     "objectID": "01-logica-conjuntos.html#referencias-del-capítulo",
     "href": "01-logica-conjuntos.html#referencias-del-capítulo",
     "title": "1  Lógica y conjuntos",
@@ -455,6 +465,16 @@
     "title": "2  Números enteros y reales",
     "section": "Síntesis",
     "text": "Síntesis\nR hace visibles los algoritmos y permite experimentar con numerosos ejemplos. El residuo implementa divisibilidad; Euclides reduce el problema del MCD; la criba y las divisiones sucesivas exploran primos; las aproximaciones muestran la diferencia entre un real matemático y su representación finita. La inducción, la unicidad de la factorización y las propiedades de completitud siguen requiriendo razonamiento matemático.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
+    ]
+  },
+  {
+    "objectID": "02-enteros-reales.html#materiales-complementarios-del-capítulo",
+    "href": "02-enteros-reales.html#materiales-complementarios-del-capítulo",
+    "title": "2  Números enteros y reales",
+    "section": "2.9 Materiales complementarios del capítulo",
+    "text": "2.9 Materiales complementarios del capítulo\n\nVideo del capítulo\nEl enlace al video se incorporará cuando esté disponible.\n\n\n\nMaterial\nDescripción\nAcceso\n\n\n\n\nPresentación en PDF\nDiapositivas del capítulo para consulta y exposición.\nEnlace pendiente\n\n\nPresentación editable\nDiapositivas en formato PowerPoint.\nEnlace pendiente\n\n\nInfografía\nSíntesis visual de los conceptos principales.\nEnlace pendiente\n\n\nCuaderno de Google Colab\nCuaderno completo del capítulo con código y ejercicios en R.\nAbrir en Google Colab",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Números enteros y reales</span>"
     ]
@@ -615,6 +635,16 @@
     "title": "3  Números complejos",
     "section": "Síntesis",
     "text": "Síntesis\n\nUn par de \\(\\mathbb R^2\\) se almacena como vector; una colección, como tabla.\natan2(y, x) y Arg(z) resuelven correctamente el cuadrante.\nR representa complejos con el tipo complex y el literal 1i.\nRe(), Im(), Mod(), Arg() y Conj() traducen directamente las definiciones.\nLa suma es vectorial; el producto combina escala y rotación.\nEl conjugado permite dividir y visualizar una reflexión.\nexp(1i * theta) simplifica la forma polar, De Moivre y las raíces.\nLas comparaciones numéricas deben usar tolerancia.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
+    ]
+  },
+  {
+    "objectID": "03-numeros-complejos.html#materiales-complementarios-del-capítulo",
+    "href": "03-numeros-complejos.html#materiales-complementarios-del-capítulo",
+    "title": "3  Números complejos",
+    "section": "3.10 Materiales complementarios del capítulo",
+    "text": "3.10 Materiales complementarios del capítulo\n\nVideo del capítulo\nEl enlace al video se incorporará cuando esté disponible.\n\n\n\nMaterial\nDescripción\nAcceso\n\n\n\n\nPresentación en PDF\nDiapositivas del capítulo para consulta y exposición.\nEnlace pendiente\n\n\nPresentación editable\nDiapositivas en formato PowerPoint.\nEnlace pendiente\n\n\nInfografía\nSíntesis visual de los conceptos principales.\nEnlace pendiente\n\n\nCuaderno de Google Colab\nCuaderno completo del capítulo con código y ejercicios en R.\nAbrir en Google Colab",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Números complejos</span>"
     ]
@@ -820,6 +850,16 @@
     ]
   },
   {
+    "objectID": "04-polinomios.html#materiales-complementarios-del-capítulo",
+    "href": "04-polinomios.html#materiales-complementarios-del-capítulo",
+    "title": "4  Polinomios",
+    "section": "4.12 Materiales complementarios del capítulo",
+    "text": "4.12 Materiales complementarios del capítulo\n\nVideo del capítulo\nEl enlace al video se incorporará cuando esté disponible.\n\n\n\nMaterial\nDescripción\nAcceso\n\n\n\n\nPresentación en PDF\nDiapositivas del capítulo para consulta y exposición.\nEnlace pendiente\n\n\nPresentación editable\nDiapositivas en formato PowerPoint.\nEnlace pendiente\n\n\nInfografía\nSíntesis visual de los conceptos principales.\nEnlace pendiente\n\n\nCuaderno de Google Colab\nCuaderno completo del capítulo con código y ejercicios en R.\nAbrir en Google Colab",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Polinomios</span>"
+    ]
+  },
+  {
     "objectID": "04-polinomios.html#referencias-del-capítulo",
     "href": "04-polinomios.html#referencias-del-capítulo",
     "title": "4  Polinomios",
@@ -914,7 +954,7 @@
     "href": "05-metodos-raices.html#sec-newton",
     "title": "5  Métodos numéricos para la estimación de raíces",
     "section": "5.7 Estimación mediante el método de Newton",
-    "text": "5.7 Estimación mediante el método de Newton\nNewton usa la tangente:\n\\[\nx_{n+1}=x_n-\\frac{p(x_n)}{p'(x_n)}.\n\\]\n\nHorner simultáneo para \\(p\\) y \\(p'\\)\nhorner_valor_derivada &lt;- function(coef, x) {\n  coef &lt;- normalizar_coef(coef)\n  grado &lt;- length(coef) - 1L\n  if (grado == 0L) return(c(valor = coef, derivada = 0))\n\n  b &lt;- coef[1L]\n  caux &lt;- b\n  if (grado &gt; 1L) {\n    for (i in 2L:grado) {\n      b &lt;- coef[i] + x * b\n      caux &lt;- b + x * caux\n    }\n  }\n  b &lt;- coef[length(coef)] + x * b\n  c(valor = unname(b), derivada = unname(caux))\n}\n\nhorner_valor_derivada(fcoef, 1.5)\n\n\nNewton-Horner en R\nnewton_horner &lt;- function(coef, x0, tol = 1e-8, max_iter = 100L, multiplicidad = 1) {\n  historial &lt;- vector(\"list\", max_iter)\n\n  for (k in seq_len(max_iter)) {\n    vd &lt;- horner_valor_derivada(coef, x0)\n    if (abs(vd[\"derivada\"]) &lt;= .Machine$double.eps) {\n      stop(\"La derivada es numéricamente nula.\")\n    }\n    x1 &lt;- x0 - multiplicidad * vd[\"valor\"] / vd[\"derivada\"]\n    f1 &lt;- evaluar_horner(coef, x1)\n    cambio &lt;- abs(x1 - x0)\n    historial[[k]] &lt;- data.frame(iter = k, x = x1, fx = f1, cambio = cambio)\n\n    if (abs(f1) &lt;= tol || cambio &lt;= tol) break\n    x0 &lt;- x1\n  }\n  do.call(rbind, historial[seq_len(k)])\n}\n\nhist_newton &lt;- newton_horner(fcoef, 1.5, tol = 1e-12)\nhist_newton\n\n\n\n\n\n\nFigura 5.3: La secante usa una cuerda definida por dos puntos; Newton usa una tangente y requiere la derivada.\n\n\n\n\n\nAbrir la construcción en una página independiente\n\n\nActividad GeoGebra\n\nDesplace los puntos iniciales de la secante y observe su intersección con el eje.\nDesplace el punto inicial de Newton y compare la tangente.\nLocalice una posición donde la derivada sea pequeña.\nExplique por qué la construcción predice un paso de Newton muy grande.\n\nDescargar la construcción base .ggb\n\n\nRaíz múltiple\nPara \\(p(x)=(x-1)^4\\), Newton ordinario converge lentamente. Si se conoce \\(m=4\\), use:\nraiz_multiple &lt;- c(1, -4, 6, -4, 1)\nnewton_horner(raiz_multiple, 2, tol = 1e-12, multiplicidad = 1)\nnewton_horner(raiz_multiple, 2, tol = 1e-12, multiplicidad = 4)\nLa versión modificada incorpora la multiplicidad y puede recuperar convergencia cuadrática.",
+    "text": "5.7 Estimación mediante el método de Newton\nNewton usa la tangente:\n\\[\nx_{n+1}=x_n-\\frac{p(x_n)}{p'(x_n)}.\n\\]\n\nHorner simultáneo para \\(p\\) y \\(p'\\)\nhorner_valor_derivada &lt;- function(coef, x) {\n  coef &lt;- normalizar_coef(coef)\n  grado &lt;- length(coef) - 1L\n  if (grado == 0L) return(c(valor = coef, derivada = 0))\n\n  b &lt;- coef[1L]\n  caux &lt;- b\n  if (grado &gt; 1L) {\n    for (i in 2L:grado) {\n      b &lt;- coef[i] + x * b\n      caux &lt;- b + x * caux\n    }\n  }\n  b &lt;- coef[length(coef)] + x * b\n  c(valor = unname(b), derivada = unname(caux))\n}\n\nhorner_valor_derivada(fcoef, 1.5)\n\n\nNewton-Horner en R\nnewton_horner &lt;- function(coef, x0, tol = 1e-8, max_iter = 100L, multiplicidad = 1) {\n  historial &lt;- vector(\"list\", max_iter)\n\n  for (k in seq_len(max_iter)) {\n    vd &lt;- horner_valor_derivada(coef, x0)\n    valor &lt;- vd[[\"valor\"]]\n    derivada &lt;- vd[[\"derivada\"]]\n    if (abs(derivada) &lt;= .Machine$double.eps) {\n      stop(\"La derivada es numéricamente nula.\")\n    }\n    x1 &lt;- x0 - multiplicidad * valor / derivada\n    f1 &lt;- evaluar_horner(coef, x1)\n    cambio &lt;- abs(x1 - x0)\n    historial[[k]] &lt;- data.frame(iter = k, x = x1, fx = f1, cambio = cambio)\n\n    if (abs(f1) &lt;= tol || cambio &lt;= tol) break\n    x0 &lt;- x1\n  }\n  do.call(rbind, historial[seq_len(k)])\n}\n\nhist_newton &lt;- newton_horner(fcoef, 1.5, tol = 1e-12)\nhist_newton\n\n\n\n\n\n\nFigura 5.3: La secante usa una cuerda definida por dos puntos; Newton usa una tangente y requiere la derivada.\n\n\n\n\n\nAbrir la construcción en una página independiente\n\n\nActividad GeoGebra\n\nDesplace los puntos iniciales de la secante y observe su intersección con el eje.\nDesplace el punto inicial de Newton y compare la tangente.\nLocalice una posición donde la derivada sea pequeña.\nExplique por qué la construcción predice un paso de Newton muy grande.\n\nDescargar la construcción base .ggb\n\n\nRaíz múltiple\nPara \\(p(x)=(x-1)^4\\), Newton ordinario converge lentamente. Si se conoce \\(m=4\\), use:\nraiz_multiple &lt;- c(1, -4, 6, -4, 1)\nnewton_horner(raiz_multiple, 2, tol = 1e-12, multiplicidad = 1)\nnewton_horner(raiz_multiple, 2, tol = 1e-12, multiplicidad = 4)\nLa versión modificada incorpora la multiplicidad y puede recuperar convergencia cuadrática.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
     ]
@@ -975,6 +1015,16 @@
     "title": "5  Métodos numéricos para la estimación de raíces",
     "section": "Síntesis",
     "text": "Síntesis\nLa estimación confiable de raíces es un proceso, no una fórmula única. Cauchy y la malla delimitan la búsqueda; Descartes y Budan-Fourier reducen posibilidades; Sturm cuenta; bisección aporta seguridad; secante evita derivadas; Newton-Horner aprovecha la estructura polinómica para lograr rapidez. R permite conservar todo el historial de cálculo y GeoGebra hace visible la geometría de cada iteración.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
+    ]
+  },
+  {
+    "objectID": "05-metodos-raices.html#materiales-complementarios-del-capítulo",
+    "href": "05-metodos-raices.html#materiales-complementarios-del-capítulo",
+    "title": "5  Métodos numéricos para la estimación de raíces",
+    "section": "5.8 Materiales complementarios del capítulo",
+    "text": "5.8 Materiales complementarios del capítulo\n\nVideo del capítulo\nEl enlace al video se incorporará cuando esté disponible.\n\n\n\nMaterial\nDescripción\nAcceso\n\n\n\n\nPresentación en PDF\nDiapositivas del capítulo para consulta y exposición.\nEnlace pendiente\n\n\nPresentación editable\nDiapositivas en formato PowerPoint.\nEnlace pendiente\n\n\nInfografía\nSíntesis visual de los conceptos principales.\nEnlace pendiente\n\n\nCuaderno de Google Colab\nCuaderno completo del capítulo con código y ejercicios en R.\nAbrir en Google Colab",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Métodos numéricos para la estimación de raíces</span>"
     ]
